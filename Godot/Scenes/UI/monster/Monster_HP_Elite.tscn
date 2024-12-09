@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqqps8o8d76y5"]
+
+[ext_resource type="Texture2D" uid="uid://dpnrc2q00xgfg" path="res://assets/images/monster_hp/elite_bg.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://uqr65uiq3r3y" path="res://assets/images/common_etc/monster_type/0.png" id="4"]
+
+[node name="Monster_HP_Elite" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -564.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="panel" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 578.0
+offset_bottom = 36.0
+texture = ExtResource("1")
+patch_margin_left = 36
+patch_margin_right = 4
+
+[node name="type" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 34.75
+offset_top = -0.8125
+offset_right = 66.75
+offset_bottom = 14.1875
+texture = ExtResource("4")
+
+[node name="nameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = -2.0
+offset_right = 148.0
+offset_bottom = 15.0
+text = "Lv2 哥布林"
+
+[node name="hp_double" type="Label" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = -12.0
+offset_right = 571.0
+offset_bottom = 19.0
+text = "x2"

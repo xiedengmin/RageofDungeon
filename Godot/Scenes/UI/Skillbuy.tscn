@@ -1,0 +1,224 @@
+[gd_scene load_steps=19 format=3 uid="uid://c6j2g2vxju3o8"]
+
+[ext_resource type="Texture2D" uid="uid://bmcmg3hqd2qiw" path="res://assets/images/ui/windowcommon/Panel.png" id="1"]
+[ext_resource type="Theme" uid="uid://bkyc4lkdy847v" path="res://src/component/theme/vscrollbar.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://d2ufig4i2gomj" path="res://assets/images/ui/windowcommon/windowtitle1.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://d1a73eqqghdbr" path="res://assets/sounds/ui/click1.wav" id="4"]
+[ext_resource type="PackedScene" uid="uid://cf8avhck56h3j" path="res://src/component/buttons/Tab_Button1.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://2rsodvuukx1w" path="res://assets/images/ui/windowcommon/277.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cjj5k07gkm411" path="res://assets/images/ui/windowcommon/278.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dm5wugpl54xrf" path="res://assets/images/ui/windowcommon/276.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bq86jt7w0eev2" path="res://assets/images/ui/windowcommon/70.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cj2sjw0cibofh" path="res://assets/images/ui/windowcommon/279.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://s421w0xp1v34" path="res://assets/images/ui/window_title_accessory/1.png" id="12"]
+[ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="13"]
+[ext_resource type="Script" path="res://src/UI/Skillbuy.cs" id="14"]
+[ext_resource type="AudioStream" uid="uid://j8gh0ucttat5" path="res://assets/sounds/ui/ambox_result.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://wcmfea7x4m2s" path="res://assets/sounds/ui/click2.ogg" id="17"]
+
+[sub_resource type="Animation" id="3"]
+resource_name = "learn"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Audio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="4"]
+resource_name = "select"
+length = 0.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Audio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uxyih"]
+_data = {
+"learn": SubResource("3"),
+"select": SubResource("4")
+}
+
+[node name="Skillbuy" type="Panel"]
+offset_left = 77.0
+offset_top = 80.0
+offset_right = 368.0
+offset_bottom = 466.0
+script = ExtResource("14")
+
+[node name="bg2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 22.0
+offset_right = 279.0
+offset_bottom = 385.0
+texture = ExtResource("1")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 9
+
+[node name="windowtitle" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 284.0
+offset_bottom = 39.0
+texture = ExtResource("3")
+
+[node name="title" type="Label" parent="windowtitle"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 278.0
+offset_bottom = 33.0
+text = "技能学习栏"
+
+[node name="t_acc" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3.30763
+offset_top = 6.92966
+offset_right = 33.3076
+offset_bottom = 36.9297
+texture = ExtResource("12")
+
+[node name="closeBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 260.831
+offset_top = 13.4486
+offset_right = 276.831
+offset_bottom = 29.4486
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("8")
+texture_hover = ExtResource("6")
+texture_disabled = ExtResource("11")
+
+[node name="Tab_Button1" parent="." instance=ExtResource("5")]
+layout_mode = 0
+offset_left = 21.1037
+offset_top = 47.247
+offset_right = 69.1037
+offset_bottom = 69.247
+focus_mode = 0
+text = "波动"
+
+[node name="Tab_Button2" parent="." instance=ExtResource("5")]
+layout_mode = 0
+offset_left = 69.1305
+offset_top = 47.247
+offset_right = 117.13
+offset_bottom = 69.247
+focus_mode = 0
+text = "剑术"
+
+[node name="Tab_Button3" parent="." instance=ExtResource("5")]
+layout_mode = 0
+offset_left = 117.212
+offset_top = 47.247
+offset_right = 165.212
+offset_bottom = 69.247
+focus_mode = 0
+text = "血气"
+
+[node name="Tab_Button4" parent="." instance=ExtResource("5")]
+layout_mode = 0
+offset_left = 164.609
+offset_top = 47.247
+offset_right = 212.609
+offset_bottom = 69.247
+focus_mode = 0
+text = "鬼神"
+
+[node name="Tab_Button5" parent="." instance=ExtResource("5")]
+layout_mode = 0
+offset_left = 213.171
+offset_top = 47.247
+offset_right = 261.171
+offset_bottom = 69.247
+focus_mode = 0
+text = "通用"
+
+[node name="line" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 69.0
+offset_right = 272.0
+offset_bottom = 72.0
+texture = ExtResource("10")
+
+[node name="skillContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 75.0
+offset_right = 271.0
+offset_bottom = 353.0
+theme = ExtResource("2")
+
+[node name="grid1" type="GridContainer" parent="skillContainer"]
+layout_mode = 2
+
+[node name="grid2" type="GridContainer" parent="skillContainer"]
+layout_mode = 2
+
+[node name="grid3" type="GridContainer" parent="skillContainer"]
+layout_mode = 2
+
+[node name="grid4" type="GridContainer" parent="skillContainer"]
+layout_mode = 2
+
+[node name="grid5" type="GridContainer" parent="skillContainer"]
+layout_mode = 2
+
+[node name="learnBtn" parent="." instance=ExtResource("13")]
+layout_mode = 0
+offset_left = 58.3268
+offset_top = 352.796
+offset_right = 135.327
+offset_bottom = 375.796
+text = "学习技能"
+
+[node name="closeBtn2" parent="." instance=ExtResource("13")]
+layout_mode = 0
+offset_left = 145.189
+offset_top = 352.796
+offset_right = 222.189
+offset_bottom = 375.796
+text = "关闭"
+
+[node name="windowSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uxyih")
+}
+
+[connection signal="pressed" from="closeBtn" to="." method="_on_closeBtn_pressed"]
+[connection signal="toggled" from="Tab_Button1" to="." method="_on_Tab_Button1_toggled"]
+[connection signal="toggled" from="Tab_Button2" to="." method="_on_Tab_Button2_toggled"]
+[connection signal="toggled" from="Tab_Button3" to="." method="_on_Tab_Button3_toggled"]
+[connection signal="toggled" from="Tab_Button4" to="." method="_on_Tab_Button4_toggled"]
+[connection signal="toggled" from="Tab_Button5" to="." method="_on_Tab_Button5_toggled"]
+[connection signal="pressed" from="learnBtn" to="." method="_on_learnBtn_pressed"]
+[connection signal="pressed" from="closeBtn2" to="." method="_on_closeBtn_pressed"]

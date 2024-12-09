@@ -1,0 +1,379 @@
+[gd_scene load_steps=40 format=3 uid="uid://cawncx4g0fky8"]
+
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dc6tff018h34i" path="res://assets/images/npc/linus/0.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://buemob0yf82wl" path="res://assets/images/npc/linus/1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ctetuxo8fjjr5" path="res://assets/images/npc/linus/11.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dbud71xxbgkav" path="res://assets/images/npc/linus/9.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ci4gcu3dp7y3c" path="res://assets/images/npc/linus/7.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cy1ocjtmxckd0" path="res://assets/images/npc/linus/3.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cmj7vrjn68msv" path="res://assets/images/npc/linus/5.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://betiq27ouh6y8" path="res://assets/images/npc/linus/2.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c6pb56ardpduj" path="res://assets/images/npc/linus/6.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dn0l4bidooc8g" path="res://assets/images/npc/linus/8.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://k52y7d2vpa6y" path="res://assets/images/npc/linus/4.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cp1gn5k40dw5u" path="res://assets/images/npc/linus/10.png" id="14"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="15"]
+[ext_resource type="Script" path="res://src/npc/Linus.cs" id="16"]
+[ext_resource type="AudioStream" uid="uid://cuyxpkoy1uiaf" path="res://assets/sounds/npc/linus/rn_amb_01.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://dieyk0upm4ygp" path="res://assets/sounds/npc/linus/rn_fw_02.ogg" id="18"]
+[ext_resource type="AudioStream" uid="uid://bs1ax4icxe7ev" path="res://assets/sounds/npc/linus/rn_fw_01.ogg" id="19"]
+[ext_resource type="AudioStream" uid="uid://c1jtcyedhcmwx" path="res://assets/sounds/npc/linus/rn_fw_03.ogg" id="20"]
+[ext_resource type="AudioStream" uid="uid://sr03lkfsmj0e" path="res://assets/sounds/npc/linus/rn_tk_01.ogg" id="21"]
+[ext_resource type="AudioStream" uid="uid://ch3ibqsxafs5a" path="res://assets/sounds/npc/linus/rn_tk_03.ogg" id="22"]
+[ext_resource type="AudioStream" uid="uid://cwjxacdci4rj8" path="res://assets/sounds/npc/linus/rn_tk_02.ogg" id="23"]
+[ext_resource type="Texture2D" uid="uid://djyvjomyckuvl" path="res://assets/images/face/npc/popup/linus.png" id="24"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="25"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("1")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("15")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 4.98
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26, 1.44, 1.62, 1.8, 1.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26, 1.44, 1.62, 1.8, 1.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kiwqm"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "fw_01"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_02"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_03"
+length = 1.6
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "tk_01"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_02"
+length = 3.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_03"
+length = 1.7
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_opy4w"]
+_data = {
+"amb_01": SubResource("6"),
+"fw_01": SubResource("7"),
+"fw_02": SubResource("8"),
+"fw_03": SubResource("9"),
+"tk_01": SubResource("10"),
+"tk_02": SubResource("11"),
+"tk_03": SubResource("12")
+}
+
+[node name="Linus" instance=ExtResource("2")]
+anchors_preset = -1
+anchor_left = -0.057
+anchor_top = -0.11
+anchor_right = 0.046
+anchor_bottom = 0.097
+offset_left = 72.96
+offset_top = 79.2
+offset_right = -58.88
+offset_bottom = -69.84
+script = ExtResource("16")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-44, 18.5)
+scale = Vector2(1, 1.12973)
+sprite_frames = SubResource("2")
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+position = Vector2(2.5, -0.124998)
+scale = Vector2(1.55, 0.898649)
+sprite_frames = SubResource("4")
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_kiwqm")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -70.0
+offset_top = -82.0
+offset_right = 71.0
+offset_bottom = -56.0
+text = "铁匠·林纳斯"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 114.0
+offset_bottom = 125.0
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("18")
+
+[node name="CollisionShape2D" parent="range_check" index="0"]
+position = Vector2(-4, 0.875)
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_opy4w")
+}
+
+[node name="Menu_Type2" parent="." index="10" instance=ExtResource("25")]
+visible = false
+
+[node name="faceIcon" parent="Menu_Type2/top" index="0"]
+texture = ExtResource("24")
+
+[node name="nameLabel" parent="Menu_Type2/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "林纳斯"
+
+[connection signal="pressed" from="Menu_Type2/MarginContainer/VBoxContainer/talkBtn" to="." method="OnTalkBtnPressed"]
+[connection signal="pressed" from="Menu_Type2/MarginContainer/VBoxContainer/shopBtn" to="." method="OnShopBtnPressed"]
+[connection signal="pressed" from="Menu_Type2/MarginContainer/VBoxContainer/taskBtn" to="." method="OnTaskBtnPressed"]
+
+[editable path="Menu_Type2"]

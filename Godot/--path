@@ -1,0 +1,9 @@
+WARNING: GENERAL - Message Id Number: 0 | Message Id Name: Loader Message
+	windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.
+	Objects - 1
+		Object[0] - VK_OBJECT_TYPE_INSTANCE, Handle 2011798624160
+     at: RenderingContextDriverVulkan::_debug_messenger_callback (drivers\vulkan\rendering_context_driver_vulkan.cpp:305)
+WARNING: Event not find: ET.EventType.SceneChangeFinish
+     at: void ET.GodotLogger.Warning(string) (res://Mono/Core/Log/GodotLogger.cs:26)
+WARNING: Event not find: ET.EventType.EnterMapFinish
+     at: void ET.GodotLogger.Warning(string) (res://Mono/Core/Log/GodotLogger.cs:26)

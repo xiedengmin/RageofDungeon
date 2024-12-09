@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/map/act1/breakableobject/barrel/0.png" type="Texture2D" id=1]
+[ext_resource path="res://src/component/act1/o1obj107.cs" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 25.4579
+
+[node name="barrel" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="pic" type="Sprite2D" parent="."]
+position = Vector2( 0, -25.5968 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array( -28.2663, -14.0606, 29.0786, -14.259, 30.2691, -32.1173, 23.9195, -56.722, 7.64866, -63.8653, -7.43165, -64.0637, -19.734, -60.2936, -26.6789, -45.8086, -30.8458, -27.1566 )

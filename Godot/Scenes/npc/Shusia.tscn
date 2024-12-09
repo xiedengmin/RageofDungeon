@@ -1,0 +1,333 @@
+[gd_scene load_steps=34 format=3 uid="uid://bagnqkk5uvb21"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://bp57x4catj2u1" path="res://assets/images/npc/npc_susia/0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b18yfyn3flhf3" path="res://assets/images/npc/npc_susia/1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://du6xacecqy065" path="res://assets/images/npc/npc_susia/3.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cuyruderolbif" path="res://assets/images/npc/npc_susia/4.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b0d3556ljmk55" path="res://assets/images/npc/npc_susia/2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://boa2x2nirm66r" path="res://assets/images/npc/npc_susia/5.png" id="7"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="8"]
+[ext_resource type="Script" path="res://src/npc/Susia.cs" id="9"]
+[ext_resource type="AudioStream" uid="uid://bhcyuh81smukf" path="res://assets/sounds/npc/susia/su_fw_02.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://c8vqbs33ldiw5" path="res://assets/sounds/npc/susia/su_tk_01.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://cat8yrtbo1xo2" path="res://assets/sounds/npc/susia/su_fw_01.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://ctno2lanptbes" path="res://assets/sounds/npc/susia/su_amb_01.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://dlk1s0y74ndax" path="res://assets/sounds/npc/susia/su_amb_02.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://vjf8e3on4puu" path="res://assets/sounds/npc/susia/su_tk_02.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://bsdoovuekhtud" path="res://assets/sounds/npc/susia/su_tk_03.ogg" id="16"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="17"]
+[ext_resource type="Texture2D" uid="uid://dfgcet457g7d1" path="res://assets/images/face/npc/popup/shusia.png" id="18"]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type canvas_item;
+
+uniform float tilt = 0.4;
+uniform float scale = 0.3;
+uniform float alpha = 0.4;
+uniform bool shadow = true;
+
+void fragment(){
+	vec4 previous_color = texture(TEXTURE,UV);
+	vec4 block_color;
+	if(shadow == true){
+		block_color = vec4(0.0,0.0,0.0,previous_color.a * alpha);
+	}else{
+		block_color = vec4(previous_color.r,previous_color.g,previous_color.b,previous_color.a * alpha);
+	}
+
+    COLOR = block_color;
+}
+
+void vertex(){
+	mat3 mat_scale = mat3(vec3(1.0,0.0,0.0),vec3(0.0,1.0,0.0),vec3(0.0,0.0,1.0));
+	mat3 mat_tilt = mat3(vec3(1.0, tilt, 0.0), vec3(0.0, scale, 0.0), vec3(0.0, 0.0, 1.0));
+	mat3 mul = mat_scale * mat_tilt;
+	vec3 temp = vec3(VERTEX,0.0) * mul;
+	
+	VERTEX =  temp.xy;
+}"
+
+[sub_resource type="ShaderMaterial" id="2"]
+shader = SubResource("1")
+shader_parameter/tilt = 0.0
+shader_parameter/scale = -1.0
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = false
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="4"]
+shader = ExtResource("8")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="6"]
+length = 1.08
+loop_mode = 1
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mopsv"]
+_data = {
+"default": SubResource("6")
+}
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_01"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "amb_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_01"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "fw_02"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_01"
+length = 2.1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_02"
+length = 3.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "tk_03"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_20dad"]
+_data = {
+"amb_01": SubResource("7"),
+"amb_02": SubResource("8"),
+"fw_01": SubResource("9"),
+"fw_02": SubResource("10"),
+"tk_01": SubResource("11"),
+"tk_02": SubResource("12"),
+"tk_03": SubResource("13")
+}
+
+[node name="Susia" instance=ExtResource("1")]
+script = ExtResource("9")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("2")
+position = Vector2(0, 138.493)
+sprite_frames = SubResource("3")
+frame = 5
+
+[node name="body" parent="." index="1"]
+material = SubResource("4")
+sprite_frames = SubResource("5")
+frame = 5
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_mopsv")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -53.4087
+offset_right = 46.5913
+text = "索西雅"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("16")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_20dad")
+}
+
+[node name="Menu_Type1" parent="." index="10" instance=ExtResource("17")]
+
+[node name="faceIcon" parent="Menu_Type1/top" index="0"]
+texture = ExtResource("18")
+
+[node name="nameLabel" parent="Menu_Type1/top" index="1"]
+text = "索西雅"
+
+[editable path="Menu_Type1"]

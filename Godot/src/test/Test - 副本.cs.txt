@@ -1,0 +1,126 @@
+using Godot;
+using System;
+using Godot.Collections;
+using System.Collections.Generic;
+using ET;
+public partial class Test1 : Node2D
+{
+    // 角色节点
+    private CharacterBody2D _player;
+
+    // TileMapLayer节点
+    private TileMapLayer _tileMapLayer;
+
+    // TileSet资源
+    private TileSet _tileSet;
+
+    // 定义加载和卸载的范围（以地砖的数量为单位）
+    private const int LoadRange = 5;
+    private const int UnloadRange = 7;
+
+    // 存储当前加载的地砖
+    private HashSet<Vector2I> _loadedTiles = new HashSet<Vector2I>();
+
+
+
+    public override void _Ready()
+    {
+
+
+
+
+        // 获取玩家节点
+        _player = GetNode<CharacterBody2D>("Character");
+
+        // 获取TileMapLayer
+        _tileMapLayer = GetNode<TileMapLayer>("TileMapLayer");
+
+        // 加载TileSet资源
+        _tileSet = ResourceLoader.Load<TileSet>("res://scenes/test/Test.tres");
+
+        // 设置TileMapLayer的TileSet
+        _tileMapLayer.TileSet = _tileSet;
+
+        // 初始化TileMap
+        //  LoadInitialTiles();
+
+
+    }
+
+    public override void _Process(double delta)
+    {
+        // 获取玩家的当前位置
+        Vector2 playerPos = _player.Position;
+        Vector2I tilePos = WorldToTile(playerPos);
+
+        // 加载玩家周围的地砖
+        //   LoadTilesAround(tilePos);
+
+        // 卸载超出范围的地砖
+        //  UnloadTilesOutsideRange(tilePos);
+    }
+
+    // 将世界坐标转换为地砖坐标
+    private Vector2I WorldToTile(Vector2 worldPos)
+    {
+        return new Vector2I((int)(worldPos.X / 128), (int)(worldPos.Y / 128));
+    }
+
+    // 初始化加载地砖
+    private void LoadInitialTiles()
+    {
+        Vector2I playerTilePos = WorldToTile(_player.Position);
+        LoadTilesAround(playerTilePos);
+    }
+
+    // 加载指定范围内的地砖
+    private void LoadTilesAround(Vector2I centerTile)
+    {
+        for (int x = centerTile.X - LoadRange; x <= centerTile.X + LoadRange; x++)
+        {
+            for (int y = centerTile.Y - LoadRange; y <= centerTile.Y + LoadRange; y++)
+            {
+                Vector2I tilePos = new Vector2I(x, y);
+
+                if (!_loadedTiles.Contains(tilePos))
+                {
+                    LoadTile(tilePos);
+                }
+            }
+        }
+    }
+
+    // 加载单个地砖
+    private void LoadTile(Vector2I tilePos)
+    {
+        // 假设地砖ID为0，可以根据需求调整
+        _tileMapLayer.SetCell(tilePos);
+        _loadedTiles.Add(tilePos);
+    }
+
+    // 卸载超出范围的地砖
+    private void UnloadTilesOutsideRange(Vector2I centerTile)
+    {
+        List<Vector2I> tilesToUnload = new List<Vector2I>();
+
+        foreach (Vector2I tilePos in _loadedTiles)
+        {
+            if (Math.Abs(tilePos.X - centerTile.X) > UnloadRange || Math.Abs(tilePos.Y - centerTile.Y) > UnloadRange)
+            {
+                tilesToUnload.Add(tilePos);
+            }
+        }
+
+        foreach (Vector2I tilePos in tilesToUnload)
+        {
+            UnloadTile(tilePos);
+        }
+    }
+
+    // 卸载单个地砖
+    private void UnloadTile(Vector2I tilePos)
+    {
+        _tileMapLayer.SetCell(tilePos, -1); // -1 表示删除该位置的地砖
+        _loadedTiles.Remove(tilePos);
+    }
+}

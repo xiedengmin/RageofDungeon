@@ -1,0 +1,15 @@
+[gd_resource type="FontFile" load_steps=3 format=2]
+
+[ext_resource path="res://addons/BitmapFontCutterPlus/cutter.cs" type="Script" id=1]
+[ext_resource path="res://assets/fonts/bitmapfont/s_lv/lv0_9.png" type="Texture2D" id=2]
+
+[resource]
+textures = [ ExtResource( 2 ) ]
+chars = PackedInt32Array( 56, 0, 48, 0, 6, 7, 0, 0, 5, 48, 0, 0, 0, 6, 7, 0, 0, 5, 57, 0, 54, 0, 6, 7, 0, 0, 5, 49, 0, 6, 0, 6, 7, 0, 0, 5, 50, 0, 12, 0, 6, 7, 0, 0, 5, 51, 0, 18, 0, 6, 7, 0, 0, 5, 52, 0, 24, 0, 6, 7, 0, 0, 5, 53, 0, 30, 0, 6, 7, 0, 0, 5, 54, 0, 36, 0, 6, 7, 0, 0, 5, 55, 0, 42, 0, 6, 7, 0, 0, 5 )
+height = 7.0
+script = ExtResource( 1 )
+GlyphSize = Vector2( 6, 7 )
+TextureToCut = ExtResource( 2 )
+StartChar = 48
+Spacing = -1.0
+Monospaced = true

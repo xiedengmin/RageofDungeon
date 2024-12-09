@@ -1,0 +1,381 @@
+[gd_scene load_steps=41 format=3 uid="uid://cqxfjjcx8hu8q"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://g6f6bt1ksu1r" path="res://assets/images/npc/npc_birken2/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c8ek8qhb8gx1g" path="res://assets/images/npc/npc_birken2/2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bxpkcjdgwyg4i" path="res://assets/images/npc/npc_birken2/4.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cn4i1u4yycsa5" path="res://assets/images/npc/npc_birken2/0.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cckfxn6titgn0" path="res://assets/images/npc/npc_birken2/1.png" id="7"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="8"]
+[ext_resource type="Script" path="res://src/npc/Birken2.cs" id="9"]
+[ext_resource type="AudioStream" uid="uid://b4bx1kp6octb4" path="res://assets/sounds/npc/birken/bk_amb.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://c3ilwft7jnthe" path="res://assets/sounds/npc/birken/bk_fw_05.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://ddgjptiks7vhq" path="res://assets/sounds/npc/birken/bk_tk_02.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://b2wly3pv1iyt2" path="res://assets/sounds/npc/birken/bk_fw_03.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://dlwrgkjvrblh6" path="res://assets/sounds/npc/birken/bk_fw_04.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://ckdswtt3ivwij" path="res://assets/sounds/npc/birken/bk_tk_05.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://ctxlkgngmhk5" path="res://assets/sounds/npc/birken/bk_fw_01.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://cdw2jl2873eyo" path="res://assets/sounds/npc/birken/bk_tk_01.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://cng2hva0fkvby" path="res://assets/sounds/npc/birken/bk_tk_04.ogg" id="18"]
+[ext_resource type="AudioStream" uid="uid://dexksy8cnrsrm" path="res://assets/sounds/npc/birken/bk_fw_02.ogg" id="19"]
+[ext_resource type="AudioStream" uid="uid://cpjwxsny4rjgb" path="res://assets/sounds/npc/birken/bk_tk_03.ogg" id="20"]
+[ext_resource type="Texture2D" uid="uid://b0undlnhsoira" path="res://assets/images/face/npc/popup/birken2.png" id="21"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="22"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("2")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("8")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 0.9
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wa5f5"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "fw_01"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_03"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "fw_04"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "fw_05"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_01"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "tk_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="14"]
+resource_name = "tk_03"
+length = 3.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="15"]
+resource_name = "tk_04"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="16"]
+resource_name = "tk_05"
+length = 3.1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tfco1"]
+_data = {
+"amb_01": SubResource("6"),
+"fw_01": SubResource("7"),
+"fw_02": SubResource("8"),
+"fw_03": SubResource("9"),
+"fw_04": SubResource("10"),
+"fw_05": SubResource("11"),
+"tk_01": SubResource("12"),
+"tk_02": SubResource("13"),
+"tk_03": SubResource("14"),
+"tk_04": SubResource("15"),
+"tk_05": SubResource("16")
+}
+
+[node name="Birken2" instance=ExtResource("1")]
+script = ExtResource("9")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-29.8452, 52.1177)
+sprite_frames = SubResource("2")
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_wa5f5")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+text = "博肯"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("19")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_tfco1")
+}
+
+[node name="Menu_Birken2" parent="." index="10" instance=ExtResource("22")]
+
+[node name="faceIcon" parent="Menu_Birken2/top" index="0"]
+texture = ExtResource("21")
+
+[node name="nameLabel" parent="Menu_Birken2/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "博肯"
+
+[editable path="Menu_Birken2"]

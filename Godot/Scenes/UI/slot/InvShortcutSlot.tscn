@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0expods1dumt"]
+
+[ext_resource type="Script" path="res://src/UI/slot/InvShortcutSlot.cs" id="1_lybpi"]
+[ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
+
+[node name="InvShortcutSlot" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.966
+anchor_bottom = 0.169
+offset_right = 16.52
+offset_bottom = 3.31999
+expand_mode = 1
+script = ExtResource("1_lybpi")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 34.0
+expand_mode = 1
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+texture = ExtResource("3")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_InvShortcutSlot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_InvShortcutSlot_mouse_exited"]

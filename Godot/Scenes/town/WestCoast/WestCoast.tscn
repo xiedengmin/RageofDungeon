@@ -1,0 +1,247 @@
+[gd_scene load_steps=19 format=3 uid="uid://ccdijvkpil0bk"]
+
+[ext_resource type="PackedScene" uid="uid://bt26i8813n1kp" path="res://scenes/town/WestCoast/stage_05.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cmg43exif3ghl" path="res://scenes/town/WestCoast/stage_06.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://xgv4vh236ox2" path="res://scenes/town/WestCoast/stage_01.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c673nlcfxuutg" path="res://scenes/town/WestCoast/stage_03.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://5epscerhjsig" path="res://scenes/town/WestCoast/stage_02.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://r6k8ydqf76jb" path="res://scenes/town/WestCoast/stage_04.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="7"]
+[ext_resource type="Script" path="res://src/town/WestCoast.cs" id="8"]
+
+[sub_resource type="Animation" id="3"]
+resource_name = "flash"
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1k1fe"]
+_data = {
+"flash": SubResource("3")
+}
+
+[sub_resource type="Animation" id="1"]
+resource_name = "move"
+length = 1.2
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(747, 179), Vector2(747, 178), Vector2(747, 177), Vector2(747, 179)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w874t"]
+_data = {
+"move": SubResource("1")
+}
+
+[sub_resource type="Animation" id="2"]
+length = 1.67
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23, 0.41, 0.56, 0.74, 0.97, 1.32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(750, 354), Vector2(750, 352), Vector2(750, 350), Vector2(750, 352), Vector2(750, 354), Vector2(750, 356), Vector2(750, 358)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_456j7"]
+_data = {
+"move": SubResource("2")
+}
+
+[sub_resource type="Animation" id="Animation_a5l8y"]
+resource_name = "move"
+length = 1.2
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(747, 179), Vector2(747, 178), Vector2(747, 177), Vector2(747, 179)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgvmh"]
+_data = {
+"move": SubResource("Animation_a5l8y")
+}
+
+[sub_resource type="Animation" id="Animation_rvj2o"]
+length = 1.67
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23, 0.41, 0.56, 0.74, 0.97, 1.32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(750, 354), Vector2(750, 352), Vector2(750, 350), Vector2(750, 352), Vector2(750, 354), Vector2(750, 356), Vector2(750, 358)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_054yj"]
+_data = {
+"move": SubResource("Animation_rvj2o")
+}
+
+[node name="WestCoast" type="Node2D"]
+script = ExtResource("8")
+
+[node name="stage_01" parent="." instance=ExtResource("3")]
+
+[node name="stage_02" parent="." instance=ExtResource("5")]
+position = Vector2(0, 832)
+
+[node name="background" parent="stage_02/environment" index="0"]
+offset = Vector2(0, 832)
+transform = Transform2D(1, 0, 0, 1, 0, 832)
+
+[node name="Sharan" parent="stage_02/npc" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Iris" parent="stage_02/npc" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Danjin3" parent="stage_02/npc" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="AnimationPlayer" parent="stage_02/hendonpath_0" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_1k1fe")
+}
+
+[node name="stage_03" parent="." instance=ExtResource("4")]
+position = Vector2(0, 1427)
+
+[node name="background" parent="stage_03/environment" index="1"]
+offset = Vector2(0, 1427)
+transform = Transform2D(1, 0, 0, 1, 0, 1427)
+
+[node name="stage_04" parent="." instance=ExtResource("6")]
+position = Vector2(0, 2168)
+
+[node name="background" parent="stage_04/environment" index="0"]
+offset = Vector2(0, 2168)
+transform = Transform2D(1, 0, 0, 1, 0, 2168)
+
+[node name="AnimationPlayer" parent="stage_04/environment/westomidship" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_w874t")
+}
+
+[node name="AnimationPlayer" parent="stage_04/environment/westnearship" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_456j7")
+}
+
+[node name="Ophelia" parent="stage_04" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0004
+offset_bottom = 17.0
+
+[node name="stage_05" parent="." instance=ExtResource("1")]
+position = Vector2(0, 2857)
+
+[node name="background" parent="stage_05/environment" index="0"]
+offset = Vector2(0, 2857)
+transform = Transform2D(1, 0, 0, 1, 0, 2857)
+
+[node name="AnimationPlayer" parent="stage_05/environment/westomidship" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_fgvmh")
+}
+
+[node name="AnimationPlayer" parent="stage_05/environment/westnearship" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_054yj")
+}
+
+[node name="stage_06" parent="." instance=ExtResource("2")]
+position = Vector2(0, 3600)
+
+[node name="background" parent="stage_06" index="0"]
+offset = Vector2(0, 3600)
+transform = Transform2D(1, 0, 0, 1, 0, 3600)
+
+[node name="Simona" parent="stage_06" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Gate" parent="." instance=ExtResource("7")]
+position = Vector2(2.68506, 4406.48)
+
+[node name="Seria" parent="Gate" index="3"]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Postbox" parent="Gate" index="4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Storate" parent="Gate" index="10"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[editable path="stage_02"]
+[editable path="stage_03"]
+[editable path="stage_04"]
+[editable path="stage_05"]
+[editable path="stage_06"]
+[editable path="Gate"]
+[editable path="Gate/doors/to_stage_01"]

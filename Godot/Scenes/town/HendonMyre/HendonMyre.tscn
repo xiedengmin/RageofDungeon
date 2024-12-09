@@ -1,0 +1,526 @@
+[gd_scene load_steps=54 format=3 uid="uid://ngg37jnp2afu"]
+
+[ext_resource type="PackedScene" uid="uid://2llvwshueqwo" path="res://scenes/town/HendonMyre/stage_01.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://4xbs067plcwt" path="res://scenes/town/HendonMyre/stage_02.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://7mt7ewynkoax" path="res://scenes/town/HendonMyre/stage_05.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://86mojqh0n5uf" path="res://scenes/town/HendonMyre/stage_06.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://d0kx7mrk3whjg" path="res://scenes/town/HendonMyre/stage_04.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://bxse3p7atyg84" path="res://assets/images/map/hendonMyre/bigrabbit_0.png" id="5_na8d8"]
+[ext_resource type="PackedScene" uid="uid://b0iqan8ff6l17" path="res://scenes/town/HendonMyre/stage_03.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://cxrrpurjt51sl" path="res://assets/images/map/hendonMyre/bigrabbit_1.png" id="6_hrjbp"]
+[ext_resource type="PackedScene" uid="uid://cf3tj406w3a0r" path="res://scenes/town/HendonMyre/stage_07.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://kv6v5bs2alan" path="res://assets/images/map/hendonMyre/bigrabbit_2.png" id="7_gek4c"]
+[ext_resource type="PackedScene" uid="uid://bvxvslsoxm3j0" path="res://scenes/town/HendonMyre/stage_08.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://dry5qo80u67d" path="res://assets/images/map/hendonMyre/smallbear_0.png" id="8_ce0oa"]
+[ext_resource type="PackedScene" uid="uid://cbj86rofl36ps" path="res://scenes/town/Gate_HendonMyre.tscn" id="9"]
+[ext_resource type="Texture2D" uid="uid://dw4xw7khxw72c" path="res://assets/images/map/hendonMyre/smallbear_1.png" id="9_a4xrp"]
+[ext_resource type="Script" path="res://src/town/HendonMyre.cs" id="10"]
+[ext_resource type="Texture2D" uid="uid://ccbmcngojtw3v" path="res://assets/images/map/hendonMyre/smallbear_2.png" id="10_qbtyn"]
+[ext_resource type="Texture2D" uid="uid://b4r2w3q8njkde" path="res://assets/images/map/hendonMyre/hmobj01_18.png" id="11_centk"]
+[ext_resource type="Texture2D" uid="uid://dgjvvf26oxbkv" path="res://assets/images/map/hendonMyre/hmobj01_19.png" id="12_tmqw3"]
+[ext_resource type="Texture2D" uid="uid://dmwkf1jy1a8aj" path="res://assets/images/map/hendonMyre/hmobj01_20.png" id="13_644c8"]
+[ext_resource type="Texture2D" uid="uid://dpr2yp636r3xw" path="res://assets/images/map/hendonMyre/hmobj01_21.png" id="14_uevcg"]
+[ext_resource type="Texture2D" uid="uid://cdua4ff2n1opc" path="res://assets/images/map/hendonMyre/hmobj01_7.png" id="15_bnj7o"]
+[ext_resource type="Texture2D" uid="uid://w8p85u4j472l" path="res://assets/images/map/hendonMyre/hmobj01_8.png" id="16_1kdan"]
+[ext_resource type="Texture2D" uid="uid://b2raxtbr172ym" path="res://assets/images/map/hendonMyre/hmobj01_9.png" id="17_kkum3"]
+[ext_resource type="Texture2D" uid="uid://b7jw27va8ncii" path="res://assets/images/map/hendonMyre/hmobj01_10.png" id="18_n4u3o"]
+[ext_resource type="Texture2D" uid="uid://cq4y18luy6t8d" path="res://assets/images/map/hendonMyre/hmobj01_11.png" id="19_71r1r"]
+[ext_resource type="Texture2D" uid="uid://ka47uegutswd" path="res://assets/images/map/hendonMyre/hmobj01_12.png" id="20_slu2g"]
+[ext_resource type="Texture2D" uid="uid://r3mqy1034dyi" path="res://assets/images/map/hendonMyre/hmobj01_13.png" id="21_wybmd"]
+[ext_resource type="Texture2D" uid="uid://dtjasbi6iltum" path="res://assets/images/map/light/onipart/0.png" id="22_ai6sb"]
+[ext_resource type="Texture2D" uid="uid://bld8jkx4lgpxr" path="res://assets/images/map/light/onipart/1.png" id="23_nkcjh"]
+[ext_resource type="Texture2D" uid="uid://d1njec6quppxl" path="res://assets/images/map/light/onipart/2.png" id="24_q12hb"]
+[ext_resource type="Texture2D" uid="uid://df21wnbah68v" path="res://assets/images/map/light/onipart/3.png" id="25_0r2k4"]
+[ext_resource type="Texture2D" uid="uid://do25dcnb2j77v" path="res://assets/images/map/light/onipart/4.png" id="26_blofo"]
+[ext_resource type="Texture2D" uid="uid://c2j6imhivd7h5" path="res://assets/images/map/light/onipart/5.png" id="27_7amvu"]
+[ext_resource type="Texture2D" uid="uid://c25sle6ynwsiu" path="res://assets/images/map/light/onipart/6.png" id="28_38kl6"]
+
+[sub_resource type="Animation" id="3"]
+resource_name = "flash"
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nced3"]
+_data = {
+"flash": SubResource("3")
+}
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_na8d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hrjbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gek4c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 10.56
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 9.96, 10.2, 10.32, 10.44),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yk2fy"]
+_data = {
+"idle": SubResource("5")
+}
+
+[sub_resource type="SpriteFrames" id="8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ce0oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a4xrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qbtyn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="9"]
+length = 7.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7, 7.1, 7.2, 7.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kg2dl"]
+_data = {
+"idle": SubResource("9")
+}
+
+[sub_resource type="SpriteFrames" id="10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_centk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tmqw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_644c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_uevcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="11"]
+length = 2.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hy877"]
+_data = {
+"idle": SubResource("11")
+}
+
+[sub_resource type="SpriteFrames" id="12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_bnj7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1kdan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kkum3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n4u3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_71r1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_slu2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wybmd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="13"]
+length = 0.84
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v4l8r"]
+_data = {
+"idle": SubResource("13")
+}
+
+[sub_resource type="Animation" id="14"]
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nd5fi"]
+_data = {
+"flash": SubResource("14")
+}
+
+[sub_resource type="SpriteFrames" id="19"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_ai6sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_nkcjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_q12hb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0r2k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_blofo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7amvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_38kl6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_7mtrp"]
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ha58x"]
+_data = {
+"flash": SubResource("Animation_7mtrp")
+}
+
+[node name="HendonMyre" type="Node2D"]
+script = ExtResource("10")
+
+[node name="stage_01" parent="." instance=ExtResource("1")]
+
+[node name="stage_02" parent="." instance=ExtResource("2")]
+position = Vector2(0, 820)
+
+[node name="background" parent="stage_02/environment" index="0"]
+offset = Vector2(0, 820)
+transform = Transform2D(1, 0, 0, 1, 0, 820)
+
+[node name="hmwall02" parent="stage_02/environment" index="1"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0)
+
+[node name="hmtile" parent="stage_02/environment" index="2"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0)
+
+[node name="Rothon" parent="stage_02/npc" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Grandis" parent="stage_02/npc" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Birken" parent="stage_02/npc" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Albert" parent="stage_02/npc" index="3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Board" parent="stage_02/npc" index="4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="stage_03" parent="." instance=ExtResource("6")]
+position = Vector2(0, 1520)
+
+[node name="background" parent="stage_03/environment" index="0"]
+offset = Vector2(0, 1520)
+transform = Transform2D(1, 0, 0, 1, 0, 1520)
+
+[node name="hmwall02" parent="stage_03/environment" index="2"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0)
+
+[node name="hmtile" parent="stage_03/environment" index="3"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0)
+
+[node name="AnimationPlayer" parent="stage_03/environment/hendonpath_1" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_nced3")
+}
+
+[node name="AnimatedSprite2D" parent="stage_03/environment/bigrabbit" index="0"]
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" parent="stage_03/environment/bigrabbit" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_yk2fy")
+}
+
+[node name="shadow" parent="stage_03/environment/smallbear" index="0"]
+sprite_frames = SubResource("8")
+frame = 0
+
+[node name="AnimatedSprite2D" parent="stage_03/environment/smallbear" index="1"]
+sprite_frames = SubResource("8")
+frame = 0
+
+[node name="AnimationPlayer" parent="stage_03/environment/smallbear" index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_kg2dl")
+}
+
+[node name="AnimatedSprite2D" parent="stage_03/environment/sstreet00" index="0"]
+sprite_frames = SubResource("10")
+frame = 0
+
+[node name="AnimationPlayer" parent="stage_03/environment/sstreet00" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_hy877")
+}
+
+[node name="AnimatedSprite2D" parent="stage_03/environment/hmobj01_14" index="0"]
+sprite_frames = SubResource("12")
+frame = 0
+
+[node name="AnimationPlayer" parent="stage_03/environment/hmobj01_14" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_v4l8r")
+}
+
+[node name="Oran" parent="stage_03/npc" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Sinda" parent="stage_03/npc" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="GSD" parent="stage_03/npc" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="AnimationPlayer" parent="stage_03/hendonpath_0" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_nd5fi")
+}
+
+[node name="onipart" parent="stage_03" index="7"]
+sprite_frames = SubResource("19")
+
+[node name="stage_04" parent="." instance=ExtResource("5")]
+position = Vector2(2969, 0)
+
+[node name="background" parent="stage_04/environment" index="0"]
+offset = Vector2(2969, 0)
+transform = Transform2D(1, 0, 0, 1, 2969, 0)
+
+[node name="hmbstile" parent="stage_04/environment" index="1"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0)
+
+[node name="Shylock" parent="stage_04" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="AnimationPlayer" parent="stage_04/hendonpath_0" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_ha58x")
+}
+
+[node name="stage_05" parent="." instance=ExtResource("3")]
+position = Vector2(0, 2320)
+
+[node name="background" parent="stage_05" index="0"]
+offset = Vector2(0, 2320)
+transform = Transform2D(1, 0, 0, 1, 0, 2320)
+
+[node name="Susia" parent="stage_05" index="7"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="stage_06" parent="." instance=ExtResource("4")]
+position = Vector2(4572, 0)
+
+[node name="background" parent="stage_06/environment" index="0"]
+offset = Vector2(4572, 0)
+transform = Transform2D(1, 0, 0, 1, 4572, 0)
+
+[node name="stage_07" parent="." instance=ExtResource("7")]
+position = Vector2(0, 4043)
+
+[node name="background" parent="stage_07/environment" index="0"]
+offset = Vector2(0, 4043)
+transform = Transform2D(1, 0, 0, 1, 0, 4043)
+
+[node name="hmwall02" parent="stage_07/environment" index="1"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0)
+
+[node name="hmtile" parent="stage_07/environment" index="2"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0)
+
+[node name="stage_08" parent="." instance=ExtResource("8")]
+position = Vector2(0, 4930)
+
+[node name="background" parent="stage_08/environment" index="0"]
+offset = Vector2(0, 4930)
+transform = Transform2D(1, 0, 0, 1, 0, 4930)
+
+[node name="hmbstile" parent="stage_08/environment" index="1"]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0)
+
+[node name="Gate" parent="." instance=ExtResource("9")]
+position = Vector2(0, 3146)
+
+[node name="Seria" parent="Gate" index="3"]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Postbox" parent="Gate" index="4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 17.0
+
+[node name="Storate" parent="Gate" index="10"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[editable path="stage_02"]
+[editable path="stage_03"]
+[editable path="stage_04"]
+[editable path="stage_05"]
+[editable path="stage_06"]
+[editable path="stage_07"]
+[editable path="stage_08"]
+[editable path="Gate"]
+[editable path="Gate/doors/to_stage_03"]

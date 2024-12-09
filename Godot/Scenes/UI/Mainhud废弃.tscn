@@ -1,0 +1,193 @@
+[gd_scene load_steps=29 format=3 uid="uid://b4ef43r6x2snx"]
+
+[ext_resource type="Texture2D" uid="uid://8qescc4hodme" path="res://assets/images/mainhud/8.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bk0pklfqbgan1" path="res://assets/images/mainhud/4.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://di57bvniphria" path="res://assets/images/mainhud/15.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://du8mv727qyv7j" path="res://assets/images/mainhud/1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://de0ejbjlvcju3" path="res://assets/images/mainhud/16.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bu1111jfrg5nd" path="res://assets/images/mainhud/2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bijvxhtsykkcd" path="res://assets/images/mainhud/5.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://buxdgs8jilvhk" path="res://assets/images/mainhud/17.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dftwm5ptk4lrd" path="res://assets/images/mainhud/18.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://5afi23mg1hq5" path="res://assets/images/mainhud/3.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b1ekgb52wwagh" path="res://assets/images/mainhud/30.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dm4hawf8awhoj" path="res://assets/images/mainhud/14.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://chuusyxx23oub" path="res://assets/images/mainhud/31.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://c84dfoi8pex4g" path="res://assets/images/mainhud/10.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://bm2vp8qoabw2j" path="res://assets/images/mainhud/11.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://b4swpksj4v4xm" path="res://assets/images/mainhud/0.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://bg2kmfo2vkppl" path="res://assets/images/mainhud/6.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://co1cvlk0227hq" path="res://assets/images/mainhud/9.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://bibyd4vm0gus0" path="res://assets/images/mainhud/12.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://2g8phd7daljq" path="res://assets/images/mainhud/13.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://b3iw0dkepbdbb" path="res://assets/images/mainhud/19.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://4otkfsk7y0cq" path="res://assets/images/mainhud/7.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://d05kh0hhu3pho" path="res://assets/images/mainhud/32.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://drmwar5yx801r" path="res://assets/images/mainhud/34.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://4sq4vii33jvv" path="res://assets/images/mainhud/35.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://clnsf3ndk4bmd" path="res://assets/images/mainhud/33.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://cq814d1j73ioi" path="res://assets/fonts/bitmapfont/level02/10.png" id="28"]
+[ext_resource type="Script" path="res://src/UI/Mainhud.cs" id="31"]
+
+[node name="Mainhud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("31")
+
+[node name="panel" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -110.0
+offset_right = 400.0
+texture = ExtResource("17")
+stretch_mode = 1
+
+[node name="expBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 89.5469
+offset_top = 592.163
+offset_right = 710.547
+offset_bottom = 596.163
+value = 100.0
+texture_progress = ExtResource("2")
+
+[node name="fatigueBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 345.778
+offset_top = 545.323
+offset_right = 453.778
+offset_bottom = 549.323
+value = 50.0
+texture_progress = ExtResource("10")
+
+[node name="SP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 733.911
+offset_top = 585.528
+offset_right = 773.911
+offset_bottom = 597.528
+text = "0"
+
+[node name="hpBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 15.803
+offset_top = 509.0
+offset_right = 85.803
+offset_bottom = 579.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("4")
+
+[node name="mpBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 715.049
+offset_top = 509.0
+offset_right = 785.049
+offset_bottom = 579.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("6")
+
+[node name="upBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 74.966
+offset_top = 585.0
+offset_right = 83.966
+offset_bottom = 599.0
+texture_normal = ExtResource("27")
+texture_pressed = ExtResource("26")
+texture_hover = ExtResource("25")
+
+[node name="downBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 74.966
+offset_top = 585.0
+offset_right = 83.966
+offset_bottom = 599.0
+texture_normal = ExtResource("11")
+texture_pressed = ExtResource("24")
+texture_hover = ExtResource("13")
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2(345.839, 554.479)
+
+[node name="bagBtn" type="TextureButton" parent="buttons"]
+offset_right = 18.0
+offset_bottom = 31.0
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("23")
+texture_hover = ExtResource("18")
+
+[node name="stateBtn" type="TextureButton" parent="buttons"]
+offset_left = 21.8745
+offset_right = 39.8745
+offset_bottom = 31.0
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("15")
+texture_hover = ExtResource("19")
+
+[node name="fightBtn" type="TextureButton" parent="buttons"]
+offset_left = 44.5
+offset_right = 62.5
+offset_bottom = 31.0
+texture_normal = ExtResource("16")
+texture_pressed = ExtResource("21")
+texture_hover = ExtResource("20")
+
+[node name="tutBtn" type="TextureButton" parent="buttons"]
+offset_left = 67.2042
+offset_right = 85.2042
+offset_bottom = 31.0
+texture_normal = ExtResource("12")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("3")
+
+[node name="setBtn" type="TextureButton" parent="buttons"]
+offset_left = 90.0
+offset_right = 108.0
+offset_bottom = 31.0
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("22")
+texture_hover = ExtResource("9")
+
+[node name="skillList" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 494.0
+offset_right = 696.0
+offset_bottom = 589.0
+
+[node name="itemList" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 550.0
+offset_right = 329.0
+offset_bottom = 590.0
+
+[node name="lv" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 586.0
+offset_right = 79.0
+offset_bottom = 613.0
+text = "15
+"
+
+[node name="10" type="Sprite2D" parent="."]
+position = Vector2(33.779, 592)
+texture = ExtResource("28")
+
+[connection signal="pressed" from="buttons/bagBtn" to="." method="_on_bag"]
+[connection signal="pressed" from="buttons/stateBtn" to="." method="_on_state"]
+[connection signal="pressed" from="buttons/fightBtn" to="." method="_on_fight"]
+[connection signal="pressed" from="buttons/tutBtn" to="." method="_on_tutBtn_pressed"]
+[connection signal="pressed" from="buttons/setBtn" to="." method="_on_setBtn_pressed"]

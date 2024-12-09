@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgpv5vi3k4bcp"]
+
+[ext_resource type="Texture2D" uid="uid://qkgh3p5ayrt4" path="res://assets/images/icon/weapon/swordman/club/1.png" id="1"]
+[ext_resource type="Script" path="res://src/UI/slot/EquipmentSlot.cs" id="2"]
+[ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
+
+[node name="EquipSlot" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.035
+offset_right = 2.12
+offset_bottom = 2.8
+expand_mode = 1
+script = ExtResource("2")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.778
+anchor_bottom = 0.778
+offset_right = -28.008
+offset_bottom = -28.008
+texture = ExtResource("1")
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 28.0
+offset_bottom = 27.0
+texture = ExtResource("3")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_EquipSlot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_EquipSlot_mouse_exited"]

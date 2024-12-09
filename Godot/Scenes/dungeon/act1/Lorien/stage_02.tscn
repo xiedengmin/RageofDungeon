@@ -1,0 +1,261 @@
+[gd_scene load_steps=26 format=3 uid="uid://bdxbjurs8pclm"]
+
+[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="1_sbqjp"]
+[ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="2_qvdq7"]
+[ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="3_gwkki"]
+[ext_resource type="Texture2D" uid="uid://dt737fegcc41c" path="res://assets/images/map/act1/01tile03.png" id="4_yf0gl"]
+[ext_resource type="Texture2D" uid="uid://chnjjdxp4v52e" path="res://assets/images/map/act1/01tile02.png" id="5_e6ife"]
+[ext_resource type="Texture2D" uid="uid://s3unr7x3knpn" path="res://assets/images/map/act1/01tile01.png" id="6_xprx8"]
+[ext_resource type="Texture2D" uid="uid://b28qtbglwlips" path="res://assets/images/map/act1/01obj101.png" id="7_l20wj"]
+[ext_resource type="Texture2D" uid="uid://ore2joym51wh" path="res://assets/images/map/act1/01obj102.png" id="8_igunn"]
+[ext_resource type="Texture2D" uid="uid://ej7wcncqxm5g" path="res://assets/images/map/act1/01obj105.png" id="9_25bws"]
+[ext_resource type="Texture2D" uid="uid://cr2mxmnvkertk" path="res://assets/images/map/act1/01obj400.png" id="10_fectl"]
+[ext_resource type="Texture2D" uid="uid://cnrss1s108n0l" path="res://assets/images/map/act1/01obj300_0.png" id="11_22wvl"]
+[ext_resource type="Texture2D" uid="uid://bsd5b125b7mtw" path="res://assets/images/map/act1/01obj109.png" id="12_yfxn4"]
+[ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="13_gwlti"]
+[ext_resource type="PackedScene" path="res://src/component/act1/RightGate.tscn" id="14_t0m6l"]
+[ext_resource type="PackedScene" path="res://src/component/act1/01obj002.tscn" id="15_vp1o0"]
+[ext_resource type="Texture2D" uid="uid://v2at6x35ik63" path="res://assets/images/map/act1/01obj001.png" id="16_qskui"]
+[ext_resource type="PackedScene" path="res://src/component/act1/01obj107.tscn" id="17_c6670"]
+[ext_resource type="Texture2D" uid="uid://cp632j2ry7f54" path="res://assets/images/map/act1/01obj111.png" id="18_v6ml8"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="19_gfrms"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_noild"]
+texture = ExtResource("4_yf0gl")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwwd2"]
+texture = ExtResource("5_e6ife")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3wmh"]
+texture = ExtResource("6_xprx8")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/3 = SubResource("TileSetAtlasSource_noild")
+sources/4 = SubResource("TileSetAtlasSource_qwwd2")
+sources/5 = SubResource("TileSetAtlasSource_e3wmh")
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(60.4592, 101.81)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(1228.01, 57.9846)
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource("1_sbqjp")
+bgm = "forest01_new"
+env = "amb_forest_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+scale = Vector2(1.38919, 1)
+texture = ExtResource("2_qvdq7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 925, 375)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+scale = Vector2(1.00781, 0.992084)
+texture = ExtResource("3_gwkki")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 379)
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2(0, 80)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 3, 0, 1, 3, 0, 2, 4, 0, 3, 5, 0, 4, 3, 0, 1507333, 3, 262144, 1507347, 3, 262144, 1638434, 3, 262144, 1638449, 3, 262144, 1638457, 3, 262144)
+
+[node name="01obj101" type="Sprite2D" parent="environment"]
+position = Vector2(406, 154)
+texture = ExtResource("7_l20wj")
+
+[node name="01obj102" type="Sprite2D" parent="environment"]
+position = Vector2(798, 155)
+texture = ExtResource("8_igunn")
+
+[node name="01obj105" type="Sprite2D" parent="environment"]
+position = Vector2(226.621, 303.681)
+texture = ExtResource("9_25bws")
+
+[node name="01obj400" type="Sprite2D" parent="environment"]
+position = Vector2(578.956, 265)
+texture = ExtResource("10_fectl")
+
+[node name="01obj300_0" type="Sprite2D" parent="environment"]
+position = Vector2(916.838, 255.227)
+texture = ExtResource("11_22wvl")
+
+[node name="01obj109" type="Sprite2D" parent="environment"]
+position = Vector2(709.295, 340.681)
+texture = ExtResource("12_yfxn4")
+
+[node name="granflorisbush01" type="Sprite2D" parent="environment"]
+position = Vector2(1081.81, 344.885)
+texture = ExtResource("13_gwlti")
+
+[node name="granflorisbush02" type="Sprite2D" parent="environment"]
+position = Vector2(1166.74, 493.724)
+texture = ExtResource("13_gwlti")
+
+[node name="granflorisbush03" type="Sprite2D" parent="environment"]
+position = Vector2(450, -67)
+texture = ExtResource("13_gwlti")
+flip_h = true
+
+[node name="RightDoor" parent="environment" instance=ExtResource("14_t0m6l")]
+position = Vector2(43.925, 359.662)
+
+[node name="granflorisbush04" type="Sprite2D" parent="environment"]
+position = Vector2(832, -85)
+texture = ExtResource("13_gwlti")
+flip_h = true
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="objs" type="Node2D" parent="stage"]
+
+[node name="01obj003" parent="stage/objs" instance=ExtResource("15_vp1o0")]
+position = Vector2(768.314, 436.07)
+
+[node name="01obj001" type="Sprite2D" parent="stage/objs"]
+position = Vector2(139.289, 277.236)
+scale = Vector2(1.38405, 2.34697)
+texture = ExtResource("16_qskui")
+
+[node name="01obj107" parent="stage/objs" instance=ExtResource("17_c6670")]
+position = Vector2(516.174, 392.139)
+
+[node name="01obj108" parent="stage/objs" instance=ExtResource("17_c6670")]
+position = Vector2(665.845, 482.566)
+
+[node name="01obj002" parent="stage/objs" instance=ExtResource("15_vp1o0")]
+position = Vector2(502.908, 340.911)
+
+[node name="01obj004" parent="stage/objs" instance=ExtResource("15_vp1o0")]
+position = Vector2(474.915, 398.247)
+
+[node name="01obj111" type="Sprite2D" parent="."]
+position = Vector2(317, 483)
+texture = ExtResource("18_v6ml8")
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(47.8777, 388.254)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("19_gfrms")
+current = "stage_02"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(66.1223, 24.746)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1147, 596)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+position = Vector2(-20.0924, -4.06)
+scale = Vector2(1.01243, 1.0057)
+polygon = PackedVector2Array(183.566, 546.86, 154.349, 502.66, 89.922, 446.474, 25.4947, 395.531, 24.7281, 336.673, 508.885, 332.705, 554.397, 340.843, 647.292, 364.067, 664.523, 376.803, 714.454, 377.946, 779.143, 356.575, 836.828, 353.579, 874.286, 333.352, 894.513, 343.84, 930.472, 344.589, 953.696, 328.857, 971.613, 329.53, 979.55, 373.977, 1021.12, 412.762, 1094.54, 444.226, 1056.33, 495.918, 1057.87, 543.902, 1117.4, 544.299, 1119.26, -3.01837, 0.772663, 0.727386, -0.725643, 544.613)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(588.881, 583.056)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+position = Vector2(15.119, -0.0560112)
+shape = SubResource("3")
+
+[node name="Born" type="Marker2D" parent="."]
+position = Vector2(838.148, 458.759)
+
+[node name="BornMonster" type="Marker2D" parent="."]
+position = Vector2(244, 386)

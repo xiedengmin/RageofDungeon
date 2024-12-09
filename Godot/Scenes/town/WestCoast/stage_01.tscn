@@ -1,0 +1,670 @@
+[gd_scene load_steps=84 format=3 uid="uid://xgv4vh236ox2"]
+
+[ext_resource type="Texture2D" uid="uid://dseiyrt2ovcjb" path="res://assets/images/map/tiles/hmtileex.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bxtbff1lcqdes" path="res://assets/images/map/path/hendonpath_1.png" id="2"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="3"]
+[ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://duicqhecebsck" path="res://assets/images/map/path/hendonpath_4.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://e5tcashw2vtc" path="res://assets/images/map/hendonMyre/hmstreetlamp_0.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c2viqrt2pw1jy" path="res://assets/images/map/hendonMyre/hmbgflowerpot0.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cgp18d5nqqmtq" path="res://assets/images/map/obj/hmpoll_0.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c4yi3lad1a3e" path="res://assets/images/map/hendonMyre/hmbggrass0.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bq7hlqr20wc2o" path="res://assets/images/map/hendonMyre/hmkannahouse.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bai0p4frl1vrv" path="res://assets/images/map/hendonMyre/hmbggrass1.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cr5nnm2h45m6g" path="res://assets/images/map/sign/sign5.png" id="13"]
+[ext_resource type="PackedScene" path="res://src/component/obj/egseriahouse.tscn" id="14"]
+[ext_resource type="Texture2D" uid="uid://dciamxndo2w10" path="res://assets/images/map/hendonMyre/hmbgbox_0.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://beglgbujersdu" path="res://assets/images/map/light/seriahousewave01/0.png" id="15_82yxq"]
+[ext_resource type="Texture2D" uid="uid://c7ruoltcxtx1q" path="res://assets/images/map/hendonMyre/hmbgbox_1.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://ojk0yilqehe4" path="res://assets/images/map/light/seriahousewave01/1.png" id="16_fj8mu"]
+[ext_resource type="Texture2D" uid="uid://dib7eaj4o5sy3" path="res://assets/images/map/hendonMyre/hmbgbox_3.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://rdyomon37gm7" path="res://assets/images/map/light/seriahousewave01/2.png" id="17_pffm2"]
+[ext_resource type="Texture2D" uid="uid://2xss6xwxgbxt" path="res://assets/images/map/hendonMyre/hmbgbox_2.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dpfbrsgf7ktg1" path="res://assets/images/map/light/seriahousewave01/3.png" id="18_byu4d"]
+[ext_resource type="Texture2D" uid="uid://ka47uegutswd" path="res://assets/images/map/hendonMyre/hmobj01_12.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://b2bswei27qqbj" path="res://assets/images/map/light/seriahousewave01/4.png" id="19_eq04l"]
+[ext_resource type="Texture2D" uid="uid://w8p85u4j472l" path="res://assets/images/map/hendonMyre/hmobj01_8.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://bjcmwrl3wsban" path="res://assets/images/map/light/seriahousewave01/5.png" id="20_6qag6"]
+[ext_resource type="Texture2D" uid="uid://b2raxtbr172ym" path="res://assets/images/map/hendonMyre/hmobj01_9.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://dwoafy44cjhbr" path="res://assets/images/map/light/seriahousewave01/6.png" id="21_phl41"]
+[ext_resource type="Texture2D" uid="uid://r3mqy1034dyi" path="res://assets/images/map/hendonMyre/hmobj01_13.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://babrvgr7871nr" path="res://assets/images/map/light/seriahousewave01/7.png" id="22_s0jtf"]
+[ext_resource type="Texture2D" uid="uid://cdua4ff2n1opc" path="res://assets/images/map/hendonMyre/hmobj01_7.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://dflf6slxkn8do" path="res://assets/images/map/light/seriahousewave01/8.png" id="23_jkbjv"]
+[ext_resource type="Texture2D" uid="uid://bnhoknwgy6jvf" path="res://assets/images/map/hendonMyre/hmobj01_14.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://nexv73uvd738" path="res://assets/images/map/light/seriahousewave00/0.png" id="24_jm2j8"]
+[ext_resource type="Texture2D" uid="uid://b7jw27va8ncii" path="res://assets/images/map/hendonMyre/hmobj01_10.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://h7o7misp0ylf" path="res://assets/images/map/light/seriahousewave00/1.png" id="25_1sryy"]
+[ext_resource type="Texture2D" uid="uid://cq4y18luy6t8d" path="res://assets/images/map/hendonMyre/hmobj01_11.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://327xtrk4un3t" path="res://assets/images/map/light/seriahousewave00/2.png" id="26_8rrv3"]
+[ext_resource type="Texture2D" uid="uid://berdqahs65kgo" path="res://assets/images/map/hendonMyre/hmtree01.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://dpjq371tn86ds" path="res://assets/images/map/light/seriahousewave00/3.png" id="27_lmkdw"]
+[ext_resource type="Texture2D" uid="uid://baj5h730evjoh" path="res://assets/images/map/hendonMyre/goldencart.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://bxi4puh3chn5q" path="res://assets/images/map/light/seriahousewave00/4.png" id="28_kai51"]
+[ext_resource type="Texture2D" uid="uid://cyook15i7qhkj" path="res://assets/images/map/obj/hmpoll_3.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://btixkmlteb20l" path="res://assets/images/map/light/seriahousewave00/5.png" id="29_31lr7"]
+[ext_resource type="Texture2D" uid="uid://lr73qw10jncb" path="res://assets/images/map/hendonMyre/hmbrrtile01.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://ybf5ecbhbdvt" path="res://assets/images/map/light/seriahousewave00/6.png" id="30_vnurm"]
+[ext_resource type="Texture2D" uid="uid://cqeqi26lsy8fg" path="res://assets/images/map/hendonMyre/hmbrrtile02.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://cq4vvreb1k1qt" path="res://assets/images/map/light/seriahousewave00/7.png" id="31_xxodg"]
+[ext_resource type="Texture2D" uid="uid://dv6xwc5xbx05u" path="res://assets/images/map/hendonMyre/horsemane_1.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://cuochrm15ex28" path="res://assets/images/map/light/seriahousewave00/8.png" id="32_mki8l"]
+[ext_resource type="Texture2D" uid="uid://3j1lv5tjybk1" path="res://assets/images/map/hendonMyre/horsemane_3.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://xquc1hp80tql" path="res://assets/images/map/hendonMyre/horsemane_0.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://dni5drjhy2r40" path="res://assets/images/map/hendonMyre/horsemane_2.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://byxmv4r0vj1p1" path="res://assets/images/map/hendonMyre/hmseriahouse1.png" id="38"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="39"]
+[ext_resource type="PackedScene" uid="uid://bpla15og8bhwx" path="res://scenes/npc/Lorian.tscn" id="40"]
+[ext_resource type="PackedScene" uid="uid://bf2kojqmmjeb8" path="res://scenes/npc/Kagon.tscn" id="41"]
+[ext_resource type="PackedScene" path="res://scenes/npc/Roger.tscn" id="42"]
+[ext_resource type="PackedScene" uid="uid://xgqbu4h8564j" path="res://scenes/npc/Daphne.tscn" id="43"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="44"]
+[ext_resource type="PackedScene" uid="uid://c3bejm435t7pj" path="res://scenes/npc/Danjin2.tscn" id="45"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66ewd"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(224, 134)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/0 = SubResource("TileSetAtlasSource_66ewd")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30ge6"]
+texture = ExtResource("4")
+texture_region_size = Vector2i(224, 138)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="2"]
+sources/0 = SubResource("TileSetAtlasSource_30ge6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3vfb6"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(224, 120)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="3"]
+sources/0 = SubResource("TileSetAtlasSource_3vfb6")
+
+[sub_resource type="Animation" id="4"]
+resource_name = "flash"
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t4wbb"]
+_data = {
+"flash": SubResource("4")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_38vx1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_82yxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fj8mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pffm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_byu4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_eq04l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6qag6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_phl41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_s0jtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jkbjv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvjna"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_jm2j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1sryy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_8rrv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lmkdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_kai51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_31lr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vnurm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_xxodg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_mki8l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="6"]
+resource_name = "idle"
+length = 0.84
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e50re"]
+_data = {
+"idle": SubResource("6")
+}
+
+[sub_resource type="ShaderMaterial" id="7"]
+shader = ExtResource("44")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="9"]
+shader = ExtResource("44")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="RectangleShape2D" id="10"]
+size = Vector2(14.6881, 247.282)
+
+[sub_resource type="RectangleShape2D" id="11"]
+size = Vector2(109.511, 8.95446)
+
+[sub_resource type="RectangleShape2D" id="12"]
+size = Vector2(109.511, 11.86)
+
+[sub_resource type="RectangleShape2D" id="13"]
+size = Vector2(2912, 106.959)
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource("3")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("36")
+centered = false
+offset = Vector2(0, -20)
+region_enabled = true
+region_rect = Rect2(0, 0, 1002, 243)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(895, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("37")
+centered = false
+offset = Vector2(0, 110)
+region_enabled = true
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="hmtree02" type="Sprite2D" parent="environment"]
+position = Vector2(172.511, 215.829)
+texture = ExtResource("27")
+
+[node name="hmtree01" type="Sprite2D" parent="environment"]
+position = Vector2(1457.63, 216.458)
+texture = ExtResource("27")
+
+[node name="hmwall02" type="TileMap" parent="environment"]
+position = Vector2(0, 270)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 65536, 2, 0, 65536, 3, 0, 65536, 4, 0, 65536, 5, 0, 65536, 6, 0, 65536, 7, 0, 65536, 8, 0, 65536, 9, 0, 65536, 10, 0, 65536, 11, 0, 0)
+
+[node name="hmtile" type="TileMap" parent="environment"]
+position = Vector2(0, 404)
+tile_set = SubResource("2")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 65536, 2, 0, 65536, 3, 0, 65536, 4, 0, 65536, 5, 0, 65536, 6, 0, 65536, 7, 0, 65536, 8, 0, 65536, 9, 0, 65536, 10, 0, 65536, 11, 0, 0)
+
+[node name="hmtileex" type="TileMap" parent="environment"]
+position = Vector2(0, 542)
+tile_set = SubResource("3")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 65536, 3, 0, 65536, 4, 0, 65536, 5, 0, 65536, 6, 0, 65536, 7, 0, 65536, 8, 0, 65536, 9, 0, 65536, 10, 0, 65536, 11, 0, 0, 12, 0, 0)
+
+[node name="hendonpath_1" type="Sprite2D" parent="environment"]
+position = Vector2(336, 282)
+texture = ExtResource("2")
+
+[node name="hendonpath_4" type="Sprite2D" parent="environment/hendonpath_1"]
+modulate = Color(1, 1, 1, 0.423435)
+position = Vector2(-11.8193, -96.9283)
+texture = ExtResource("6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/hendonpath_1"]
+libraries = {
+"": SubResource("AnimationLibrary_t4wbb")
+}
+autoplay = "flash"
+
+[node name="hmpoll_0" type="Sprite2D" parent="environment"]
+position = Vector2(90.3798, 270.692)
+texture = ExtResource("9")
+
+[node name="sign5" type="Sprite2D" parent="environment"]
+position = Vector2(479.94, 284.926)
+texture = ExtResource("13")
+
+[node name="hmbrrtile01" type="Sprite2D" parent="environment"]
+position = Vector2(2799.42, 341.917)
+texture = ExtResource("30")
+
+[node name="egseriahouse" parent="environment" instance=ExtResource("14")]
+position = Vector2(785.403, 192.601)
+
+[node name="Sprite2D" parent="environment/egseriahouse" index="0"]
+texture = ExtResource("38")
+
+[node name="seriahousewave01" parent="environment/egseriahouse" index="1"]
+position = Vector2(-4, 100)
+sprite_frames = SubResource("SpriteFrames_38vx1")
+frame = 0
+
+[node name="seriahousewave00" parent="environment/egseriahouse" index="2"]
+position = Vector2(-4, 100)
+sprite_frames = SubResource("SpriteFrames_jvjna")
+frame = 0
+
+[node name="hmstreetlamp_0" type="Sprite2D" parent="environment"]
+position = Vector2(233.784, 227.253)
+texture = ExtResource("7")
+
+[node name="hmkannahouse" type="Sprite2D" parent="environment"]
+position = Vector2(1249.15, 214.177)
+texture = ExtResource("11")
+
+[node name="hmbgbox_3" type="Sprite2D" parent="environment"]
+position = Vector2(1125.02, 374.521)
+texture = ExtResource("17")
+
+[node name="hmstreetlamp_1" type="Sprite2D" parent="environment"]
+position = Vector2(1019.52, 234.531)
+texture = ExtResource("7")
+
+[node name="hmbggrass1" type="Sprite2D" parent="environment"]
+position = Vector2(968.935, 385.452)
+texture = ExtResource("12")
+
+[node name="hmbgbox_1" type="Sprite2D" parent="environment"]
+position = Vector2(1541.72, 352.468)
+texture = ExtResource("16")
+
+[node name="hmbgbox_0" type="Sprite2D" parent="environment"]
+position = Vector2(1535.3, 366.134)
+texture = ExtResource("15")
+
+[node name="hmobj01_14" type="Sprite2D" parent="environment"]
+position = Vector2(1809.86, 214.46)
+texture = ExtResource("24")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment/hmobj01_14"]
+position = Vector2(-93, 100)
+sprite_frames = SubResource("5")
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/hmobj01_14"]
+libraries = {
+"": SubResource("AnimationLibrary_e50re")
+}
+autoplay = "idle"
+
+[node name="hmpoll_3" type="Sprite2D" parent="environment"]
+visible = false
+position = Vector2(2637.55, 239.397)
+texture = ExtResource("29")
+
+[node name="hmstreetlamp_2" type="Sprite2D" parent="environment"]
+position = Vector2(2059.24, 228.428)
+texture = ExtResource("7")
+
+[node name="hmpoll_4" type="Sprite2D" parent="environment"]
+position = Vector2(2636.6, 240.634)
+texture = ExtResource("29")
+
+[node name="grass" type="Node2D" parent="environment"]
+
+[node name="hmbggrass1" type="Sprite2D" parent="environment/grass"]
+position = Vector2(102.366, 382.316)
+texture = ExtResource("12")
+
+[node name="hmbggrass2" type="Sprite2D" parent="environment/grass"]
+position = Vector2(341.346, 386.061)
+texture = ExtResource("12")
+
+[node name="hmbggrass3" type="Sprite2D" parent="environment/grass"]
+position = Vector2(382.55, 349.353)
+texture = ExtResource("12")
+
+[node name="hmbggrass0" type="Sprite2D" parent="environment/grass"]
+position = Vector2(527.886, 368.58)
+texture = ExtResource("10")
+
+[node name="hmbgflowerpot0" type="Sprite2D" parent="environment/grass"]
+position = Vector2(1059.28, 363.1)
+texture = ExtResource("8")
+
+[node name="hmbggrass4" type="Sprite2D" parent="environment/grass"]
+position = Vector2(2698.65, 397.887)
+texture = ExtResource("10")
+
+[node name="hmbggrass5" type="Sprite2D" parent="environment/grass"]
+position = Vector2(2044.75, 383.398)
+texture = ExtResource("10")
+
+[node name="hmtree03" type="Sprite2D" parent="environment"]
+position = Vector2(2428.4, 216.459)
+texture = ExtResource("27")
+
+[node name="AnimatedSprite_shadow" type="AnimatedSprite2D" parent="environment"]
+material = SubResource("7")
+position = Vector2(2020, 314.3)
+sprite_frames = SubResource("8")
+centered = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment"]
+position = Vector2(2091, 200)
+sprite_frames = SubResource("8")
+centered = false
+
+[node name="goldencart_shadow" type="Sprite2D" parent="environment"]
+material = SubResource("9")
+position = Vector2(2217, 341)
+texture = ExtResource("28")
+
+[node name="goldencart" type="Sprite2D" parent="environment"]
+position = Vector2(2253, 288)
+texture = ExtResource("28")
+
+[node name="hmbgbox_2" type="Sprite2D" parent="environment"]
+position = Vector2(2506.2, 348.609)
+texture = ExtResource("18")
+
+[node name="hmbggrass2" type="Sprite2D" parent="environment"]
+position = Vector2(2577.15, 376.827)
+texture = ExtResource("12")
+
+[node name="hmbggrass0" type="Sprite2D" parent="environment"]
+position = Vector2(2649.19, 350.87)
+texture = ExtResource("10")
+
+[node name="hmbrrtile02" type="Sprite2D" parent="environment"]
+position = Vector2(2799.5, 472.9)
+texture = ExtResource("31")
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="Lorian" parent="npc" instance=ExtResource("40")]
+offset_left = 1221.38
+offset_top = 318.981
+offset_right = 1286.38
+offset_bottom = 335.981
+
+[node name="Kagon" parent="npc" instance=ExtResource("41")]
+offset_left = 1879.23
+offset_top = 316.741
+offset_right = 1944.23
+offset_bottom = 333.741
+
+[node name="Roger" parent="npc" instance=ExtResource("42")]
+offset_left = 2189.38
+offset_top = 316.271
+offset_right = 2254.38
+offset_bottom = 333.271
+
+[node name="Daphne" parent="npc" instance=ExtResource("43")]
+offset_left = 2305.25
+offset_top = 336.359
+offset_right = 2370.25
+offset_bottom = 353.359
+
+[node name="Danjin2" parent="npc" instance=ExtResource("45")]
+offset_left = 2491.24
+offset_top = 317.2
+offset_right = 2556.24
+offset_bottom = 334.2
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_HendonMyre" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(6.3798, 519.513)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("39")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_HendonMyre"]
+shape = SubResource("10")
+
+[node name="pos" type="Marker2D" parent="doors/to_HendonMyre"]
+position = Vector2(106.986, 0)
+
+[node name="to_stage_03" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(2903.42, 519.513)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("39")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_03"]
+shape = SubResource("10")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_03"]
+position = Vector2(-81, 0)
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(324.725, 349.785)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("39")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+shape = SubResource("11")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_02"]
+position = Vector2(20.6472, 29.6117)
+
+[node name="to_Gate" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(785.403, 358.101)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("39")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Gate"]
+shape = SubResource("12")
+
+[node name="pos" type="Marker2D" parent="doors/to_Gate"]
+position = Vector2(0, 27.152)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(2912, 661.841)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(1456, 695.841)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource("13")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PackedVector2Array(-1.42535, 397.117, 269.784, 397.46, 269.784, 346.617, 377.002, 345.059, 377.002, 352.4, 465.726, 397.46, 727.419, 397.46, 743.321, 351.879, 817.616, 352.012, 846.222, 397.46, 2911.86, 397.117, 2912.53, 642.061, 2939.23, 641.393, 2939.58, -0.120789, -0.759033, 0.670052, -64.8313, 0.670059, -63.1732, 641.179, -0.759064, 641.393)
+
+[editable path="environment/egseriahouse"]

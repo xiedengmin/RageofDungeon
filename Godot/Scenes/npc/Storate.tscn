@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=3 uid="uid://cmtqqov33s4lr"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://dl47xccimmiol" path="res://assets/images/map/obj/storage_0.png" id="3"]
+[ext_resource type="Script" path="res://src/npc/Storage.cs" id="4"]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type canvas_item;
+
+uniform float tilt = 0.4;
+uniform float scale = 0.3;
+uniform float alpha = 0.4;
+uniform bool shadow = true;
+
+void fragment(){
+	vec4 previous_color = texture(TEXTURE,UV);
+	vec4 block_color;
+	if(shadow == true){
+		block_color = vec4(0.0,0.0,0.0,previous_color.a * alpha);
+	}else{
+		block_color = vec4(previous_color.r,previous_color.g,previous_color.b,previous_color.a * alpha);
+	}
+
+    COLOR = block_color;
+}
+
+void vertex(){
+	mat3 mat_scale = mat3(vec3(1.0,0.0,0.0),vec3(0.0,1.0,0.0),vec3(0.0,0.0,1.0));
+	mat3 mat_tilt = mat3(vec3(1.0, tilt, 0.0), vec3(0.0, scale, 0.0), vec3(0.0, 0.0, 1.0));
+	mat3 mul = mat_scale * mat_tilt;
+	vec3 temp = vec3(VERTEX,0.0) * mul;
+	
+	VERTEX =  temp.xy;
+}"
+
+[sub_resource type="ShaderMaterial" id="2"]
+shader = SubResource("1")
+shader_parameter/tilt = 0.1
+shader_parameter/scale = 0.5
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="4"]
+shader = ExtResource("2")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Storate" instance=ExtResource("1")]
+script = ExtResource("4")
+
+[node name="body_shadow" parent="." index="0"]
+visible = false
+material = SubResource("2")
+position = Vector2(-2.7092, 17.6637)
+sprite_frames = SubResource("3")
+
+[node name="body" parent="." index="1"]
+material = SubResource("4")
+sprite_frames = SubResource("5")
+flip_h = true
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -55.6179
+offset_top = -53.3911
+offset_right = 56.3821
+offset_bottom = -36.3911
+text = "破烂的铁质金库"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = -47.0
+offset_top = -73.0
+offset_right = 48.0
+offset_bottom = 57.0
+
+[node name="range_check" parent="." index="6"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" parent="range_check" index="0"]
+position = Vector2(0, 1)

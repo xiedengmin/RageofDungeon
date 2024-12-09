@@ -1,0 +1,294 @@
+[gd_scene load_steps=31 format=3 uid="uid://dm2i566k48fq4"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://dgr0uqtuu4r6v" path="res://assets/images/npc/npc_gsd/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://beonxryfb1l8k" path="res://assets/images/npc/npc_gsd/2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://m07cwko4558g" path="res://assets/images/npc/npc_gsd/1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dalm7b3tllnbg" path="res://assets/images/npc/npc_gsd/0.png" id="6"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" path="res://src/npc/GSD.cs" id="8"]
+[ext_resource type="AudioStream" uid="uid://dos6g003j4gis" path="res://assets/sounds/npc/gsd/gsd_tk_03.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://710fhadaohjy" path="res://assets/sounds/npc/gsd/gsd_fw_03.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://dpaxogb0ln5jd" path="res://assets/sounds/npc/gsd/gsd_tk_01.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://pvcq7b40awrr" path="res://assets/sounds/npc/gsd/gsd_amb_01.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://dnd2qupduxhq5" path="res://assets/sounds/npc/gsd/gsd_fw_02.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://3beaaj5hf5i" path="res://assets/sounds/npc/gsd/gsd_fw_01.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://dy3md013wv683" path="res://assets/sounds/npc/gsd/gsd_tk_02.ogg" id="15"]
+[ext_resource type="PackedScene" uid="uid://cjqrl6olmfam5" path="res://scenes/UI/npc_nemu/Menu_Type3.tscn" id="16"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("2")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("7")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 0.72
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8bfaq"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 3.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "fw_01"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_02"
+length = 3.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_03"
+length = 3.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "tk_01"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_02"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_03"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a7lse"]
+_data = {
+"amb_01": SubResource("6"),
+"fw_01": SubResource("7"),
+"fw_02": SubResource("8"),
+"fw_03": SubResource("9"),
+"tk_01": SubResource("10"),
+"tk_02": SubResource("11"),
+"tk_03": SubResource("12")
+}
+
+[node name="GSD" instance=ExtResource("1")]
+script = ExtResource("8")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-18.2635, 28.0634)
+sprite_frames = SubResource("2")
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_8bfaq")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_top = -70.0729
+offset_bottom = -53.0729
+text = "G.S.D"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("9")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_a7lse")
+}
+
+[node name="Menu_GSD" parent="." index="9" instance=ExtResource("16")]
+visible = false
+
+[node name="nameLabel" parent="Menu_GSD/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="Menu_GSD/MarginContainer/VBoxContainer/talkBtn" to="." method="_on_talkBtn_pressed"]
+[connection signal="pressed" from="Menu_GSD/MarginContainer/VBoxContainer/shopBtn" to="." method="_on_shopBtn_pressed"]
+[connection signal="pressed" from="Menu_GSD/MarginContainer/VBoxContainer/skillBtn" to="." method="_on_skillBtn_pressed"]
+
+[editable path="Menu_GSD"]

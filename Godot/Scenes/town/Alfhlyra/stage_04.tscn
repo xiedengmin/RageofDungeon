@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=3 uid="uid://dk18xddlyneku"]
+
+[ext_resource type="Texture2D" uid="uid://tcqnngp74d70" path="res://assets/images/map/sign/sign10.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://u6wh73id8dc8" path="res://assets/images/map/alfhlyra/egtile.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dlk8vgg5pxkbv" path="res://assets/images/map/alfhlyra/egobj01.png" id="3"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="4"]
+[ext_resource type="Texture2D" uid="uid://bpywwby5fh3ig" path="res://assets/images/map/path/elvenpath1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b87xgwodgrnvv" path="res://assets/images/map/path/elvenpath0.png" id="6"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="7"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "flash"
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("elvenpath1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqsng"]
+_data = {
+"flash": SubResource("1")
+}
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(13.8809, 157.03)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(231.548, 27.5918)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(58, 416)
+
+[node name="stage_04" type="Node2D"]
+script = ExtResource("4")
+bgm = "forest_town"
+env = "amb_forest_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="egtile" type="Sprite2D" parent="environment"]
+texture = ExtResource("2")
+centered = false
+
+[node name="elvenpath0" type="Sprite2D" parent="environment"]
+position = Vector2(200.336, 293.047)
+texture = ExtResource("6")
+
+[node name="elvenpath1" type="Sprite2D" parent="environment/elvenpath0"]
+modulate = Color(1, 1, 1, 0.313726)
+position = Vector2(2.00226, -31.3688)
+texture = ExtResource("5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/elvenpath0"]
+libraries = {
+"": SubResource("AnimationLibrary_fqsng")
+}
+autoplay = "flash"
+
+[node name="sign10" type="Sprite2D" parent="environment"]
+position = Vector2(474.815, 288.795)
+texture = ExtResource("1")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="egobj01" type="Sprite2D" parent="."]
+position = Vector2(0, 430.407)
+texture = ExtResource("3")
+centered = false
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(888.764, 453.687)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7")
+current = "stage_04"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(-88.217, 0)
+
+[node name="to_Elvengard" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(203.949, 360.893)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7")
+current = "Alfhlyra"
+target = "Elvengard"
+stage = "stage_01"
+type = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Elvengard"]
+shape = SubResource("5")
+
+[node name="pos" type="Marker2D" parent="doors/to_Elvengard"]
+position = Vector2(0, 74.2091)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(896, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PackedVector2Array(100.301, 375.632, 163.706, 376.3, 165.04, 352.94, 233.117, 352.94, 235.12, 374.965, 895.198, 376.967, 895.865, -0.792686, 0.187744, -0.125267, 0.187759, 599.218, 896, 600.31, 896, 531.163, 100.913, 531.163)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(924, 443)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource("4")

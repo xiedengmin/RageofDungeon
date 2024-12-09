@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://ckt7uc8o6qfy2"]
+
+[ext_resource type="Script" path="res://src/worldmap/Worldmap_Button.cs" id="1"]
+[ext_resource type="Texture2D" uid="uid://bvxjoj58q2rr3" path="res://assets/images/worldmap/act1/lorien/3.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cm60k5f2wjgyd" path="res://assets/images/worldmap/act1/lorien/2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://didb7enoeopyx" path="res://assets/images/worldmap/act1/lorien/1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c3ll47c3xjvp1" path="res://assets/images/worldmap/act1/lorien/4.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b6el5fh2w6trd" path="res://assets/images/worldmap/act1/lorien/0.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dsd8ybdlo42h" path="res://assets/images/worldmap/act1/lorien/5.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://2vlotbcgg6hr" path="res://assets/images/worldmap/act1/lorien/6.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://c3yuy1cn5rgh3" path="res://assets/images/worldmap/act1/lorien/7.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://ch37fakocmvrf" path="res://assets/images/ui/selectdungeon/14.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b1fu81eaea587" path="res://assets/images/ui/selectdungeon/12.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://b02lgxq6c0r0v" path="res://assets/images/ui/selectdungeon/13.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://sg6sxkwhxsb1" path="res://assets/images/ui/selectdungeon/15.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cyhhf3fhifahu" path="res://assets/images/ui/selectdungeon/11.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://bo1w72rg7fraa" path="res://assets/images/ui/selectdungeon/10.png" id="15"]
+
+[node name="Worldmap_Button" type="Control"]
+layout_mode = 3
+anchor_left = 0.013
+anchor_top = 0.035
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.64
+offset_top = -20.2
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="normalbg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -28.3654
+offset_top = -48.7216
+offset_right = 231.635
+offset_bottom = 47.2784
+texture = ExtResource("2")
+
+[node name="normalBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.045
+anchor_right = 0.17
+anchor_bottom = 0.044
+offset_left = -12.7423
+offset_top = 0.3083
+offset_right = -0.34201
+offset_bottom = 0.228298
+texture_normal = ExtResource("3")
+texture_disabled = ExtResource("5")
+
+[node name="selectbg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -28.6991
+offset_top = -61.2451
+offset_right = 295.301
+offset_bottom = 69.7549
+texture = ExtResource("4")
+
+[node name="selectBtn" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -14.0
+offset_top = -46.0
+offset_right = 280.0
+offset_bottom = 55.0
+texture_normal = ExtResource("6")
+
+[node name="maoxian" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = -46.0
+offset_right = 280.0
+offset_bottom = 35.0
+texture = ExtResource("7")
+
+[node name="yongshi" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = -46.0
+offset_right = 280.0
+offset_bottom = 34.0
+texture = ExtResource("8")
+
+[node name="king" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = -46.0
+offset_right = 280.0
+offset_bottom = 34.0
+texture = ExtResource("9")
+
+[node name="leftBtn" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 145.5
+offset_top = 35.0
+offset_right = 173.5
+offset_bottom = 53.0
+texture_normal = ExtResource("15")
+texture_pressed = ExtResource("11")
+texture_hover = ExtResource("14")
+
+[node name="rightBtn" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 175.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 53.0
+texture_normal = ExtResource("12")
+texture_pressed = ExtResource("13")
+texture_hover = ExtResource("10")
+
+[connection signal="mouse_entered" from="normalBtn" to="." method="OnNormalBtnMouseEntered"]
+[connection signal="mouse_exited" from="normalBtn" to="." method="OnNormalBtnMouseExited"]
+[connection signal="pressed" from="normalBtn" to="." method="OnNormalBtnPressed"]
+[connection signal="pressed" from="selectBtn" to="." method="OnEnterMap"]
+[connection signal="pressed" from="leftBtn" to="." method="OnLeftBtnPressed"]
+[connection signal="pressed" from="rightBtn" to="." method="OnRightBtnPressed"]

@@ -1,0 +1,312 @@
+[gd_scene load_steps=35 format=3 uid="uid://bpla15og8bhwx"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://00abw7vy2wfk" path="res://assets/images/npc/npc_lorian/1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://5cqu1wuv0dhj" path="res://assets/images/npc/npc_lorian/5.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cfn0dhra0j0pn" path="res://assets/images/npc/npc_lorian/0.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://d3b57kyx5d6a3" path="res://assets/images/npc/npc_lorian/8.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://calt42gwvpxai" path="res://assets/images/npc/npc_lorian/7.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://d051fs6luh6sb" path="res://assets/images/npc/npc_lorian/2.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://3guv7hxhfg83" path="res://assets/images/npc/npc_lorian/3.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bn32y0embgl8q" path="res://assets/images/npc/npc_lorian/4.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bi3rxrunrdvc8" path="res://assets/images/npc/npc_lorian/6.png" id="11"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="12"]
+[ext_resource type="Script" path="res://src/npc/Lorian.cs" id="13"]
+[ext_resource type="AudioStream" uid="uid://bv3vcoqmj2um1" path="res://assets/sounds/npc/lorian/lo_fw_02.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://syrtsnttxw5q" path="res://assets/sounds/npc/lorian/lo_amb_01.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://ceiyus3mklxxs" path="res://assets/sounds/npc/lorian/lo_tk_02.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://vn2et40ocjp7" path="res://assets/sounds/npc/lorian/lo_fw_01.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://bs420d3jive5t" path="res://assets/sounds/npc/lorian/lo_tk_03.ogg" id="18"]
+[ext_resource type="AudioStream" uid="uid://c4psolyibqk0h" path="res://assets/sounds/npc/lorian/lo_tk_01.ogg" id="19"]
+[ext_resource type="Texture2D" uid="uid://dwwtehx174ovt" path="res://assets/images/face/npc/popup/lorian.png" id="20"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="21"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("2")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("12")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 1.62
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26, 1.44),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26, 1.44),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8568c"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "fw_01"
+length = 2.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_02"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "tk_01"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "tk_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_03"
+length = 2.4
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5b6ds"]
+_data = {
+"amb_01": SubResource("6"),
+"fw_01": SubResource("7"),
+"fw_02": SubResource("8"),
+"tk_01": SubResource("9"),
+"tk_02": SubResource("10"),
+"tk_03": SubResource("11")
+}
+
+[node name="Lorian" instance=ExtResource("1")]
+script = ExtResource("13")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-28.0634, 48.9995)
+sprite_frames = SubResource("2")
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_8568c")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -63.6541
+offset_top = -54.0367
+offset_right = 32.3459
+offset_bottom = -37.0367
+text = "罗莉安"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("18")
+
+[node name="CollisionShape2D" parent="range_check" index="0"]
+position = Vector2(0.5, 0.5)
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_5b6ds")
+}
+
+[node name="Menu_Type1" parent="." index="10" instance=ExtResource("21")]
+
+[node name="faceIcon" parent="Menu_Type1/top" index="0"]
+texture = ExtResource("20")
+
+[node name="nameLabel" parent="Menu_Type1/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "罗莉安"
+
+[editable path="Menu_Type1"]

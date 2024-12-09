@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/images/map/act1/01obj002.png" type="Texture2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 3.28113 )
+
+[node name="01obj002" type="StaticBody2D"]
+
+[node name="pic" type="Sprite2D" parent="."]
+position = Vector2( 0, -16.3518 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+disabled = true

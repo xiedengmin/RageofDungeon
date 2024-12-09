@@ -1,0 +1,336 @@
+[gd_scene load_steps=31 format=3 uid="uid://cjloj475us43x"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://b06i8f6fbh4j" path="res://assets/images/npc/npc_seria/4.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c7315ikagqe7i" path="res://assets/images/npc/npc_seria/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://u7i4mewqltbk" path="res://assets/images/npc/npc_seria/2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b0lsrb1yhj7m1" path="res://assets/images/npc/npc_seria/1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bw3vkq2g8wawy" path="res://assets/images/npc/npc_seria/5.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ccpny7nnh418a" path="res://assets/images/npc/npc_seria/0.png" id="7"]
+[ext_resource type="Script" path="res://src/npc/Seria.cs" id="8"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="9"]
+[ext_resource type="AudioStream" uid="uid://bmyjctkk57lgp" path="res://assets/sounds/npc/seria/se_amb_01.wav" id="10"]
+[ext_resource type="AudioStream" uid="uid://b2mftptynys7r" path="res://assets/sounds/npc/seria/se_tk_02.wav" id="11"]
+[ext_resource type="AudioStream" uid="uid://bkjosqc116ys2" path="res://assets/sounds/npc/seria/se_tk_01.wav" id="12"]
+[ext_resource type="AudioStream" uid="uid://c6dyxhjhqmqnl" path="res://assets/sounds/npc/seria/se_fw_01.wav" id="13"]
+[ext_resource type="AudioStream" uid="uid://g3thyda0hs10" path="res://assets/sounds/npc/seria/se_fw_02.wav" id="14"]
+[ext_resource type="AudioStream" uid="uid://cjs1onl847lf0" path="res://assets/sounds/npc/seria/se_tk_03.wav" id="15"]
+[ext_resource type="PackedScene" uid="uid://chiavs44b412s" path="res://scenes/UI/npc_nemu/Menu_Seria.tscn" id="16"]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type canvas_item;
+
+uniform float tilt = 0.4;
+uniform float scale = 0.3;
+uniform float alpha = 0.4;
+uniform bool shadow = true;
+
+void fragment(){
+	vec4 previous_color = texture(TEXTURE,UV);
+	vec4 block_color;
+	if(shadow == true){
+		block_color = vec4(0.0,0.0,0.0,previous_color.a * alpha);
+	}else{
+		block_color = vec4(previous_color.r,previous_color.g,previous_color.b,previous_color.a * alpha);
+	}
+
+    COLOR = block_color;
+}
+
+void vertex(){
+	mat3 mat_scale = mat3(vec3(1.0,0.0,0.0),vec3(0.0,1.0,0.0),vec3(0.0,0.0,1.0));
+	mat3 mat_tilt = mat3(vec3(1.0, tilt, 0.0), vec3(0.0, scale, 0.0), vec3(0.0, 0.0, 1.0));
+	mat3 mul = mat_scale * mat_tilt;
+	vec3 temp = vec3(VERTEX,0.0) * mul;
+	
+	VERTEX =  temp.xy;
+}"
+
+[sub_resource type="ShaderMaterial" id="2"]
+shader = SubResource("1")
+shader_parameter/tilt = -0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="4"]
+shader = ExtResource("9")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="6"]
+length = 2.9
+loop_mode = 1
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8of1m"]
+_data = {
+"default": SubResource("6")
+}
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_01"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_01"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_02"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "tk_01"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_02"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_03"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_umau6"]
+_data = {
+"amb_01": SubResource("7"),
+"fw_01": SubResource("8"),
+"fw_02": SubResource("9"),
+"tk_01": SubResource("10"),
+"tk_02": SubResource("11"),
+"tk_03": SubResource("12")
+}
+
+[node name="Seria" instance=ExtResource("1")]
+anchors_preset = -1
+anchor_left = -0.047
+anchor_top = -0.086
+anchor_right = 0.047
+anchor_bottom = 0.088
+offset_left = 60.16
+offset_top = 61.92
+offset_right = -60.16
+offset_bottom = -63.36
+script = ExtResource("8")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("2")
+position = Vector2(38.5, 31)
+scale = Vector2(1.37, 0.71)
+sprite_frames = SubResource("3")
+
+[node name="body" parent="." index="1"]
+material = SubResource("4")
+position = Vector2(-0.500007, -0.499998)
+scale = Vector2(1.65, 0.895)
+sprite_frames = SubResource("5")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_8of1m")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -23.0
+offset_top = -78.0
+offset_right = 35.0
+offset_bottom = -52.0
+text = "赛丽亚"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = -74.0
+offset_top = -76.0
+offset_right = 74.0
+offset_bottom = 76.0
+stretch_mode = 0
+
+[node name="CollisionShape2D" parent="range_check" index="0"]
+position = Vector2(-1, 2)
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_umau6")
+}
+
+[node name="Menu_Seria" parent="." index="9" instance=ExtResource("16")]
+initial_position = 4
+visible = false
+always_on_top = true
+max_size = Vector2i(0, 0)
+
+[node name="nameLabel" parent="Menu_Seria/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="Menu_Seria/talkBtn" to="." method="OnTalkBtnPressed"]
+[connection signal="pressed" from="Menu_Seria/shopBtn" to="." method="OnShopBtnPressed"]
+[connection signal="pressed" from="Menu_Seria/taskBtn" to="." method="OnTaskBtnPressed"]
+
+[editable path="Menu_Seria"]

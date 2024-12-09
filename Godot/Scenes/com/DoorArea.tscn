@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://wifly836pnwu"]
+
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="1"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(231.548, 27.5918)
+
+[node name="doorArea" type="Area2D"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1")
+current = "stage_0"
+target = "stage_0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="pos" type="Marker2D" parent="."]

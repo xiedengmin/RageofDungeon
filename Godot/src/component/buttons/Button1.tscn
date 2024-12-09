@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dky7q52qh0u0o"]
+
+[ext_resource type="AudioStream" uid="uid://wcmfea7x4m2s" path="res://assets/sounds/ui/click2.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://c4co24sxtci6h" path="res://assets/sounds/ui/click_move.ogg" id="8"]
+[ext_resource type="Script" path="res://src/component/buttons/Button1.cs" id="9"]
+
+[node name="Button1" type="Button"]
+offset_right = 12.0
+offset_bottom = 20.0
+focus_mode = 0
+text = "测试测试"
+script = ExtResource("9")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7")
+
+[node name="EnteredSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8")
+
+[connection signal="mouse_entered" from="." to="." method="_on_Button1_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_Button1_pressed"]

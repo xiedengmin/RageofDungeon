@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkaubc0pnmo5p"]
+
+[ext_resource type="Script" path="res://src/UI/Progress.cs" id="1_t21v8"]
+
+[node name="progress" type="ColorRect"]
+custom_minimum_size = Vector2(400, 30)
+anchors_preset = -1
+anchor_left = 0.072
+anchor_top = 0.079
+anchor_right = 0.712
+anchor_bottom = 0.121
+offset_left = -0.160004
+offset_top = 0.119999
+offset_right = -0.359985
+offset_bottom = -0.120003
+color = Color(0.105882, 0.00784314, 0.243137, 1)
+script = ExtResource("1_t21v8")

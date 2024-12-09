@@ -1,0 +1,7 @@
+[
+{"key":0,"job":"swordman","job_zh":"鬼剑士","HP_MAX":45,"MP_MAX":25,"physical_attack":4.8,"physical_defense":4.8,"magical_attack":4.2,"magical_defense":4.2,"inventory_limit":300,"mp_regen_speed":2.5,"hit_recovery":1.5,"awakening":"","awakening_skill":""},
+{"key":1,"job":"bladeMaster","job_zh":"剑魂","HP_MAX":50,"MP_MAX":20,"physical_attack":5,"physical_defense":5,"magical_attack":4,"magical_defense":4,"inventory_limit":300,"mp_regen_speed":2.5,"hit_recovery":2,"awakening":"剑圣","awakening_skill":91},
+{"key":2,"job":"soulBender","job_zh":"鬼泣","HP_MAX":40,"MP_MAX":30,"physical_attack":3.5,"physical_defense":3.5,"magical_attack":5.5,"magical_defense":5.5,"inventory_limit":300,"mp_regen_speed":5,"hit_recovery":1,"awakening":"弑魂","awakening_skill":89},
+{"key":3,"job":"berserker","job_zh":"狂战士","HP_MAX":55,"MP_MAX":15,"physical_attack":5.5,"physical_defense":5.5,"magical_attack":3.5,"magical_defense":3.5,"inventory_limit":300,"mp_regen_speed":2.5,"hit_recovery":2,"awakening":"狱血魔神","awakening_skill":90},
+{"key":4,"job":"asura","job_zh":"阿修罗","HP_MAX":45,"MP_MAX":25,"physical_attack":4.5,"physical_defense":4.5,"magical_attack":4.5,"magical_defense":4.5,"inventory_limit":300,"mp_regen_speed":4,"hit_recovery":2,"awakening":"大暗黑天","awakening_skill":92}
+]

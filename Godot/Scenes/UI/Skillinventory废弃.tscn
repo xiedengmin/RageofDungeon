@@ -1,0 +1,846 @@
+[gd_scene load_steps=14 format=3 uid="uid://bgqo35jow4mfi"]
+
+[ext_resource type="Texture2D" uid="uid://d2ufig4i2gomj" path="res://assets/images/ui/windowcommon/windowtitle1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bmcmg3hqd2qiw" path="res://assets/images/ui/windowcommon/Panel.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://s421w0xp1v34" path="res://assets/images/ui/window_title_accessory/1.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://2rsodvuukx1w" path="res://assets/images/ui/windowcommon/277.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cjj5k07gkm411" path="res://assets/images/ui/windowcommon/278.png" id="7"]
+[ext_resource type="Script" path="res://src/UI/Skillinventory.cs" id="8"]
+[ext_resource type="PackedScene" uid="uid://dgwigr2mqwfmt" path="res://scenes/UI/slot/SkillSlot.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://cf8avhck56h3j" path="res://src/component/buttons/Tab_Button1.tscn" id="10"]
+[ext_resource type="Texture2D" uid="uid://dm5wugpl54xrf" path="res://assets/images/ui/windowcommon/276.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://4spb8rj06arj" path="res://assets/images/ui/skillbuy/15.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cj2sjw0cibofh" path="res://assets/images/ui/windowcommon/279.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://bq86jt7w0eev2" path="res://assets/images/ui/windowcommon/70.png" id="17"]
+
+[node name="Skillinventory" type="Control"]
+layout_mode = 3
+anchor_right = 0.353
+anchor_bottom = 0.641
+offset_left = 406.05
+offset_top = 76.8465
+offset_right = 123.65
+offset_bottom = -307.753
+script = ExtResource("8")
+
+[node name="panel" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 278.0
+offset_bottom = 383.0
+texture = ExtResource("2")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 9
+
+[node name="windowtitle" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 284.0
+offset_bottom = 39.0
+texture = ExtResource("1")
+
+[node name="title" type="Label" parent="windowtitle"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 278.0
+offset_bottom = 33.0
+text = "技能栏"
+
+[node name="grid1" type="GridContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 42.7995
+offset_top = 76.0
+offset_right = 242.799
+offset_bottom = 310.0
+columns = 6
+
+[node name="SkillSlot1" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="grid1" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="grid2" type="GridContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 42.7995
+offset_top = 76.0
+offset_right = 242.799
+offset_bottom = 310.0
+columns = 6
+
+[node name="SkillSlot1" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="grid2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="grid3" type="GridContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 42.7995
+offset_top = 76.0
+offset_right = 242.799
+offset_bottom = 310.0
+columns = 6
+
+[node name="SkillSlot1" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="grid3" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="grid4" type="GridContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 42.7995
+offset_top = 76.0
+offset_right = 242.799
+offset_bottom = 310.0
+columns = 6
+
+[node name="SkillSlot1" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="grid4" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="grid5" type="GridContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 42.7995
+offset_top = 76.0
+offset_right = 242.799
+offset_bottom = 310.0
+columns = 6
+
+[node name="SkillSlot1" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="grid5" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="lockBtn" parent="." instance=ExtResource("4")]
+layout_mode = 0
+offset_left = 57.1881
+offset_top = 345.29
+offset_right = 134.188
+offset_bottom = 368.29
+text = "锁定操作"
+
+[node name="unclockBtn" parent="." instance=ExtResource("4")]
+layout_mode = 0
+offset_left = 150.027
+offset_top = 345.29
+offset_right = 227.027
+offset_bottom = 368.29
+text = "解除操作"
+
+[node name="closeBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 261.831
+offset_top = 13.4486
+offset_right = 277.831
+offset_bottom = 29.4486
+texture_normal = ExtResource("11")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("6")
+texture_disabled = ExtResource("15")
+
+[node name="t_acc" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3.30763
+offset_top = 6.92966
+offset_right = 33.3076
+offset_bottom = 36.9297
+texture = ExtResource("3")
+
+[node name="Tab_Button1" parent="." instance=ExtResource("10")]
+layout_mode = 0
+offset_left = 21.1037
+offset_top = 47.247
+offset_right = 69.1037
+offset_bottom = 69.247
+focus_mode = 0
+text = "波动"
+
+[node name="Tab_Button2" parent="." instance=ExtResource("10")]
+layout_mode = 0
+offset_left = 69.1305
+offset_top = 47.247
+offset_right = 117.13
+offset_bottom = 69.247
+focus_mode = 0
+text = "剑术"
+
+[node name="Tab_Button3" parent="." instance=ExtResource("10")]
+layout_mode = 0
+offset_left = 117.212
+offset_top = 47.247
+offset_right = 165.212
+offset_bottom = 69.247
+focus_mode = 0
+text = "血气"
+
+[node name="Tab_Button4" parent="." instance=ExtResource("10")]
+layout_mode = 0
+offset_left = 164.609
+offset_top = 47.247
+offset_right = 212.609
+offset_bottom = 69.247
+focus_mode = 0
+text = "鬼神"
+
+[node name="Tab_Button5" parent="." instance=ExtResource("10")]
+layout_mode = 0
+offset_left = 213.171
+offset_top = 47.247
+offset_right = 261.171
+offset_bottom = 69.247
+focus_mode = 0
+text = "通用"
+
+[node name="line" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 69.0
+offset_right = 272.0
+offset_bottom = 72.0
+texture = ExtResource("17")
+
+[node name="15" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 313.0
+offset_right = 242.0
+offset_bottom = 331.0
+texture = ExtResource("13")
+patch_margin_left = 60
+patch_margin_right = 10
+
+[node name="SP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 89.0013
+offset_top = 313.572
+offset_right = 235.001
+offset_bottom = 330.572
+text = "2000"
+
+[connection signal="pressed" from="lockBtn" to="." method="_on_lockBtn_pressed"]
+[connection signal="pressed" from="unclockBtn" to="." method="_on_unclockBtn_pressed"]
+[connection signal="pressed" from="closeBtn" to="." method="_on_closeBtn_pressed"]
+[connection signal="toggled" from="Tab_Button1" to="." method="_on_Tab_Button1_toggled"]
+[connection signal="toggled" from="Tab_Button2" to="." method="_on_Tab_Button2_toggled"]
+[connection signal="toggled" from="Tab_Button3" to="." method="_on_Tab_Button3_toggled"]
+[connection signal="toggled" from="Tab_Button4" to="." method="_on_Tab_Button4_toggled"]
+[connection signal="toggled" from="Tab_Button5" to="." method="_on_Tab_Button5_toggled"]

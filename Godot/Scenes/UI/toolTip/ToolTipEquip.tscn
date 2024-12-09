@@ -1,0 +1,188 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ts52huo7stt"]
+
+[ext_resource type="Texture2D" uid="uid://ljknoyd8lwfl" path="res://assets/images/ui/windowcommon/ToolTipbg.png" id="4"]
+[ext_resource type="Script" path="res://src/UI/toolTip/ToolTipEquip.cs" id="5"]
+[ext_resource type="Texture2D" uid="uid://c3jwuuhh4uqkm" path="res://assets/images/icon/weapon/swordman/katana/0.png" id="6"]
+
+[node name="ToolTipEquip" type="Control"]
+layout_mode = 3
+anchor_right = 0.272
+anchor_bottom = 0.333
+offset_right = 0.399994
+offset_bottom = 197.2
+mouse_filter = 2
+script = ExtResource("5")
+
+[node name="panel" type="NinePatchRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("4")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="Margin" type="MarginContainer" parent="panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.52588e-05
+offset_bottom = -83.0
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="panel/Margin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="panel/Margin/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panel/Margin/VBox/HBoxContainer"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="panel/Margin/VBox/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "双龙魔影剑"
+
+[node name="ItemName_EN" type="Label" parent="panel/Margin/VBox/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "双龙魔影剑"
+
+[node name="HSeparator2" type="HSeparator" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="panel/Margin/VBox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ItemWeight" type="Label" parent="panel/Margin/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4kg"
+
+[node name="ItemPrice" type="Label" parent="panel/Margin/VBox/HBox"]
+layout_mode = 2
+text = "16416金币"
+
+[node name="HBox2" type="HBoxContainer" parent="panel/Margin/VBox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ItemType" type="Label" parent="panel/Margin/VBox/HBox2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "巨剑"
+
+[node name="SlotType" type="Label" parent="panel/Margin/VBox/HBox2"]
+layout_mode = 2
+text = "武器"
+
+[node name="ItemSpeed" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "缓慢攻击速度"
+
+[node name="ItemPhysicalSkill" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "武器物理技能：MP+20%冷却+10%"
+
+[node name="ItemMagicalSkill" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "武器魔法技能：MP-10%"
+
+[node name="HBox3" type="HBoxContainer" parent="panel/Margin/VBox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ItemDurability" type="Label" parent="panel/Margin/VBox/HBox3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "耐久度 35/35"
+
+[node name="ItemJY" type="Label" parent="panel/Margin/VBox/HBox3"]
+layout_mode = 2
+text = "无法交易"
+
+[node name="HBox4" type="HBoxContainer" parent="panel/Margin/VBox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ItemGrade" type="Label" parent="panel/Margin/VBox/HBox4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lv50以上可以使用"
+
+[node name="ItemQuality" type="Label" parent="panel/Margin/VBox/HBox4"]
+layout_mode = 2
+text = "最上级"
+
+[node name="ItemJob" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "鬼剑士可以使用"
+
+[node name="sn_top" type="HSeparator" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="SkillNeed" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "需要[光剑掌握]技能"
+
+[node name="sn_bottom" type="HSeparator" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Physical" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "物理攻击力 + 701"
+
+[node name="Physical_ID" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "无视防御物理攻击力 +914"
+
+[node name="Magical" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "魔法攻击力 + 701"
+
+[node name="Magical_ID" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "无视防御魔法攻击力 +914"
+
+[node name="STR" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "力量 +43"
+
+[node name="WIS" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "智力 +43"
+
+[node name="VIT" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "体力 +43"
+
+[node name="MND" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "精神 +43"
+
+[node name="HSeparator" type="HSeparator" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="EP" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "暗属性攻击"
+
+[node name="HSeparator3" type="HSeparator" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Effects" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "攻击时，有2%的几率使敌人进入诅咒状态"
+
+[node name="HSeparator4" type="HSeparator" parent="panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="FlavorText" type="Label" parent="panel/Margin/VBox"]
+layout_mode = 2
+text = "它很适合你！ --索德罗斯"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgtu8fxgad75i"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dxfr15b5c7s33" path="res://assets/images/map/obj/board.png" id="2"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="3"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("3")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Board" instance=ExtResource("1")]
+
+[node name="body" parent="." index="1"]
+material = SubResource("1")
+sprite_frames = SubResource("2")
+
+[node name="nameLabel" parent="." index="3"]
+offset_top = -103.927
+offset_bottom = -86.9271
+text = "布告栏"
+
+[node name="range_check" parent="." index="6"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" parent="range_check" index="0"]
+disabled = true

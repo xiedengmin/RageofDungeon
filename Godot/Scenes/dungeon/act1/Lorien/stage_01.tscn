@@ -1,0 +1,217 @@
+[gd_scene load_steps=21 format=4 uid="uid://bl4tdcr0mu3f6"]
+
+[ext_resource type="Texture2D" uid="uid://b28qtbglwlips" path="res://assets/images/map/act1/01obj101.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bsd5b125b7mtw" path="res://assets/images/map/act1/01obj109.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4lvi07uia28j" path="res://assets/images/map/act1/granfloristree01.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cnrss1s108n0l" path="res://assets/images/map/act1/01obj300_0.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dt737fegcc41c" path="res://assets/images/map/act1/01tile03.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://b3stl5twudx7" path="res://assets/images/map/act1/01obj103.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://d2nqn7i0bx5nr" path="res://assets/images/map/act1/01obj012.png" id="9"]
+[ext_resource type="PackedScene" path="res://src/component/act1/RightGate.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://src/component/act1/BottomGate.tscn" id="11"]
+[ext_resource type="Texture2D" uid="uid://v2at6x35ik63" path="res://assets/images/map/act1/01obj001.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://dpiu3q6y6mghi" path="res://assets/images/map/act1/01obj002.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="15"]
+[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="16"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="17"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hle7f"]
+texture = ExtResource("7")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_hle7f")
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(94.2664, 73.8464)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(157.45, 27.5918)
+
+[node name="stage_01" type="Node2D"]
+script = ExtResource("16")
+bgm = "forest01_new"
+env = "amb_forest_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("15")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 925, 375)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("14")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 379)
+
+[node name="granflorisbush01" type="Sprite2D" parent="environment"]
+position = Vector2(725, -176)
+texture = ExtResource("6")
+flip_h = true
+
+[node name="granflorisbush02" type="Sprite2D" parent="environment"]
+position = Vector2(924, -101)
+texture = ExtResource("6")
+flip_h = true
+
+[node name="01obj101" type="Sprite2D" parent="environment"]
+position = Vector2(394, 140)
+texture = ExtResource("2")
+
+[node name="01obj103" type="Sprite2D" parent="environment"]
+position = Vector2(682, 144)
+texture = ExtResource("8")
+
+[node name="01obj300_0" type="Sprite2D" parent="environment"]
+position = Vector2(257.476, 258.027)
+texture = ExtResource("5")
+
+[node name="01obj109" type="Sprite2D" parent="environment"]
+position = Vector2(525.763, 301.161)
+texture = ExtResource("3")
+
+[node name="granfloristree01" type="Sprite2D" parent="environment"]
+position = Vector2(997.669, 175.589)
+texture = ExtResource("4")
+
+[node name="RightGate" parent="environment" instance=ExtResource("10")]
+position = Vector2(1050.17, 323.618)
+
+[node name="granflorisbush03" type="Sprite2D" parent="environment"]
+position = Vector2(355, -180)
+texture = ExtResource("6")
+
+[node name="Layer0" type="TileMapLayer" parent="environment"]
+use_parent_material = true
+position = Vector2(0, 80)
+tile_map_data = PackedByteArray("AAAGAAQAAAAAAAAAAQAJAAQAAAAAAAAAAQAMAAQAAAAAAAAAAQAOAAQAAAAAAAAAAQAWAAUAAAAAAAAAAAAcAAcAAAAAAAAAAAAdAAYAAAAAAAAAAAADAAsAAAAAAAAAAAAIAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAATAAsAAAAAAAAAAAAXAAwAAAAAAAAAAAASAAYAAAAAAAAAAAA=")
+tile_set = SubResource("1")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="objs" type="Node2D" parent="stage"]
+
+[node name="01obj002" type="Sprite2D" parent="stage/objs"]
+position = Vector2(293.026, 414.514)
+texture = ExtResource("13")
+
+[node name="01obj003" type="Sprite2D" parent="stage/objs"]
+position = Vector2(338.267, 470.867)
+texture = ExtResource("13")
+
+[node name="01obj004" type="Sprite2D" parent="stage/objs"]
+position = Vector2(430.336, 443.087)
+texture = ExtResource("13")
+
+[node name="01obj005" type="Sprite2D" parent="stage/objs"]
+position = Vector2(546.614, 462.136)
+texture = ExtResource("13")
+
+[node name="01obj006" type="Sprite2D" parent="stage/objs"]
+position = Vector2(613.217, 375.648)
+texture = ExtResource("13")
+
+[node name="01obj007" type="Sprite2D" parent="stage/objs"]
+position = Vector2(556.135, 381.594)
+texture = ExtResource("13")
+
+[node name="01obj001" type="Sprite2D" parent="stage/objs"]
+position = Vector2(558.216, 400.918)
+texture = ExtResource("12")
+
+[node name="01obj012" type="Sprite2D" parent="."]
+position = Vector2(764, 408)
+texture = ExtResource("9")
+
+[node name="BottomGate" parent="." instance=ExtResource("11")]
+position = Vector2(560.821, 545.379)
+
+[node name="doors" type="Node2D" parent="."]
+position = Vector2(1018.07, 406.331)
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(38.7606, -34.7303)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("17")
+current = "stage_01"
+target = "stage_02"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+rotation = 0.539307
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_02"]
+position = Vector2(-59.6901, 70.381)
+
+[node name="to_stage_03" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(-461.181, 146.099)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("17")
+current = "stage_01"
+target = "stage_03"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_03"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_03"]
+position = Vector2(-0.445496, -46.3267)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1120, 590.483)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PackedVector2Array(123.386, 546.835, 149.222, 478.236, 124.276, 431.91, 56.5682, 378.456, 80.6224, 336.583, 959.049, 335.692, 965.285, 365.983, 993.04, 388.34, 1008.94, 365.092, 1077.52, 394.309, 1077.31, 432.35, 1052.05, 469.225, 1041.19, 500.689, 1061.79, 547.886, 633.87, 546.835, 626.743, 559.308, 496.672, 560.199, 478.854, 548.617, 125.588, 547.684, 1.17033, 600.286, 1118.52, 590.49, 1121.19, -0.176346, -0.449341, 0.714554, -0.449341, 548.617, 84.0101, 562.803)
+one_way_collision_margin = 0.0
+
+[node name="BornMonster" type="Marker2D" parent="."]
+position = Vector2(196, 436)
+
+[node name="Born" type="Marker2D" parent="."]
+position = Vector2(838.148, 458.759)

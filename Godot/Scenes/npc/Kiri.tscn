@@ -1,0 +1,547 @@
+[gd_scene load_steps=55 format=3 uid="uid://dkcricw07yays"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://bwmkjp843n1fr" path="res://assets/images/npc/npc_kiri/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bt70m1mu3jjs8" path="res://assets/images/npc/npc_kiri/0.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://k7vvrhq4gkhc" path="res://assets/images/npc/npc_kiri/2.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://exfrpvpuesor" path="res://assets/images/npc/npc_kiri/1.png" id="6"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" path="res://src/npc/Kiri.cs" id="8"]
+[ext_resource type="AudioStream" uid="uid://bfdc8tsfvq30g" path="res://assets/sounds/npc/kiri/kiri_fw_06.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://dbr2ohvj0fv11" path="res://assets/sounds/npc/kiri/kiri_fw_08.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://dnmcaegbuwugu" path="res://assets/sounds/npc/kiri/kiri_amb_04.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://cghgms668e1nl" path="res://assets/sounds/npc/kiri/kiri_amb_03.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://buqn3jj3jhk77" path="res://assets/sounds/npc/kiri/kiri_fw_03.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://bl14x2qi4sd24" path="res://assets/sounds/npc/kiri/kiri_amb_01.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://d2lbtvfndnnan" path="res://assets/sounds/npc/kiri/kiri_amb_02.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://dt0uijuberaa6" path="res://assets/sounds/npc/kiri/kiri_fw_04.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://busrb2g48sr5w" path="res://assets/sounds/npc/kiri/kiri_fw_02.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://qjur6waew6qf" path="res://assets/sounds/npc/kiri/kiri_fw_05.ogg" id="18"]
+[ext_resource type="AudioStream" uid="uid://cj464nko3duls" path="res://assets/sounds/npc/kiri/kiri_fw_07.ogg" id="19"]
+[ext_resource type="AudioStream" uid="uid://qmd3kpnse0y0" path="res://assets/sounds/npc/kiri/kiri_fw_01.ogg" id="20"]
+[ext_resource type="AudioStream" uid="uid://tk1h614xj1be" path="res://assets/sounds/npc/kiri/kiri_tk_04.ogg" id="21"]
+[ext_resource type="AudioStream" uid="uid://drisb62t5dpju" path="res://assets/sounds/npc/kiri/kiri_tk_06.ogg" id="22"]
+[ext_resource type="AudioStream" uid="uid://cd5gnbqdlxhii" path="res://assets/sounds/npc/kiri/kiri_tk_07.ogg" id="23"]
+[ext_resource type="AudioStream" uid="uid://d30wxegwxnvts" path="res://assets/sounds/npc/kiri/kiri_tk_03.ogg" id="24"]
+[ext_resource type="AudioStream" uid="uid://dd30db5vg5jy4" path="res://assets/sounds/npc/kiri/kiri_tk_05.ogg" id="25"]
+[ext_resource type="AudioStream" uid="uid://dbgaujc0k4q4y" path="res://assets/sounds/npc/kiri/kiri_tk_02.ogg" id="26"]
+[ext_resource type="AudioStream" uid="uid://c2uv5oe1d0k56" path="res://assets/sounds/npc/kiri/kiri_tk_01.ogg" id="27"]
+[ext_resource type="PackedScene" uid="uid://btuho23srun8" path="res://scenes/UI/npc_nemu/Menu_Kiri.tscn" id="28"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("2")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("7")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 0.72
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bbn7l"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_02"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "amb_03"
+length = 4.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "amb_04"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "fw_01"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "fw_02"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "fw_03"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "fw_04"
+length = 1.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="14"]
+resource_name = "fw_05"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="15"]
+resource_name = "fw_06"
+length = 4.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="16"]
+resource_name = "fw_07"
+length = 1.6
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="17"]
+resource_name = "fw_08"
+length = 3.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="18"]
+resource_name = "tk_01"
+length = 2.7
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="19"]
+resource_name = "tk_02"
+length = 1.8
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="20"]
+resource_name = "tk_03"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="21"]
+resource_name = "tk_04"
+length = 3.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="22"]
+resource_name = "tk_05"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="23"]
+resource_name = "tk_06"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="24"]
+resource_name = "tk_07"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yqcgq"]
+_data = {
+"amb_01": SubResource("6"),
+"amb_02": SubResource("7"),
+"amb_03": SubResource("8"),
+"amb_04": SubResource("9"),
+"fw_01": SubResource("10"),
+"fw_02": SubResource("11"),
+"fw_03": SubResource("12"),
+"fw_04": SubResource("13"),
+"fw_05": SubResource("14"),
+"fw_06": SubResource("15"),
+"fw_07": SubResource("16"),
+"fw_08": SubResource("17"),
+"tk_01": SubResource("18"),
+"tk_02": SubResource("19"),
+"tk_03": SubResource("20"),
+"tk_04": SubResource("21"),
+"tk_05": SubResource("22"),
+"tk_06": SubResource("23"),
+"tk_07": SubResource("24")
+}
+
+[node name="Kiri" instance=ExtResource("1")]
+script = ExtResource("8")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-31.627, 52.1177)
+sprite_frames = SubResource("2")
+frame = 2
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+frame = 2
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_bbn7l")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+text = "凯丽"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = -45.0
+offset_right = 45.0
+offset_bottom = 86.0
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("23")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_yqcgq")
+}
+
+[node name="Menu_Kiri" parent="." index="9" instance=ExtResource("28")]
+visible = false
+
+[node name="nameLabel" parent="Menu_Kiri/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+
+[editable path="Menu_Kiri"]

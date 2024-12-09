@@ -1,0 +1,645 @@
+[gd_scene load_steps=42 format=3 uid="uid://comln50yi8cl5"]
+
+[ext_resource type="Texture2D" uid="uid://b6ksl3mtc5s6u" path="res://assets/images/ui/window_title_accessory/9.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d2ufig4i2gomj" path="res://assets/images/ui/windowcommon/windowtitle1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ivs23ej408h7" path="res://assets/images/ui/status_bag/profile-1.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dpyw1bif7wggf" path="res://assets/images/ui/status_bag/profile_icon1.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://b214s8yj7ocbc" path="res://scenes/UI/status/StatusItem.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://cthcshqcjx22d" path="res://assets/images/ui/status_bag/profile_icon2.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://nkoktevqfai1" path="res://assets/images/ui/status_bag/profile_icon4.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dtk6n6vye1eqt" path="res://assets/images/ui/status_bag/profile_icon3.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://cuqht4cvbpmha" path="res://assets/images/ui/status_bag/profile_icon5.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bcglmuh6ukgsj" path="res://assets/images/ui/status_bag/profile_icon9.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bfgjswcmrkcay" path="res://assets/images/ui/status_bag/profile_icon7.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://b7uh4bf1xcspl" path="res://assets/images/ui/status_bag/profile_icon6.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://vbkavs8ef5xp" path="res://assets/images/ui/status_bag/profile_icon8.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://bp8nte43oq85c" path="res://assets/images/ui/status_bag/profile_icon11.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://crdwpamktj315" path="res://assets/images/ui/status_bag/profile_icon10.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://d0gvtwjtxqrag" path="res://assets/images/ui/status_bag/profile_icon12.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://djs1kt5h1qsxb" path="res://assets/images/ui/status_bag/profile_icon13.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://bbf46v0d1t7t1" path="res://assets/images/ui/status_bag/profile_icon17.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://dxprpedkno3bg" path="res://assets/images/ui/status_bag/profile_icon16.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://omyx64tm3h4o" path="res://assets/images/ui/status_bag/profile_icon14.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://blh7hqu6s51t1" path="res://assets/images/ui/status_bag/profile_icon18.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://80n5dtoe1p7k" path="res://assets/images/ui/status_bag/profile_icon19.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://cthygg1kpn0gv" path="res://assets/images/ui/status_bag/profile_icon21.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://3m4hdrxbntn5" path="res://assets/images/ui/status_bag/profile_icon20.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://wv28rftldp2y" path="res://assets/images/ui/status_bag/profile_icon22.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://bcyk61p14e8lh" path="res://assets/images/ui/status_bag/profile_icon23.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://ddv1mwt5spsqv" path="res://assets/images/ui/status_bag/profile_icon24.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://bdk5hps6j274e" path="res://assets/images/ui/status_bag/profile_icon26.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://bkdm0e1q4uxil" path="res://assets/images/ui/status_bag/profile_icon27.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://cfd40y6r11d3" path="res://assets/images/ui/status_bag/profile_icon25.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://dco0jk3l8pasu" path="res://assets/images/ui/status_bag/profile_icon28.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://dkyd37ssyn8l1" path="res://assets/images/ui/status_bag/profile_icon29.png" id="35"]
+[ext_resource type="Theme" uid="uid://bkyc4lkdy847v" path="res://src/component/theme/vscrollbar.tres" id="36"]
+[ext_resource type="Script" path="res://src/UI/Status.cs" id="41"]
+[ext_resource type="Texture2D" uid="uid://bq86jt7w0eev2" path="res://assets/images/ui/windowcommon/70.png" id="42"]
+[ext_resource type="Texture2D" uid="uid://2rsodvuukx1w" path="res://assets/images/ui/windowcommon/277.png" id="43"]
+[ext_resource type="Texture2D" uid="uid://cjj5k07gkm411" path="res://assets/images/ui/windowcommon/278.png" id="44"]
+[ext_resource type="Texture2D" uid="uid://dm5wugpl54xrf" path="res://assets/images/ui/windowcommon/276.png" id="45"]
+[ext_resource type="Texture2D" uid="uid://cj2sjw0cibofh" path="res://assets/images/ui/windowcommon/279.png" id="46"]
+[ext_resource type="Script" path="res://src/com/DraggableBar.cs" id="47"]
+[ext_resource type="AudioStream" uid="uid://d1a73eqqghdbr" path="res://assets/sounds/ui/click1.wav" id="48"]
+
+[node name="Status" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 31.0
+offset_top = 88.0
+offset_right = 394.0
+offset_bottom = 546.0
+mouse_filter = 2
+script = ExtResource("41")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 359.0
+offset_bottom = 458.0
+
+[node name="windowtitle" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 364.0
+offset_bottom = 39.0
+mouse_filter = 1
+texture = ExtResource("5")
+patch_margin_left = 100
+patch_margin_right = 50
+script = ExtResource("47")
+
+[node name="title" type="Label" parent="windowtitle"]
+layout_mode = 0
+anchor_top = -0.024202
+anchor_bottom = -0.024202
+offset_left = 4.0
+offset_top = 10.9439
+offset_right = 362.0
+offset_bottom = 33.9439
+text = "个人信息(M)"
+
+[node name="t_acc" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3.30763
+offset_top = 6.92966
+offset_right = 33.3076
+offset_bottom = 36.9297
+texture = ExtResource("4")
+
+[node name="profile-1" type="Sprite2D" parent="."]
+position = Vector2(183.903, 261.448)
+texture = ExtResource("6")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 190.0
+offset_right = 346.0
+offset_bottom = 367.0
+theme = ExtResource("36")
+
+[node name="Control" type="ColorRect" parent="ScrollContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="hpItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+
+[node name="nameLabel" parent="ScrollContainer/Control/hpItem" index="0"]
+text = "HP"
+
+[node name="valueLabel" parent="ScrollContainer/Control/hpItem" index="1"]
+offset_left = 97.0
+offset_top = -3.0
+offset_right = 201.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="mpItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 0)
+
+[node name="nameLabel" parent="ScrollContainer/Control/mpItem" index="0"]
+text = "MP"
+
+[node name="valueLabel" parent="ScrollContainer/Control/mpItem" index="1"]
+offset_left = 93.935
+offset_top = 4.0
+offset_right = 197.935
+offset_bottom = 30.0
+
+[node name="icon" parent="ScrollContainer/Control/mpItem" index="2"]
+texture = ExtResource("7")
+
+[node name="STRItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 21.1893)
+
+[node name="nameLabel" parent="ScrollContainer/Control/STRItem" index="0"]
+text = "力量"
+
+[node name="valueLabel" parent="ScrollContainer/Control/STRItem" index="1"]
+offset_left = 96.0
+offset_top = 4.8107
+offset_right = 200.0
+offset_bottom = 30.8107
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/STRItem" index="2"]
+texture = ExtResource("9")
+
+[node name="WISItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 21.1893)
+
+[node name="nameLabel" parent="ScrollContainer/Control/WISItem" index="0"]
+text = "智力"
+
+[node name="valueLabel" parent="ScrollContainer/Control/WISItem" index="1"]
+offset_left = 94.935
+offset_top = 1.8107
+offset_right = 198.935
+offset_bottom = 27.8107
+
+[node name="icon" parent="ScrollContainer/Control/WISItem" index="2"]
+texture = ExtResource("11")
+
+[node name="VITItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 44.4975)
+
+[node name="nameLabel" parent="ScrollContainer/Control/VITItem" index="0"]
+text = "体力"
+
+[node name="valueLabel" parent="ScrollContainer/Control/VITItem" index="1"]
+offset_left = 95.0
+offset_top = 2.5025
+offset_right = 199.0
+offset_bottom = 28.5025
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/VITItem" index="2"]
+texture = ExtResource("10")
+
+[node name="MNDItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 44.4975)
+
+[node name="nameLabel" parent="ScrollContainer/Control/MNDItem" index="0"]
+text = "精神"
+
+[node name="valueLabel" parent="ScrollContainer/Control/MNDItem" index="1"]
+offset_left = 94.935
+offset_top = 1.5025
+offset_right = 198.935
+offset_bottom = 27.5025
+
+[node name="icon" parent="ScrollContainer/Control/MNDItem" index="2"]
+texture = ExtResource("12")
+
+[node name="physical_attackItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 66.7699)
+
+[node name="nameLabel" parent="ScrollContainer/Control/physical_attackItem" index="0"]
+text = "物理攻击"
+
+[node name="valueLabel" parent="ScrollContainer/Control/physical_attackItem" index="1"]
+offset_left = 94.0
+offset_top = 4.2301
+offset_right = 198.0
+offset_bottom = 30.2301
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/physical_attackItem" index="2"]
+texture = ExtResource("15")
+
+[node name="magical_attackItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 66.7699)
+
+[node name="nameLabel" parent="ScrollContainer/Control/magical_attackItem" index="0"]
+text = "魔法攻击"
+
+[node name="valueLabel" parent="ScrollContainer/Control/magical_attackItem" index="1"]
+offset_left = 94.935
+offset_top = 2.2301
+offset_right = 198.935
+offset_bottom = 28.2301
+
+[node name="icon" parent="ScrollContainer/Control/magical_attackItem" index="2"]
+texture = ExtResource("14")
+
+[node name="physical_defenseItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 88.6333)
+
+[node name="nameLabel" parent="ScrollContainer/Control/physical_defenseItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "物理防御"
+
+[node name="valueLabel" parent="ScrollContainer/Control/physical_defenseItem" index="1"]
+offset_left = 95.0
+offset_top = 1.3667
+offset_right = 199.0
+offset_bottom = 27.3667
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/physical_defenseItem" index="2"]
+texture = ExtResource("16")
+
+[node name="magical_defenseItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 88.6333)
+
+[node name="nameLabel" parent="ScrollContainer/Control/magical_defenseItem" index="0"]
+text = "魔法防御"
+
+[node name="valueLabel" parent="ScrollContainer/Control/magical_defenseItem" index="1"]
+offset_left = 94.935
+offset_top = 2.3667
+offset_right = 198.935
+offset_bottom = 28.3667
+
+[node name="icon" parent="ScrollContainer/Control/magical_defenseItem" index="2"]
+texture = ExtResource("13")
+
+[node name="physical_criticalItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 110.917)
+
+[node name="nameLabel" parent="ScrollContainer/Control/physical_criticalItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "物理暴击"
+
+[node name="valueLabel" parent="ScrollContainer/Control/physical_criticalItem" index="1"]
+offset_left = 95.0
+offset_top = 3.08301
+offset_right = 199.0
+offset_bottom = 29.083
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/physical_criticalItem" index="2"]
+texture = ExtResource("18")
+
+[node name="magical_criticalItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 110.917)
+
+[node name="nameLabel" parent="ScrollContainer/Control/magical_criticalItem" index="0"]
+text = "魔法暴击"
+
+[node name="valueLabel" parent="ScrollContainer/Control/magical_criticalItem" index="1"]
+offset_left = 95.935
+offset_top = 1.08301
+offset_right = 199.935
+offset_bottom = 27.083
+
+[node name="icon" parent="ScrollContainer/Control/magical_criticalItem" index="2"]
+texture = ExtResource("17")
+
+[node name="attack_speedItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 133.201)
+
+[node name="nameLabel" parent="ScrollContainer/Control/attack_speedItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "攻击速度"
+
+[node name="valueLabel" parent="ScrollContainer/Control/attack_speedItem" index="1"]
+offset_left = 96.0
+offset_top = 0.799011
+offset_right = 200.0
+offset_bottom = 26.799
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/attack_speedItem" index="2"]
+texture = ExtResource("19")
+
+[node name="cast_speedItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 133.201)
+
+[node name="nameLabel" parent="ScrollContainer/Control/cast_speedItem" index="0"]
+text = "施放速度"
+
+[node name="valueLabel" parent="ScrollContainer/Control/cast_speedItem" index="1"]
+offset_left = 95.935
+offset_top = 0.799011
+offset_right = 199.935
+offset_bottom = 26.799
+
+[node name="icon" parent="ScrollContainer/Control/cast_speedItem" index="2"]
+texture = ExtResource("20")
+
+[node name="move_speedItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 156.746)
+
+[node name="nameLabel" parent="ScrollContainer/Control/move_speedItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "移动速度"
+
+[node name="valueLabel" parent="ScrollContainer/Control/move_speedItem" index="1"]
+offset_left = 96.0
+offset_top = 1.254
+offset_right = 200.0
+offset_bottom = 27.254
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/move_speedItem" index="2"]
+texture = ExtResource("23")
+
+[node name="stuckItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 179.45)
+
+[node name="nameLabel" parent="ScrollContainer/Control/stuckItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "命中率"
+
+[node name="valueLabel" parent="ScrollContainer/Control/stuckItem" index="1"]
+offset_left = 72.0
+offset_top = 3.54999
+offset_right = 176.0
+offset_bottom = 29.55
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/stuckItem" index="2"]
+texture = ExtResource("22")
+
+[node name="stuck_resistanceItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 179.45)
+
+[node name="nameLabel" parent="ScrollContainer/Control/stuck_resistanceItem" index="0"]
+text = "回避率"
+
+[node name="icon" parent="ScrollContainer/Control/stuck_resistanceItem" index="2"]
+texture = ExtResource("21")
+
+[node name="hp_regen_speedItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 201.723)
+
+[node name="nameLabel" parent="ScrollContainer/Control/hp_regen_speedItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "HP恢复量"
+
+[node name="valueLabel" parent="ScrollContainer/Control/hp_regen_speedItem" index="1"]
+offset_left = 68.0
+offset_top = 5.27698
+offset_right = 172.0
+offset_bottom = 31.277
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/hp_regen_speedItem" index="2"]
+texture = ExtResource("24")
+
+[node name="mp_regen_speedItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 201.723)
+
+[node name="nameLabel" parent="ScrollContainer/Control/mp_regen_speedItem" index="0"]
+text = "MP恢复量"
+
+[node name="icon" parent="ScrollContainer/Control/mp_regen_speedItem" index="2"]
+texture = ExtResource("25")
+
+[node name="immobilityItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 223.995)
+
+[node name="nameLabel" parent="ScrollContainer/Control/immobilityItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "僵直度"
+
+[node name="valueLabel" parent="ScrollContainer/Control/immobilityItem" index="1"]
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/immobilityItem" index="2"]
+texture = ExtResource("27")
+
+[node name="hit_recoveryItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 223.995)
+
+[node name="nameLabel" parent="ScrollContainer/Control/hit_recoveryItem" index="0"]
+text = "硬直"
+
+[node name="icon" parent="ScrollContainer/Control/hit_recoveryItem" index="2"]
+texture = ExtResource("26")
+
+[node name="fire_attackItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 246.268)
+
+[node name="nameLabel" parent="ScrollContainer/Control/fire_attackItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "火属性强化"
+
+[node name="valueLabel" parent="ScrollContainer/Control/fire_attackItem" index="1"]
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/fire_attackItem" index="2"]
+texture = ExtResource("28")
+
+[node name="fire_resistanceItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 246.268)
+
+[node name="nameLabel" parent="ScrollContainer/Control/fire_resistanceItem" index="0"]
+text = "火属性抗性"
+
+[node name="icon" parent="ScrollContainer/Control/fire_resistanceItem" index="2"]
+texture = ExtResource("29")
+
+[node name="water_attackItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 268.985)
+
+[node name="nameLabel" parent="ScrollContainer/Control/water_attackItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "冰属性强化"
+
+[node name="valueLabel" parent="ScrollContainer/Control/water_attackItem" index="1"]
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/water_attackItem" index="2"]
+texture = ExtResource("30")
+
+[node name="water_resistanceItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 268.985)
+
+[node name="nameLabel" parent="ScrollContainer/Control/water_resistanceItem" index="0"]
+text = "冰属性抗性"
+
+[node name="icon" parent="ScrollContainer/Control/water_resistanceItem" index="2"]
+texture = ExtResource("33")
+
+[node name="light_attackItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 291.703)
+
+[node name="nameLabel" parent="ScrollContainer/Control/light_attackItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+
+[node name="valueLabel" parent="ScrollContainer/Control/light_attackItem" index="1"]
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/light_attackItem" index="2"]
+texture = ExtResource("31")
+
+[node name="light_resistanceItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 291.703)
+
+[node name="nameLabel" parent="ScrollContainer/Control/light_resistanceItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "光属性抗性"
+
+[node name="icon" parent="ScrollContainer/Control/light_resistanceItem" index="2"]
+texture = ExtResource("32")
+
+[node name="dark_attackItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(0, 313.53)
+
+[node name="nameLabel" parent="ScrollContainer/Control/dark_attackItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "暗属性强化"
+
+[node name="valueLabel" parent="ScrollContainer/Control/dark_attackItem" index="1"]
+text = "0"
+
+[node name="icon" parent="ScrollContainer/Control/dark_attackItem" index="2"]
+position = Vector2(0, -0.8909)
+texture = ExtResource("34")
+
+[node name="dark_resistanceItem" parent="ScrollContainer/Control" instance=ExtResource("8")]
+position = Vector2(157.065, 313.53)
+
+[node name="nameLabel" parent="ScrollContainer/Control/dark_resistanceItem" index="0"]
+offset_left = 19.0
+offset_right = 99.0
+offset_bottom = 16.0
+text = "暗属性抗性"
+
+[node name="icon" parent="ScrollContainer/Control/dark_resistanceItem" index="2"]
+texture = ExtResource("35")
+
+[node name="ex_job_des" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.1588
+offset_top = 377.606
+offset_right = 70.1588
+offset_bottom = 394.606
+text = "副职业"
+
+[node name="ex_job" type="Label" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 378.0
+offset_right = 343.0
+offset_bottom = 395.0
+text = "无"
+
+[node name="pvp_des" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.1588
+offset_top = 401.106
+offset_right = 70.1588
+offset_bottom = 418.106
+text = "决斗"
+
+[node name="pvp" type="Label" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 401.5
+offset_right = 343.0
+offset_bottom = 418.5
+text = "0胜 0败 (0.00%)"
+
+[node name="cof_des" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.1588
+offset_top = 424.106
+offset_right = 70.1588
+offset_bottom = 441.106
+text = "COF指数          0.00%"
+
+[node name="qx" type="Label" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 424.5
+offset_right = 343.0
+offset_bottom = 441.5
+text = "无法倾向                 0"
+
+[node name="roleBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 47.0
+offset_right = 92.0
+offset_bottom = 70.0
+toggle_mode = true
+text = "角色"
+
+[node name="fashineBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 47.0
+offset_right = 212.0
+offset_bottom = 70.0
+text = "妆扮及宠物"
+
+[node name="line" type="Sprite2D" parent="."]
+position = Vector2(13, 67)
+scale = Vector2(5.68288, 1)
+texture = ExtResource("42")
+centered = false
+
+[node name="closeBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 341.193
+offset_top = 14.4486
+offset_right = 357.193
+offset_bottom = 30.4486
+texture_normal = ExtResource("45")
+texture_pressed = ExtResource("44")
+texture_hover = ExtResource("43")
+texture_disabled = ExtResource("46")
+
+[node name="windowSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("48")
+
+[connection signal="visibility_changed" from="." to="." method="_on_Status_visibility_changed"]
+[connection signal="pressed" from="closeBtn" to="." method="_on_closeBtn_pressed"]
+
+[editable path="ScrollContainer/Control/hpItem"]
+[editable path="ScrollContainer/Control/mpItem"]
+[editable path="ScrollContainer/Control/STRItem"]
+[editable path="ScrollContainer/Control/WISItem"]
+[editable path="ScrollContainer/Control/VITItem"]
+[editable path="ScrollContainer/Control/MNDItem"]
+[editable path="ScrollContainer/Control/physical_attackItem"]
+[editable path="ScrollContainer/Control/magical_attackItem"]
+[editable path="ScrollContainer/Control/physical_defenseItem"]
+[editable path="ScrollContainer/Control/magical_defenseItem"]
+[editable path="ScrollContainer/Control/physical_criticalItem"]
+[editable path="ScrollContainer/Control/magical_criticalItem"]
+[editable path="ScrollContainer/Control/attack_speedItem"]
+[editable path="ScrollContainer/Control/cast_speedItem"]
+[editable path="ScrollContainer/Control/move_speedItem"]
+[editable path="ScrollContainer/Control/stuckItem"]
+[editable path="ScrollContainer/Control/stuck_resistanceItem"]
+[editable path="ScrollContainer/Control/hp_regen_speedItem"]
+[editable path="ScrollContainer/Control/mp_regen_speedItem"]
+[editable path="ScrollContainer/Control/immobilityItem"]
+[editable path="ScrollContainer/Control/hit_recoveryItem"]
+[editable path="ScrollContainer/Control/fire_attackItem"]
+[editable path="ScrollContainer/Control/fire_resistanceItem"]
+[editable path="ScrollContainer/Control/water_attackItem"]
+[editable path="ScrollContainer/Control/water_resistanceItem"]
+[editable path="ScrollContainer/Control/light_attackItem"]
+[editable path="ScrollContainer/Control/light_resistanceItem"]
+[editable path="ScrollContainer/Control/dark_attackItem"]
+[editable path="ScrollContainer/Control/dark_resistanceItem"]

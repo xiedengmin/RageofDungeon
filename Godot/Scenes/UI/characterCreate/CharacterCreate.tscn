@@ -1,0 +1,241 @@
+[gd_scene load_steps=33 format=3 uid="uid://ig2ry1timhte"]
+
+[ext_resource type="Texture2D" uid="uid://hh128qxt0l6a" path="res://assets/images/charactercreate/8.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://fjckqyeq3aik" path="res://assets/images/charactercreate/6.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bt8wn3fvbj1sk" path="res://assets/images/charactercreate/9.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dle1rve0ycq8t" path="res://assets/images/charactercreate/7.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cgfnl6tb4uik0" path="res://assets/images/charactercreate/31.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://sjj8icser060" path="res://assets/images/charactercreate/29.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bf1483j4kd8yf" path="res://assets/images/charactercreate/30.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://d3lm8g2of6gqn" path="res://assets/images/charactercreate/10.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://jpbmu4b7i7m7" path="res://assets/images/charactercreate/11.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ro5bp8nn3p0a" path="res://assets/images/charactercreate/13.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://b8kw3dyv1jimg" path="res://assets/images/charactercreate/18.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://b6sj48g47uoyw" path="res://assets/images/charactercreate/12.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://btqhyrdduh2xo" path="res://assets/images/charactercreate/19.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://dsfjut47smqq6" path="res://assets/images/charactercreate/20.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://ckrt8nb47nrli" path="res://assets/images/charactercreate/21.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://uc6soxq3h8e0" path="res://assets/images/charactercreate/26.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://ckkwcodpayhbg" path="res://assets/images/charactercreate/27.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://56tfm3hqddx6" path="res://assets/images/charactercreate/28.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://16kwcw6mymmy" path="res://assets/images/charactercreate/33.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://em35o2ghsbon" path="res://assets/images/charactercreate/32.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://bmcmg3hqd2qiw" path="res://assets/images/ui/windowcommon/Panel.png" id="23"]
+[ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="24"]
+[ext_resource type="Texture2D" uid="uid://cq34hg8an7vrl" path="res://assets/images/charactercreate/46.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://dcv3sfmqvkldo" path="res://assets/images/charactercreate/44.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://dupb6veuss40y" path="res://assets/images/charactercreate/60.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://86mwyjns625g" path="res://assets/images/charactercreate/52.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://vblitrc3ujgh" path="res://assets/images/charactercreate/39.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://bukbmc212iw3y" path="res://assets/images/charactercreate/38.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://upajyjh7vlcr" path="res://assets/images/charactercreate/41.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://d4i8rbbiqnpb" path="res://assets/images/charactercreate/43.png" id="32"]
+[ext_resource type="Script" path="res://src/UI/characterCreate/CharacterCreate.cs" id="33"]
+[ext_resource type="AudioStream" uid="uid://wcmfea7x4m2s" path="res://assets/sounds/ui/click2.ogg" id="35"]
+
+[node name="CharacterCreate" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("33")
+
+[node name="cutscene_swordman" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(257, 241)
+texture = ExtResource("30")
+
+[node name="cutscene_fighter" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(132, 299)
+texture = ExtResource("29")
+
+[node name="cutscene_gunner" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(210, 300)
+texture = ExtResource("31")
+
+[node name="cutscene_mage" type="Sprite2D" parent="."]
+position = Vector2(130, 215)
+scale = Vector2(1.12, 1.12)
+texture = ExtResource("32")
+
+[node name="cutscene_priest" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(162, 313)
+scale = Vector2(1.12, 1.12)
+texture = ExtResource("26")
+
+[node name="swordmanBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 43.244
+offset_top = 488.62
+offset_right = 147.244
+offset_bottom = 561.62
+toggle_mode = true
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("6")
+texture_disabled = ExtResource("5")
+
+[node name="fighterBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 163.093
+offset_top = 488.62
+offset_right = 267.093
+offset_bottom = 561.62
+toggle_mode = true
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("14")
+texture_hover = ExtResource("11")
+texture_disabled = ExtResource("12")
+
+[node name="gunnerBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 283.735
+offset_top = 488.62
+offset_right = 387.735
+offset_bottom = 561.62
+toggle_mode = true
+texture_normal = ExtResource("13")
+texture_pressed = ExtResource("16")
+texture_hover = ExtResource("15")
+texture_disabled = ExtResource("17")
+
+[node name="mageBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 404.171
+offset_top = 488.62
+offset_right = 508.171
+offset_bottom = 561.62
+toggle_mode = true
+texture_normal = ExtResource("18")
+texture_pressed = ExtResource("20")
+texture_hover = ExtResource("19")
+texture_disabled = ExtResource("8")
+
+[node name="priestBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 525.02
+offset_top = 488.62
+offset_right = 629.02
+offset_bottom = 561.62
+toggle_mode = true
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("22")
+texture_hover = ExtResource("7")
+texture_disabled = ExtResource("21")
+
+[node name="desbg" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 125.0
+offset_right = 746.0
+offset_bottom = 455.0
+texture = ExtResource("23")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="job_title" type="Sprite2D" parent="."]
+position = Vector2(553, 65.5)
+texture = ExtResource("25")
+
+[node name="job_hard" type="Sprite2D" parent="."]
+position = Vector2(555.731, 194.444)
+texture = ExtResource("28")
+
+[node name="job_des" type="Sprite2D" parent="."]
+position = Vector2(549.366, 337.395)
+texture = ExtResource("27")
+
+[node name="createBtn" parent="." instance=ExtResource("24")]
+layout_mode = 0
+offset_left = 416.366
+offset_top = 416.395
+offset_right = 536.366
+offset_bottom = 441.395
+text = "创建角色"
+
+[node name="backBtn" parent="." instance=ExtResource("24")]
+layout_mode = 0
+offset_left = 570.366
+offset_top = 416.395
+offset_right = 690.366
+offset_bottom = 441.395
+text = "返回"
+
+[node name="clickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35")
+bus = &"SFX"
+
+[node name="createWindow" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.25098)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="Panel" parent="createWindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216
+anchor_top = 0.439
+anchor_right = 0.407
+anchor_bottom = 0.614
+offset_left = 0.519989
+offset_top = -0.0800171
+offset_right = 0.039856
+offset_bottom = -0.0800171
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="nameText" type="TextEdit" parent="createWindow"]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 330.0
+offset_right = 474.0
+offset_bottom = 374.0
+placeholder_text = "输入角色名"
+
+[node name="okBtn" parent="createWindow" instance=ExtResource("24")]
+layout_mode = 0
+offset_left = 318.79
+offset_top = 389.0
+offset_right = 395.79
+offset_bottom = 412.0
+text = "创建"
+
+[node name="cancelBtn" parent="createWindow" instance=ExtResource("24")]
+layout_mode = 0
+offset_left = 403.408
+offset_top = 389.0
+offset_right = 480.408
+offset_bottom = 412.0
+text = "取消"
+
+[node name="tipLabel" type="Label" parent="createWindow"]
+visible = false
+layout_mode = 0
+offset_left = 314.0
+offset_top = 416.0
+offset_right = 487.0
+offset_bottom = 433.0
+text = "角色名重要"
+
+[connection signal="toggled" from="swordmanBtn" to="." method="OnSwordmanBtnToggled"]
+[connection signal="toggled" from="fighterBtn" to="." method="OnFighterBtnToggled"]
+[connection signal="toggled" from="gunnerBtn" to="." method="OnGunnerBtnToggled"]
+[connection signal="toggled" from="mageBtn" to="." method="_on_mageBtn_toggled"]
+[connection signal="toggled" from="mageBtn" to="." method="OnMageBtnToggled"]
+[connection signal="toggled" from="priestBtn" to="." method="OnPriestBtnToggled"]
+[connection signal="pressed" from="createBtn" to="." method="OnCreateBtnPressed"]
+[connection signal="pressed" from="backBtn" to="." method="OnBackBtnPressed"]
+[connection signal="pressed" from="createWindow/okBtn" to="." method="OnOkBtnPressed"]
+[connection signal="pressed" from="createWindow/cancelBtn" to="." method="OnCancelBtnPressed"]

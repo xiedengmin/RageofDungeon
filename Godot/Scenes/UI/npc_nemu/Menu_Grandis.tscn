@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://df8ac2iii18w7"]
+
+[ext_resource type="Texture2D" uid="uid://dmui0dkjaa41j" path="res://assets/images/ui/popup/128.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://k1ab85kwm3y2" path="res://assets/images/ui/popup/44.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://pgquwj3vxijg" path="res://assets/images/ui/popup/129.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dk0mpvw0urljc" path="res://assets/images/ui/popup/130.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dqv2vcmx4pj05" path="res://assets/images/face/npc/popup/grandis.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cuesmu4p84hxa" path="res://assets/images/ui/popup/46.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dgt2j5xo448jt" path="res://assets/images/ui/popup/45.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://j00ulen4ia8e" path="res://assets/images/ui/popup/41.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bdojllbfe5rfg" path="res://assets/images/ui/popup/42.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dt6qegd6r5ayi" path="res://assets/images/ui/popup/43.png" id="11"]
+
+[node name="Menu_Grandis" type="Popup"]
+visible = true
+
+[node name="top" type="ColorRect" parent="."]
+offset_bottom = -84.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="faceIcon" type="Sprite2D" parent="top"]
+position = Vector2(10.5, 10.5)
+texture = ExtResource("6")
+
+[node name="nameLabel" type="Label" parent="top"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 2.0
+offset_right = 99.0
+offset_bottom = 19.0
+text = "歌兰蒂斯"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_top = 21.0
+offset_right = 100.0
+offset_bottom = 84.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="shopBtn" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("8")
+
+[node name="skillBtn" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("4")
+texture_hover = ExtResource("3")
+
+[node name="taskBtn" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("11")
+texture_hover = ExtResource("10")

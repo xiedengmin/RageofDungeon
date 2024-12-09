@@ -1,0 +1,423 @@
+[gd_scene load_steps=35 format=3 uid="uid://d1qp5o6yw3wly"]
+
+[ext_resource type="Texture2D" uid="uid://jv3c2ksd5ycg" path="res://assets/images/map/tiles/alfhtileex.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://gx286yhk521" path="res://assets/images/map/alfhlyra/littlerock.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c23b6jianudkx" path="res://assets/images/map/alfhlyra/bigrock.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cpwt0sxhfdroq" path="res://assets/images/map/tiles/alftile.png" id="4"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="5"]
+[ext_resource type="Texture2D" uid="uid://canflvbohrlyl" path="res://assets/images/map/alfhlyra/alfobj00.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://5i8i8utlwxp7" path="res://assets/images/map/alfhlyra/mlittlerock.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cu2genf0ymfhb" path="res://assets/images/map/alfhlyra/redsign.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cfo787ii2quqn" path="res://assets/images/map/alfhlyra/d_gatelight_1.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://d1e6wrmy4x5lr" path="res://assets/images/map/alfhlyra/d_gatelight_2.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cd53hvs7yav4s" path="res://assets/images/map/alfhlyra/d_gate.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://jo44aemxdytp" path="res://assets/images/map/alfhlyra/d_gatelight_0.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://oerao66v3450" path="res://assets/images/map/alfhlyra/d_gatelight_3.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bihg1cnaj00d0" path="res://assets/images/map/alfhlyra/d_gatelight_4.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://cb7d0y85p0a4j" path="res://assets/images/map/alfhlyra/d_gateedge.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://bnkbkxlxdh48t" path="res://assets/images/map/alfhlyra/udgate.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://ddlxpr28it5ek" path="res://assets/images/map/alfhlyra/udgatelight_0.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://ddxm0rjw5ocnx" path="res://assets/images/map/alfhlyra/udgatelight_1.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://did76tbnfayu5" path="res://assets/images/map/alfhlyra/udgatelight_2.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://b2eu4fuk87dhq" path="res://assets/images/map/alfhlyra/biggrass.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://wn064jj776l1" path="res://assets/images/map/alfhlyra/smgrass.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://e6ob6y0eq0mw" path="res://assets/images/map/alfhlyra/midgrass.png" id="24"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="25"]
+
+[sub_resource type="Animation" id="Animation_qroij"]
+resource_name = "move"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1120, 156), Vector2(-480, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iyv0b"]
+_data = {
+"move": SubResource("Animation_qroij")
+}
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3cfsa"]
+texture = ExtResource("4")
+texture_region_size = Vector2i(224, 256)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3ru6"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(224, 120)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="2"]
+sources/0 = SubResource("TileSetAtlasSource_3cfsa")
+sources/1 = SubResource("TileSetAtlasSource_f3ru6")
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="5"]
+resource_name = "move"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1120, 156), Vector2(-480, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ca0yi"]
+_data = {
+"move": SubResource("5")
+}
+
+[sub_resource type="RectangleShape2D" id="6"]
+size = Vector2(80.754, 24.7706)
+
+[sub_resource type="RectangleShape2D" id="7"]
+size = Vector2(49.1166, 109.09)
+
+[node name="stage_03" type="Node2D"]
+script = ExtResource("5")
+bgm = "alfhlyra_new"
+env = "amb_forest_04"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 831, 330)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="fog" type="Sprite2D" parent="environment/background/mid"]
+position = Vector2(-904.583, 156)
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2245, 158)
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment"]
+autoplay = "move"
+libraries = {
+"": SubResource("AnimationLibrary_iyv0b")
+}
+
+[node name="TileMap" type="TileMap" parent="environment"]
+visible = false
+position = Vector2(0, 304)
+tile_set = SubResource("2")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0)
+
+[node name="littlerock" type="Sprite2D" parent="environment"]
+position = Vector2(201.92, 277.167)
+texture = ExtResource("2")
+
+[node name="littlerock2" type="Sprite2D" parent="environment"]
+position = Vector2(466.885, 277.167)
+texture = ExtResource("2")
+
+[node name="bigrock" type="Sprite2D" parent="environment"]
+position = Vector2(77.0847, 266.367)
+texture = ExtResource("3")
+
+[node name="bigrock2" type="Sprite2D" parent="environment"]
+position = Vector2(845.285, 243.252)
+texture = ExtResource("3")
+
+[node name="mlittlerock" type="Sprite2D" parent="environment"]
+position = Vector2(401.437, 291.252)
+texture = ExtResource("7")
+
+[node name="mlittlerock2" type="Sprite2D" parent="environment"]
+position = Vector2(642.375, 294.589)
+texture = ExtResource("7")
+
+[node name="mlittlerock3" type="Sprite2D" parent="environment"]
+position = Vector2(707.115, 294.589)
+texture = ExtResource("7")
+
+[node name="d_gate" type="Sprite2D" parent="environment"]
+position = Vector2(997, 223)
+texture = ExtResource("11")
+
+[node name="light" type="AnimatedSprite2D" parent="environment/d_gate"]
+position = Vector2(4, 103)
+frames = SubResource("3")
+playing = true
+
+[node name="udgate" type="Sprite2D" parent="environment"]
+position = Vector2(313, 266.819)
+texture = ExtResource("16")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment/udgate"]
+position = Vector2(4.00903, -70.381)
+frames = SubResource("4")
+playing = true
+
+[node name="smgrass" type="Sprite2D" parent="environment"]
+position = Vector2(646.368, 329.213)
+texture = ExtResource("23")
+
+[node name="midgrass" type="Sprite2D" parent="environment"]
+position = Vector2(485.115, 336.34)
+texture = ExtResource("24")
+
+[node name="biggrass" type="Sprite2D" parent="environment"]
+position = Vector2(390.68, 455.721)
+texture = ExtResource("22")
+
+[node name="redsign" type="Sprite2D" parent="environment"]
+position = Vector2(760.262, 296.852)
+texture = ExtResource("8")
+
+[node name="environment2" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment2"]
+
+[node name="far" type="ParallaxLayer" parent="environment2/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment2/background/far"]
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 831, 330)
+
+[node name="mid" type="ParallaxLayer" parent="environment2/background"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="fog" type="Sprite2D" parent="environment2/background/mid"]
+position = Vector2(-1120, 156)
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2245, 158)
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment2"]
+autoplay = "move"
+libraries = {
+"": SubResource("AnimationLibrary_ca0yi")
+}
+
+[node name="TileMap" type="TileMap" parent="environment2"]
+position = Vector2(0, 304)
+tile_set = SubResource("2")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0)
+
+[node name="littlerock" type="Sprite2D" parent="environment2"]
+position = Vector2(201.92, 277.167)
+texture = ExtResource("2")
+
+[node name="littlerock2" type="Sprite2D" parent="environment2"]
+position = Vector2(466.885, 277.167)
+texture = ExtResource("2")
+
+[node name="bigrock" type="Sprite2D" parent="environment2"]
+position = Vector2(77.0847, 266.367)
+texture = ExtResource("3")
+
+[node name="bigrock2" type="Sprite2D" parent="environment2"]
+position = Vector2(845.285, 243.252)
+texture = ExtResource("3")
+
+[node name="mlittlerock" type="Sprite2D" parent="environment2"]
+position = Vector2(401.437, 291.252)
+texture = ExtResource("7")
+
+[node name="mlittlerock2" type="Sprite2D" parent="environment2"]
+position = Vector2(642.375, 294.589)
+texture = ExtResource("7")
+
+[node name="mlittlerock3" type="Sprite2D" parent="environment2"]
+position = Vector2(707.115, 294.589)
+texture = ExtResource("7")
+
+[node name="d_gate" type="Sprite2D" parent="environment2"]
+position = Vector2(997, 223)
+texture = ExtResource("11")
+
+[node name="light" type="AnimatedSprite2D" parent="environment2/d_gate"]
+position = Vector2(4, 103)
+frames = SubResource("3")
+playing = true
+
+[node name="udgate" type="Sprite2D" parent="environment2"]
+position = Vector2(313, 266.819)
+texture = ExtResource("16")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment2/udgate"]
+position = Vector2(4.00903, -70.381)
+frames = SubResource("4")
+playing = true
+
+[node name="smgrass" type="Sprite2D" parent="environment2"]
+position = Vector2(646.368, 329.213)
+texture = ExtResource("23")
+
+[node name="midgrass" type="Sprite2D" parent="environment2"]
+position = Vector2(485.115, 336.34)
+texture = ExtResource("24")
+
+[node name="biggrass" type="Sprite2D" parent="environment2"]
+position = Vector2(560.841, 416.721)
+texture = ExtResource("22")
+
+[node name="biggrass2" type="Sprite2D" parent="environment2"]
+position = Vector2(396.025, 455.721)
+texture = ExtResource("22")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="alfobj00" type="Sprite2D" parent="."]
+position = Vector2(0, 326.581)
+texture = ExtResource("6")
+centered = false
+
+[node name="d_gateedge" type="Sprite2D" parent="."]
+position = Vector2(1048, 362)
+texture = ExtResource("15")
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(313, 346.252)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("25")
+current = "stage_03"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("6")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(0, 61.9837)
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(1037.21, 408.236)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("25")
+current = "stage_0"
+type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+rotation = -0.462512
+shape = SubResource("7")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(-91.2053, 36.7643)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1120, 599.413)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PackedVector2Array(3.77265, 362.176, 257.936, 362.176, 276.645, 337.231, 347.026, 338.122, 368.407, 362.176, 895.664, 362.176, 971.546, 401.376, 1016.98, 400.485, 1049.94, 416.521, 1022.33, 488.684, 986.691, 528.774, -43.1879, 527.678, -43.1879, 599.516, 1120.33, 600.937, 1120.14, 0.0756989, -43.2227, 0.0695, -44.0788, 362.176, -43.3689, 527.658, 3.77265, 527.678)

@@ -1,0 +1,214 @@
+[gd_scene load_steps=21 format=3 uid="uid://bt26i8813n1kp"]
+
+[ext_resource type="Texture2D" uid="uid://cyook15i7qhkj" path="res://assets/images/map/obj/hmpoll_3.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cydjv4mc3bb5y" path="res://assets/images/map/hendonMyre/westtile03.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ijvcgk5jtojq" path="res://assets/images/map/hendonMyre/westomidship.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cfg7f6a0xmnnv" path="res://assets/images/map/hendonMyre/westtile00.png" id="4"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="5"]
+[ext_resource type="Texture2D" uid="uid://b43ip30vn1grm" path="res://assets/images/map/hendonMyre/westnearship.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://d1nccq7v8otqi" path="res://assets/images/map/hendonMyre/westtile04.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dog57ige3wvqb" path="res://assets/images/map/bg/westfar00.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://1o5h4d4uqpta" path="res://assets/images/map/bg/westmid00.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bac6gu8vvoqcp" path="res://assets/images/map/hendonMyre/westmobj00.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dp5eb6515tydp" path="res://assets/images/map/hendonMyre/westmsafetybar.png" id="11"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="12"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "move"
+length = 1.2
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(747, 179), Vector2(747, 178), Vector2(747, 177), Vector2(747, 179)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nsrl"]
+_data = {
+"move": SubResource("1")
+}
+
+[sub_resource type="Animation" id="2"]
+length = 1.67
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23, 0.41, 0.56, 0.74, 0.97, 1.32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(750, 354), Vector2(750, 352), Vector2(750, 350), Vector2(750, 352), Vector2(750, 354), Vector2(750, 356), Vector2(750, 358)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yp1bf"]
+_data = {
+"move": SubResource("2")
+}
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(10.9933, 129.244)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_scldj"]
+texture = ExtResource("11")
+texture_region_size = Vector2i(63, 41)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="4"]
+sources/0 = SubResource("TileSetAtlasSource_scldj")
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(896, 55.9266)
+
+[node name="stage_05" type="Node2D"]
+script = ExtResource("12")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+scale = Vector2(1.00561, 1)
+texture = ExtResource("8")
+centered = false
+offset = Vector2(-120, 0)
+region_rect = Rect2(0, 0, 1002, 243)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("9")
+centered = false
+offset = Vector2(-50, 130)
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="westomidship" type="Sprite2D" parent="environment"]
+position = Vector2(747, 178.76)
+texture = ExtResource("3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/westomidship"]
+libraries = {
+"": SubResource("AnimationLibrary_6nsrl")
+}
+autoplay = "move"
+
+[node name="westtile00" type="Sprite2D" parent="environment"]
+position = Vector2(0, 156)
+texture = ExtResource("4")
+centered = false
+
+[node name="westtile03" type="Sprite2D" parent="environment"]
+position = Vector2(672, 156)
+texture = ExtResource("2")
+centered = false
+
+[node name="westnearship" type="Sprite2D" parent="environment"]
+position = Vector2(750, 355.444)
+texture = ExtResource("6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/westnearship"]
+libraries = {
+"": SubResource("AnimationLibrary_yp1bf")
+}
+autoplay = "move"
+
+[node name="westtile04" type="Sprite2D" parent="environment"]
+position = Vector2(591, 375)
+texture = ExtResource("7")
+centered = false
+
+[node name="westmobj00" type="Sprite2D" parent="environment"]
+position = Vector2(393, 353)
+texture = ExtResource("10")
+
+[node name="hmpoll_3" type="Sprite2D" parent="environment"]
+position = Vector2(690.116, 340.487)
+texture = ExtResource("1")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(5.85778, 494.046)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_02"]
+position = Vector2(111.317, 0)
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(890.299, 521.23)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(-90.4818, -2.57953)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(896, 600)
+
+[node name="westmsafetybar" type="TileMap" parent="."]
+position = Vector2(0, 530)
+tile_set = SubResource("4")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(449.189, 588.657)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource("5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PackedVector2Array(-1.13504, 560.574, -0.104034, 426.867, 376.11, 426.867, 435.4, 470.886, 895.747, 472.473, 896.54, 561.368, 940.987, 561.368, 940.987, 1.01521, -49.5508, -0.572189, -49.2878, 560.472)

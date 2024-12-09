@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/map/path/elvenpath2.png" type="Texture2D" id=1]
+[ext_resource path="res://assets/images/map/path/elvenpath3.png" type="Texture2D" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "flash"
+length = 2.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.7, 1.4 ),
+"transitions": PackedFloat32Array( 2, 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.313726 ), Color( 1, 1, 1, 0.862745 ), Color( 1, 1, 1, 0.862745 ) ]
+}
+
+[node name="elvenpath2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+modulate = Color( 1, 1, 1, 0.470589 )
+position = Vector2( 3, 4 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "flash"
+anims/flash = SubResource( 1 )

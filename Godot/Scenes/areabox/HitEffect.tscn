@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://ogabb6niujgs"]
+
+[ext_resource type="Texture2D" uid="uid://qmtlh3pkw040" path="res://assets/images/hitEffects/knocksmall/2.png" id="1"]
+[ext_resource type="Script" path="res://src/areabox/HitEffect.cs" id="1_sjycg"]
+[ext_resource type="Texture2D" uid="uid://dy1tw644j7k38" path="res://assets/images/hitEffects/knocksmall/0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c122f2i32l86e" path="res://assets/images/hitEffects/knocksmall/1.png" id="3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jw4ri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="HitEffect" type="Node2D"]
+script = ExtResource("1_sjycg")
+
+[node name="Effect" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jw4ri")
+frame_progress = 0.70783
+
+[connection signal="animation_finished" from="Effect" to="." method="_OnEffectAnimationFinished"]

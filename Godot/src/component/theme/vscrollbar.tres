@@ -1,0 +1,39 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bkyc4lkdy847v"]
+
+[ext_resource type="Texture2D" uid="uid://dst4w735jddun" path="res://assets/images/ui/skillbuy/4.png" id="1_bxyd4"]
+[ext_resource type="Texture2D" uid="uid://bytbmf1lbgunh" path="res://assets/images/ui/skillbuy/5.png" id="2_l06tb"]
+[ext_resource type="Texture2D" uid="uid://cw4yudusv3du1" path="res://assets/images/ui/skillbuy/6.png" id="3_uu8ex"]
+[ext_resource type="Texture2D" uid="uid://cwg00jer841r3" path="res://assets/images/ui/skillbuy/7.png" id="4_3hqqb"]
+[ext_resource type="Texture2D" uid="uid://b517ga0wij381" path="res://assets/images/ui/skillbuy/3.png" id="5_fid17"]
+[ext_resource type="Texture2D" uid="uid://mjj2qii4lgq6" path="res://assets/images/ui/skillbuy/2.png" id="6_vn5o0"]
+
+[sub_resource type="StyleBoxTexture" id="1"]
+texture = ExtResource("5_fid17")
+region_rect = Rect2(0, 0, 11, 16)
+
+[sub_resource type="StyleBoxTexture" id="2"]
+texture = ExtResource("5_fid17")
+region_rect = Rect2(0, 0, 11, 16)
+
+[sub_resource type="StyleBoxTexture" id="3"]
+texture = ExtResource("5_fid17")
+region_rect = Rect2(0, 0, 11, 16)
+
+[sub_resource type="StyleBoxTexture" id="4"]
+texture = ExtResource("6_vn5o0")
+region_rect = Rect2(0, 0, 11, 233)
+
+[sub_resource type="StyleBoxTexture" id="5"]
+texture = ExtResource("5_fid17")
+region_rect = Rect2(0, 0, 11, 16)
+
+[resource]
+VScrollBar/icons/decrement = ExtResource("1_bxyd4")
+VScrollBar/icons/decrement_highlight = ExtResource("2_l06tb")
+VScrollBar/icons/increment = ExtResource("3_uu8ex")
+VScrollBar/icons/increment_highlight = ExtResource("4_3hqqb")
+VScrollBar/styles/grabber = SubResource("1")
+VScrollBar/styles/grabber_highlight = SubResource("2")
+VScrollBar/styles/grabber_pressed = SubResource("3")
+VScrollBar/styles/scroll = SubResource("4")
+VScrollBar/styles/scroll_focus = SubResource("5")

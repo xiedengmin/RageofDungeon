@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/map/act1/granflorissidegate01.png" type="Texture2D" id=1]
+[ext_resource path="res://assets/images/map/act1/granflorissidelight01.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/images/map/act1/granflorissidedoor01.png" type="Texture2D" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "flash"
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("granflorissidelight01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.5, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="RightGate" type="Sprite2D"]
+texture = ExtResource( 1 )
+
+[node name="granflorissidelight01" type="Sprite2D" parent="."]
+position = Vector2( -9, -1 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "flash"
+anims/flash = SubResource( 1 )
+
+[node name="granflorissidedoor01" type="Sprite2D" parent="."]
+position = Vector2( -10.8831, 12.4494 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array( -57.8848, 63.9578, 36.0305, 113.983, 53.0202, 114.927, 53.9641, 57.8226, -56.469, 2.60609 )

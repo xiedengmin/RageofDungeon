@@ -1,0 +1,677 @@
+[gd_scene load_steps=77 format=3 uid="uid://b0iqan8ff6l17"]
+
+[ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="2"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="3"]
+[ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cgp18d5nqqmtq" path="res://assets/images/map/obj/hmpoll_0.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bxtbff1lcqdes" path="res://assets/images/map/path/hendonpath_1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bqhomib7bt8hb" path="res://assets/images/map/sign/sign4.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ckod4djvpqrqn" path="res://assets/images/map/hendonMyre/hmtree00.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cxrrpurjt51sl" path="res://assets/images/map/hendonMyre/bigrabbit_1.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bxse3p7atyg84" path="res://assets/images/map/hendonMyre/bigrabbit_0.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://kv6v5bs2alan" path="res://assets/images/map/hendonMyre/bigrabbit_2.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://ccbmcngojtw3v" path="res://assets/images/map/hendonMyre/smallbear_2.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dw4xw7khxw72c" path="res://assets/images/map/hendonMyre/smallbear_1.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dry5qo80u67d" path="res://assets/images/map/hendonMyre/smallbear_0.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://duicqhecebsck" path="res://assets/images/map/path/hendonpath_4.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cfx87omwnceb8" path="res://assets/images/map/hendonMyre/hmstreetlamp_1.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://bai0p4frl1vrv" path="res://assets/images/map/hendonMyre/hmbggrass1.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dciamxndo2w10" path="res://assets/images/map/hendonMyre/hmbgbox_0.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://c4yi3lad1a3e" path="res://assets/images/map/hendonMyre/hmbggrass0.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://bnhoknwgy6jvf" path="res://assets/images/map/hendonMyre/hmobj01_14.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://w3osb4xhd8g2" path="res://assets/images/map/hendonMyre/hmseriahouse.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://dmpdd3pm2omrn" path="res://assets/images/map/hendonMyre/hmobj01_24.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://b4r2w3q8njkde" path="res://assets/images/map/hendonMyre/hmobj01_18.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://dpr2yp636r3xw" path="res://assets/images/map/hendonMyre/hmobj01_21.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://dmwkf1jy1a8aj" path="res://assets/images/map/hendonMyre/hmobj01_20.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://dgjvvf26oxbkv" path="res://assets/images/map/hendonMyre/hmobj01_19.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://brakpr1csgks4" path="res://assets/images/map/hendonMyre/shade.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://cdua4ff2n1opc" path="res://assets/images/map/hendonMyre/hmobj01_7.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://ka47uegutswd" path="res://assets/images/map/hendonMyre/hmobj01_12.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://w8p85u4j472l" path="res://assets/images/map/hendonMyre/hmobj01_8.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://b2raxtbr172ym" path="res://assets/images/map/hendonMyre/hmobj01_9.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://b7jw27va8ncii" path="res://assets/images/map/hendonMyre/hmobj01_10.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://cq4y18luy6t8d" path="res://assets/images/map/hendonMyre/hmobj01_11.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://r3mqy1034dyi" path="res://assets/images/map/hendonMyre/hmobj01_13.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://bchm4wmoug4li" path="res://assets/images/map/path/hendonpath_0.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://dkr2j5bq163r4" path="res://assets/images/map/path/hendonpath_3.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://dtjasbi6iltum" path="res://assets/images/map/light/onipart/0.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://do25dcnb2j77v" path="res://assets/images/map/light/onipart/4.png" id="39"]
+[ext_resource type="Texture2D" uid="uid://c2j6imhivd7h5" path="res://assets/images/map/light/onipart/5.png" id="40"]
+[ext_resource type="Texture2D" uid="uid://bld8jkx4lgpxr" path="res://assets/images/map/light/onipart/1.png" id="41"]
+[ext_resource type="Texture2D" uid="uid://c25sle6ynwsiu" path="res://assets/images/map/light/onipart/6.png" id="42"]
+[ext_resource type="Texture2D" uid="uid://d1njec6quppxl" path="res://assets/images/map/light/onipart/2.png" id="43"]
+[ext_resource type="Texture2D" uid="uid://df21wnbah68v" path="res://assets/images/map/light/onipart/3.png" id="44"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="45"]
+[ext_resource type="PackedScene" path="res://scenes/npc/Oran.tscn" id="46"]
+[ext_resource type="PackedScene" uid="uid://dkcdjfgovrcdv" path="res://scenes/npc/Sinda.tscn" id="47"]
+[ext_resource type="PackedScene" uid="uid://dm2i566k48fq4" path="res://scenes/npc/GSD.tscn" id="48"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhugq"]
+texture = ExtResource("2")
+texture_region_size = Vector2i(224, 134)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/1 = SubResource("TileSetAtlasSource_nhugq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmdmt"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(224, 138)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="2"]
+sources/1 = SubResource("TileSetAtlasSource_hmdmt")
+
+[sub_resource type="Animation" id="3"]
+resource_name = "flash"
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c4tyk"]
+_data = {
+"flash": SubResource("3")
+}
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 10.56
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 9.96, 10.2, 10.32, 10.44),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1pvxr"]
+_data = {
+"idle": SubResource("5")
+}
+
+[sub_resource type="Shader" id="6"]
+code = "shader_type canvas_item;
+
+uniform float tilt = 0.4;
+uniform float scale = 0.3;
+uniform float alpha = 0.4;
+uniform bool shadow = true;
+
+void fragment(){
+	vec4 previous_color = texture(TEXTURE,UV);
+	vec4 block_color;
+	if(shadow == true){
+		block_color = vec4(0.0,0.0,0.0,previous_color.a * alpha);
+	}else{
+		block_color = vec4(previous_color.r,previous_color.g,previous_color.b,previous_color.a * alpha);
+	}
+
+    COLOR = block_color;
+}
+
+void vertex(){
+	mat3 mat_scale = mat3(vec3(1.0,0.0,0.0),vec3(0.0,1.0,0.0),vec3(0.0,0.0,1.0));
+	mat3 mat_tilt = mat3(vec3(1.0, tilt, 0.0), vec3(0.0, scale, 0.0), vec3(0.0, 0.0, 1.0));
+	mat3 mul = mat_scale * mat_tilt;
+	vec3 temp = vec3(VERTEX,0.0) * mul;
+	
+	VERTEX =  temp.xy;
+}"
+
+[sub_resource type="ShaderMaterial" id="7"]
+shader = SubResource("6")
+shader_parameter/tilt = 0.0
+shader_parameter/scale = -0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="9"]
+length = 7.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7, 7.1, 7.2, 7.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nsacm"]
+_data = {
+"idle": SubResource("9")
+}
+
+[sub_resource type="SpriteFrames" id="10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="11"]
+length = 2.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yluwd"]
+_data = {
+"idle": SubResource("11")
+}
+
+[sub_resource type="SpriteFrames" id="12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="13"]
+length = 0.84
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vu80f"]
+_data = {
+"idle": SubResource("13")
+}
+
+[sub_resource type="Animation" id="14"]
+length = 2.1
+step = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hendonpath_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0.313726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q8mrk"]
+_data = {
+"flash": SubResource("14")
+}
+
+[sub_resource type="RectangleShape2D" id="15"]
+size = Vector2(109.922, 12.6133)
+
+[sub_resource type="RectangleShape2D" id="16"]
+size = Vector2(135.029, 12.6394)
+
+[sub_resource type="RectangleShape2D" id="17"]
+size = Vector2(116.292, 9.65796)
+
+[sub_resource type="RectangleShape2D" id="18"]
+size = Vector2(13.2919, 143.161)
+
+[sub_resource type="SpriteFrames" id="19"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="20"]
+size = Vector2(40.745, 162.214)
+
+[node name="stage_03" type="Node2D"]
+script = ExtResource("45")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1002, 243)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(895, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("5")
+centered = false
+offset = Vector2(0, 120)
+region_enabled = true
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="hmtree00" type="Sprite2D" parent="environment"]
+position = Vector2(18.0898, 193.64)
+texture = ExtResource("9")
+
+[node name="hmwall02" type="TileMap" parent="environment"]
+position = Vector2(0, 288)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0)
+
+[node name="hmtile" type="TileMap" parent="environment"]
+position = Vector2(0, 422)
+tile_set = SubResource("2")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0)
+
+[node name="hmbgbox_0" type="Sprite2D" parent="environment"]
+position = Vector2(52.9267, 365.513)
+texture = ExtResource("19")
+
+[node name="hmpoll_0" type="Sprite2D" parent="environment"]
+position = Vector2(85.7742, 283.6)
+texture = ExtResource("6")
+
+[node name="hendonpath_1" type="Sprite2D" parent="environment"]
+position = Vector2(336, 300)
+texture = ExtResource("7")
+
+[node name="hendonpath_4" type="Sprite2D" parent="environment/hendonpath_1"]
+modulate = Color(1, 1, 1, 0.313726)
+position = Vector2(-11.8193, -96.9283)
+texture = ExtResource("16")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/hendonpath_1"]
+libraries = {
+"": SubResource("AnimationLibrary_c4tyk")
+}
+autoplay = "flash"
+
+[node name="sign4" type="Sprite2D" parent="environment"]
+position = Vector2(487.697, 305.883)
+texture = ExtResource("8")
+
+[node name="hmtree01" type="Sprite2D" parent="environment"]
+position = Vector2(696.469, 204.938)
+texture = ExtResource("9")
+
+[node name="bigrabbit" type="Node2D" parent="environment"]
+position = Vector2(676.393, 343.206)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment/bigrabbit"]
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/bigrabbit"]
+libraries = {
+"": SubResource("AnimationLibrary_1pvxr")
+}
+autoplay = "idle"
+
+[node name="smallbear" type="Node2D" parent="environment"]
+position = Vector2(598.072, 362.337)
+
+[node name="shadow" type="AnimatedSprite2D" parent="environment/smallbear"]
+material = SubResource("7")
+position = Vector2(0, 19.369)
+sprite_frames = SubResource("8")
+frame = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment/smallbear"]
+sprite_frames = SubResource("8")
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/smallbear"]
+libraries = {
+"": SubResource("AnimationLibrary_nsacm")
+}
+
+[node name="hmseriahouse" type="Sprite2D" parent="environment"]
+position = Vector2(882.766, 262.855)
+texture = ExtResource("22")
+
+[node name="hmstreetlamp_1" type="Sprite2D" parent="environment"]
+position = Vector2(240.842, 244.64)
+texture = ExtResource("17")
+
+[node name="hmobj01_24" type="Sprite2D" parent="environment"]
+position = Vector2(1945, 326)
+texture = ExtResource("23")
+
+[node name="sstreet00" type="Node2D" parent="environment"]
+position = Vector2(1637, 275)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment/sstreet00"]
+sprite_frames = SubResource("10")
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/sstreet00"]
+libraries = {
+"": SubResource("AnimationLibrary_yluwd")
+}
+autoplay = "idle"
+
+[node name="shade" type="Sprite2D" parent="environment/sstreet00"]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(-122.084, -19.8456)
+texture = ExtResource("28")
+
+[node name="hmobj01_14" type="Sprite2D" parent="environment"]
+position = Vector2(1237.74, 237.881)
+texture = ExtResource("21")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="environment/hmobj01_14"]
+position = Vector2(-93, 100)
+sprite_frames = SubResource("12")
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/hmobj01_14"]
+libraries = {
+"": SubResource("AnimationLibrary_vu80f")
+}
+autoplay = "idle"
+
+[node name="grass" type="Node2D" parent="environment"]
+
+[node name="hmbggrass1" type="Sprite2D" parent="environment/grass"]
+position = Vector2(46.7915, 382.03)
+texture = ExtResource("18")
+
+[node name="hmbggrass0" type="Sprite2D" parent="environment/grass"]
+position = Vector2(148.73, 396.661)
+texture = ExtResource("20")
+
+[node name="hmbggrass2" type="Sprite2D" parent="environment/grass"]
+position = Vector2(1622.23, 418.947)
+texture = ExtResource("20")
+
+[node name="hmbggrass3" type="Sprite2D" parent="environment/grass"]
+position = Vector2(1766.17, 426.498)
+texture = ExtResource("18")
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="Oran" parent="npc" instance=ExtResource("46")]
+offset_left = 640.701
+offset_top = 353.473
+offset_right = 705.701
+offset_bottom = 370.473
+
+[node name="Sinda" parent="npc" instance=ExtResource("47")]
+offset_left = 1244.33
+offset_top = 357.473
+offset_right = 1309.33
+offset_bottom = 374.473
+
+[node name="GSD" parent="npc" instance=ExtResource("48")]
+offset_left = 1519.94
+offset_top = 366.473
+offset_right = 1584.94
+offset_bottom = 383.473
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="hendonpath_0" type="Sprite2D" parent="."]
+position = Vector2(465.47, 503.441)
+texture = ExtResource("36")
+
+[node name="hendonpath_3" type="Sprite2D" parent="hendonpath_0"]
+modulate = Color(1, 1, 1, 0.417739)
+position = Vector2(3.55896, -35.131)
+texture = ExtResource("37")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hendonpath_0"]
+libraries = {
+"": SubResource("AnimationLibrary_q8mrk")
+}
+autoplay = "flash"
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_04" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(337.914, 363.932)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_04"]
+shape = SubResource("15")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_04"]
+position = Vector2(7.13522, 24.7293)
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(465.033, 554.192)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("16")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(0, -32.1086)
+
+[node name="to_Gate" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(884.146, 392.255)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Gate"]
+shape = SubResource("17")
+
+[node name="pos" type="Marker2D" parent="doors/to_Gate"]
+position = Vector2(0, 30.403)
+
+[node name="to_stage_07" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(6.67871, 477.873)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_07"]
+shape = SubResource("18")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_07"]
+position = Vector2(90.4111, 0)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(2060.41, 600)
+
+[node name="onipart" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
+position = Vector2(1514.79, 302.658)
+sprite_frames = SubResource("19")
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PackedVector2Array(-0.896698, 408.597, 283.424, 409.932, 282.457, 357.473, 378.319, 357.893, 450.389, 408.997, 814.68, 409.077, 839.418, 387.037, 929.398, 387.037, 951.62, 409.077, 1577.3, 403.592, 1623.97, 424.614, 1929.63, 425.034, 1929.28, 554.095, 533.039, 547.421, 533, 561, 397.25, 561.25, 396.886, 546.086, -0.896698, 543.416, -0.896698, 599.48, 2058.76, 598.145, 2060.1, -1.19836, 0.438141, 1.47131)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(-21.5394, 471.101)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource("20")

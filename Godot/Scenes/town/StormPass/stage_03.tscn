@@ -1,0 +1,226 @@
+[gd_scene load_steps=32 format=3 uid="uid://wqqaxlhd8bcy"]
+
+[ext_resource type="TileSet" path="res://assets/tres/stormPass_tileset.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://cqahpivyat72a" path="res://assets/images/map/stormPass/spobj01.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ocyt5kinnrr6" path="res://assets/images/map/stormPass/fire_2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cqgvntk4cw55b" path="res://assets/images/map/stormPass/fire_4.png" id="4"]
+[ext_resource type="PackedScene" path="res://src/component/obj/stormbattlegateleftr.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://src/component/obj/stormbattlegaterightr.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://bmko4lqtb62bi" path="res://assets/images/map/stormPass/cowtotem.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cu5wfadedpryh" path="res://assets/images/map/bg/spfar01.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dcuxepjtdb8gp" path="res://assets/images/map/stormPass/fire_14.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://ptns46l2op2n" path="res://assets/images/map/stormPass/fire_9.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dqq8fkumb5okx" path="res://assets/images/map/stormPass/fire_0.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ds8ph1fy01tm3" path="res://assets/images/map/stormPass/fire_3.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://ormjhpmvmx4q" path="res://assets/images/map/stormPass/fire_6.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://beww2e7iq2xy7" path="res://assets/images/map/stormPass/fire_10.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://bqryokqt34kyk" path="res://assets/images/map/stormPass/fire_11.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://mahmkid87ia8" path="res://assets/images/map/stormPass/fire_5.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cbfbods3o3nli" path="res://assets/images/map/stormPass/fire_8.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://dgqmdftcsx144" path="res://assets/images/map/stormPass/fire_15.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://cn867sdecn3cp" path="res://assets/images/map/stormPass/fire_13.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://qoyw5cftj0xu" path="res://assets/images/map/stormPass/fire_7.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://4sl78lm36lnk" path="res://assets/images/map/stormPass/fire_12.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://cdfesgo0dfoi7" path="res://assets/images/map/stormPass/firebox.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://dvmo0nn1yo6fe" path="res://assets/images/map/stormPass/fire_1.png" id="23"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="24"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="25"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="2"]
+resource_name = "idle"
+length = 1.92
+loop_mode = 1
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fire:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96, 1.08, 1.2, 1.32, 1.44, 1.56, 1.68, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dpcsb"]
+_data = {
+"idle": SubResource("2")
+}
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(11.9033, 156.876)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(896, 160)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(40.447, 331.668)
+
+[node name="stage_03" type="Node2D"]
+script = ExtResource("25")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="environment"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(721, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("8")
+centered = false
+offset = Vector2(0, -500)
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2(0, 127)
+tile_set = ExtResource("1")
+format = 2
+
+[node name="spobj01" type="Sprite2D" parent="environment"]
+position = Vector2(0, 60.4762)
+texture = ExtResource("2")
+centered = false
+
+[node name="stormbattlegateleftr" parent="environment" instance=ExtResource("5")]
+position = Vector2(94, 296)
+
+[node name="stormbattlegaterightr" parent="environment" instance=ExtResource("6")]
+position = Vector2(129, 465)
+
+[node name="cowtotem" type="Sprite2D" parent="environment"]
+position = Vector2(675.926, 222.455)
+texture = ExtResource("7")
+
+[node name="firebox" type="Sprite2D" parent="environment"]
+position = Vector2(311.442, 307.961)
+texture = ExtResource("22")
+
+[node name="fire" type="AnimatedSprite2D" parent="environment/firebox"]
+position = Vector2(1.05948, -114.422)
+sprite_frames = SubResource("1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/firebox"]
+libraries = {
+"": SubResource("AnimationLibrary_dpcsb")
+}
+autoplay = "idle"
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(6.36783, 416.155)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(85.7781, 0)
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(889.248, 416.155)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(-89.7534, 0)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(896, 726)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(448, 263.557)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource("4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(448, 570.316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource("4")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2(-20.4236, 415.796)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource("5")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="collision"]
+position = Vector2(915.967, 415.796)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D4"]
+shape = SubResource("5")

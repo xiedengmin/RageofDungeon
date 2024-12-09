@@ -1,0 +1,310 @@
+[gd_scene load_steps=34 format=3 uid="uid://bs5417ossijum"]
+
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://drnor4f830u2m" path="res://assets/images/npc/kanna/7.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dnbbdjweafqmm" path="res://assets/images/npc/kanna/0.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://blgjju7h6hg4h" path="res://assets/images/npc/kanna/1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cjsio2oxfr6um" path="res://assets/images/npc/kanna/5.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://db83qm76vbynp" path="res://assets/images/npc/kanna/6.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dxfo1t06vwoiq" path="res://assets/images/npc/kanna/4.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://d573wdvhqlj2" path="res://assets/images/npc/kanna/2.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bsypbmff2hdq" path="res://assets/images/npc/kanna/3.png" id="10"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="11"]
+[ext_resource type="Script" path="res://src/npc/Kanna.cs" id="12"]
+[ext_resource type="AudioStream" uid="uid://cjs40nhe8i1qj" path="res://assets/sounds/npc/kanna/kn_amb_02.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://bijhtnb4tra6m" path="res://assets/sounds/npc/kanna/kn_fw_01.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://dv4kghagyntp4" path="res://assets/sounds/npc/kanna/kn_fw_02.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://dn53l4h5734oi" path="res://assets/sounds/npc/kanna/kn_tk_02.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://bblowi42t23go" path="res://assets/sounds/npc/kanna/kn_tk_01.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://cbdkl1o3ucin7" path="res://assets/sounds/npc/kanna/kn_amb_01.ogg" id="18"]
+[ext_resource type="Texture2D" uid="uid://bq8codng5qltb" path="res://assets/images/face/npc/popup/kanna.png" id="19"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="20"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("1")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("11")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 3.76
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ughn"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_02"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "tk_01"
+length = 1.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_02"
+length = 1.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byvvs"]
+_data = {
+"amb_01": SubResource("6"),
+"amb_02": SubResource("7"),
+"fw_01": SubResource("8"),
+"fw_02": SubResource("9"),
+"tk_01": SubResource("10"),
+"tk_02": SubResource("11")
+}
+
+[node name="Kanna" instance=ExtResource("2")]
+visible = false
+script = ExtResource("12")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-28.9542, 48.1086)
+sprite_frames = SubResource("2")
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_2ughn")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -64.0
+offset_top = -50.0276
+offset_right = 64.0
+offset_bottom = -33.0276
+text = "杂货店的卡妮娜"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = -43.6541
+offset_top = -47.2177
+offset_right = 46.3459
+offset_bottom = 82.7823
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("18")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_byvvs")
+}
+
+[node name="Menu_Type1" parent="." index="10" instance=ExtResource("20")]
+
+[node name="faceIcon" parent="Menu_Type1/top" index="0"]
+texture = ExtResource("19")
+
+[node name="nameLabel" parent="Menu_Type1/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "卡妮娜"
+
+[editable path="Menu_Type1"]

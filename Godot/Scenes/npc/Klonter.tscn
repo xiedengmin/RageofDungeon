@@ -1,0 +1,451 @@
+[gd_scene load_steps=46 format=3 uid="uid://b6n784qbf1pyu"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://dgjr3fpobnyx0" path="res://assets/images/npc/npc_klonter/1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://ck4pyjkjlc15g" path="res://assets/images/npc/npc_klonter/0.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d3invuo63qcnd" path="res://assets/images/npc/npc_klonter/3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://df84hv0hslpjk" path="res://assets/images/npc/npc_klonter/2.png" id="6"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" path="res://src/npc/Klonter.cs" id="8"]
+[ext_resource type="AudioStream" uid="uid://th62e6pimqvx" path="res://assets/sounds/npc/klonter/klonter_amb_01.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://doi0hlqye7dhl" path="res://assets/sounds/npc/klonter/klonter_amb_02.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://bspr43rsogqdr" path="res://assets/sounds/npc/klonter/klonter_amb_05.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://bnruqshsys82e" path="res://assets/sounds/npc/klonter/klonter_fw_01.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://cyt6so5kq0fne" path="res://assets/sounds/npc/klonter/klonter_fw_02.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://do4e1m3eo21x5" path="res://assets/sounds/npc/klonter/klonter_fw_03.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://dbocquhbm3qii" path="res://assets/sounds/npc/klonter/klonter_fw_04.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://ct0lobbo8eina" path="res://assets/sounds/npc/klonter/klonter_fw_05.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://cc0uhbmdgm078" path="res://assets/sounds/npc/klonter/klonter_tk_01.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://d3dwftm4jud0d" path="res://assets/sounds/npc/klonter/klonter_tk_02.ogg" id="18"]
+[ext_resource type="AudioStream" uid="uid://c0buh7p4c67wq" path="res://assets/sounds/npc/klonter/klonter_tk_03.ogg" id="19"]
+[ext_resource type="AudioStream" uid="uid://8hq2jvamvt55" path="res://assets/sounds/npc/klonter/klonter_tk_04.ogg" id="20"]
+[ext_resource type="AudioStream" uid="uid://c7rnvbe0uy2fr" path="res://assets/sounds/npc/klonter/klonter_amb_04.ogg" id="21"]
+[ext_resource type="AudioStream" uid="uid://cv78h3rkondr7" path="res://assets/sounds/npc/klonter/klonter_amb_03.ogg" id="22"]
+[ext_resource type="Texture2D" uid="uid://bg0s5dl4kkfsl" path="res://assets/images/face/npc/popup/klonter.png" id="23"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="24"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("2")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("7")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 0.72
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_slox1"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_02"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "amb_03"
+length = 2.8
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "amb_04"
+length = 6.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "amb_05"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "fw_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "fw_02"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "fw_03"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="14"]
+resource_name = "fw_04"
+length = 4.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="15"]
+resource_name = "fw_05"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="16"]
+resource_name = "tk_01"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="17"]
+resource_name = "tk_02"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="18"]
+resource_name = "tk_03"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="19"]
+resource_name = "tk_04"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_838he"]
+_data = {
+"amb_01": SubResource("6"),
+"amb_02": SubResource("7"),
+"amb_03": SubResource("8"),
+"amb_04": SubResource("9"),
+"amb_05": SubResource("10"),
+"fw_01": SubResource("11"),
+"fw_02": SubResource("12"),
+"fw_03": SubResource("13"),
+"fw_04": SubResource("14"),
+"fw_05": SubResource("15"),
+"tk_01": SubResource("16"),
+"tk_02": SubResource("17"),
+"tk_03": SubResource("18"),
+"tk_04": SubResource("19")
+}
+
+[node name="Klonter" instance=ExtResource("1")]
+script = ExtResource("8")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-18.709, 37.8633)
+sprite_frames = SubResource("2")
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_slox1")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_left = -42.7179
+offset_top = -97.2454
+offset_right = 53.2821
+offset_bottom = -80.2454
+text = "克伦特"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = -110.0
+offset_top = -98.0
+offset_right = 112.0
+offset_bottom = 88.0
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("19")
+
+[node name="CollisionShape2D" parent="range_check" index="0"]
+position = Vector2(-8.5, -6.75)
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_838he")
+}
+
+[node name="Menu_Type1" parent="." index="10" instance=ExtResource("24")]
+
+[node name="faceIcon" parent="Menu_Type1/top" index="0"]
+texture = ExtResource("23")
+
+[node name="nameLabel" parent="Menu_Type1/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "克伦特"
+
+[editable path="Menu_Type1"]

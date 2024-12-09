@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://ca2vpvoxv2rex"]
+
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="1_kg3h4"]
+[ext_resource type="Texture2D" uid="uid://cn7xlhyjb4plc" path="res://assets/images/map/bg/gateback.png" id="2_y20rq"]
+[ext_resource type="PackedScene" uid="uid://wifly836pnwu" path="res://scenes/com/DoorArea.tscn" id="3_cv87t"]
+[ext_resource type="PackedScene" uid="uid://cjloj475us43x" path="res://scenes/npc/Seria.tscn" id="4_tsbaj"]
+[ext_resource type="PackedScene" uid="uid://iferwr8itas1" path="res://scenes/npc/Postbox.tscn" id="5_goh1w"]
+[ext_resource type="PackedScene" uid="uid://dsqhc4s3pe5ff" path="res://src/component/obj/gatepillar.tscn" id="6_55al1"]
+[ext_resource type="PackedScene" uid="uid://cmtqqov33s4lr" path="res://scenes/npc/Storate.tscn" id="7_f3hs4"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(318.919, 44)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(1270, 32.2678)
+
+[node name="Gate" type="Node2D"]
+script = ExtResource("1_kg3h4")
+Bgm = "gate"
+
+[node name="gateback" type="Sprite2D" parent="."]
+scale = Vector2(1.33543, 1.26964)
+texture = ExtResource("2_y20rq")
+centered = false
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" parent="doors" instance=ExtResource("3_cv87t")]
+position = Vector2(499, 629)
+current = "Gate"
+target = "stage_01"
+
+[node name="CollisionShape2D" parent="doors/to_stage_01" index="0"]
+position = Vector2(158, 32)
+shape = SubResource("1")
+
+[node name="pos" parent="doors/to_stage_01" index="1"]
+position = Vector2(158, -28)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+position = Vector2(0, 1)
+polygon = PackedVector2Array(0.900494, -0.233976, 1279, -3, 1283, 680, 1185, 675, 896, 437, 332, 440, 55, 709, 0, 709)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(459, 583)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+position = Vector2(183, 110)
+shape = SubResource("2")
+
+[node name="Seria" parent="." instance=ExtResource("4_tsbaj")]
+offset_left = 630.0
+offset_top = 399.0
+offset_right = 714.0
+offset_bottom = 495.0
+
+[node name="Postbox" parent="." instance=ExtResource("5_goh1w")]
+offset_left = 948.0
+offset_top = 522.0
+offset_right = 948.0
+offset_bottom = 539.0
+
+[node name="stage" type="Node2D" parent="."]
+position = Vector2(3, -1)
+
+[node name="gatepillar" parent="." instance=ExtResource("6_55al1")]
+position = Vector2(644, 617)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+position = Vector2(-2, 3)
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1280, 718)
+
+[node name="Born" type="Marker2D" parent="."]
+position = Vector2(762, 530)
+
+[node name="Storate" parent="." instance=ExtResource("7_f3hs4")]
+offset_left = 345.0
+offset_top = 500.0
+offset_right = 345.0
+offset_bottom = 500.0
+
+[editable path="doors/to_stage_01"]

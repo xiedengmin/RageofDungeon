@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://h7vd828nt02q"]
+
+[ext_resource type="PackedScene" uid="uid://bs2qdumm6mg15" path="res://Res/Unit/Skeleton/Idle04.gltf" id="1_thkod"]
+
+[node name="Idle04" instance=ExtResource("1_thkod")]
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/0/rotation = Quaternion(-0.0169548, -0.790228, 0.0990903, 0.604512)
+bones/2/position = Vector3(0.156302, 0, 0.000281334)
+bones/2/rotation = Quaternion(0.0132255, 0.0934578, -0.00104281, 0.995535)
+bones/3/rotation = Quaternion(-0.0639717, 0.12044, -0.0377044, 0.989939)
+bones/4/rotation = Quaternion(-0.758899, 0.635826, 0.0900647, 0.1081)
+bones/5/rotation = Quaternion(-0.184831, -0.209253, 0.475296, 0.834353)
+bones/6/rotation = Quaternion(-2.39339e-16, -0.298304, 2.22045e-16, 0.954471)
+bones/7/rotation = Quaternion(0.700728, 0.0874981, 0.00292057, 0.708036)
+bones/10/rotation = Quaternion(0.687315, 0.717539, 0.0817726, -0.0777818)
+bones/11/rotation = Quaternion(0.0283003, 0.0620255, -0.622705, 0.779481)
+bones/12/rotation = Quaternion(0, -0.183803, 0, 0.982963)
+bones/13/rotation = Quaternion(-0.691893, 0.0588806, 0.0220365, 0.719258)
+bones/14/rotation = Quaternion(0.0184236, 0.134421, -0.161362, 0.977524)
+bones/15/rotation = Quaternion(-0.377992, 0.145747, 0.228544, 0.885239)
+bones/16/rotation = Quaternion(0.0593737, -0.0985858, -0.0874734, 0.989497)
+bones/17/rotation = Quaternion(0.0434857, -0.222902, 0.972096, 0.0587697)
+bones/18/rotation = Quaternion(0, -0.358606, 0, 0.933489)
+bones/19/rotation = Quaternion(0.0228798, 0.292081, 0.0927095, 0.951614)
+bones/21/rotation = Quaternion(-0.308408, -0.0892519, 0.942428, -0.0935342)
+bones/22/rotation = Quaternion(0, -0.385938, 0, 0.922525)
+bones/23/rotation = Quaternion(-0.216621, 0.0526073, -0.167115, 0.960406)
+
+[node name="Object01" parent="Skeleton3D" index="0"]
+transform = Transform3D(0.13265, -0.0952508, 0.115461, 0.100237, 0.171105, 0.0259947, -0.11116, 0.0406265, 0.161224, -0.677702, 0.921949, 0.166855)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "All Animations"

@@ -1,0 +1,317 @@
+[gd_scene load_steps=34 format=3 uid="uid://4xbs067plcwt"]
+
+[ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cyook15i7qhkj" path="res://assets/images/map/obj/hmpoll_3.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bxtbff1lcqdes" path="res://assets/images/map/path/hendonpath_1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ci0tmboovmfpm" path="res://assets/images/map/hendonMyre/hmobj01_3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ckod4djvpqrqn" path="res://assets/images/map/hendonMyre/hmtree00.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://2xss6xwxgbxt" path="res://assets/images/map/hendonMyre/hmbgbox_2.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dib7eaj4o5sy3" path="res://assets/images/map/hendonMyre/hmbgbox_3.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bai0p4frl1vrv" path="res://assets/images/map/hendonMyre/hmbggrass1.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://kc0nad40afct" path="res://assets/images/map/hendonMyre/hmbgbox_4.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://c4yi3lad1a3e" path="res://assets/images/map/hendonMyre/hmbggrass0.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dv2xwhnyvsepu" path="res://assets/images/map/hendonMyre/basilica.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dr5wn13i752xt" path="res://assets/images/map/sign/sign2.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://c5mhafwa0jpff" path="res://assets/images/map/hendonMyre/hmcityhall.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cxah4h4tir2uv" path="res://assets/images/map/obj/hmpoll_1.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://nmyjclee14jw" path="res://assets/images/map/sign/sign1.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dwtb707yp1ls6" path="res://assets/images/map/hendonMyre/hmalberthouse.png" id="19"]
+[ext_resource type="PackedScene" uid="uid://bgtu8fxgad75i" path="res://scenes/npc/Board.tscn" id="20"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="21"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="22"]
+[ext_resource type="PackedScene" path="res://scenes/npc/Rothon.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://yiov0w4ctqvk" path="res://scenes/npc/Grandis.tscn" id="24"]
+[ext_resource type="PackedScene" uid="uid://dexennelqkath" path="res://scenes/npc/Birken.tscn" id="25"]
+[ext_resource type="PackedScene" uid="uid://bwlijifw4sm0g" path="res://scenes/npc/Albert.tscn" id="26"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cy8tx"]
+texture = ExtResource("3")
+texture_region_size = Vector2i(224, 134)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/1 = SubResource("TileSetAtlasSource_cy8tx")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oudg5"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(224, 138)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="2"]
+sources/1 = SubResource("TileSetAtlasSource_oudg5")
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(119.356, 19.5828)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(11.3068, 139.435)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(4256, 52.26)
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource("22")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("7")
+centered = false
+offset = Vector2(0, -30)
+region_enabled = true
+region_rect = Rect2(0, 0, 1002, 243)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(895, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("13")
+centered = false
+offset = Vector2(0, 130)
+region_enabled = true
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="hmwall02" type="TileMap" parent="environment"]
+position = Vector2(0, 288)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0)
+
+[node name="hmtile" type="TileMap" parent="environment"]
+position = Vector2(0, 422)
+tile_set = SubResource("2")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0)
+
+[node name="hendonpath_1" type="Sprite2D" parent="environment"]
+position = Vector2(1232, 300)
+texture = ExtResource("4")
+
+[node name="hmobj01_3" type="Sprite2D" parent="environment"]
+position = Vector2(846.189, 260.98)
+texture = ExtResource("5")
+
+[node name="sign2" type="Sprite2D" parent="environment"]
+position = Vector2(1409.91, 311.341)
+texture = ExtResource("15")
+
+[node name="hmcityhall" type="Sprite2D" parent="environment"]
+position = Vector2(2734, 217)
+texture = ExtResource("16")
+
+[node name="basilica" type="Sprite2D" parent="environment"]
+position = Vector2(1898.67, 204.313)
+texture = ExtResource("14")
+
+[node name="hmtree00" type="Sprite2D" parent="environment"]
+position = Vector2(3495.29, 209)
+texture = ExtResource("6")
+
+[node name="hmalberthouse" type="Sprite2D" parent="environment"]
+position = Vector2(3750.29, 264)
+texture = ExtResource("19")
+
+[node name="sign1" type="Sprite2D" parent="environment"]
+position = Vector2(4011.5, 306.427)
+texture = ExtResource("18")
+
+[node name="grass" type="Node2D" parent="environment"]
+
+[node name="hmbggrass3" type="Sprite2D" parent="environment/grass"]
+position = Vector2(624.848, 373.424)
+texture = ExtResource("10")
+
+[node name="hmbggrass0" type="Sprite2D" parent="environment/grass"]
+position = Vector2(416, 367)
+texture = ExtResource("12")
+
+[node name="hmbgbox_4" type="Sprite2D" parent="environment/grass"]
+position = Vector2(138.072, 370.708)
+texture = ExtResource("11")
+
+[node name="hmbgbox_3" type="Sprite2D" parent="environment/grass"]
+position = Vector2(85.3461, 370.708)
+texture = ExtResource("9")
+
+[node name="hmbgbox_2" type="Sprite2D" parent="environment/grass"]
+position = Vector2(32, 370)
+texture = ExtResource("8")
+
+[node name="hmbgbox_5" type="Sprite2D" parent="environment/grass"]
+position = Vector2(712.241, 384.739)
+texture = ExtResource("9")
+
+[node name="hmbgbox_6" type="Sprite2D" parent="environment/grass"]
+position = Vector2(658.895, 385.031)
+texture = ExtResource("8")
+
+[node name="hmpoll_3" type="Sprite2D" parent="environment/grass"]
+position = Vector2(98.8281, 258.722)
+texture = ExtResource("2")
+
+[node name="hmbggrass1" type="Sprite2D" parent="environment/grass"]
+position = Vector2(34.6222, 393.4)
+texture = ExtResource("10")
+
+[node name="hmbggrass2" type="Sprite2D" parent="environment/grass"]
+position = Vector2(17.9367, 383.389)
+texture = ExtResource("12")
+
+[node name="hmbggrass4" type="Sprite2D" parent="environment/grass"]
+position = Vector2(1348.07, 397.559)
+texture = ExtResource("12")
+
+[node name="hmbggrass5" type="Sprite2D" parent="environment/grass"]
+position = Vector2(2195.96, 397.855)
+texture = ExtResource("10")
+
+[node name="hmbggrass6" type="Sprite2D" parent="environment/grass"]
+position = Vector2(4060.51, 390.544)
+texture = ExtResource("12")
+
+[node name="hmbgbox_7" type="Sprite2D" parent="environment/grass"]
+position = Vector2(4223.05, 371.514)
+texture = ExtResource("11")
+
+[node name="hmbgbox_8" type="Sprite2D" parent="environment/grass"]
+position = Vector2(4170.13, 371.514)
+texture = ExtResource("9")
+
+[node name="hmbggrass0" type="Sprite2D" parent="environment"]
+position = Vector2(2384.76, 416.675)
+texture = ExtResource("12")
+
+[node name="hmpoll_1" type="Sprite2D" parent="environment"]
+position = Vector2(4169.32, 275.233)
+texture = ExtResource("17")
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(1223.57, 359.883)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(28.9913, 47.3762)
+
+[node name="to_Elvengard" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(4255.86, 492.385)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Elvengard"]
+position = Vector2(-5.82705, -14.8325)
+shape = SubResource("4")
+
+[node name="pos" type="Marker2D" parent="doors/to_Elvengard"]
+position = Vector2(-104.193, -15.892)
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="Rothon" parent="npc" instance=ExtResource("23")]
+offset_left = 859.273
+offset_top = 339.384
+offset_right = 924.273
+offset_bottom = 356.384
+
+[node name="Grandis" parent="npc" instance=ExtResource("24")]
+offset_left = 1894.15
+offset_top = 354.253
+offset_right = 1959.15
+offset_bottom = 371.253
+
+[node name="Birken" parent="npc" instance=ExtResource("25")]
+offset_left = 2479.12
+offset_top = 322.644
+offset_right = 2544.12
+offset_bottom = 339.644
+
+[node name="Albert" parent="npc" instance=ExtResource("26")]
+offset_left = 3768.66
+offset_top = 344.251
+offset_right = 3833.66
+offset_bottom = 361.251
+
+[node name="Board" parent="npc" instance=ExtResource("20")]
+offset_left = 3376.92
+offset_top = 338.595
+offset_right = 3441.92
+offset_bottom = 355.595
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(4256.27, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(2128, 573.844)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource("5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PackedVector2Array(-1.25456, 546.615, -1.25456, 406.307, 1164.98, 408.552, 1163.86, 347.939, 1283.99, 347.946, 1284.31, 369.995, 1344.47, 407.793, 4256.24, 408.552, 4256.24, 546.615, 4293.29, 547.737, 4291.04, 1.09814, -47.2753, 1.09802, -48.3978, 546.615)

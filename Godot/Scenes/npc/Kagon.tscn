@@ -1,0 +1,312 @@
+[gd_scene load_steps=34 format=3 uid="uid://bf2kojqmmjeb8"]
+
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="1"]
+[ext_resource type="Texture2D" uid="uid://drmwpd1woyk3c" path="res://assets/images/npc/npc_kagon/2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bwlfuspdk3x3g" path="res://assets/images/npc/npc_kagon/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b6c7pufb075ru" path="res://assets/images/npc/npc_kagon/0.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://1iim6d36pg3a" path="res://assets/images/npc/npc_kagon/1.png" id="5"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="6"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" path="res://src/npc/Kagon.cs" id="8"]
+[ext_resource type="AudioStream" uid="uid://c4pmg7ynkiwug" path="res://assets/sounds/npc/kagon/kg_tk_02.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://01qlu1sfw1k" path="res://assets/sounds/npc/kagon/kg_fw_01.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://t4md81a3x6id" path="res://assets/sounds/npc/kagon/kg_tk_01.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://bw2jgf4454fys" path="res://assets/sounds/npc/kagon/kg_amb_01.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://dvwo1ikve23a2" path="res://assets/sounds/npc/kagon/kg_fw_02.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://cnw3gewwgm565" path="res://assets/sounds/npc/kagon/kg_tk_03.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://bt6bulebwcnbm" path="res://assets/sounds/npc/kagon/kg_fw_03.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://bq4vq477jrlo0" path="res://assets/sounds/npc/kagon/kg_amb_02.ogg" id="16"]
+[ext_resource type="Texture2D" uid="uid://3jkus27ov7c" path="res://assets/images/face/npc/popup/kagon.png" id="17"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="18"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("1")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("7")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 1.22
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1u6o"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 1.6
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_01"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_02"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "fw_03"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_01"
+length = 1.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_02"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "tk_03"
+length = 3.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qkoj0"]
+_data = {
+"amb_01": SubResource("6"),
+"amb_02": SubResource("7"),
+"fw_01": SubResource("8"),
+"fw_02": SubResource("9"),
+"fw_03": SubResource("10"),
+"tk_01": SubResource("11"),
+"tk_02": SubResource("12"),
+"tk_03": SubResource("13")
+}
+
+[node name="Kagon" instance=ExtResource("6")]
+script = ExtResource("8")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+sprite_frames = SubResource("2")
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_m1u6o")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+text = "卡坤"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("14")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_qkoj0")
+}
+
+[node name="Menu_Type2" parent="." index="10" instance=ExtResource("18")]
+visible = false
+
+[node name="faceIcon" parent="Menu_Type2/top" index="0"]
+texture = ExtResource("17")
+
+[node name="nameLabel" parent="Menu_Type2/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "卡坤"
+
+[editable path="Menu_Type2"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://c2n7qfvqsjtba"]
+
+[ext_resource type="Script" path="res://src/monster/Monster.cs" id="1_mcie6"]
+[ext_resource type="Script" path="res://src/monster/MonsterStateMachine.cs" id="2_qrj55"]
+[ext_resource type="Script" path="res://src/monster/monsterstate/onground/MonsterIdle.cs" id="3_hhwvc"]
+[ext_resource type="Script" path="res://src/monster/monsterstate/onground/MonsterMove.cs" id="4_bsior"]
+[ext_resource type="Script" path="res://src/monster/monsterstate/inair/MonsterJump.cs" id="5_x3bqk"]
+[ext_resource type="Script" path="res://src/monster/monsterstate/combat/MonsterDamage.cs" id="6_rjf21"]
+[ext_resource type="Script" path="res://src/monster/monsterstate/combat/MonsterAttack.cs" id="7_h3eta"]
+[ext_resource type="Script" path="res://src/monster/monsterstate/combat/MonsterDown.cs" id="8_twq7k"]
+[ext_resource type="Script" path="res://src/data/MonsterStatus.cs" id="9_jswrn"]
+[ext_resource type="PackedScene" uid="uid://bmmfvdc5veuoe" path="res://scenes/areabox/HurtBox.tscn" id="10_i6riy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n71um"]
+radius = 7.0
+height = 14.0
+
+[node name="Monster" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_mcie6")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_qrj55")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_hhwvc")
+
+[node name="Move" type="Node" parent="StateMachine"]
+script = ExtResource("4_bsior")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("5_x3bqk")
+
+[node name="Damage" type="Node" parent="StateMachine"]
+script = ExtResource("6_rjf21")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("7_h3eta")
+
+[node name="Down" type="Node" parent="StateMachine"]
+script = ExtResource("8_twq7k")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("9_jswrn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+
+[node name="BodyPivot" type="Marker2D" parent="."]
+
+[node name="Offset" type="Marker2D" parent="BodyPivot"]
+
+[node name="Body" type="Sprite2D" parent="BodyPivot/Offset"]
+
+[node name="HurtBox" parent="BodyPivot/Offset" instance=ExtResource("10_i6riy")]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="BodyPivot/Offset/HurtBox" index="0"]
+shape = SubResource("CapsuleShape2D_n71um")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[editable path="BodyPivot/Offset/HurtBox"]

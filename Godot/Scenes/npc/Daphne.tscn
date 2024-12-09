@@ -1,0 +1,353 @@
+[gd_scene load_steps=37 format=3 uid="uid://xgqbu4h8564j"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://gedr8atxwh13" path="res://assets/images/npc/npc_daphne/0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dr55fyh8fgr56" path="res://assets/images/npc/npc_daphne/1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dmc4pwjuyffw5" path="res://assets/images/npc/npc_daphne/3.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://jjtbfo3c6fyo" path="res://assets/images/npc/npc_daphne/2.png" id="5"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="6"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" path="res://src/npc/Daphne.cs" id="8"]
+[ext_resource type="AudioStream" uid="uid://bpha5p37igjxo" path="res://assets/sounds/npc/daphne/daphne_amb_01.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://dekqldwjgt523" path="res://assets/sounds/npc/daphne/daphne_amb_02.ogg" id="10"]
+[ext_resource type="AudioStream" uid="uid://dgj5ubyi552v8" path="res://assets/sounds/npc/daphne/daphne_amb_03.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://sju1mr6ul0ji" path="res://assets/sounds/npc/daphne/daphne_fw_01.ogg" id="12"]
+[ext_resource type="AudioStream" uid="uid://cabtaliqwim3t" path="res://assets/sounds/npc/daphne/daphne_fw_03.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://b3f1if02ylx18" path="res://assets/sounds/npc/daphne/daphne_tk_03.ogg" id="14"]
+[ext_resource type="AudioStream" uid="uid://dovepu8j5bfj0" path="res://assets/sounds/npc/daphne/daphne_fw_02.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://6bypc0ca3bng" path="res://assets/sounds/npc/daphne/daphne_tk_01.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://de02qdkr8xs0w" path="res://assets/sounds/npc/daphne/daphne_tk_02.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://x8rv8adbp80x" path="res://assets/sounds/npc/daphne/daphne_tk_04.ogg" id="18"]
+[ext_resource type="PackedScene" uid="uid://cd3l7osx2wxa" path="res://scenes/UI/npc_nemu/Menu_Daphne.tscn" id="19"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("6")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("7")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 0.72
+step = 0.18
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qj4i1"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "amb_03"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_01"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "fw_02"
+length = 3.7
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "fw_03"
+length = 2.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_01"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "tk_02"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="14"]
+resource_name = "tk_03"
+length = 1.7
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="15"]
+resource_name = "tk_04"
+length = 4.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_24rot"]
+_data = {
+"amb_01": SubResource("6"),
+"amb_02": SubResource("7"),
+"amb_03": SubResource("8"),
+"fw_01": SubResource("9"),
+"fw_02": SubResource("10"),
+"fw_03": SubResource("11"),
+"tk_01": SubResource("12"),
+"tk_02": SubResource("13"),
+"tk_03": SubResource("14"),
+"tk_04": SubResource("15")
+}
+
+[node name="Daphne" instance=ExtResource("1")]
+script = ExtResource("8")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-22.718, 38.3087)
+sprite_frames = SubResource("2")
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_qj4i1")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_top = -82.5455
+offset_bottom = -65.5455
+text = "达芙妮"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("18")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_24rot")
+}
+
+[node name="Menu_Daphne" parent="." index="9" instance=ExtResource("19")]
+
+[node name="nameLabel" parent="Menu_Daphne/top" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="Menu_Daphne/talkBtn" to="." method="_on_talkBtn_pressed"]
+
+[editable path="Menu_Daphne"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/images/map/flag/flags0.png" type="Texture2D" id=1]
+
+[node name="flag0" type="Sprite2D"]
+texture = ExtResource( 1 )

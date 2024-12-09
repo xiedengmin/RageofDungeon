@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://b214s8yj7ocbc"]
+
+[ext_resource type="Texture2D" uid="uid://y3abcoiulhj0" path="res://assets/images/ui/status_bag/profile_icon0.png" id="2"]
+
+[node name="StatusItem" type="Node2D"]
+
+[node name="nameLabel" type="Label" parent="."]
+offset_left = 18.8062
+offset_top = 1.0
+offset_right = 98.8062
+offset_bottom = 18.0
+text = "光属性强化"
+
+[node name="valueLabel" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 1.0
+offset_right = 151.0
+offset_bottom = 18.0
+text = "0.0%"
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2")
+centered = false

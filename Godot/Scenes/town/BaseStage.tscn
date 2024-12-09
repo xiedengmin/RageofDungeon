@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cjxyimnbkbw64"]
+
+[node name="BaseMap" type="Node2D"]
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="objs" type="Node2D" parent="stage"]
+
+[node name="monster" type="Node2D" parent="stage"]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1283, 718)
+
+[node name="collision" type="Node2D" parent="."]

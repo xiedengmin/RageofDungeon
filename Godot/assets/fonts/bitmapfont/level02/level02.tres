@@ -1,0 +1,15 @@
+[gd_resource type="FontFile" load_steps=3 format=2]
+
+[ext_resource path="res://addons/BitmapFontCutterPlus/cutter.cs" type="Script" id=1]
+[ext_resource path="res://assets/fonts/bitmapfont/level02/level02.png" type="Texture2D" id=2]
+
+[resource]
+textures = [ ExtResource( 2 ) ]
+chars = PackedInt32Array( 56, 0, 160, 0, 20, 12, 0, 0, 10, 48, 0, 0, 0, 20, 12, 0, 0, 10, 57, 0, 180, 0, 20, 12, 0, 0, 10, 49, 0, 20, 0, 20, 12, 0, 0, 10, 50, 0, 40, 0, 20, 12, 0, 0, 10, 51, 0, 60, 0, 20, 12, 0, 0, 10, 52, 0, 80, 0, 20, 12, 0, 0, 10, 53, 0, 100, 0, 20, 12, 0, 0, 10, 54, 0, 120, 0, 20, 12, 0, 0, 10, 55, 0, 140, 0, 20, 12, 0, 0, 10 )
+height = 12.0
+script = ExtResource( 1 )
+GlyphSize = Vector2( 20, 12 )
+TextureToCut = ExtResource( 2 )
+StartChar = 48
+Spacing = -10.0
+Monospaced = true

@@ -1,0 +1,123 @@
+[gd_scene load_steps=12 format=3 uid="uid://xpfmpno3e47k"]
+
+[ext_resource type="TileSet" path="res://assets/tres/stormPass_tileset.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://cu5wfadedpryh" path="res://assets/images/map/bg/spfar01.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bln7m0fi2off8" path="res://assets/images/map/stormPass/spobj00.png" id="3"]
+[ext_resource type="PackedScene" path="res://src/component/obj/stormbattlegateleftr.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://src/component/obj/stormbattlegaterightr.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://byuwx6g4ui0sm" path="res://assets/images/map/bg/spmid00.png" id="6"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="7"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="8"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(11.9033, 156.876)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(896, 160)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(40.447, 331.668)
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource("8")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(721, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/ParallaxBackground/far"]
+texture = ExtResource("2")
+centered = false
+offset = Vector2(0, -320)
+region_enabled = true
+region_rect = Rect2(0, 0, 826, 998)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(644, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("6")
+centered = false
+offset = Vector2(0, 125)
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2(0, 127)
+tile_set = ExtResource("1")
+format = 2
+
+[node name="spobj00" type="Sprite2D" parent="environment"]
+position = Vector2(0, 19)
+texture = ExtResource("3")
+centered = false
+
+[node name="stormbattlegateleftr" parent="environment" instance=ExtResource("4")]
+position = Vector2(94, 296)
+
+[node name="stormbattlegaterightr" parent="environment" instance=ExtResource("5")]
+position = Vector2(129, 465)
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(6.36783, 416.155)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource("1")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(85.7781, 0)
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(889.248, 416.155)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("1")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(-87.9471, 0)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(896, 726)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(448, 263.557)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource("2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(448, 570.316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource("2")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2(-20.4236, 415.796)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource("3")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="collision"]
+position = Vector2(915.967, 415.796)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D4"]
+shape = SubResource("3")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw2faqywsj3u4"]
+
+[ext_resource type="Script" path="res://src/town/Elvengard.cs" id="1_5vvtd"]
+[ext_resource type="PackedScene" uid="uid://bv2n87qg4w7sj" path="res://scenes/town/Elvengard/stage_01.tscn" id="2_hbafb"]
+[ext_resource type="PackedScene" uid="uid://pgnjtj2m63ex" path="res://scenes/town/Elvengard/stage_02.tscn" id="3_hw0ty"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="4_aw0xt"]
+
+[node name="Elvengard" type="Node2D"]
+script = ExtResource("1_5vvtd")
+
+[node name="stage_01" parent="." instance=ExtResource("2_hbafb")]
+
+[node name="stage_02" parent="." instance=ExtResource("3_hw0ty")]
+position = Vector2(2000, 0)
+
+[node name="01obj009" parent="stage_02/environment" index="4"]
+position = Vector2(332, 335)
+
+[node name="background" parent="stage_02/environment" index="5"]
+offset = Vector2(2000, 0)
+transform = Transform2D(1, 0, 0, 1, 2000, 0)
+
+[node name="to_stage_01" parent="stage_02/doors" index="0"]
+current = ""
+target = ""
+
+[node name="to_Entrance" parent="stage_02/doors" index="1"]
+current = ""
+target = ""
+
+[node name="Gate" parent="." instance=ExtResource("4_aw0xt")]
+position = Vector2(0, 1000)
+
+[editable path="stage_02"]
+[editable path="stage_02/doors/to_stage_01"]
+[editable path="stage_02/doors/to_Entrance"]

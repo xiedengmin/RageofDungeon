@@ -1,0 +1,349 @@
+[gd_scene load_steps=26 format=3 uid="uid://bld44qdxas8dp"]
+
+[ext_resource type="AudioStream" uid="uid://c21tybpj4aaft" path="res://assets/music/characterSelectStage.ogg" id="1"]
+[ext_resource type="Script" path="res://src/UI/Start.cs" id="2"]
+[ext_resource type="Texture2D" uid="uid://cbcbe7bmorwng" path="res://assets/images/loading/loading.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://ckc6425lv8gyi" path="res://assets/images/ui/selectcharacter/1.png" id="10"]
+[ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="11"]
+[ext_resource type="Texture2D" uid="uid://bmcmg3hqd2qiw" path="res://assets/images/ui/windowcommon/Panel.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://diyqs5q308u6f" path="res://assets/images/ui/selectcharacter/34.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bplrbk7kjmvwq" path="res://assets/images/ui/selectcharacter/2.png" id="14"]
+[ext_resource type="PackedScene" uid="uid://crawuf31berhi" path="res://Scenes/UI/characterCreate/acter.tscn" id="15"]
+[ext_resource type="Theme" uid="uid://bkyc4lkdy847v" path="res://src/component/theme/vscrollbar.tres" id="16"]
+[ext_resource type="PackedScene" uid="uid://ig2ry1timhte" path="res://Scenes/UI/characterCreate/CharacterCreate.tscn" id="17"]
+[ext_resource type="AudioStream" uid="uid://wcmfea7x4m2s" path="res://assets/sounds/ui/click2.ogg" id="19"]
+[ext_resource type="AudioStream" uid="uid://dfuko4caym2km" path="res://assets/sounds/ui/icondrop.ogg" id="20"]
+[ext_resource type="FontFile" uid="uid://c47lka652g2ye" path="res://assets/fonts/DroidSansChinese.ttf" id="21"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_tcclc"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_oh7ck"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_57i5g"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_d7t1m"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_nmb3q"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_qs63c"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_s606s"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_pja0y"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_jf7x4"]
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("21")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="3"]
+TooltipLabel/colors/font_color = Color(0, 0, 0, 1)
+TooltipLabel/colors/font_color_shadow = Color(0, 0, 0, 0.1)
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = SubResource("2")
+
+[node name="Start" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="title" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(400.269, 49.1325)
+texture = ExtResource("10")
+
+[node name="SelectCharacter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 1279.0
+offset_bottom = 644.0
+
+[node name="panelbg" type="NinePatchRect" parent="SelectCharacter"]
+modulate = Color(1, 1, 1, 0.866667)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 61.0
+offset_right = 1225.0
+offset_bottom = 702.0
+texture = ExtResource("12")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="2" type="Sprite2D" parent="SelectCharacter"]
+position = Vector2(176, 97)
+texture = ExtResource("14")
+
+[node name="kuang" type="NinePatchRect" parent="SelectCharacter"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 64.0
+offset_right = 1263.0
+offset_bottom = 635.0
+texture = ExtResource("13")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SelectCharacter"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 0.852
+offset_left = 30.0
+offset_top = 79.0
+offset_right = -24.0
+offset_bottom = 113.572
+theme = ExtResource("16")
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="SelectCharacter/ScrollContainer"]
+custom_minimum_size = Vector2(1050, 800)
+layout_mode = 2
+columns = 6
+
+[node name="acter1" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_tcclc")
+stretch_mode = 0
+
+[node name="acter2" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_direction = 1
+layout_mode = 2
+button_group = SubResource("ButtonGroup_oh7ck")
+stretch_mode = 0
+
+[node name="acter3" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_57i5g")
+stretch_mode = 0
+
+[node name="acter4" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_d7t1m")
+stretch_mode = 0
+
+[node name="acter5" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_nmb3q")
+stretch_mode = 0
+
+[node name="acter6" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="acter7" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+stretch_mode = 0
+
+[node name="acter8" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="acter9" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="acter10" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="acter11" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="acter12" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="acter13" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+
+[node name="acter14" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+layout_mode = 2
+
+[node name="acter15" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+layout_mode = 2
+
+[node name="acter16" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+layout_mode = 2
+
+[node name="acter17" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+layout_mode = 2
+
+[node name="acter18" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+layout_mode = 2
+
+[node name="acter19" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+stretch_mode = 0
+
+[node name="acter20" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_qs63c")
+stretch_mode = 0
+
+[node name="acter21" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_s606s")
+stretch_mode = 0
+
+[node name="acter22" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+custom_minimum_size = Vector2(200, 250)
+layout_direction = 1
+layout_mode = 2
+stretch_mode = 0
+
+[node name="acter23" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_direction = 2
+layout_mode = 2
+button_group = SubResource("ButtonGroup_pja0y")
+stretch_mode = 0
+
+[node name="acter24" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_direction = 3
+layout_mode = 2
+button_group = SubResource("ButtonGroup_jf7x4")
+stretch_mode = 0
+
+[node name="createBtn" parent="." instance=ExtResource("11")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.928
+anchor_right = 0.183
+anchor_bottom = 0.971
+offset_left = -0.440002
+offset_top = -0.160034
+offset_right = -0.240021
+offset_bottom = -0.120056
+text = "创建角色"
+
+[node name="deleteBtn" parent="." instance=ExtResource("11")]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 670.0
+offset_right = 337.0
+offset_bottom = 701.0
+text = "删除角色"
+
+[node name="optionBtn" parent="." instance=ExtResource("11")]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 665.0
+offset_right = 919.0
+offset_bottom = 696.0
+text = "选项"
+
+[node name="closeBtn" parent="." instance=ExtResource("11")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.718
+anchor_top = 0.924
+anchor_right = 0.778
+anchor_bottom = 0.967
+offset_left = -0.0400391
+offset_top = -0.280029
+offset_right = 0.159912
+offset_bottom = -0.240051
+text = "结束游戏"
+
+[node name="StartBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.431
+anchor_top = 0.912
+anchor_right = 0.545
+anchor_bottom = 0.982
+offset_left = -2.68005
+offset_top = 0.359985
+offset_right = -0.600159
+offset_bottom = -0.0401001
+tooltip_text = "开始游戏"
+focus_mode = 0
+theme = SubResource("3")
+text = "开始"
+
+[node name="Loading" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1")
+autoplay = true
+bus = &"BGM"
+
+[node name="CharacterCreate" parent="." instance=ExtResource("17")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="clickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19")
+bus = &"SFX"
+
+[node name="selectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20")
+bus = &"SFX"
+
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter1" to="." method="OnActerToggled" binds= [1]]
+[connection signal="pressed" from="createBtn" to="." method="OnCreateBtnPressed"]
+[connection signal="pressed" from="closeBtn" to="." method="OnQuitGame"]
+[connection signal="pressed" from="StartBtn" to="." method="OnStartBtnPressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_closeLoading"]

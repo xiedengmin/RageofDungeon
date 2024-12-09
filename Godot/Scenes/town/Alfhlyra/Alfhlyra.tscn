@@ -1,0 +1,206 @@
+[gd_scene load_steps=24 format=3 uid="uid://chb61xaj7s3hj"]
+
+[ext_resource type="PackedScene" uid="uid://5ful7hbslkak" path="res://scenes/town/Alfhlyra/stage_01.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://di3tjov322mii" path="res://scenes/town/Alfhlyra/stage_02.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://d1qp5o6yw3wly" path="res://scenes/town/Alfhlyra/stage_03.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://jo44aemxdytp" path="res://assets/images/map/alfhlyra/d_gatelight_0.png" id="4_ru5gm"]
+[ext_resource type="PackedScene" uid="uid://dk18xddlyneku" path="res://scenes/town/Alfhlyra/stage_04.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://cfo787ii2quqn" path="res://assets/images/map/alfhlyra/d_gatelight_1.png" id="5_jn01w"]
+[ext_resource type="Script" path="res://src/town/Alfhlyra.cs" id="6"]
+[ext_resource type="Texture2D" uid="uid://d1e6wrmy4x5lr" path="res://assets/images/map/alfhlyra/d_gatelight_2.png" id="6_sabmt"]
+[ext_resource type="Texture2D" uid="uid://oerao66v3450" path="res://assets/images/map/alfhlyra/d_gatelight_3.png" id="7_jkgdj"]
+[ext_resource type="Texture2D" uid="uid://bihg1cnaj00d0" path="res://assets/images/map/alfhlyra/d_gatelight_4.png" id="8_nc3bx"]
+[ext_resource type="Texture2D" uid="uid://ddlxpr28it5ek" path="res://assets/images/map/alfhlyra/udgatelight_0.png" id="10_665bv"]
+[ext_resource type="Texture2D" uid="uid://ddxm0rjw5ocnx" path="res://assets/images/map/alfhlyra/udgatelight_1.png" id="11_wod6f"]
+[ext_resource type="Texture2D" uid="uid://did76tbnfayu5" path="res://assets/images/map/alfhlyra/udgatelight_2.png" id="12_1qq5t"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "move"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1120, 156), Vector2(-480, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_07p7v"]
+_data = {
+"move": SubResource("1")
+}
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ru5gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jn01w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sabmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jkgdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nc3bx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_qroij"]
+resource_name = "move"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1120, 156), Vector2(-480, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vfvlj"]
+_data = {
+"move": SubResource("Animation_qroij")
+}
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ru5gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jn01w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sabmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jkgdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nc3bx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_665bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wod6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1qq5t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="5"]
+resource_name = "move"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1120, 156), Vector2(-480, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4luf5"]
+_data = {
+"move": SubResource("5")
+}
+
+[node name="Alfhlyra" type="Node2D"]
+script = ExtResource("6")
+
+[node name="stage_01" parent="." instance=ExtResource("1")]
+
+[node name="stage_02" parent="." instance=ExtResource("2")]
+position = Vector2(0, 800)
+
+[node name="background" parent="stage_02/environment" index="0"]
+offset = Vector2(0, 800)
+transform = Transform2D(1, 0, 0, 1, 0, 800)
+
+[node name="fogAPlayer" parent="stage_02/environment" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_07p7v")
+}
+
+[node name="light" parent="stage_02/environment/d_gate" index="0"]
+sprite_frames = SubResource("2")
+
+[node name="CollisionPolygon2D" parent="stage_02/collision/StaticBody2D" index="0"]
+polygon = PackedVector2Array(-0.91687, 360.219, 899.23, 360.219, 980.547, 401.939, 1018.02, 399.11, 1051.26, 414.667, 1029.41, 472.364, 996.811, 508.005, -0.916943, 506.591, -0.209835, 600.636, 1120.55, 599.929, 1119.85, 1.00912, -39.1008, 1.00912, -37.8283, 505.954, 0, 505.875)
+
+[node name="stage_03" parent="." instance=ExtResource("3")]
+position = Vector2(0, 1600)
+
+[node name="background" parent="stage_03/environment" index="0"]
+offset = Vector2(0, 1600)
+transform = Transform2D(1, 0, 0, 1, 0, 1600)
+
+[node name="fogAPlayer" parent="stage_03/environment" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_vfvlj")
+}
+
+[node name="light" parent="stage_03/environment/d_gate" index="0"]
+sprite_frames = SubResource("3")
+
+[node name="AnimatedSprite2D" parent="stage_03/environment/udgate" index="0"]
+sprite_frames = SubResource("4")
+
+[node name="fogAPlayer" parent="stage_03/environment2" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_4luf5")
+}
+
+[node name="light" parent="stage_03/environment2/d_gate" index="0"]
+sprite_frames = SubResource("3")
+
+[node name="AnimatedSprite2D" parent="stage_03/environment2/udgate" index="0"]
+sprite_frames = SubResource("4")
+
+[node name="stage_04" parent="." instance=ExtResource("5")]
+position = Vector2(1171.76, 2402.48)
+
+[node name="Gate" parent="." instance=ExtResource("4")]
+position = Vector2(0, 2400)
+
+[editable path="stage_02"]
+[editable path="stage_03"]

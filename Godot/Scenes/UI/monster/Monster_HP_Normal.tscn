@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://xj7gu72n0rwg"]
+
+[ext_resource type="Texture2D" uid="uid://d4ge3ekecrmg1" path="res://assets/images/monster_hp/normal_bg.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://uqr65uiq3r3y" path="res://assets/images/common_etc/monster_type/0.png" id="4"]
+[ext_resource type="PackedScene" uid="uid://dkaubc0pnmo5p" path="res://scenes/UI/Progress.tscn" id="4_gmmvp"]
+[ext_resource type="Script" path="res://src/UI/monster/MonsterHPNormal.cs" id="7"]
+
+[node name="Monster_HP_Normal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -568.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7")
+
+[node name="panel" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 576.0
+offset_bottom = 32.0
+texture = ExtResource("2")
+patch_margin_left = 32
+patch_margin_right = 3
+
+[node name="type" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 34.75
+offset_top = -0.8125
+offset_right = 66.75
+offset_bottom = 14.1875
+texture = ExtResource("4")
+
+[node name="nameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = -2.0
+offset_right = 148.0
+offset_bottom = 15.0
+text = "Lv2 哥布林"
+
+[node name="hp_layer_num" type="Label" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = -12.0
+offset_right = 571.0
+offset_bottom = 19.0
+text = "x2"
+
+[node name="face" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 30.0
+offset_bottom = 26.0
+
+[node name="progress" parent="." instance=ExtResource("4_gmmvp")]
+layout_mode = 1
+anchor_left = 0.027
+anchor_top = 0.103
+anchor_right = 0.447
+anchor_bottom = 0.165
+offset_left = -34.56
+offset_top = -15.656
+offset_right = -572.16
+offset_bottom = -25.08

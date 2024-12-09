@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cf8avhck56h3j"]
+
+[node name="Tab_Button1" type="Button"]
+offset_right = 48.0
+offset_bottom = 22.0
+size_flags_vertical = 3
+toggle_mode = true
+text = "测试"

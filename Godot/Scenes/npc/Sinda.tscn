@@ -1,0 +1,355 @@
+[gd_scene load_steps=41 format=3 uid="uid://dkcdjfgovrcdv"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://djutmmqdiio8p" path="res://assets/images/npc/npc_sinda/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d0o58com3i5n7" path="res://assets/images/npc/npc_sinda/1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b7j4xyku5m3ia" path="res://assets/images/npc/npc_sinda/5.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c7h3boyunqb83" path="res://assets/images/npc/npc_sinda/9.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dodbc6wqqi1lk" path="res://assets/images/npc/npc_sinda/4.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dqm05gemxkopf" path="res://assets/images/npc/npc_sinda/7.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://b2lbpripn82n3" path="res://assets/images/npc/npc_sinda/8.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://magndf6xdt6l" path="res://assets/images/npc/npc_sinda/2.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://crf8pogyqbftr" path="res://assets/images/npc/npc_sinda/0.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dy1qd21mjoof5" path="res://assets/images/npc/npc_sinda/10.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bh6wp5wl5tfc7" path="res://assets/images/npc/npc_sinda/11.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dnh3o31tgw2db" path="res://assets/images/npc/npc_sinda/13.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://bbmq6liu8kjkt" path="res://assets/images/npc/npc_sinda/14.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://buw2iwjvhpb57" path="res://assets/images/npc/npc_sinda/12.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://07d66oxomepc" path="res://assets/images/npc/npc_sinda/6.png" id="17"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="18"]
+[ext_resource type="Script" path="res://src/npc/Sinda.cs" id="19"]
+[ext_resource type="AudioStream" uid="uid://dhdsmaxm0q0c6" path="res://assets/sounds/npc/sinda/sin_amb_01.ogg" id="20"]
+[ext_resource type="AudioStream" uid="uid://byc0gcvwwf3jn" path="res://assets/sounds/npc/sinda/sin_fw_01.ogg" id="21"]
+[ext_resource type="AudioStream" uid="uid://g7ajiply7d5m" path="res://assets/sounds/npc/sinda/sin_tk_02.ogg" id="22"]
+[ext_resource type="AudioStream" uid="uid://dfyu7qke6c4d3" path="res://assets/sounds/npc/sinda/sin_tk_01.ogg" id="23"]
+[ext_resource type="AudioStream" uid="uid://hrmfc6qprldn" path="res://assets/sounds/npc/sinda/sin_fw_02.ogg" id="24"]
+[ext_resource type="AudioStream" uid="uid://c1xc8v5usyffw" path="res://assets/sounds/npc/sinda/sin_tk_03.ogg" id="25"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="26"]
+[ext_resource type="Texture2D" uid="uid://dxu43vj5y6omp" path="res://assets/images/face/npc/popup/sinda.png" id="27"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("2")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("18")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 4.05
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 2.23, 2.44, 2.64, 2.83, 2.97, 3.1, 3.26, 3.44, 3.62, 3.72, 3.8, 3.86, 3.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 2.23, 2.44, 2.64, 2.83, 2.97, 3.1, 3.26, 3.44, 3.62, 3.72, 3.8, 3.86, 3.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y05c6"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "fw_01"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "fw_02"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "tk_01"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "tk_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "tk_03"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qeegk"]
+_data = {
+"amb_01": SubResource("6"),
+"fw_01": SubResource("7"),
+"fw_02": SubResource("8"),
+"tk_01": SubResource("9"),
+"tk_02": SubResource("10"),
+"tk_03": SubResource("11")
+}
+
+[node name="Sinda" instance=ExtResource("1")]
+script = ExtResource("19")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-20.4907, 32.9633)
+sprite_frames = SubResource("2")
+frame = 13
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+frame = 14
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_y05c6")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_top = -71.4092
+offset_bottom = -54.4092
+text = "辛达"
+
+[node name="mouse_check" parent="." index="4"]
+offset_left = -45.0
+offset_right = 45.0
+offset_bottom = 57.0
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("25")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_qeegk")
+}
+
+[node name="Menu_Sinda" parent="." index="10" instance=ExtResource("26")]
+
+[node name="faceIcon" parent="Menu_Sinda/top" index="0"]
+texture = ExtResource("27")
+
+[node name="nameLabel" parent="Menu_Sinda/top" index="1"]
+text = "辛达"
+
+[editable path="Menu_Sinda"]

@@ -1,0 +1,181 @@
+[gd_scene load_steps=20 format=3 uid="uid://di3tjov322mii"]
+
+[ext_resource type="Texture2D" uid="uid://jo44aemxdytp" path="res://assets/images/map/alfhlyra/d_gatelight_0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cd53hvs7yav4s" path="res://assets/images/map/alfhlyra/d_gate.png" id="4"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="5"]
+[ext_resource type="Texture2D" uid="uid://bgce4qtwftds" path="res://assets/images/map/alfhlyra/alftile01.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cfo787ii2quqn" path="res://assets/images/map/alfhlyra/d_gatelight_1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://d1e6wrmy4x5lr" path="res://assets/images/map/alfhlyra/d_gatelight_2.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://oerao66v3450" path="res://assets/images/map/alfhlyra/d_gatelight_3.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bihg1cnaj00d0" path="res://assets/images/map/alfhlyra/d_gatelight_4.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b2eu4fuk87dhq" path="res://assets/images/map/alfhlyra/biggrass.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://wn064jj776l1" path="res://assets/images/map/alfhlyra/smgrass.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://e6ob6y0eq0mw" path="res://assets/images/map/alfhlyra/midgrass.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cb7d0y85p0a4j" path="res://assets/images/map/alfhlyra/d_gateedge.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dm47wupl56toj" path="res://assets/images/map/alfhlyra/alfobj01.png" id="15"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="16"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "move"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1120, 156), Vector2(-480, 156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6qx7k"]
+_data = {
+"move": SubResource("1")
+}
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(12.3032, 136.994)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(44.4542, 98.5818)
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource("5")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 831, 330)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="fog" type="Sprite2D" parent="environment/background/mid"]
+position = Vector2(-1120, 156)
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2245, 158)
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment"]
+libraries = {
+"": SubResource("AnimationLibrary_6qx7k")
+}
+autoplay = "move"
+
+[node name="alftile01" type="Sprite2D" parent="environment"]
+texture = ExtResource("6")
+centered = false
+
+[node name="d_gate" type="Sprite2D" parent="environment"]
+position = Vector2(997, 223)
+texture = ExtResource("4")
+
+[node name="light" type="AnimatedSprite2D" parent="environment/d_gate"]
+position = Vector2(4, 103)
+sprite_frames = SubResource("2")
+
+[node name="biggrass" type="Sprite2D" parent="environment"]
+position = Vector2(389.019, 454.739)
+texture = ExtResource("11")
+
+[node name="biggrass2" type="Sprite2D" parent="environment"]
+position = Vector2(562.822, 419.529)
+texture = ExtResource("11")
+
+[node name="smgrass" type="Sprite2D" parent="environment"]
+position = Vector2(495.399, 483.207)
+texture = ExtResource("12")
+
+[node name="midgrass" type="Sprite2D" parent="environment"]
+position = Vector2(483.412, 334.125)
+texture = ExtResource("13")
+
+[node name="smgrass2" type="Sprite2D" parent="environment"]
+position = Vector2(639.236, 330)
+texture = ExtResource("12")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="alfobj01" type="Sprite2D" parent="."]
+position = Vector2(549.249, 510.827)
+texture = ExtResource("15")
+
+[node name="d_gateedge" type="Sprite2D" parent="."]
+position = Vector2(1048, 362)
+texture = ExtResource("14")
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(6.8484, 432.997)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(76.8552, 0)
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(1036.58, 410.076)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+rotation = -0.692896
+shape = SubResource("4")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(-83.1548, 38.4276)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1120, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PackedVector2Array(-0.916943, 360.219, 899.23, 360.219, 980.547, 401.939, 1018.02, 399.11, 1051.26, 414.667, 1029.41, 472.364, 996.811, 508.005, -0.916943, 506.591, -0.209835, 600.636, 1120.55, 599.929, 1119.85, 1.00912, -39.1008, 1.00912, -37.8283, 505.954, 0, 505.875)

@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://crawuf31berhi"]
+
+[ext_resource type="Texture2D" uid="uid://g273leetm5vm" path="res://assets/images/ui/selectcharacter/12.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://o1qqpxhlvq01" path="res://assets/images/ui/selectcharacter/3.png" id="3"]
+[ext_resource type="Script" path="res://src/UI/characterCreate/acter.cs" id="4"]
+[ext_resource type="Texture2D" uid="uid://btqsus8f8o50y" path="res://assets/images/ui/selectcharacter/31.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dxs180mt6oaf8" path="res://assets/images/ui/selectcharacter/11.png" id="7"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="acter" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.119
+anchor_bottom = 0.319
+offset_right = -0.320007
+offset_bottom = 1.31999
+toggle_mode = true
+script = ExtResource("4")
+
+[node name="bottom" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, 121)
+scale = Vector2(1.12605, 1.11364)
+sprite_frames = SubResource("1")
+centered = false
+
+[node name="focus" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.978
+offset_top = 3.0
+offset_right = -2.0
+offset_bottom = -5.94
+texture = ExtResource("3")
+
+[node name="select" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.957
+offset_right = -3.0
+offset_bottom = -0.110001
+texture = ExtResource("6")
+
+[node name="nameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 167.0
+offset_right = 125.0
+offset_bottom = 193.0
+text = "Lv.43 青芒果"
+
+[node name="jobLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 187.0
+offset_right = 132.0
+offset_bottom = 212.0
+text = "鬼剑士"
+
+[connection signal="mouse_entered" from="." to="." method="OnActerMouseEntered"]
+[connection signal="mouse_exited" from="." to="." method="OnActerMouseExited"]

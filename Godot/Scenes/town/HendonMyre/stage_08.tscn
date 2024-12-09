@@ -1,0 +1,168 @@
+[gd_scene load_steps=16 format=3 uid="uid://bvxvslsoxm3j0"]
+
+[ext_resource type="Texture2D" uid="uid://bibhq17xbsevt" path="res://assets/images/map/hendonMyre/hmbshouse06.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cwcraoa78yr7m" path="res://assets/images/map/hendonMyre/hmbshouse05.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c15xf76n1qwhb" path="res://assets/images/map/tiles/hmbstile.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://ft0g5xjdagq4" path="res://assets/images/map/tiles/hmbstilefloor_1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cg56iwtbyopqx" path="res://assets/images/map/hendonMyre/hmbshouse04.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dcgsjrushfwg0" path="res://assets/images/map/tiles/hmbstilefloor_0.png" id="7"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="8"]
+[ext_resource type="Texture2D" uid="uid://nn254rrr2bw8" path="res://assets/images/map/bg/hmbsmid00.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dvavw84c0n6qg" path="res://assets/images/map/bg/hmbsfar00.png" id="10"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="11"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lolvg"]
+texture = ExtResource("3")
+texture_region_size = Vector2i(224, 254)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/1 = SubResource("TileSetAtlasSource_lolvg")
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(13.2919, 196.585)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(896, 98)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(46.386, 234.322)
+
+[node name="stage_08" type="Node2D"]
+script = ExtResource("11")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("10")
+centered = false
+offset = Vector2(-150, -20)
+region_enabled = true
+region_rect = Rect2(0, 0, 1150, 243)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("9")
+centered = false
+offset = Vector2(0, 80)
+region_enabled = true
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="hmbstile" type="TileMap" parent="environment"]
+position = Vector2(0, 356)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0)
+
+[node name="hmbstilefloor_1" type="Sprite2D" parent="environment"]
+position = Vector2(841.634, 489.241)
+texture = ExtResource("5")
+
+[node name="hmbstilefloor_2" type="Sprite2D" parent="environment"]
+position = Vector2(213.89, 510.329)
+texture = ExtResource("5")
+
+[node name="hmbstilefloor_0" type="Sprite2D" parent="environment"]
+position = Vector2(403.912, 526.329)
+texture = ExtResource("7")
+
+[node name="hmbshouse04" type="Sprite2D" parent="environment"]
+position = Vector2(171, 275)
+texture = ExtResource("6")
+
+[node name="hmbshouse05" type="Sprite2D" parent="environment"]
+position = Vector2(484, 241)
+texture = ExtResource("2")
+
+[node name="hmbshouse06" type="Sprite2D" parent="environment"]
+position = Vector2(761, 265)
+texture = ExtResource("1")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(7.21724, 494.027)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(93.3529, 0)
+
+[node name="to_stage_04" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(889.609, 494.027)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_04"]
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_04"]
+position = Vector2(-89.7854, 0)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(896, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(447, 348)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2(-6, -23)
+shape = SubResource("3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(448, 639)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource("3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2(-23.5451, 481.636)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource("4")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="collision"]
+position = Vector2(919.917, 481.636)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D4"]
+shape = SubResource("4")

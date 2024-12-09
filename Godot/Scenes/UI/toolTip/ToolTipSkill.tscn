@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcluwhx5snial"]
+
+[ext_resource type="Texture2D" uid="uid://ljknoyd8lwfl" path="res://assets/images/ui/windowcommon/ToolTipbg.png" id="1"]
+[ext_resource type="Script" path="res://src/UI/toolTip/ToolTipSkill.cs" id="5"]
+
+[node name="ToolTipSkill" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -608.0
+offset_bottom = -406.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5")
+
+[node name="panel" type="NinePatchRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("1")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panel/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NameLabel" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "上挑 Lv 100"
+
+[node name="Name2Label" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "上挑 Lv 100"
+
+[node name="HSeparator" type="HSeparator" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MPLabel" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "MP 6"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CastTime" type="Label" parent="panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "施法时间:0.7秒"
+
+[node name="CoolTime" type="Label" parent="panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "冷却时间:2秒"
+
+[node name="Consume" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "[无色小晶块]1个"
+
+[node name="Operate" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "操作指令 :z"
+
+[node name="HSeparator2" type="HSeparator" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LevelProperty" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "物理攻击力：120% + 41
+浮空力比率：100%"
+
+[node name="HSeparator4" type="HSeparator" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Explain" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "    向敌人发出从下段往上挑的攻击， 可以浮空敌人； 攻击时有霸体判定。"
+
+[node name="HSeparator5" type="HSeparator" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LockTip" type="Label" parent="panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "锁定指令技能：点击右键"
+
+[connection signal="draw" from="panel/MarginContainer/VBoxContainer/LockTip" to="." method="_on_LockTip_draw"]

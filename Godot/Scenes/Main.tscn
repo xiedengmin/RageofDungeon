@@ -1,0 +1,3504 @@
+[gd_scene load_steps=103 format=3 uid="uid://j6xqrkcmsw0s"]
+
+[ext_resource type="Script" path="res://Scenes/Main.cs" id="1_rml01"]
+[ext_resource type="Script" path="res://src/UI/Mainhud.cs" id="2_4xvm4"]
+[ext_resource type="Texture2D" uid="uid://b4swpksj4v4xm" path="res://assets/images/mainhud/0.png" id="3_rxkly"]
+[ext_resource type="Texture2D" uid="uid://bk0pklfqbgan1" path="res://assets/images/mainhud/4.png" id="4_5nd6u"]
+[ext_resource type="Texture2D" uid="uid://5afi23mg1hq5" path="res://assets/images/mainhud/3.png" id="5_wq2i4"]
+[ext_resource type="Texture2D" uid="uid://du8mv727qyv7j" path="res://assets/images/mainhud/1.png" id="6_cuw1d"]
+[ext_resource type="Texture2D" uid="uid://bu1111jfrg5nd" path="res://assets/images/mainhud/2.png" id="7_qalht"]
+[ext_resource type="Texture2D" uid="uid://clnsf3ndk4bmd" path="res://assets/images/mainhud/33.png" id="8_mr7dk"]
+[ext_resource type="Texture2D" uid="uid://4sq4vii33jvv" path="res://assets/images/mainhud/35.png" id="9_cn5j8"]
+[ext_resource type="Texture2D" uid="uid://drmwar5yx801r" path="res://assets/images/mainhud/34.png" id="10_l6u2p"]
+[ext_resource type="Texture2D" uid="uid://b1ekgb52wwagh" path="res://assets/images/mainhud/30.png" id="11_iwb2u"]
+[ext_resource type="Texture2D" uid="uid://d05kh0hhu3pho" path="res://assets/images/mainhud/32.png" id="12_a0atq"]
+[ext_resource type="Texture2D" uid="uid://chuusyxx23oub" path="res://assets/images/mainhud/31.png" id="13_l8jr4"]
+[ext_resource type="Texture2D" uid="uid://bijvxhtsykkcd" path="res://assets/images/mainhud/5.png" id="14_dgkbi"]
+[ext_resource type="Texture2D" uid="uid://4otkfsk7y0cq" path="res://assets/images/mainhud/7.png" id="15_v30vp"]
+[ext_resource type="Texture2D" uid="uid://bg2kmfo2vkppl" path="res://assets/images/mainhud/6.png" id="16_ht2tl"]
+[ext_resource type="Texture2D" uid="uid://8qescc4hodme" path="res://assets/images/mainhud/8.png" id="17_avdgy"]
+[ext_resource type="Texture2D" uid="uid://c84dfoi8pex4g" path="res://assets/images/mainhud/10.png" id="18_gmgf4"]
+[ext_resource type="Texture2D" uid="uid://co1cvlk0227hq" path="res://assets/images/mainhud/9.png" id="19_dr6bc"]
+[ext_resource type="Texture2D" uid="uid://bm2vp8qoabw2j" path="res://assets/images/mainhud/11.png" id="20_1nhwv"]
+[ext_resource type="Texture2D" uid="uid://2g8phd7daljq" path="res://assets/images/mainhud/13.png" id="21_s7fsu"]
+[ext_resource type="Texture2D" uid="uid://bibyd4vm0gus0" path="res://assets/images/mainhud/12.png" id="22_c0004"]
+[ext_resource type="Texture2D" uid="uid://dm4hawf8awhoj" path="res://assets/images/mainhud/14.png" id="23_xascj"]
+[ext_resource type="Texture2D" uid="uid://de0ejbjlvcju3" path="res://assets/images/mainhud/16.png" id="24_njjqq"]
+[ext_resource type="Texture2D" uid="uid://di57bvniphria" path="res://assets/images/mainhud/15.png" id="25_8tx6x"]
+[ext_resource type="Texture2D" uid="uid://buxdgs8jilvhk" path="res://assets/images/mainhud/17.png" id="26_e2jsr"]
+[ext_resource type="Texture2D" uid="uid://b3iw0dkepbdbb" path="res://assets/images/mainhud/19.png" id="27_tdt08"]
+[ext_resource type="Texture2D" uid="uid://dftwm5ptk4lrd" path="res://assets/images/mainhud/18.png" id="28_usn7n"]
+[ext_resource type="Texture2D" uid="uid://cq814d1j73ioi" path="res://assets/fonts/bitmapfont/level02/10.png" id="29_o6amr"]
+[ext_resource type="Texture2D" uid="uid://bsj7eh3xo8egy" path="res://assets/images/ui/windowcommon/exskillquickslot.png" id="30_gnsao"]
+[ext_resource type="PackedScene" uid="uid://c0expods1dumt" path="res://Scenes/UI/slot/InvShortcutSlot.tscn" id="31_ugbj3"]
+[ext_resource type="PackedScene" uid="uid://df5elfalflcby" path="res://Scenes/UI/slot/SkillShortcutSlot.tscn" id="32_etyeh"]
+[ext_resource type="Script" path="res://src/UI/Bag.cs" id="33_i3vue"]
+[ext_resource type="Texture2D" uid="uid://d2ufig4i2gomj" path="res://assets/images/ui/windowcommon/windowtitle1.png" id="34_jwe38"]
+[ext_resource type="Script" path="res://src/com/DraggableBar.cs" id="35_5vjfw"]
+[ext_resource type="Texture2D" uid="uid://b6xl65ljkba7d" path="res://assets/images/ui/status_bag/bag_bg1.png" id="36_6qds7"]
+[ext_resource type="Texture2D" uid="uid://5y5fn0jachy2" path="res://assets/images/ui/windowcommon/57.png" id="37_erhsn"]
+[ext_resource type="PackedScene" uid="uid://dl5oqjl6do75s" path="res://Scenes/UI/slot/InventorySlot.tscn" id="38_53i1c"]
+[ext_resource type="PackedScene" uid="uid://i1fqtj8s4bgh" path="res://src/component/buttons/Button2.tscn" id="39_21hyn"]
+[ext_resource type="Texture2D" uid="uid://tjdanqrvyf5i" path="res://assets/images/ui/status_bag/13.png" id="40_byt02"]
+[ext_resource type="Texture2D" uid="uid://dm5wugpl54xrf" path="res://assets/images/ui/windowcommon/276.png" id="41_3jc3h"]
+[ext_resource type="Texture2D" uid="uid://cjj5k07gkm411" path="res://assets/images/ui/windowcommon/278.png" id="42_iw4l4"]
+[ext_resource type="Texture2D" uid="uid://2rsodvuukx1w" path="res://assets/images/ui/windowcommon/277.png" id="43_p6nnw"]
+[ext_resource type="Texture2D" uid="uid://cj2sjw0cibofh" path="res://assets/images/ui/windowcommon/279.png" id="44_2x3lo"]
+[ext_resource type="PackedScene" uid="uid://cf8avhck56h3j" path="res://src/component/buttons/Tab_Button1.tscn" id="45_80emg"]
+[ext_resource type="Texture2D" uid="uid://bq86jt7w0eev2" path="res://assets/images/ui/windowcommon/70.png" id="46_tcuur"]
+[ext_resource type="Texture2D" uid="uid://0qpkpat03u5r" path="res://assets/images/ui/status_bag/inventory_3.png" id="47_at1td"]
+[ext_resource type="Texture2D" uid="uid://cxpemeghddxrw" path="res://assets/images/ui/status_bag/inventory_5.png" id="48_tw1sc"]
+[ext_resource type="Texture2D" uid="uid://byiljid0vm36u" path="res://assets/images/ui/status_bag/inventory_4.png" id="49_c1rpx"]
+[ext_resource type="Texture2D" uid="uid://df07i7tn77sew" path="res://assets/images/ui/status_bag/inventory_6.png" id="50_pl74c"]
+[ext_resource type="Texture2D" uid="uid://da0ujf8ed0vw1" path="res://assets/images/ui/status_bag/inventory_7.png" id="51_es4t2"]
+[ext_resource type="Texture2D" uid="uid://lmg3h300wsyl" path="res://assets/images/ui/status_bag/inventory_9.png" id="52_x5wol"]
+[ext_resource type="Texture2D" uid="uid://bavs3i2mc6qan" path="res://assets/images/ui/status_bag/inventory_8.png" id="53_3ador"]
+[ext_resource type="Texture2D" uid="uid://d0fhqms7x4wwm" path="res://assets/images/ui/status_bag/inventory_10.png" id="54_bnodw"]
+[ext_resource type="PackedScene" uid="uid://dgpv5vi3k4bcp" path="res://Scenes/UI/slot/EquipmentSlot.tscn" id="55_0wist"]
+[ext_resource type="AudioStream" uid="uid://d1a73eqqghdbr" path="res://assets/sounds/ui/click1.wav" id="56_lw542"]
+[ext_resource type="Script" path="res://src/UI/StorageUI.cs" id="57_qlgfo"]
+[ext_resource type="Texture2D" uid="uid://c3qywj3bhxepf" path="res://assets/images/ui/windowcommon/safe_title_0.png" id="58_wgb2m"]
+[ext_resource type="Script" path="res://src/UI/SkillInventory.cs" id="59_rs7qi"]
+[ext_resource type="Texture2D" uid="uid://bmcmg3hqd2qiw" path="res://assets/images/ui/windowcommon/Panel.png" id="60_u6c6t"]
+[ext_resource type="PackedScene" uid="uid://dgwigr2mqwfmt" path="res://Scenes/UI/slot/SkillSlot.tscn" id="61_mlc4d"]
+[ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="62_4a3oh"]
+[ext_resource type="Texture2D" uid="uid://s421w0xp1v34" path="res://assets/images/ui/window_title_accessory/1.png" id="63_frdll"]
+[ext_resource type="Texture2D" uid="uid://4spb8rj06arj" path="res://assets/images/ui/skillbuy/15.png" id="64_b66bs"]
+[ext_resource type="PackedScene" uid="uid://comln50yi8cl5" path="res://Scenes/UI/Status.tscn" id="65_7xkpe"]
+[ext_resource type="Script" path="res://src/UI/OptionMenu.cs" id="66_sraxr"]
+[ext_resource type="Texture2D" uid="uid://c7r8bkjnnxfqo" path="res://assets/images/ui/navigation/option_normal.png" id="67_qgc57"]
+[ext_resource type="Texture2D" uid="uid://cqih3lk07olcw" path="res://assets/images/ui/navigation/option_pressed.png" id="68_d3yeu"]
+[ext_resource type="Texture2D" uid="uid://c1o8agoy4kck6" path="res://assets/images/ui/navigation/option_over.png" id="69_urcx2"]
+[ext_resource type="Texture2D" uid="uid://blirpqrgwndhm" path="res://assets/images/ui/navigation/option_disabled.png" id="70_mxqjg"]
+[ext_resource type="Texture2D" uid="uid://v1y2h6isyq22" path="res://assets/images/ui/navigation/key_normal.png" id="71_04ip2"]
+[ext_resource type="Texture2D" uid="uid://bf4nuua6tw7ku" path="res://assets/images/ui/navigation/key_pressed.png" id="72_fl3ie"]
+[ext_resource type="Texture2D" uid="uid://dgoldn15tnilc" path="res://assets/images/ui/navigation/key_over.png" id="73_e4xv3"]
+[ext_resource type="Texture2D" uid="uid://dwkfprdinqial" path="res://assets/images/ui/navigation/key_disabled.png" id="74_mp4ak"]
+[ext_resource type="Texture2D" uid="uid://dk1pqu1jwgnu4" path="res://assets/images/ui/navigation/select_normal.png" id="75_7t5ce"]
+[ext_resource type="Texture2D" uid="uid://cce87ar0a4okf" path="res://assets/images/ui/navigation/select_pressed.png" id="76_5fuah"]
+[ext_resource type="Texture2D" uid="uid://dkp74426ibx7x" path="res://assets/images/ui/navigation/select_over.png" id="77_rn65a"]
+[ext_resource type="Texture2D" uid="uid://dgxld4er7be35" path="res://assets/images/ui/navigation/select_disabled.png" id="78_uk8pt"]
+[ext_resource type="Texture2D" uid="uid://cn426lvv26kyg" path="res://assets/images/ui/navigation/backtown_normal.png" id="79_e7dcs"]
+[ext_resource type="Texture2D" uid="uid://b00j21g57qn4c" path="res://assets/images/ui/navigation/backtown_pressed.png" id="80_c5y8v"]
+[ext_resource type="Texture2D" uid="uid://df4x114em2ywg" path="res://assets/images/ui/navigation/backtown_over.png" id="81_k7g2b"]
+[ext_resource type="Texture2D" uid="uid://dbdqqnrppex5h" path="res://assets/images/ui/navigation/backtown_disabled.png" id="82_u1oyg"]
+[ext_resource type="Texture2D" uid="uid://biwjsun0mcrwo" path="res://assets/images/ui/navigation/gameclose_normal.png" id="83_nc4pa"]
+[ext_resource type="Texture2D" uid="uid://bxbpkhewx4hfa" path="res://assets/images/ui/navigation/gameclose_pressed.png" id="84_mxutg"]
+[ext_resource type="Texture2D" uid="uid://c7islx7o87esd" path="res://assets/images/ui/navigation/gameclose_over.png" id="85_4ph67"]
+[ext_resource type="Texture2D" uid="uid://u0a0g4ds5l3f" path="res://assets/images/ui/navigation/gameclose_disabled.png" id="86_tbfd0"]
+[ext_resource type="Script" path="res://src/UI/MyinfoMenu.cs" id="87_r10ng"]
+[ext_resource type="Texture2D" uid="uid://b21xmrwbakko1" path="res://assets/images/ui/navigation/quest_normal.png" id="88_xawo7"]
+[ext_resource type="Texture2D" uid="uid://61koucqjalub" path="res://assets/images/ui/navigation/quest_pressed.png" id="89_i214d"]
+[ext_resource type="Texture2D" uid="uid://diguhh60bsby8" path="res://assets/images/ui/navigation/quest_over.png" id="90_ug1r8"]
+[ext_resource type="Texture2D" uid="uid://dflibf4averqk" path="res://assets/images/ui/navigation/quest_disabled.png" id="91_xh1d5"]
+[ext_resource type="Texture2D" uid="uid://cworkbs88hnij" path="res://assets/images/ui/navigation/exjob_normal.png" id="92_gsdef"]
+[ext_resource type="Texture2D" uid="uid://c76sye3lx7b61" path="res://assets/images/ui/navigation/exjob_pressed.png" id="93_4ehpf"]
+[ext_resource type="Texture2D" uid="uid://dg6up6locxi21" path="res://assets/images/ui/navigation/exjob_over.png" id="94_qou6b"]
+[ext_resource type="Texture2D" uid="uid://8ubthxuiga7u" path="res://assets/images/ui/navigation/exjob_disabled.png" id="95_f7xau"]
+[ext_resource type="PackedScene" uid="uid://dcluwhx5snial" path="res://Scenes/UI/toolTip/ToolTipSkill.tscn" id="96_ewi2n"]
+[ext_resource type="PackedScene" uid="uid://d3ts52huo7stt" path="res://Scenes/UI/toolTip/ToolTipEquip.tscn" id="97_g7uic"]
+[ext_resource type="PackedScene" uid="uid://cn0r6p7f4nd03" path="res://Scenes/UI/Loading.tscn" id="98_no2q7"]
+[ext_resource type="Script" path="res://src/UI/MonsterHP.cs" id="99_7rlo6"]
+[ext_resource type="PackedScene" uid="uid://xj7gu72n0rwg" path="res://Scenes/UI/monster/Monster_HP_Normal.tscn" id="100_lx8j1"]
+[ext_resource type="PackedScene" uid="uid://cqqps8o8d76y5" path="res://Scenes/UI/monster/Monster_HP_Elite.tscn" id="101_ycqsj"]
+[ext_resource type="PackedScene" uid="uid://cxxpoox764ihu" path="res://Scenes/UI/monster/Monster_HP_BOSS.tscn" id="102_g12hl"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rml01")
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="Main" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Control" parent="Main"]
+layout_mode = 3
+anchor_right = 1.005
+anchor_bottom = 1.006
+offset_right = -0.400024
+offset_bottom = -4.32001
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Mainhud" type="Control" parent="Main/Panel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = -3.0
+offset_top = 605.0
+offset_right = 1276.0
+offset_bottom = 715.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_4xvm4")
+
+[node name="bg" type="TextureRect" parent="Main/Panel/Mainhud"]
+layout_mode = 2
+anchor_right = 1.002
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = -8.55811
+offset_bottom = 6.0
+texture = ExtResource("3_rxkly")
+
+[node name="expBar" type="TextureProgressBar" parent="Main/Panel/Mainhud"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.073
+anchor_top = 1.029
+anchor_right = 0.993
+anchor_bottom = 1.029
+offset_left = -1.367
+offset_top = -2.01602
+offset_right = -1.047
+offset_bottom = 2.98398
+value = 100.0
+texture_progress = ExtResource("4_5nd6u")
+
+[node name="fatigueBar" type="TextureProgressBar" parent="Main/Panel/Mainhud"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 57.0
+offset_right = 461.0
+offset_bottom = 61.0
+value = 50.0
+texture_progress = ExtResource("5_wq2i4")
+
+[node name="SP" type="Label" parent="Main/Panel/Mainhud"]
+layout_mode = 0
+offset_left = 1187.0
+offset_top = 93.0
+offset_right = 1199.0
+offset_bottom = 116.0
+text = "0"
+
+[node name="hpBar" type="TextureProgressBar" parent="Main/Panel/Mainhud"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.232
+anchor_right = 0.09
+anchor_bottom = 0.898
+offset_left = 1.235
+offset_top = -1.52
+offset_right = 2.88999
+offset_bottom = -0.779999
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("6_cuw1d")
+
+[node name="mpBar" type="TextureProgressBar" parent="Main/Panel/Mainhud"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.555
+anchor_top = 0.21
+anchor_right = 0.61
+anchor_bottom = 1.0
+offset_left = 451.155
+offset_top = 0.900002
+offset_right = 450.81
+offset_bottom = -11.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("7_qalht")
+
+[node name="upBtn" type="TextureButton" parent="Main/Panel/Mainhud"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 88.0
+offset_right = 87.0
+offset_bottom = 106.0
+texture_normal = ExtResource("8_mr7dk")
+texture_pressed = ExtResource("9_cn5j8")
+texture_hover = ExtResource("10_l6u2p")
+
+[node name="downBtn" type="TextureButton" parent="Main/Panel/Mainhud"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 102.0
+offset_right = 86.0
+offset_bottom = 116.0
+texture_normal = ExtResource("11_iwb2u")
+texture_pressed = ExtResource("12_a0atq")
+texture_hover = ExtResource("13_l8jr4")
+
+[node name="buttons" type="Node2D" parent="Main/Panel/Mainhud"]
+position = Vector2(345.839, 65)
+
+[node name="bagBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+offset_left = 205.161
+offset_top = 5.0
+offset_right = 225.161
+offset_bottom = 36.0
+focus_mode = 0
+texture_normal = ExtResource("14_dgkbi")
+texture_pressed = ExtResource("15_v30vp")
+texture_hover = ExtResource("16_ht2tl")
+
+[node name="stateBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+offset_left = 241.161
+offset_top = 5.0
+offset_right = 259.161
+offset_bottom = 36.0
+focus_mode = 0
+texture_normal = ExtResource("17_avdgy")
+texture_pressed = ExtResource("18_gmgf4")
+texture_hover = ExtResource("19_dr6bc")
+
+[node name="fightBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+offset_left = 280.161
+offset_top = 4.0
+offset_right = 299.161
+offset_bottom = 35.0
+focus_mode = 0
+texture_normal = ExtResource("20_1nhwv")
+texture_pressed = ExtResource("21_s7fsu")
+texture_hover = ExtResource("22_c0004")
+
+[node name="tutBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+offset_left = 316.161
+offset_top = 7.0
+offset_right = 337.161
+offset_bottom = 38.0
+focus_mode = 0
+texture_normal = ExtResource("23_xascj")
+texture_pressed = ExtResource("24_njjqq")
+texture_hover = ExtResource("25_8tx6x")
+
+[node name="setBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+offset_left = 351.161
+offset_top = 4.0
+offset_right = 370.161
+offset_bottom = 35.0
+focus_mode = 0
+texture_normal = ExtResource("26_e2jsr")
+texture_pressed = ExtResource("27_tdt08")
+texture_hover = ExtResource("28_usn7n")
+
+[node name="lv" type="Label" parent="Main/Panel/Mainhud"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 94.0
+offset_right = 71.0
+offset_bottom = 120.0
+text = "15
+"
+
+[node name="10" type="Sprite2D" parent="Main/Panel/Mainhud"]
+position = Vector2(35, 98)
+texture = ExtResource("29_o6amr")
+
+[node name="ex" type="Control" parent="Main/Panel/Mainhud"]
+anchors_preset = 0
+offset_left = 473.0
+offset_top = 15.7026
+offset_right = 696.0
+offset_bottom = 50.7026
+
+[node name="ex_icon1" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.283
+anchor_top = 0.029
+anchor_right = 1.484
+anchor_bottom = 1.314
+offset_left = -0.109039
+offset_top = -0.015
+offset_right = 0.0679626
+offset_bottom = 0.00999832
+texture = ExtResource("30_gnsao")
+expand_mode = 1
+
+[node name="ex_icon2" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.547
+anchor_top = 0.066
+anchor_right = 1.709
+anchor_bottom = 1.0
+offset_left = 0.0189819
+offset_top = -1.31
+offset_right = 8.89301
+offset_bottom = 11.0
+texture = ExtResource("30_gnsao")
+expand_mode = 1
+
+[node name="ex_icon3" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.807
+anchor_right = 1.978
+anchor_bottom = 1.0
+offset_left = 0.0390015
+offset_top = 1.0
+offset_right = 6.90598
+offset_bottom = 11.0
+texture = ExtResource("30_gnsao")
+expand_mode = 1
+
+[node name="ex_icon4" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.09
+anchor_right = 2.247
+anchor_bottom = 1.0
+offset_left = -7.06998
+offset_top = 1.0
+offset_right = 2.91901
+offset_bottom = 11.0
+texture = ExtResource("30_gnsao")
+expand_mode = 1
+
+[node name="ex_icon5" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.332
+anchor_right = 2.484
+anchor_bottom = 1.0
+offset_left = -0.0360107
+offset_top = 1.0
+offset_right = 11.068
+offset_bottom = 11.0
+texture = ExtResource("30_gnsao")
+expand_mode = 1
+
+[node name="ex_icon6" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.592
+anchor_right = 2.749
+anchor_bottom = 1.0
+offset_left = -0.0159912
+offset_top = 1.0
+offset_right = 9.97296
+offset_bottom = 11.0
+texture = ExtResource("30_gnsao")
+expand_mode = 1
+
+[node name="InvShortcut" type="Control" parent="Main/Panel/Mainhud"]
+modulate = Color(1, 1, 1, 0.905882)
+layout_mode = 1
+anchor_left = 0.127
+anchor_top = 0.582
+anchor_right = 0.415
+anchor_bottom = 0.936
+offset_left = 0.567001
+offset_top = -0.0200043
+offset_right = -9.78497
+offset_bottom = 0.0399933
+
+[node name="InvShortbutSlot1" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource("31_ugbj3")]
+layout_mode = 1
+anchor_left = -4.284
+anchor_top = 0.5
+anchor_right = -3.855
+anchor_bottom = 1.385
+offset_left = 0.00387573
+offset_top = -6.42
+offset_right = 0.0223389
+offset_bottom = -0.00500107
+
+[node name="InvShortbutSlot2" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource("31_ugbj3")]
+layout_mode = 1
+anchor_left = -4.723
+anchor_top = 0.5
+anchor_right = -4.259
+anchor_bottom = 1.413
+offset_left = 547.754
+offset_top = -67.42
+offset_right = 586.45
+offset_bottom = -69.8785
+
+[node name="InvShortbutSlot3" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource("31_ugbj3")]
+layout_mode = 1
+anchor_left = -4.128
+anchor_top = 0.369
+anchor_right = -3.712
+anchor_bottom = 1.48
+offset_left = -11.9895
+offset_top = -3.09701
+offset_right = -11.9716
+offset_bottom = -3.09351
+
+[node name="InvShortbutSlot4" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource("31_ugbj3")]
+layout_mode = 1
+anchor_left = -3.53
+anchor_top = 0.336
+anchor_right = -3.048
+anchor_bottom = 1.566
+offset_left = 0.0363464
+offset_top = -0.00798416
+offset_right = 1.98019
+offset_bottom = -4.01399
+
+[node name="InvShortbutSlot5" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource("31_ugbj3")]
+layout_mode = 1
+anchor_left = -3.191
+anchor_top = 0.496
+anchor_right = -2.801
+anchor_bottom = 1.448
+offset_left = -0.0259857
+offset_top = -0.00400543
+offset_right = -0.00918579
+offset_bottom = 0.00799179
+
+[node name="InvShortbutSlot6" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource("31_ugbj3")]
+layout_mode = 1
+anchor_left = -2.758
+anchor_top = 0.5
+anchor_right = -2.263
+anchor_bottom = 1.492
+offset_left = 0.0349884
+offset_top = -4.75
+offset_right = -0.0205994
+offset_bottom = 0.00199509
+
+[node name="SkillShortcutGrid" type="Control" parent="Main/Panel/Mainhud"]
+layout_mode = 1
+anchor_left = 0.592
+anchor_top = 0.591
+anchor_right = 0.869
+anchor_bottom = 0.955
+offset_left = -7.16803
+offset_top = -0.0100021
+offset_right = -0.45105
+offset_bottom = -0.0500031
+
+[node name="SkillShortcutSlot1" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 1
+anchor_left = 0.97
+anchor_right = 1.1
+anchor_bottom = 0.805
+offset_left = 0.0700378
+offset_top = -2.0
+offset_right = 0.100067
+offset_bottom = -0.00500107
+
+[node name="SkillShortcutSlot2" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 1
+anchor_left = 0.21
+anchor_top = 1.341
+anchor_right = 0.328
+anchor_bottom = 2.122
+offset_left = -0.120003
+offset_top = 0.0189972
+offset_right = -0.0160065
+offset_bottom = -0.00200653
+
+[node name="SkillShortcutSlot3" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 1
+anchor_left = 0.414
+anchor_top = 1.293
+anchor_right = 0.5
+anchor_bottom = 2.146
+offset_left = -0.00801086
+offset_top = -0.0130043
+offset_right = 3.0
+offset_bottom = 0.0139923
+
+[node name="SkillShortcutSlot4" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 111.0
+offset_right = 146.0
+offset_bottom = 0.0
+
+[node name="SkillShortcutSlot5" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 148.0
+offset_right = 183.0
+offset_bottom = 0.0
+
+[node name="SkillShortcutSlot6" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 186.0
+offset_right = 221.0
+offset_bottom = 0.0
+
+[node name="SkillShortcutSlot7" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 206.0
+offset_top = 51.0
+offset_right = 241.0
+offset_bottom = 86.0
+
+[node name="SkillShortcutSlot8" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 36.0
+offset_top = 44.895
+offset_right = 71.0
+offset_bottom = 79.895
+
+[node name="SkillShortcutSlot9" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 74.0
+offset_top = 45.0
+offset_right = 109.0
+offset_bottom = 80.0
+
+[node name="SkillShortcutSlot10" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 111.0
+offset_top = 45.0
+offset_right = 146.0
+offset_bottom = 80.0
+
+[node name="SkillShortcutSlot11" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 1
+anchor_right = 0.12
+anchor_bottom = 2.122
+offset_left = 7.0
+offset_top = 52.0
+offset_right = 0.119999
+offset_bottom = -0.00200653
+
+[node name="SkillShortcutSlot12" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource("32_etyeh")]
+layout_mode = 1
+anchor_left = 0.865
+anchor_top = 1.293
+anchor_right = 0.995
+anchor_bottom = 2.293
+offset_left = 0.11499
+offset_top = 5.987
+offset_right = 0.144989
+offset_bottom = -0.0130081
+
+[node name="Bag" type="Control" parent="Main/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 846.0
+offset_top = 58.0
+offset_right = -83.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("33_i3vue")
+
+[node name="Panel" type="Panel" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 360.0
+offset_bottom = 513.0
+
+[node name="windowtitle" type="NinePatchRect" parent="Main/Panel/Bag"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036
+anchor_top = 0.033
+anchor_right = 0.975
+anchor_bottom = 0.078
+offset_left = 0.147999
+offset_top = 0.137001
+offset_right = -0.0750122
+offset_bottom = 0.141998
+mouse_filter = 1
+texture = ExtResource("34_jwe38")
+patch_margin_left = 100
+patch_margin_right = 50
+script = ExtResource("35_5vjfw")
+
+[node name="title" type="Label" parent="Main/Panel/Bag/windowtitle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.149
+anchor_top = 0.256
+anchor_right = 0.979
+anchor_bottom = 1.0
+offset_left = 0.0849991
+offset_top = 0.0159998
+offset_right = 0.0350037
+offset_bottom = -3.0
+text = "装备栏(B)"
+
+[node name="bag_bg1" type="Sprite2D" parent="Main/Panel/Bag"]
+position = Vector2(185.5, 132.723)
+scale = Vector2(1.11221, 1.06685)
+texture = ExtResource("36_6qds7")
+
+[node name="itembg" type="NinePatchRect" parent="Main/Panel/Bag"]
+modulate = Color(1, 1, 1, 0.627451)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 217.0
+offset_right = 355.0
+offset_bottom = 437.0
+texture = ExtResource("37_erhsn")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="EquipGrid" type="GridContainer" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 221.0
+offset_right = 319.0
+offset_bottom = 401.0
+columns = 10
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="Icon" parent="Main/Panel/Bag/EquipGrid/ItemSlot25" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 28.0
+offset_bottom = 28.0
+
+[node name="amount" parent="Main/Panel/Bag/EquipGrid/ItemSlot25" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 28.0
+offset_bottom = 23.0
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="Stackable" type="GridContainer" parent="Main/Panel/Bag"]
+visible = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 221.0
+offset_right = 319.0
+offset_bottom = 401.0
+columns = 10
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Stackable" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="Materials" type="GridContainer" parent="Main/Panel/Bag"]
+visible = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 221.0
+offset_right = 355.0
+offset_bottom = 421.0
+columns = 10
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+expand_mode = 2
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Materials" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="Experjob" type="GridContainer" parent="Main/Panel/Bag"]
+visible = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 221.0
+offset_right = 319.0
+offset_bottom = 401.0
+columns = 10
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Experjob" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="Quest" type="GridContainer" parent="Main/Panel/Bag"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.053
+anchor_top = 0.432
+anchor_right = 0.994
+anchor_bottom = 0.824
+offset_left = 0.0789986
+offset_top = 0.248001
+offset_right = -35.858
+offset_bottom = -20.064
+columns = 10
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Quest" instance=ExtResource("38_53i1c")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 415.0
+offset_right = 65.0
+offset_bottom = 438.0
+text = "重量"
+
+[node name="inventory_limitBar" type="ProgressBar" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 407.0
+offset_right = 238.0
+offset_bottom = 434.0
+value = 100.0
+
+[node name="zlBtn" parent="Main/Panel/Bag" instance=ExtResource("39_21hyn")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 411.0
+offset_right = 366.0
+offset_bottom = 442.0
+focus_mode = 0
+text = "整理"
+
+[node name="bottom_bg" type="Sprite2D" parent="Main/Panel/Bag"]
+position = Vector2(169.338, 469)
+scale = Vector2(1.24462, 1.25)
+texture = ExtResource("40_byt02")
+
+[node name="closeBtn" type="TextureButton" parent="Main/Panel/Bag"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.916
+anchor_top = 0.039
+anchor_right = 0.961
+anchor_bottom = 0.07
+offset_left = -0.0119629
+offset_top = 0.0709991
+offset_right = -0.0769348
+offset_bottom = 0.23
+texture_normal = ExtResource("41_3jc3h")
+texture_pressed = ExtResource("42_iw4l4")
+texture_hover = ExtResource("43_p6nnw")
+texture_disabled = ExtResource("44_2x3lo")
+
+[node name="equipBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 196.0
+offset_right = 80.0
+offset_bottom = 227.0
+focus_mode = 0
+text = "装备"
+
+[node name="stackableBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 78.5353
+offset_top = 198.0
+offset_right = 136.535
+offset_bottom = 218.0
+focus_mode = 0
+text = "消耗品"
+
+[node name="materialBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 138.865
+offset_top = 198.0
+offset_right = 196.865
+offset_bottom = 218.0
+focus_mode = 0
+text = "材料"
+
+[node name="exBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 198.844
+offset_top = 198.0
+offset_right = 256.844
+offset_bottom = 218.0
+focus_mode = 0
+text = "副职业"
+
+[node name="questBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 258.585
+offset_top = 198.0
+offset_right = 316.585
+offset_bottom = 218.0
+focus_mode = 0
+text = "任务"
+
+[node name="inventoryBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 46.0
+offset_right = 107.0
+offset_bottom = 71.0
+text = "物品栏"
+
+[node name="dressBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 105.323
+offset_top = 46.0
+offset_right = 192.323
+offset_bottom = 71.0
+text = "装扮"
+
+[node name="creatureBtn" parent="Main/Panel/Bag" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 192.233
+offset_top = 46.0
+offset_right = 279.233
+offset_bottom = 71.0
+text = "宠物"
+
+[node name="line" type="NinePatchRect" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 69.0
+offset_right = 326.0
+offset_bottom = 72.0
+texture = ExtResource("46_tcuur")
+
+[node name="shopBtn" type="TextureButton" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 20.6786
+offset_top = 472.1
+offset_right = 43.6786
+offset_bottom = 495.1
+texture_normal = ExtResource("47_at1td")
+texture_pressed = ExtResource("48_tw1sc")
+texture_hover = ExtResource("49_c1rpx")
+texture_disabled = ExtResource("50_pl74c")
+
+[node name="shopBtn2" type="TextureButton" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 152.08
+offset_top = 472.1
+offset_right = 175.08
+offset_bottom = 495.1
+texture_normal = ExtResource("51_es4t2")
+texture_pressed = ExtResource("52_x5wol")
+texture_hover = ExtResource("53_3ador")
+texture_disabled = ExtResource("54_bnodw")
+
+[node name="saveLabel" type="Label" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 444.0
+offset_right = 138.0
+offset_bottom = 470.0
+text = "0 个"
+
+[node name="diamond" type="Label" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 475.0
+offset_right = 138.0
+offset_bottom = 501.0
+text = "0 点券"
+
+[node name="gold" type="Label" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 475.0
+offset_right = 314.0
+offset_bottom = 501.0
+text = "0 金币"
+
+[node name="pvp_point" type="Label" parent="Main/Panel/Bag"]
+layout_mode = 0
+offset_left = 191.73
+offset_top = 443.945
+offset_right = 312.73
+offset_bottom = 460.945
+text = "0 点"
+
+[node name="leftEquip" type="Control" parent="Main/Panel/Bag"]
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 79.0
+offset_right = 145.0
+offset_bottom = 160.0
+mouse_filter = 2
+
+[node name="Shoulder" parent="Main/Panel/Bag/leftEquip" instance=ExtResource("55_0wist")]
+layout_mode = 1
+anchor_left = 0.099
+anchor_top = 0.111
+anchor_right = 0.269
+anchor_bottom = 0.374
+offset_left = 0.020999
+offset_top = -2.991
+offset_right = 7.451
+offset_bottom = 1.706
+
+[node name="Jacket" parent="Main/Panel/Bag/leftEquip" instance=ExtResource("55_0wist")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 53.0
+offset_top = 3.0
+offset_right = 89.0
+offset_bottom = 39.0
+
+[node name="Pants" parent="Main/Panel/Bag/leftEquip" instance=ExtResource("55_0wist")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 97.0
+offset_top = 4.0
+offset_right = 129.0
+offset_bottom = 36.0
+
+[node name="Shoes" parent="Main/Panel/Bag/leftEquip" instance=ExtResource("55_0wist")]
+layout_mode = 1
+anchor_left = 0.074
+anchor_top = 0.556
+anchor_right = 0.355
+anchor_bottom = 0.914
+offset_left = 2.046
+offset_top = -2.036
+offset_right = 2.045
+offset_bottom = 0.965996
+
+[node name="Belt" parent="Main/Panel/Bag/leftEquip" instance=ExtResource("55_0wist")]
+layout_mode = 1
+anchor_left = 0.463
+anchor_top = 0.568
+anchor_right = 0.727
+anchor_bottom = 0.926
+offset_left = -4.023
+offset_top = -2.008
+offset_right = -3.96701
+offset_bottom = -2.006
+
+[node name="rightEquip" type="Control" parent="Main/Panel/Bag"]
+anchors_preset = 0
+offset_left = 196.804
+offset_top = 79.0
+offset_right = 317.804
+offset_bottom = 160.0
+
+[node name="Wrist" parent="Main/Panel/Bag/rightEquip" instance=ExtResource("55_0wist")]
+layout_mode = 1
+anchor_left = 0.26
+anchor_top = 0.093
+anchor_right = 0.446
+anchor_bottom = 0.389
+offset_left = -5.26401
+offset_top = -5.533
+offset_right = 8.22995
+offset_bottom = 6.491
+
+[node name="Amulet" parent="Main/Panel/Bag/rightEquip" instance=ExtResource("55_0wist")]
+layout_mode = 1
+anchor_left = 0.588
+anchor_top = 0.025
+anchor_right = 0.831
+anchor_bottom = 0.383
+offset_left = 0.0480804
+offset_top = -0.0250001
+offset_right = 6.64508
+offset_bottom = 6.977
+
+[node name="Ring" parent="Main/Panel/Bag/rightEquip" instance=ExtResource("55_0wist")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 115.196
+offset_top = 2.0
+offset_right = 151.196
+offset_bottom = 38.0
+
+[node name="Weapon" parent="Main/Panel/Bag/rightEquip" instance=ExtResource("55_0wist")]
+layout_mode = 1
+anchor_left = 0.58
+anchor_top = 0.568
+anchor_right = 0.836
+anchor_bottom = 0.914
+offset_left = 0.0160522
+offset_top = -1.008
+offset_right = 0.0400543
+offset_bottom = -0.0340042
+
+[node name="Title" parent="Main/Panel/Bag/rightEquip" instance=ExtResource("55_0wist")]
+visible = false
+layout_mode = 1
+anchor_left = 0.927
+anchor_top = 0.531
+anchor_right = 1.175
+anchor_bottom = 0.877
+offset_left = 0.0290527
+offset_top = -0.0110016
+offset_right = 0.0210571
+offset_bottom = -0.0370026
+
+[node name="windowSound" type="AudioStreamPlayer" parent="Main/Panel/Bag"]
+stream = ExtResource("56_lw542")
+
+[node name="StorateUI" type="Control" parent="Main/Panel"]
+visible = false
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 63.028
+offset_top = 143.775
+offset_right = -398.972
+offset_bottom = -306.225
+script = ExtResource("57_qlgfo")
+
+[node name="panel" type="Panel" parent="Main/Panel/StorateUI"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 331.0
+offset_bottom = 149.0
+
+[node name="WindowTitle" type="NinePatchRect" parent="Main/Panel/StorateUI"]
+layout_mode = 0
+offset_right = 338.0
+offset_bottom = 40.0
+mouse_filter = 1
+texture = ExtResource("58_wgb2m")
+patch_margin_left = 70
+patch_margin_right = 20
+script = ExtResource("35_5vjfw")
+
+[node name="title" type="Label" parent="Main/Panel/StorateUI/WindowTitle"]
+layout_mode = 0
+anchor_top = -0.024202
+anchor_bottom = -0.024202
+offset_left = 4.0
+offset_top = 10.9681
+offset_right = 332.0
+offset_bottom = 33.9681
+text = "破烂的铁质金库"
+
+[node name="GridContainer" type="GridContainer" parent="Main/Panel/StorateUI"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 47.0
+offset_right = 319.0
+offset_bottom = 77.0
+columns = 10
+
+[node name="bottom" type="Control" parent="Main/Panel/StorateUI"]
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 83.0
+offset_right = 323.0
+offset_bottom = 143.0
+
+[node name="itembg" type="NinePatchRect" parent="Main/Panel/StorateUI/bottom"]
+modulate = Color(1, 1, 1, 0.627451)
+layout_mode = 0
+offset_right = 306.0
+offset_bottom = 29.0
+texture = ExtResource("37_erhsn")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Label" type="Label" parent="Main/Panel/StorateUI/bottom"]
+layout_mode = 0
+offset_left = 8.4878
+offset_top = 6.38031
+offset_right = 48.4878
+offset_bottom = 23.3803
+text = "重量"
+
+[node name="inventory_limitBar" type="ProgressBar" parent="Main/Panel/StorateUI/bottom"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 8.0553
+offset_right = 230.0
+offset_bottom = 22.0553
+value = 100.0
+
+[node name="upBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource("39_21hyn")]
+layout_mode = 0
+offset_left = 237.64
+offset_top = 3.47128
+offset_right = 299.64
+offset_bottom = 26.4713
+focus_mode = 0
+text = "升级"
+
+[node name="takeinBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource("39_21hyn")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 34.0
+offset_right = 102.0
+offset_bottom = 57.0
+focus_mode = 0
+text = "放入"
+
+[node name="takeoutBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource("39_21hyn")]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = 4.0
+offset_right = 30.5
+offset_bottom = 27.0
+focus_mode = 0
+text = "取出"
+
+[node name="zlBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource("39_21hyn")]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 52.3528
+offset_top = 4.0
+offset_right = 114.353
+offset_bottom = 27.0
+focus_mode = 0
+text = "整理"
+
+[node name="closeBtn" type="TextureButton" parent="Main/Panel/StorateUI"]
+layout_mode = 0
+offset_left = 315.154
+offset_top = 13.0774
+offset_right = 331.154
+offset_bottom = 29.0774
+texture_normal = ExtResource("41_3jc3h")
+texture_pressed = ExtResource("42_iw4l4")
+texture_hover = ExtResource("43_p6nnw")
+texture_disabled = ExtResource("44_2x3lo")
+
+[node name="Skillinventory" type="Control" parent="Main/Panel"]
+visible = false
+layout_mode = 1
+anchor_right = 0.353
+anchor_bottom = 0.641
+offset_left = 406.0
+offset_top = 77.0
+offset_right = 233.042
+offset_bottom = 31.48
+script = ExtResource("59_rs7qi")
+
+[node name="panel" type="NinePatchRect" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 278.0
+offset_bottom = 383.0
+texture = ExtResource("60_u6c6t")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 9
+
+[node name="windowtitle" type="TextureRect" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_right = 284.0
+offset_bottom = 39.0
+texture = ExtResource("34_jwe38")
+
+[node name="title" type="Label" parent="Main/Panel/Skillinventory/windowtitle"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 10.0
+offset_right = 278.0
+offset_bottom = 33.0
+text = "技能栏"
+
+[node name="grid1" type="GridContainer" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -117.0
+offset_right = 100.0
+offset_bottom = 117.0
+columns = 6
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="grid2" type="GridContainer" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -117.0
+offset_right = 100.0
+offset_bottom = 117.0
+columns = 6
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="grid3" type="GridContainer" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -117.0
+offset_right = 100.0
+offset_bottom = 117.0
+columns = 6
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="grid4" type="GridContainer" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -117.0
+offset_right = 100.0
+offset_bottom = 117.0
+columns = 6
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="grid5" type="GridContainer" parent="Main/Panel/Skillinventory"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144
+anchor_top = 0.219
+anchor_right = 0.856
+anchor_bottom = 0.781
+offset_left = 0.0359993
+offset_top = -0.104004
+offset_right = -0.036026
+offset_bottom = 0.104004
+columns = 6
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource("61_mlc4d")]
+layout_mode = 2
+
+[node name="lockBtn" parent="Main/Panel/Skillinventory" instance=ExtResource("62_4a3oh")]
+layout_mode = 0
+offset_left = 57.1881
+offset_top = 345.29
+offset_right = 134.188
+offset_bottom = 368.29
+text = "锁定操作"
+
+[node name="unclockBtn" parent="Main/Panel/Skillinventory" instance=ExtResource("62_4a3oh")]
+layout_mode = 0
+offset_left = 150.027
+offset_top = 345.29
+offset_right = 227.027
+offset_bottom = 368.29
+text = "解除操作"
+
+[node name="closeBtn" type="TextureButton" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_left = 261.831
+offset_top = 13.4486
+offset_right = 277.831
+offset_bottom = 29.4486
+texture_normal = ExtResource("41_3jc3h")
+texture_pressed = ExtResource("42_iw4l4")
+texture_hover = ExtResource("43_p6nnw")
+texture_disabled = ExtResource("44_2x3lo")
+
+[node name="t_acc" type="TextureRect" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_left = 3.30763
+offset_top = 6.92966
+offset_right = 33.3076
+offset_bottom = 36.9297
+texture = ExtResource("63_frdll")
+
+[node name="Tab_Button1" parent="Main/Panel/Skillinventory" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 21.1037
+offset_top = 47.247
+offset_right = 69.1037
+offset_bottom = 69.247
+focus_mode = 0
+text = "波动"
+
+[node name="Tab_Button2" parent="Main/Panel/Skillinventory" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 69.1305
+offset_top = 47.247
+offset_right = 117.13
+offset_bottom = 69.247
+focus_mode = 0
+text = "剑术"
+
+[node name="Tab_Button3" parent="Main/Panel/Skillinventory" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 117.212
+offset_top = 47.247
+offset_right = 165.212
+offset_bottom = 69.247
+focus_mode = 0
+text = "血气"
+
+[node name="Tab_Button4" parent="Main/Panel/Skillinventory" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 164.609
+offset_top = 47.247
+offset_right = 212.609
+offset_bottom = 69.247
+focus_mode = 0
+text = "鬼神"
+
+[node name="Tab_Button5" parent="Main/Panel/Skillinventory" instance=ExtResource("45_80emg")]
+layout_mode = 0
+offset_left = 213.171
+offset_top = 47.247
+offset_right = 261.171
+offset_bottom = 69.247
+focus_mode = 0
+text = "通用"
+
+[node name="line" type="NinePatchRect" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 69.0
+offset_right = 272.0
+offset_bottom = 72.0
+texture = ExtResource("46_tcuur")
+
+[node name="15" type="NinePatchRect" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 313.0
+offset_right = 242.0
+offset_bottom = 331.0
+texture = ExtResource("64_b66bs")
+patch_margin_left = 60
+patch_margin_right = 10
+
+[node name="SP" type="Label" parent="Main/Panel/Skillinventory"]
+layout_mode = 0
+offset_left = 90.0013
+offset_top = 314.572
+offset_right = 236.001
+offset_bottom = 331.572
+text = "0"
+
+[node name="windowSound" type="AudioStreamPlayer" parent="Main/Panel/Skillinventory"]
+stream = ExtResource("56_lw542")
+
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Status" parent="UI" instance=ExtResource("65_7xkpe")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 363.0
+offset_bottom = 458.0
+
+[node name="Popup" type="CanvasLayer" parent="."]
+
+[node name="OptionMenu" type="Popup" parent="Popup"]
+position = Vector2i(400, 300)
+script = ExtResource("66_sraxr")
+
+[node name="panel" type="NinePatchRect" parent="Popup/OptionMenu"]
+offset_right = 125.0
+offset_bottom = 153.0
+texture = ExtResource("60_u6c6t")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/OptionMenu/panel"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -65.0
+offset_right = 54.0
+offset_bottom = 65.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/OptionMenu/panel/MarginContainer"]
+layout_mode = 2
+
+[node name="optionBtn" type="TextureButton" parent="Popup/OptionMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("67_qgc57")
+texture_pressed = ExtResource("68_d3yeu")
+texture_hover = ExtResource("69_urcx2")
+texture_disabled = ExtResource("70_mxqjg")
+
+[node name="keyBtn" type="TextureButton" parent="Popup/OptionMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("71_04ip2")
+texture_pressed = ExtResource("72_fl3ie")
+texture_hover = ExtResource("73_e4xv3")
+texture_disabled = ExtResource("74_mp4ak")
+
+[node name="selectBtn" type="TextureButton" parent="Popup/OptionMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("75_7t5ce")
+texture_pressed = ExtResource("76_5fuah")
+texture_hover = ExtResource("77_rn65a")
+texture_disabled = ExtResource("78_uk8pt")
+
+[node name="backtownBtn" type="TextureButton" parent="Popup/OptionMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("79_e7dcs")
+texture_pressed = ExtResource("80_c5y8v")
+texture_hover = ExtResource("81_k7g2b")
+texture_disabled = ExtResource("82_u1oyg")
+
+[node name="gamecloseBtn" type="TextureButton" parent="Popup/OptionMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("83_nc4pa")
+texture_pressed = ExtResource("84_mxutg")
+texture_hover = ExtResource("85_4ph67")
+texture_disabled = ExtResource("86_tbfd0")
+
+[node name="MyinfoMenu" type="Popup" parent="Popup"]
+initial_position = 1
+script = ExtResource("87_r10ng")
+
+[node name="panel" type="NinePatchRect" parent="Popup/MyinfoMenu"]
+offset_right = 125.0
+offset_bottom = 67.0
+texture = ExtResource("60_u6c6t")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/MyinfoMenu/panel"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -26.0
+offset_right = 54.0
+offset_bottom = 26.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/MyinfoMenu/panel/MarginContainer"]
+layout_mode = 2
+
+[node name="questBtn" type="TextureButton" parent="Popup/MyinfoMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("88_xawo7")
+texture_pressed = ExtResource("89_i214d")
+texture_hover = ExtResource("90_ug1r8")
+texture_disabled = ExtResource("91_xh1d5")
+
+[node name="exjobBtn" type="TextureButton" parent="Popup/MyinfoMenu/panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("92_gsdef")
+texture_pressed = ExtResource("93_4ehpf")
+texture_hover = ExtResource("94_qou6b")
+texture_disabled = ExtResource("95_f7xau")
+
+[node name="Pause" type="CanvasLayer" parent="."]
+
+[node name="ToolTip" type="CanvasLayer" parent="."]
+
+[node name="ToolTipSkill" parent="ToolTip" instance=ExtResource("96_ewi2n")]
+visible = false
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="ToolTipEquip" parent="ToolTip" instance=ExtResource("97_g7uic")]
+visible = false
+
+[node name="LoadingLayer" type="CanvasLayer" parent="."]
+
+[node name="Loading" parent="LoadingLayer" instance=ExtResource("98_no2q7")]
+visible = false
+
+[node name="MonsterHP" type="CanvasLayer" parent="."]
+script = ExtResource("99_7rlo6")
+
+[node name="Monster_HP_Normal" parent="MonsterHP" instance=ExtResource("100_lx8j1")]
+visible = false
+offset_top = 98.0
+offset_bottom = -470.0
+
+[node name="Monster_HP_Elite" parent="MonsterHP" instance=ExtResource("101_ycqsj")]
+visible = false
+offset_left = -2.0
+offset_top = 96.0
+offset_right = -2.0
+offset_bottom = -468.0
+
+[node name="Monster_HP_BOSS" parent="MonsterHP" instance=ExtResource("102_g12hl")]
+visible = false
+offset_top = 95.0
+offset_bottom = -473.0
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 10.0
+
+[node name="ENVPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 10.883
+
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/bagBtn" to="Main/Panel/Mainhud" method="OnBag"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/stateBtn" to="Main/Panel/Mainhud" method="OnState"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/fightBtn" to="Main/Panel/Mainhud" method="OnFight"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/tutBtn" to="Main/Panel/Mainhud" method="OnTutBtnPressed"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/setBtn" to="Main/Panel/Mainhud" method="OnSetBtnPressed"]
+[connection signal="visibility_changed" from="Main/Panel/Bag" to="Main/Panel/Bag" method="_on_Bag_visibility_changed"]
+[connection signal="pressed" from="Main/Panel/Bag/closeBtn" to="Main/Panel/Bag" method="OnCloseBtnPressed"]
+[connection signal="toggled" from="Main/Panel/Bag/equipBtn" to="Main/Panel/Bag" method="_on_equipBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/stackableBtn" to="Main/Panel/Bag" method="_on_stackableBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/materialBtn" to="Main/Panel/Bag" method="_on_materialBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/exBtn" to="Main/Panel/Bag" method="_on_exBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/questBtn" to="Main/Panel/Bag" method="_on_questBtn_toggled"]
+[connection signal="pressed" from="Main/Panel/StorateUI/closeBtn" to="Main/Panel/StorateUI" method="_on_closeBtn_pressed"]
+[connection signal="visibility_changed" from="Main/Panel/Skillinventory" to="Main/Panel/Skillinventory" method="_on_Skillinventory_visibility_changed"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot1" to="Main/Panel/Skillinventory/grid1/SkillSlot1" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot1" to="Main/Panel/Skillinventory/grid1/SkillSlot1" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot2" to="Main/Panel/Skillinventory/grid1/SkillSlot2" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot2" to="Main/Panel/Skillinventory/grid1/SkillSlot2" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot3" to="Main/Panel/Skillinventory/grid1/SkillSlot3" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot3" to="Main/Panel/Skillinventory/grid1/SkillSlot3" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot4" to="Main/Panel/Skillinventory/grid1/SkillSlot4" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot4" to="Main/Panel/Skillinventory/grid1/SkillSlot4" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot5" to="Main/Panel/Skillinventory/grid1/SkillSlot5" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot5" to="Main/Panel/Skillinventory/grid1/SkillSlot5" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot6" to="Main/Panel/Skillinventory/grid1/SkillSlot6" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot6" to="Main/Panel/Skillinventory/grid1/SkillSlot6" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot7" to="Main/Panel/Skillinventory/grid1/SkillSlot7" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot7" to="Main/Panel/Skillinventory/grid1/SkillSlot7" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot8" to="Main/Panel/Skillinventory/grid1/SkillSlot8" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot8" to="Main/Panel/Skillinventory/grid1/SkillSlot8" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot9" to="Main/Panel/Skillinventory/grid1/SkillSlot9" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot9" to="Main/Panel/Skillinventory/grid1/SkillSlot9" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot10" to="Main/Panel/Skillinventory/grid1/SkillSlot10" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot10" to="Main/Panel/Skillinventory/grid1/SkillSlot10" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot11" to="Main/Panel/Skillinventory/grid1/SkillSlot11" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot11" to="Main/Panel/Skillinventory/grid1/SkillSlot11" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot12" to="Main/Panel/Skillinventory/grid1/SkillSlot12" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot12" to="Main/Panel/Skillinventory/grid1/SkillSlot12" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot13" to="Main/Panel/Skillinventory/grid1/SkillSlot13" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot13" to="Main/Panel/Skillinventory/grid1/SkillSlot13" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot14" to="Main/Panel/Skillinventory/grid1/SkillSlot14" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot14" to="Main/Panel/Skillinventory/grid1/SkillSlot14" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot15" to="Main/Panel/Skillinventory/grid1/SkillSlot15" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot15" to="Main/Panel/Skillinventory/grid1/SkillSlot15" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot16" to="Main/Panel/Skillinventory/grid1/SkillSlot16" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot16" to="Main/Panel/Skillinventory/grid1/SkillSlot16" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot17" to="Main/Panel/Skillinventory/grid1/SkillSlot17" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot17" to="Main/Panel/Skillinventory/grid1/SkillSlot17" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot18" to="Main/Panel/Skillinventory/grid1/SkillSlot18" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot18" to="Main/Panel/Skillinventory/grid1/SkillSlot18" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot19" to="Main/Panel/Skillinventory/grid1/SkillSlot19" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot19" to="Main/Panel/Skillinventory/grid1/SkillSlot19" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot20" to="Main/Panel/Skillinventory/grid1/SkillSlot20" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot20" to="Main/Panel/Skillinventory/grid1/SkillSlot20" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot21" to="Main/Panel/Skillinventory/grid1/SkillSlot21" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot21" to="Main/Panel/Skillinventory/grid1/SkillSlot21" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot22" to="Main/Panel/Skillinventory/grid1/SkillSlot22" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot22" to="Main/Panel/Skillinventory/grid1/SkillSlot22" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot23" to="Main/Panel/Skillinventory/grid1/SkillSlot23" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot23" to="Main/Panel/Skillinventory/grid1/SkillSlot23" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot24" to="Main/Panel/Skillinventory/grid1/SkillSlot24" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot24" to="Main/Panel/Skillinventory/grid1/SkillSlot24" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot25" to="Main/Panel/Skillinventory/grid1/SkillSlot25" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot25" to="Main/Panel/Skillinventory/grid1/SkillSlot25" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot26" to="Main/Panel/Skillinventory/grid1/SkillSlot26" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot26" to="Main/Panel/Skillinventory/grid1/SkillSlot26" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot27" to="Main/Panel/Skillinventory/grid1/SkillSlot27" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot27" to="Main/Panel/Skillinventory/grid1/SkillSlot27" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot28" to="Main/Panel/Skillinventory/grid1/SkillSlot28" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot28" to="Main/Panel/Skillinventory/grid1/SkillSlot28" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot29" to="Main/Panel/Skillinventory/grid1/SkillSlot29" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot29" to="Main/Panel/Skillinventory/grid1/SkillSlot29" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot30" to="Main/Panel/Skillinventory/grid1/SkillSlot30" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot30" to="Main/Panel/Skillinventory/grid1/SkillSlot30" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot31" to="Main/Panel/Skillinventory/grid1/SkillSlot31" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot31" to="Main/Panel/Skillinventory/grid1/SkillSlot31" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot32" to="Main/Panel/Skillinventory/grid1/SkillSlot32" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot32" to="Main/Panel/Skillinventory/grid1/SkillSlot32" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot33" to="Main/Panel/Skillinventory/grid1/SkillSlot33" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot33" to="Main/Panel/Skillinventory/grid1/SkillSlot33" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot34" to="Main/Panel/Skillinventory/grid1/SkillSlot34" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot34" to="Main/Panel/Skillinventory/grid1/SkillSlot34" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot35" to="Main/Panel/Skillinventory/grid1/SkillSlot35" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot35" to="Main/Panel/Skillinventory/grid1/SkillSlot35" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot36" to="Main/Panel/Skillinventory/grid1/SkillSlot36" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot36" to="Main/Panel/Skillinventory/grid1/SkillSlot36" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot37" to="Main/Panel/Skillinventory/grid1/SkillSlot37" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot37" to="Main/Panel/Skillinventory/grid1/SkillSlot37" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot38" to="Main/Panel/Skillinventory/grid1/SkillSlot38" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot38" to="Main/Panel/Skillinventory/grid1/SkillSlot38" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot39" to="Main/Panel/Skillinventory/grid1/SkillSlot39" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot39" to="Main/Panel/Skillinventory/grid1/SkillSlot39" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot40" to="Main/Panel/Skillinventory/grid1/SkillSlot40" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot40" to="Main/Panel/Skillinventory/grid1/SkillSlot40" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot41" to="Main/Panel/Skillinventory/grid1/SkillSlot41" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot41" to="Main/Panel/Skillinventory/grid1/SkillSlot41" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid1/SkillSlot42" to="Main/Panel/Skillinventory/grid1/SkillSlot42" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid1/SkillSlot42" to="Main/Panel/Skillinventory/grid1/SkillSlot42" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot1" to="Main/Panel/Skillinventory/grid2/SkillSlot1" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot1" to="Main/Panel/Skillinventory/grid2/SkillSlot1" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot2" to="Main/Panel/Skillinventory/grid2/SkillSlot2" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot2" to="Main/Panel/Skillinventory/grid2/SkillSlot2" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot3" to="Main/Panel/Skillinventory/grid2/SkillSlot3" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot3" to="Main/Panel/Skillinventory/grid2/SkillSlot3" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot4" to="Main/Panel/Skillinventory/grid2/SkillSlot4" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot4" to="Main/Panel/Skillinventory/grid2/SkillSlot4" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot5" to="Main/Panel/Skillinventory/grid2/SkillSlot5" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot5" to="Main/Panel/Skillinventory/grid2/SkillSlot5" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot6" to="Main/Panel/Skillinventory/grid2/SkillSlot6" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot6" to="Main/Panel/Skillinventory/grid2/SkillSlot6" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot7" to="Main/Panel/Skillinventory/grid2/SkillSlot7" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot7" to="Main/Panel/Skillinventory/grid2/SkillSlot7" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot8" to="Main/Panel/Skillinventory/grid2/SkillSlot8" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot8" to="Main/Panel/Skillinventory/grid2/SkillSlot8" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot9" to="Main/Panel/Skillinventory/grid2/SkillSlot9" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot9" to="Main/Panel/Skillinventory/grid2/SkillSlot9" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot10" to="Main/Panel/Skillinventory/grid2/SkillSlot10" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot10" to="Main/Panel/Skillinventory/grid2/SkillSlot10" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot11" to="Main/Panel/Skillinventory/grid2/SkillSlot11" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot11" to="Main/Panel/Skillinventory/grid2/SkillSlot11" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot12" to="Main/Panel/Skillinventory/grid2/SkillSlot12" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot12" to="Main/Panel/Skillinventory/grid2/SkillSlot12" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot13" to="Main/Panel/Skillinventory/grid2/SkillSlot13" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot13" to="Main/Panel/Skillinventory/grid2/SkillSlot13" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot14" to="Main/Panel/Skillinventory/grid2/SkillSlot14" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot14" to="Main/Panel/Skillinventory/grid2/SkillSlot14" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot15" to="Main/Panel/Skillinventory/grid2/SkillSlot15" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot15" to="Main/Panel/Skillinventory/grid2/SkillSlot15" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot16" to="Main/Panel/Skillinventory/grid2/SkillSlot16" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot16" to="Main/Panel/Skillinventory/grid2/SkillSlot16" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot17" to="Main/Panel/Skillinventory/grid2/SkillSlot17" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot17" to="Main/Panel/Skillinventory/grid2/SkillSlot17" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot18" to="Main/Panel/Skillinventory/grid2/SkillSlot18" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot18" to="Main/Panel/Skillinventory/grid2/SkillSlot18" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot19" to="Main/Panel/Skillinventory/grid2/SkillSlot19" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot19" to="Main/Panel/Skillinventory/grid2/SkillSlot19" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot20" to="Main/Panel/Skillinventory/grid2/SkillSlot20" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot20" to="Main/Panel/Skillinventory/grid2/SkillSlot20" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot21" to="Main/Panel/Skillinventory/grid2/SkillSlot21" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot21" to="Main/Panel/Skillinventory/grid2/SkillSlot21" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot22" to="Main/Panel/Skillinventory/grid2/SkillSlot22" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot22" to="Main/Panel/Skillinventory/grid2/SkillSlot22" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot23" to="Main/Panel/Skillinventory/grid2/SkillSlot23" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot23" to="Main/Panel/Skillinventory/grid2/SkillSlot23" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot24" to="Main/Panel/Skillinventory/grid2/SkillSlot24" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot24" to="Main/Panel/Skillinventory/grid2/SkillSlot24" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot25" to="Main/Panel/Skillinventory/grid2/SkillSlot25" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot25" to="Main/Panel/Skillinventory/grid2/SkillSlot25" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot26" to="Main/Panel/Skillinventory/grid2/SkillSlot26" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot26" to="Main/Panel/Skillinventory/grid2/SkillSlot26" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot27" to="Main/Panel/Skillinventory/grid2/SkillSlot27" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot27" to="Main/Panel/Skillinventory/grid2/SkillSlot27" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot28" to="Main/Panel/Skillinventory/grid2/SkillSlot28" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot28" to="Main/Panel/Skillinventory/grid2/SkillSlot28" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot29" to="Main/Panel/Skillinventory/grid2/SkillSlot29" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot29" to="Main/Panel/Skillinventory/grid2/SkillSlot29" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot30" to="Main/Panel/Skillinventory/grid2/SkillSlot30" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot30" to="Main/Panel/Skillinventory/grid2/SkillSlot30" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot31" to="Main/Panel/Skillinventory/grid2/SkillSlot31" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot31" to="Main/Panel/Skillinventory/grid2/SkillSlot31" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot32" to="Main/Panel/Skillinventory/grid2/SkillSlot32" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot32" to="Main/Panel/Skillinventory/grid2/SkillSlot32" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot33" to="Main/Panel/Skillinventory/grid2/SkillSlot33" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot33" to="Main/Panel/Skillinventory/grid2/SkillSlot33" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot34" to="Main/Panel/Skillinventory/grid2/SkillSlot34" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot34" to="Main/Panel/Skillinventory/grid2/SkillSlot34" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot35" to="Main/Panel/Skillinventory/grid2/SkillSlot35" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot35" to="Main/Panel/Skillinventory/grid2/SkillSlot35" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot36" to="Main/Panel/Skillinventory/grid2/SkillSlot36" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot36" to="Main/Panel/Skillinventory/grid2/SkillSlot36" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot37" to="Main/Panel/Skillinventory/grid2/SkillSlot37" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot37" to="Main/Panel/Skillinventory/grid2/SkillSlot37" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot38" to="Main/Panel/Skillinventory/grid2/SkillSlot38" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot38" to="Main/Panel/Skillinventory/grid2/SkillSlot38" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot39" to="Main/Panel/Skillinventory/grid2/SkillSlot39" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot39" to="Main/Panel/Skillinventory/grid2/SkillSlot39" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot40" to="Main/Panel/Skillinventory/grid2/SkillSlot40" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot40" to="Main/Panel/Skillinventory/grid2/SkillSlot40" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot41" to="Main/Panel/Skillinventory/grid2/SkillSlot41" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot41" to="Main/Panel/Skillinventory/grid2/SkillSlot41" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid2/SkillSlot42" to="Main/Panel/Skillinventory/grid2/SkillSlot42" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid2/SkillSlot42" to="Main/Panel/Skillinventory/grid2/SkillSlot42" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot1" to="Main/Panel/Skillinventory/grid3/SkillSlot1" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot1" to="Main/Panel/Skillinventory/grid3/SkillSlot1" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot2" to="Main/Panel/Skillinventory/grid3/SkillSlot2" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot2" to="Main/Panel/Skillinventory/grid3/SkillSlot2" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot3" to="Main/Panel/Skillinventory/grid3/SkillSlot3" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot3" to="Main/Panel/Skillinventory/grid3/SkillSlot3" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot4" to="Main/Panel/Skillinventory/grid3/SkillSlot4" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot4" to="Main/Panel/Skillinventory/grid3/SkillSlot4" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot5" to="Main/Panel/Skillinventory/grid3/SkillSlot5" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot5" to="Main/Panel/Skillinventory/grid3/SkillSlot5" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot6" to="Main/Panel/Skillinventory/grid3/SkillSlot6" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot6" to="Main/Panel/Skillinventory/grid3/SkillSlot6" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot7" to="Main/Panel/Skillinventory/grid3/SkillSlot7" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot7" to="Main/Panel/Skillinventory/grid3/SkillSlot7" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot8" to="Main/Panel/Skillinventory/grid3/SkillSlot8" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot8" to="Main/Panel/Skillinventory/grid3/SkillSlot8" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot9" to="Main/Panel/Skillinventory/grid3/SkillSlot9" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot9" to="Main/Panel/Skillinventory/grid3/SkillSlot9" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot10" to="Main/Panel/Skillinventory/grid3/SkillSlot10" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot10" to="Main/Panel/Skillinventory/grid3/SkillSlot10" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot11" to="Main/Panel/Skillinventory/grid3/SkillSlot11" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot11" to="Main/Panel/Skillinventory/grid3/SkillSlot11" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot12" to="Main/Panel/Skillinventory/grid3/SkillSlot12" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot12" to="Main/Panel/Skillinventory/grid3/SkillSlot12" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot13" to="Main/Panel/Skillinventory/grid3/SkillSlot13" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot13" to="Main/Panel/Skillinventory/grid3/SkillSlot13" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot14" to="Main/Panel/Skillinventory/grid3/SkillSlot14" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot14" to="Main/Panel/Skillinventory/grid3/SkillSlot14" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot15" to="Main/Panel/Skillinventory/grid3/SkillSlot15" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot15" to="Main/Panel/Skillinventory/grid3/SkillSlot15" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot16" to="Main/Panel/Skillinventory/grid3/SkillSlot16" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot16" to="Main/Panel/Skillinventory/grid3/SkillSlot16" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot17" to="Main/Panel/Skillinventory/grid3/SkillSlot17" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot17" to="Main/Panel/Skillinventory/grid3/SkillSlot17" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot18" to="Main/Panel/Skillinventory/grid3/SkillSlot18" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot18" to="Main/Panel/Skillinventory/grid3/SkillSlot18" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot19" to="Main/Panel/Skillinventory/grid3/SkillSlot19" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot19" to="Main/Panel/Skillinventory/grid3/SkillSlot19" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot20" to="Main/Panel/Skillinventory/grid3/SkillSlot20" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot20" to="Main/Panel/Skillinventory/grid3/SkillSlot20" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot21" to="Main/Panel/Skillinventory/grid3/SkillSlot21" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot21" to="Main/Panel/Skillinventory/grid3/SkillSlot21" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot22" to="Main/Panel/Skillinventory/grid3/SkillSlot22" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot22" to="Main/Panel/Skillinventory/grid3/SkillSlot22" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot23" to="Main/Panel/Skillinventory/grid3/SkillSlot23" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot23" to="Main/Panel/Skillinventory/grid3/SkillSlot23" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot24" to="Main/Panel/Skillinventory/grid3/SkillSlot24" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot24" to="Main/Panel/Skillinventory/grid3/SkillSlot24" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot25" to="Main/Panel/Skillinventory/grid3/SkillSlot25" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot25" to="Main/Panel/Skillinventory/grid3/SkillSlot25" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot26" to="Main/Panel/Skillinventory/grid3/SkillSlot26" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot26" to="Main/Panel/Skillinventory/grid3/SkillSlot26" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot27" to="Main/Panel/Skillinventory/grid3/SkillSlot27" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot27" to="Main/Panel/Skillinventory/grid3/SkillSlot27" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot28" to="Main/Panel/Skillinventory/grid3/SkillSlot28" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot28" to="Main/Panel/Skillinventory/grid3/SkillSlot28" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot29" to="Main/Panel/Skillinventory/grid3/SkillSlot29" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot29" to="Main/Panel/Skillinventory/grid3/SkillSlot29" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot30" to="Main/Panel/Skillinventory/grid3/SkillSlot30" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot30" to="Main/Panel/Skillinventory/grid3/SkillSlot30" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot31" to="Main/Panel/Skillinventory/grid3/SkillSlot31" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot31" to="Main/Panel/Skillinventory/grid3/SkillSlot31" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot32" to="Main/Panel/Skillinventory/grid3/SkillSlot32" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot32" to="Main/Panel/Skillinventory/grid3/SkillSlot32" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot33" to="Main/Panel/Skillinventory/grid3/SkillSlot33" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot33" to="Main/Panel/Skillinventory/grid3/SkillSlot33" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot34" to="Main/Panel/Skillinventory/grid3/SkillSlot34" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot34" to="Main/Panel/Skillinventory/grid3/SkillSlot34" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot35" to="Main/Panel/Skillinventory/grid3/SkillSlot35" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot35" to="Main/Panel/Skillinventory/grid3/SkillSlot35" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot36" to="Main/Panel/Skillinventory/grid3/SkillSlot36" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot36" to="Main/Panel/Skillinventory/grid3/SkillSlot36" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot37" to="Main/Panel/Skillinventory/grid3/SkillSlot37" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot37" to="Main/Panel/Skillinventory/grid3/SkillSlot37" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot38" to="Main/Panel/Skillinventory/grid3/SkillSlot38" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot38" to="Main/Panel/Skillinventory/grid3/SkillSlot38" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot39" to="Main/Panel/Skillinventory/grid3/SkillSlot39" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot39" to="Main/Panel/Skillinventory/grid3/SkillSlot39" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot40" to="Main/Panel/Skillinventory/grid3/SkillSlot40" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot40" to="Main/Panel/Skillinventory/grid3/SkillSlot40" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot41" to="Main/Panel/Skillinventory/grid3/SkillSlot41" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot41" to="Main/Panel/Skillinventory/grid3/SkillSlot41" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid3/SkillSlot42" to="Main/Panel/Skillinventory/grid3/SkillSlot42" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid3/SkillSlot42" to="Main/Panel/Skillinventory/grid3/SkillSlot42" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot1" to="Main/Panel/Skillinventory/grid4/SkillSlot1" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot1" to="Main/Panel/Skillinventory/grid4/SkillSlot1" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot2" to="Main/Panel/Skillinventory/grid4/SkillSlot2" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot2" to="Main/Panel/Skillinventory/grid4/SkillSlot2" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot3" to="Main/Panel/Skillinventory/grid4/SkillSlot3" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot3" to="Main/Panel/Skillinventory/grid4/SkillSlot3" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot4" to="Main/Panel/Skillinventory/grid4/SkillSlot4" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot4" to="Main/Panel/Skillinventory/grid4/SkillSlot4" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot5" to="Main/Panel/Skillinventory/grid4/SkillSlot5" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot5" to="Main/Panel/Skillinventory/grid4/SkillSlot5" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot6" to="Main/Panel/Skillinventory/grid4/SkillSlot6" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot6" to="Main/Panel/Skillinventory/grid4/SkillSlot6" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot7" to="Main/Panel/Skillinventory/grid4/SkillSlot7" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot7" to="Main/Panel/Skillinventory/grid4/SkillSlot7" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot8" to="Main/Panel/Skillinventory/grid4/SkillSlot8" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot8" to="Main/Panel/Skillinventory/grid4/SkillSlot8" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot9" to="Main/Panel/Skillinventory/grid4/SkillSlot9" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot9" to="Main/Panel/Skillinventory/grid4/SkillSlot9" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot10" to="Main/Panel/Skillinventory/grid4/SkillSlot10" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot10" to="Main/Panel/Skillinventory/grid4/SkillSlot10" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot11" to="Main/Panel/Skillinventory/grid4/SkillSlot11" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot11" to="Main/Panel/Skillinventory/grid4/SkillSlot11" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot12" to="Main/Panel/Skillinventory/grid4/SkillSlot12" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot12" to="Main/Panel/Skillinventory/grid4/SkillSlot12" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot13" to="Main/Panel/Skillinventory/grid4/SkillSlot13" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot13" to="Main/Panel/Skillinventory/grid4/SkillSlot13" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot14" to="Main/Panel/Skillinventory/grid4/SkillSlot14" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot14" to="Main/Panel/Skillinventory/grid4/SkillSlot14" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot15" to="Main/Panel/Skillinventory/grid4/SkillSlot15" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot15" to="Main/Panel/Skillinventory/grid4/SkillSlot15" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot16" to="Main/Panel/Skillinventory/grid4/SkillSlot16" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot16" to="Main/Panel/Skillinventory/grid4/SkillSlot16" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot17" to="Main/Panel/Skillinventory/grid4/SkillSlot17" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot17" to="Main/Panel/Skillinventory/grid4/SkillSlot17" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot18" to="Main/Panel/Skillinventory/grid4/SkillSlot18" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot18" to="Main/Panel/Skillinventory/grid4/SkillSlot18" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot19" to="Main/Panel/Skillinventory/grid4/SkillSlot19" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot19" to="Main/Panel/Skillinventory/grid4/SkillSlot19" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot20" to="Main/Panel/Skillinventory/grid4/SkillSlot20" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot20" to="Main/Panel/Skillinventory/grid4/SkillSlot20" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot21" to="Main/Panel/Skillinventory/grid4/SkillSlot21" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot21" to="Main/Panel/Skillinventory/grid4/SkillSlot21" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot22" to="Main/Panel/Skillinventory/grid4/SkillSlot22" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot22" to="Main/Panel/Skillinventory/grid4/SkillSlot22" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot23" to="Main/Panel/Skillinventory/grid4/SkillSlot23" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot23" to="Main/Panel/Skillinventory/grid4/SkillSlot23" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot24" to="Main/Panel/Skillinventory/grid4/SkillSlot24" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot24" to="Main/Panel/Skillinventory/grid4/SkillSlot24" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot25" to="Main/Panel/Skillinventory/grid4/SkillSlot25" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot25" to="Main/Panel/Skillinventory/grid4/SkillSlot25" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot26" to="Main/Panel/Skillinventory/grid4/SkillSlot26" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot26" to="Main/Panel/Skillinventory/grid4/SkillSlot26" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot27" to="Main/Panel/Skillinventory/grid4/SkillSlot27" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot27" to="Main/Panel/Skillinventory/grid4/SkillSlot27" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot28" to="Main/Panel/Skillinventory/grid4/SkillSlot28" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot28" to="Main/Panel/Skillinventory/grid4/SkillSlot28" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot29" to="Main/Panel/Skillinventory/grid4/SkillSlot29" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot29" to="Main/Panel/Skillinventory/grid4/SkillSlot29" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot30" to="Main/Panel/Skillinventory/grid4/SkillSlot30" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot30" to="Main/Panel/Skillinventory/grid4/SkillSlot30" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot31" to="Main/Panel/Skillinventory/grid4/SkillSlot31" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot31" to="Main/Panel/Skillinventory/grid4/SkillSlot31" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot32" to="Main/Panel/Skillinventory/grid4/SkillSlot32" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot32" to="Main/Panel/Skillinventory/grid4/SkillSlot32" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot33" to="Main/Panel/Skillinventory/grid4/SkillSlot33" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot33" to="Main/Panel/Skillinventory/grid4/SkillSlot33" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot34" to="Main/Panel/Skillinventory/grid4/SkillSlot34" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot34" to="Main/Panel/Skillinventory/grid4/SkillSlot34" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot35" to="Main/Panel/Skillinventory/grid4/SkillSlot35" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot35" to="Main/Panel/Skillinventory/grid4/SkillSlot35" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot36" to="Main/Panel/Skillinventory/grid4/SkillSlot36" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot36" to="Main/Panel/Skillinventory/grid4/SkillSlot36" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot37" to="Main/Panel/Skillinventory/grid4/SkillSlot37" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot37" to="Main/Panel/Skillinventory/grid4/SkillSlot37" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot38" to="Main/Panel/Skillinventory/grid4/SkillSlot38" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot38" to="Main/Panel/Skillinventory/grid4/SkillSlot38" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot39" to="Main/Panel/Skillinventory/grid4/SkillSlot39" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot39" to="Main/Panel/Skillinventory/grid4/SkillSlot39" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot40" to="Main/Panel/Skillinventory/grid4/SkillSlot40" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot40" to="Main/Panel/Skillinventory/grid4/SkillSlot40" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot41" to="Main/Panel/Skillinventory/grid4/SkillSlot41" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot41" to="Main/Panel/Skillinventory/grid4/SkillSlot41" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid4/SkillSlot42" to="Main/Panel/Skillinventory/grid4/SkillSlot42" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid4/SkillSlot42" to="Main/Panel/Skillinventory/grid4/SkillSlot42" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot1" to="Main/Panel/Skillinventory/grid5/SkillSlot1" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot1" to="Main/Panel/Skillinventory/grid5/SkillSlot1" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot2" to="Main/Panel/Skillinventory/grid5/SkillSlot2" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot2" to="Main/Panel/Skillinventory/grid5/SkillSlot2" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot3" to="Main/Panel/Skillinventory/grid5/SkillSlot3" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot3" to="Main/Panel/Skillinventory/grid5/SkillSlot3" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot4" to="Main/Panel/Skillinventory/grid5/SkillSlot4" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot4" to="Main/Panel/Skillinventory/grid5/SkillSlot4" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot5" to="Main/Panel/Skillinventory/grid5/SkillSlot5" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot5" to="Main/Panel/Skillinventory/grid5/SkillSlot5" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot6" to="Main/Panel/Skillinventory/grid5/SkillSlot6" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot6" to="Main/Panel/Skillinventory/grid5/SkillSlot6" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot7" to="Main/Panel/Skillinventory/grid5/SkillSlot7" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot7" to="Main/Panel/Skillinventory/grid5/SkillSlot7" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot8" to="Main/Panel/Skillinventory/grid5/SkillSlot8" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot8" to="Main/Panel/Skillinventory/grid5/SkillSlot8" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot9" to="Main/Panel/Skillinventory/grid5/SkillSlot9" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot9" to="Main/Panel/Skillinventory/grid5/SkillSlot9" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot10" to="Main/Panel/Skillinventory/grid5/SkillSlot10" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot10" to="Main/Panel/Skillinventory/grid5/SkillSlot10" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot11" to="Main/Panel/Skillinventory/grid5/SkillSlot11" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot11" to="Main/Panel/Skillinventory/grid5/SkillSlot11" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot12" to="Main/Panel/Skillinventory/grid5/SkillSlot12" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot12" to="Main/Panel/Skillinventory/grid5/SkillSlot12" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot13" to="Main/Panel/Skillinventory/grid5/SkillSlot13" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot13" to="Main/Panel/Skillinventory/grid5/SkillSlot13" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot14" to="Main/Panel/Skillinventory/grid5/SkillSlot14" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot14" to="Main/Panel/Skillinventory/grid5/SkillSlot14" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot15" to="Main/Panel/Skillinventory/grid5/SkillSlot15" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot15" to="Main/Panel/Skillinventory/grid5/SkillSlot15" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot16" to="Main/Panel/Skillinventory/grid5/SkillSlot16" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot16" to="Main/Panel/Skillinventory/grid5/SkillSlot16" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot17" to="Main/Panel/Skillinventory/grid5/SkillSlot17" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot17" to="Main/Panel/Skillinventory/grid5/SkillSlot17" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot18" to="Main/Panel/Skillinventory/grid5/SkillSlot18" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot18" to="Main/Panel/Skillinventory/grid5/SkillSlot18" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot19" to="Main/Panel/Skillinventory/grid5/SkillSlot19" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot19" to="Main/Panel/Skillinventory/grid5/SkillSlot19" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot20" to="Main/Panel/Skillinventory/grid5/SkillSlot20" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot20" to="Main/Panel/Skillinventory/grid5/SkillSlot20" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot21" to="Main/Panel/Skillinventory/grid5/SkillSlot21" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot21" to="Main/Panel/Skillinventory/grid5/SkillSlot21" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot22" to="Main/Panel/Skillinventory/grid5/SkillSlot22" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot22" to="Main/Panel/Skillinventory/grid5/SkillSlot22" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot23" to="Main/Panel/Skillinventory/grid5/SkillSlot23" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot23" to="Main/Panel/Skillinventory/grid5/SkillSlot23" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot24" to="Main/Panel/Skillinventory/grid5/SkillSlot24" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot24" to="Main/Panel/Skillinventory/grid5/SkillSlot24" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot25" to="Main/Panel/Skillinventory/grid5/SkillSlot25" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot25" to="Main/Panel/Skillinventory/grid5/SkillSlot25" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot26" to="Main/Panel/Skillinventory/grid5/SkillSlot26" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot26" to="Main/Panel/Skillinventory/grid5/SkillSlot26" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot27" to="Main/Panel/Skillinventory/grid5/SkillSlot27" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot27" to="Main/Panel/Skillinventory/grid5/SkillSlot27" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot28" to="Main/Panel/Skillinventory/grid5/SkillSlot28" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot28" to="Main/Panel/Skillinventory/grid5/SkillSlot28" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot29" to="Main/Panel/Skillinventory/grid5/SkillSlot29" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot29" to="Main/Panel/Skillinventory/grid5/SkillSlot29" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot30" to="Main/Panel/Skillinventory/grid5/SkillSlot30" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot30" to="Main/Panel/Skillinventory/grid5/SkillSlot30" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot31" to="Main/Panel/Skillinventory/grid5/SkillSlot31" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot31" to="Main/Panel/Skillinventory/grid5/SkillSlot31" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot32" to="Main/Panel/Skillinventory/grid5/SkillSlot32" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot32" to="Main/Panel/Skillinventory/grid5/SkillSlot32" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot33" to="Main/Panel/Skillinventory/grid5/SkillSlot33" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot33" to="Main/Panel/Skillinventory/grid5/SkillSlot33" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot34" to="Main/Panel/Skillinventory/grid5/SkillSlot34" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot34" to="Main/Panel/Skillinventory/grid5/SkillSlot34" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot35" to="Main/Panel/Skillinventory/grid5/SkillSlot35" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot35" to="Main/Panel/Skillinventory/grid5/SkillSlot35" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot36" to="Main/Panel/Skillinventory/grid5/SkillSlot36" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot36" to="Main/Panel/Skillinventory/grid5/SkillSlot36" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot37" to="Main/Panel/Skillinventory/grid5/SkillSlot37" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot37" to="Main/Panel/Skillinventory/grid5/SkillSlot37" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot38" to="Main/Panel/Skillinventory/grid5/SkillSlot38" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot38" to="Main/Panel/Skillinventory/grid5/SkillSlot38" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot39" to="Main/Panel/Skillinventory/grid5/SkillSlot39" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot39" to="Main/Panel/Skillinventory/grid5/SkillSlot39" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot40" to="Main/Panel/Skillinventory/grid5/SkillSlot40" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot40" to="Main/Panel/Skillinventory/grid5/SkillSlot40" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot41" to="Main/Panel/Skillinventory/grid5/SkillSlot41" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot41" to="Main/Panel/Skillinventory/grid5/SkillSlot41" method="_on_SkillSlot_mouse_exited"]
+[connection signal="mouse_entered" from="Main/Panel/Skillinventory/grid5/SkillSlot42" to="Main/Panel/Skillinventory/grid5/SkillSlot42" method="_on_SkillSlot_mouse_entered"]
+[connection signal="mouse_exited" from="Main/Panel/Skillinventory/grid5/SkillSlot42" to="Main/Panel/Skillinventory/grid5/SkillSlot42" method="_on_SkillSlot_mouse_exited"]
+[connection signal="pressed" from="Main/Panel/Skillinventory/lockBtn" to="Main/Panel/Skillinventory" method="_on_lockBtn_pressed"]
+[connection signal="pressed" from="Main/Panel/Skillinventory/unclockBtn" to="Main/Panel/Skillinventory" method="_on_unclockBtn_pressed"]
+[connection signal="pressed" from="Main/Panel/Skillinventory/closeBtn" to="Main/Panel/Skillinventory" method="_on_closeBtn_pressed"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button1" to="Main/Panel/Skillinventory" method="_on_Tab_Button1_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button2" to="Main/Panel/Skillinventory" method="_on_Tab_Button2_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button3" to="Main/Panel/Skillinventory" method="_on_Tab_Button3_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button4" to="Main/Panel/Skillinventory" method="_on_Tab_Button4_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button5" to="Main/Panel/Skillinventory" method="_on_Tab_Button5_toggled"]
+[connection signal="pressed" from="Popup/OptionMenu/panel/MarginContainer/VBoxContainer/optionBtn" to="Popup/OptionMenu" method="_on_optionBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/panel/MarginContainer/VBoxContainer/keyBtn" to="Popup/OptionMenu" method="_on_keyBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/panel/MarginContainer/VBoxContainer/selectBtn" to="Popup/OptionMenu" method="_on_selectBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/panel/MarginContainer/VBoxContainer/backtownBtn" to="Popup/OptionMenu" method="_on_backtownBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/panel/MarginContainer/VBoxContainer/gamecloseBtn" to="Popup/OptionMenu" method="_on_gamecloseBtn_pressed"]
+[connection signal="pressed" from="Popup/MyinfoMenu/panel/MarginContainer/VBoxContainer/questBtn" to="Popup/MyinfoMenu" method="_on_questBtn_pressed"]
+[connection signal="pressed" from="Popup/MyinfoMenu/panel/MarginContainer/VBoxContainer/exjobBtn" to="Popup/MyinfoMenu" method="_on_exjobBtn_pressed"]
+
+[editable path="Main/Panel/Bag/EquipGrid/ItemSlot25"]

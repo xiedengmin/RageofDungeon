@@ -1,0 +1,415 @@
+[gd_scene load_steps=39 format=3 uid="uid://c01bq5shybj65"]
+
+[ext_resource type="Texture2D" uid="uid://b3kd3ny038aym" path="res://assets/images/map/obj/01obj009.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d2nqn7i0bx5nr" path="res://assets/images/map/act1/01obj012.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dpiu3q6y6mghi" path="res://assets/images/map/act1/01obj002.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://s3unr7x3knpn" path="res://assets/images/map/act1/01tile01.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b28qtbglwlips" path="res://assets/images/map/act1/01obj101.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ej7wcncqxm5g" path="res://assets/images/map/act1/01obj105.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dt737fegcc41c" path="res://assets/images/map/act1/01tile03.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ore2joym51wh" path="res://assets/images/map/act1/01obj102.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://chnjjdxp4v52e" path="res://assets/images/map/act1/01tile02.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cnrss1s108n0l" path="res://assets/images/map/act1/01obj300_0.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://ctggp1wuc8mnd" path="res://assets/images/map/act1/granflorispathtree01.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dc1ysbh3tgslv" path="res://assets/images/map/act1/01obj201.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://bx8ki5xxlkukl" path="res://assets/images/map/act1/01obj202.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://v2at6x35ik63" path="res://assets/images/map/act1/01obj001.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://dkyasm3llhneg" path="res://assets/images/map/act1/01tile00.png" id="18"]
+[ext_resource type="PackedScene" path="res://src/component/act1/TopGate.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://src/component/act1/01obj400.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://src/component/act1/01obj300.tscn" id="21"]
+[ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="22"]
+[ext_resource type="PackedScene" path="res://src/component/act1/RightGate.tscn" id="23"]
+[ext_resource type="Texture2D" uid="uid://cw0xbkadwuosk" path="res://assets/images/map/act1/granflorissidelight02.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://b6qskaiti6ake" path="res://assets/images/map/act1/granflorissidedoor05.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://clhm2ahsnk30s" path="res://assets/images/map/act1/granflorissidegate05.png" id="26"]
+[ext_resource type="PackedScene" path="res://src/component/act1/barrel.tscn" id="27"]
+[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="28"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="29"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym5rq"]
+texture = ExtResource("8")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a21pp"]
+texture = ExtResource("10")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78lbu"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3xjn"]
+texture = ExtResource("18")
+texture_region_size = Vector2i(224, 480)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/0 = SubResource("TileSetAtlasSource_ym5rq")
+sources/1 = SubResource("TileSetAtlasSource_a21pp")
+sources/2 = SubResource("TileSetAtlasSource_78lbu")
+sources/3 = SubResource("TileSetAtlasSource_n3xjn")
+
+[sub_resource type="Animation" id="Animation_eesxw"]
+resource_name = "flash"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("granflorissidelight01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jjpmj"]
+_data = {
+"flash": SubResource("Animation_eesxw")
+}
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(132.456, 27.5918)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(95.288, 116.969)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(1618.78, 67.5112)
+
+[node name="stage_06" type="Node2D"]
+script = ExtResource("28")
+bgm = "forest01_new"
+env = "amb_forest_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("13")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 925, 375)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("12")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 379)
+
+[node name="01obj102" type="Sprite2D" parent="environment/background"]
+position = Vector2(794.187, 158.893)
+texture = ExtResource("9")
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2(0, 80)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 1, 0, 4, 2, 0, 5, 0, 0)
+
+[node name="01obj300_0" type="Sprite2D" parent="environment"]
+position = Vector2(701.427, 245.137)
+texture = ExtResource("11")
+
+[node name="granflorispathtree01" type="Sprite2D" parent="environment"]
+position = Vector2(849.81, 147.068)
+texture = ExtResource("14")
+
+[node name="TopGate" parent="environment" instance=ExtResource("19")]
+position = Vector2(851.808, 266.985)
+
+[node name="01obj009" type="Sprite2D" parent="environment"]
+position = Vector2(602.537, 302.154)
+texture = ExtResource("2")
+
+[node name="01obj101" type="Sprite2D" parent="environment"]
+position = Vector2(333.486, 143.574)
+texture = ExtResource("6")
+
+[node name="01obj102" type="Sprite2D" parent="environment"]
+position = Vector2(480.039, 142.238)
+texture = ExtResource("9")
+
+[node name="01obj105" type="Sprite2D" parent="environment"]
+position = Vector2(227.469, 299.818)
+texture = ExtResource("7")
+
+[node name="01obj201" type="Sprite2D" parent="environment"]
+position = Vector2(203.675, 492.681)
+texture = ExtResource("15")
+
+[node name="01obj203" type="Sprite2D" parent="environment"]
+position = Vector2(253.732, 402.579)
+texture = ExtResource("15")
+
+[node name="01obj205" type="Sprite2D" parent="environment"]
+position = Vector2(407.238, 492.013)
+texture = ExtResource("15")
+
+[node name="01obj204" type="Sprite2D" parent="environment"]
+position = Vector2(437.272, 427.941)
+texture = ExtResource("15")
+
+[node name="01obj202" type="Sprite2D" parent="environment"]
+position = Vector2(339.829, 449.298)
+texture = ExtResource("16")
+
+[node name="granflorisbush01" type="Sprite2D" parent="environment"]
+position = Vector2(1316.37, 330.2)
+texture = ExtResource("22")
+
+[node name="granflorisbush02" type="Sprite2D" parent="environment"]
+position = Vector2(1395.74, 464.335)
+texture = ExtResource("22")
+
+[node name="granflorisbush03" type="Sprite2D" parent="environment"]
+position = Vector2(-18.1116, 334.264)
+texture = ExtResource("22")
+flip_h = true
+
+[node name="RightGate" parent="environment" instance=ExtResource("23")]
+position = Vector2(41.8722, 361.705)
+texture = ExtResource("26")
+
+[node name="granflorissidelight01" parent="environment/RightGate" index="0"]
+texture = ExtResource("24")
+
+[node name="AnimationPlayer" parent="environment/RightGate" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_jjpmj")
+}
+
+[node name="granflorissidedoor01" parent="environment/RightGate" index="2"]
+texture = ExtResource("25")
+
+[node name="granflorisbush04" type="Sprite2D" parent="environment"]
+position = Vector2(56.7239, 535.607)
+texture = ExtResource("22")
+flip_h = true
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="objs" type="Node2D" parent="stage"]
+
+[node name="01obj400" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(993.823, 351.819)
+
+[node name="01obj401" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1125.23, 357.765)
+
+[node name="01obj402" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1272.69, 403.55)
+
+[node name="01obj403" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1238.21, 441.604)
+
+[node name="01obj413" parent="stage/objs" instance=ExtResource("21")]
+position = Vector2(1092.11, 515.966)
+
+[node name="01obj414" parent="stage/objs" instance=ExtResource("21")]
+position = Vector2(1023.86, 523.11)
+
+[node name="01obj404" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1266.75, 448.74)
+
+[node name="01obj405" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1242.96, 487.389)
+
+[node name="01obj406" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1285.77, 527.227)
+
+[node name="01obj407" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1246.53, 529.606)
+
+[node name="01obj408" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1179.93, 522.471)
+
+[node name="01obj409" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1195.99, 546.255)
+
+[node name="01obj410" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(1128.8, 539.12)
+
+[node name="01obj411" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(974.796, 541.498)
+
+[node name="01obj412" parent="stage/objs" instance=ExtResource("20")]
+position = Vector2(936.147, 548.633)
+
+[node name="01obj001" type="Sprite2D" parent="stage/objs"]
+position = Vector2(160.215, 359.915)
+texture = ExtResource("17")
+
+[node name="01obj002" type="Sprite2D" parent="stage/objs"]
+position = Vector2(469.806, 369.353)
+texture = ExtResource("4")
+
+[node name="01obj003" type="Sprite2D" parent="stage/objs"]
+position = Vector2(450.928, 473.18)
+texture = ExtResource("4")
+
+[node name="01obj004" type="Sprite2D" parent="stage/objs"]
+position = Vector2(324.449, 481.674)
+texture = ExtResource("4")
+
+[node name="barrel" parent="stage/objs" instance=ExtResource("27")]
+position = Vector2(325.102, 533.492)
+
+[node name="barrel2" parent="stage/objs" instance=ExtResource("27")]
+position = Vector2(497.486, 432.585)
+
+[node name="01obj012" type="Sprite2D" parent="."]
+position = Vector2(577.288, 561.936)
+texture = ExtResource("3")
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_04" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(851.808, 344.005)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("29")
+current = "stage_06"
+target = "stage_04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_04"]
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_04"]
+position = Vector2(-3.70813, 55.6218)
+
+[node name="to_stage_05" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(36.7856, 390.076)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("29")
+current = "stage_06"
+target = "stage_05"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_05"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_05"]
+position = Vector2(144.087, 33.3731)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1344, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PackedVector2Array(171.264, 552.741, 92.8392, 451.892, 45.5921, 423.544, 19.7637, 407.165, 19.7637, 335.35, 722.17, 335.98, 727.839, 347.949, 785.277, 358.036, 792.725, 335.35, 892.889, 334.09, 913.678, 358.028, 969.744, 349.839, 1086.92, 334.72, 1233.07, 330.94, 1274.02, 333.46, 1285.98, 552.056, 1471, 552, 1457, -1, -1, 0, -0.0864029, 554.668)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2(800.315, 584.803)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource("4")
+
+[node name="BornMonster" type="Marker2D" parent="."]
+position = Vector2(244, 386)
+
+[editable path="environment/RightGate"]

@@ -1,0 +1,108 @@
+[gd_scene load_steps=16 format=3 uid="uid://dihxqpxwt46l2"]
+
+[ext_resource type="Script" path="res://src/character/Character.cs" id="1_t48oh"]
+[ext_resource type="Script" path="res://src/character/PlayerStateMachine.cs" id="2_65axe"]
+[ext_resource type="Script" path="res://src/character/state/motion/onground/Idle.cs" id="3_wqovb"]
+[ext_resource type="Script" path="res://src/character/state/motion/onground/Move.cs" id="4_luuf6"]
+[ext_resource type="Script" path="res://src/character/state/motion/inair/Jump.cs" id="5_ft12c"]
+[ext_resource type="Script" path="res://src/character/state/combat/Damage.cs" id="6_sa51u"]
+[ext_resource type="Script" path="res://src/character/state/combat/Attack.cs" id="7_ongjl"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="8_h86vx"]
+[ext_resource type="Texture2D" uid="uid://omkif5t1rpgd" path="res://assets/images/character/swordman/body/sm_body0000.png" id="9_v3ela"]
+[ext_resource type="Texture2D" uid="uid://3h6b8qfxrhi0" path="res://assets/images/character/swordman/kanata/katana0001.png" id="10_v1rhd"]
+[ext_resource type="PackedScene" uid="uid://bnrocxn68oxhy" path="res://scenes/areabox/HitBox.tscn" id="11_2ku1r"]
+[ext_resource type="PackedScene" uid="uid://bmmfvdc5veuoe" path="res://scenes/areabox/HurtBox.tscn" id="11_wbpg1"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("8_h86vx")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eh78k"]
+radius = 25.0
+height = 128.0
+
+[sub_resource type="CapsuleShape2D" id="2"]
+radius = 14.0
+
+[node name="Character" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_t48oh")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_65axe")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_wqovb")
+
+[node name="Move" type="Node" parent="StateMachine"]
+script = ExtResource("4_luuf6")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("5_ft12c")
+
+[node name="Damage" type="Node" parent="StateMachine"]
+script = ExtResource("6_sa51u")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("7_ongjl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+material = SubResource("1")
+position = Vector2(-34.7451, -22.537)
+texture = ExtResource("9_v3ela")
+hframes = 15
+vframes = 14
+frame = 174
+
+[node name="BodyPivot" type="Marker2D" parent="."]
+
+[node name="CombatPivot" type="Marker2D" parent="BodyPivot"]
+position = Vector2(0, -58)
+
+[node name="HurtBox" parent="BodyPivot/CombatPivot" instance=ExtResource("11_wbpg1")]
+position = Vector2(0, 26.278)
+collision_layer = 8
+collision_mask = 6
+
+[node name="CollisionShape2D" parent="BodyPivot/CombatPivot/HurtBox" index="0"]
+position = Vector2(-1, -15.278)
+shape = SubResource("CapsuleShape2D_eh78k")
+
+[node name="HitBox" parent="BodyPivot/CombatPivot" instance=ExtResource("11_2ku1r")]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Offset" type="Marker2D" parent="BodyPivot"]
+position = Vector2(0, -80)
+
+[node name="Body" type="Sprite2D" parent="BodyPivot/Offset"]
+texture = ExtResource("9_v3ela")
+hframes = 15
+vframes = 14
+frame = 176
+
+[node name="Weapon" type="Sprite2D" parent="BodyPivot/Offset"]
+texture = ExtResource("10_v1rhd")
+hframes = 15
+vframes = 14
+frame = 176
+
+[node name="Bullet" type="Marker2D" parent="BodyPivot"]
+position = Vector2(42.9463, -86.8364)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("2")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/Attack" method="OnAnimationFinished"]
+
+[editable path="BodyPivot/CombatPivot/HurtBox"]

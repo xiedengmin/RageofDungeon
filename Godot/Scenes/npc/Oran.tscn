@@ -1,0 +1,424 @@
+[gd_scene load_steps=50 format=3 uid="uid://bft5d5t6dqvu6"]
+
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dper3nvrfh4f5" path="res://assets/images/npc/npc_oran/8.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dtfsdsny0vp6y" path="res://assets/images/npc/npc_oran/10.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cxbtj1un30bpk" path="res://assets/images/npc/npc_oran/11.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://fvidqprp1d4o" path="res://assets/images/npc/npc_oran/12.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cvy7jvqiknxyv" path="res://assets/images/npc/npc_oran/13.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://b2sjc2f1luafg" path="res://assets/images/npc/npc_oran/9.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://coqama4ppn10r" path="res://assets/images/npc/npc_oran/1.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://1famleq6p3s2" path="res://assets/images/npc/npc_oran/2.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://du7n877jpnx2c" path="res://assets/images/npc/npc_oran/0.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b3rpqsmdi4gm5" path="res://assets/images/npc/npc_oran/3.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://cmla1almq1ggm" path="res://assets/images/npc/npc_oran/4.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cwntcjk13d4e7" path="res://assets/images/npc/npc_oran/5.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cln5t38qbrnxy" path="res://assets/images/npc/npc_oran/6.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://b2unijvrqtm8t" path="res://assets/images/npc/npc_oran/7.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://c6l48gn36pb7q" path="res://assets/images/npc/npc_oran/17.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://dfa07fagq6epq" path="res://assets/images/npc/npc_oran/18.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://bfpou8j4qkblp" path="res://assets/images/npc/npc_oran/14.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://btu6mw620kdql" path="res://assets/images/npc/npc_oran/15.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://bmvuqdh2dw5v2" path="res://assets/images/npc/npc_oran/16.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://dsgi6ch5dqy6g" path="res://assets/images/npc/npc_oran/19.png" id="21"]
+[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="22"]
+[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="23"]
+[ext_resource type="Script" path="res://src/npc/Oran.cs" id="24"]
+[ext_resource type="AudioStream" uid="uid://bswaeqa5wn81h" path="res://assets/sounds/npc/oran/oran_tk_01.ogg" id="25"]
+[ext_resource type="AudioStream" uid="uid://bx64kq6o0r7un" path="res://assets/sounds/npc/oran/oran_fw_01.ogg" id="26"]
+[ext_resource type="AudioStream" uid="uid://bsh0aypllrgy8" path="res://assets/sounds/npc/oran/oran_fw_03.ogg" id="27"]
+[ext_resource type="AudioStream" uid="uid://d3nybwdgov7ir" path="res://assets/sounds/npc/oran/oran_tk_02.ogg" id="28"]
+[ext_resource type="AudioStream" uid="uid://bwcwa1h4xflp3" path="res://assets/sounds/npc/oran/oran_fw_02.ogg" id="29"]
+[ext_resource type="AudioStream" uid="uid://2m2d0lrlbry1" path="res://assets/sounds/npc/oran/oran_amb_02.ogg" id="30"]
+[ext_resource type="AudioStream" uid="uid://bcs7oxehgr0t" path="res://assets/sounds/npc/oran/oran_amb_03.ogg" id="31"]
+[ext_resource type="AudioStream" uid="uid://bfnccyarnbyfw" path="res://assets/sounds/npc/oran/oran_amb_01.ogg" id="32"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="33"]
+[ext_resource type="Texture2D" uid="uid://csbd0e70dwkr3" path="res://assets/images/face/npc/popup/oran.png" id="34"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("22")
+shader_parameter/tilt = 0.4
+shader_parameter/scale = 0.3
+shader_parameter/alpha = 0.4
+shader_parameter/shadow = true
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("23")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="5"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkjn2"]
+_data = {
+"default": SubResource("5")
+}
+
+[sub_resource type="Animation" id="6"]
+resource_name = "amb_01"
+length = 3.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="7"]
+resource_name = "amb_02"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("30")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="8"]
+resource_name = "amb_03"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="9"]
+resource_name = "fw_01"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="10"]
+resource_name = "fw_02"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="11"]
+resource_name = "fw_03"
+length = 5.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="12"]
+resource_name = "tk_01"
+length = 5.1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="13"]
+resource_name = "tk_02"
+length = 2.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhcqt"]
+_data = {
+"amb_01": SubResource("6"),
+"amb_02": SubResource("7"),
+"amb_03": SubResource("8"),
+"fw_01": SubResource("9"),
+"fw_02": SubResource("10"),
+"fw_03": SubResource("11"),
+"tk_01": SubResource("12"),
+"tk_02": SubResource("13")
+}
+
+[node name="Oran" instance=ExtResource("1")]
+script = ExtResource("24")
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource("1")
+position = Vector2(-20.0453, 32.9633)
+sprite_frames = SubResource("2")
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource("3")
+sprite_frames = SubResource("4")
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_mkjn2")
+}
+autoplay = "default"
+
+[node name="nameLabel" parent="." index="3"]
+offset_top = -62.9457
+offset_bottom = -45.9457
+text = "奥兰奶奶"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource("28")
+
+[node name="talkPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_bhcqt")
+}
+
+[node name="Menu_Type1" parent="." index="10" instance=ExtResource("33")]
+
+[node name="faceIcon" parent="Menu_Type1/top" index="0"]
+texture = ExtResource("34")
+
+[node name="nameLabel" parent="Menu_Type1/top" index="1"]
+text = "奥兰"
+
+[editable path="Menu_Type1"]

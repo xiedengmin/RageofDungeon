@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://yty4f68raf0h"]
+
+[ext_resource type="Script" path="res://Scenes/test/GuardAI/GuardAI.cs" id="1_0r3n4"]
+[ext_resource type="Texture2D" uid="uid://dk8l3nviso1ue" path="res://assets/images/Pixel.png" id="2_gsgun"]
+[ext_resource type="Script" path="res://Scenes/test/GuardAI/PlayerController.cs" id="3_8cd15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blhp5"]
+size = Vector2(42, 42)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_80b74"]
+radius = 164.11
+
+[node name="GuardAI" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+unique_name_in_owner = true
+position = Vector2(623, 724)
+collision_layer = 3
+collision_mask = 0
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("3_8cd15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_blhp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(48, 48)
+texture = ExtResource("2_gsgun")
+
+[node name="Guard" type="CharacterBody2D" parent="." node_paths=PackedStringArray("StateDisplayText")]
+position = Vector2(1120, 435)
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_0r3n4")
+PatrolPoints = PackedVector2Array(1120, 435, 560, 273, 350, 250, 550, 350, 340, 50)
+StateDisplayText = NodePath("StateLabel")
+
+[node name="Sprite2D" type="Sprite2D" parent="Guard"]
+scale = Vector2(48, 48)
+texture = ExtResource("2_gsgun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
+shape = SubResource("RectangleShape2D_blhp5")
+
+[node name="DetectionArea" type="Area2D" parent="Guard"]
+collision_layer = 8388608
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guard/DetectionArea"]
+shape = SubResource("CircleShape2D_80b74")
+
+[node name="StateLabel" type="Label" parent="Guard"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 25.0
+offset_right = 65.0
+offset_bottom = 51.0
+grow_horizontal = 2
+text = "/Fight/Telegraph"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Guard/DetectionArea" to="Guard" method="OnDetectionAreaBodyEntered"]

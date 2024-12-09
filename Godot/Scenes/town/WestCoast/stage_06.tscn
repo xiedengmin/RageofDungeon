@@ -1,0 +1,177 @@
+[gd_scene load_steps=17 format=3 uid="uid://cmg43exif3ghl"]
+
+[ext_resource type="Texture2D" uid="uid://bbyth86qlebxy" path="res://assets/images/map/hendonMyre/hmdtwall01.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cpcb4lvt8u13a" path="res://assets/images/map/hendonMyre/hmdtwall00.png" id="2"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="3"]
+[ext_resource type="Texture2D" uid="uid://bsmsfg4b3dm2g" path="res://assets/images/map/hendonMyre/hmdtobj00.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://donm2utjuyl7r" path="res://assets/images/map/tiles/hmdttilefloor_0.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bbdkrhh78lben" path="res://assets/images/map/tiles/hmdttilefloor_1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://2i80gve8bdf3" path="res://assets/images/map/bg/hmdtfar00.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="9"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/npc/Simona.tscn" id="11"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyybl"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(224, 138)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+sources/0 = SubResource("TileSetAtlasSource_jyybl")
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(10.9933, 134.144)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(10.9933, 134.144)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(968, 60)
+
+[node name="stage_06" type="Node2D"]
+script = ExtResource("10")
+
+[node name="background" type="ParallaxBackground" parent="."]
+
+[node name="far" type="ParallaxLayer" parent="background"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(782, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="background/far"]
+texture = ExtResource("8")
+centered = false
+offset = Vector2(0, -20)
+region_rect = Rect2(0, 0, 1002, 243)
+
+[node name="mid" type="ParallaxLayer" parent="background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(895, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="background/mid"]
+texture = ExtResource("9")
+centered = false
+offset = Vector2(0, 130)
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="hmtile" type="TileMap" parent="environment"]
+position = Vector2(0, 422)
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 65536, 2, 0, 65536, 3, 0, 65536, 4, 0, 65536)
+
+[node name="hmdtwall01" type="Sprite2D" parent="environment"]
+position = Vector2(0, 129)
+texture = ExtResource("1")
+centered = false
+
+[node name="hmdtwall00" type="Sprite2D" parent="environment"]
+position = Vector2(242, 169)
+texture = ExtResource("2")
+centered = false
+
+[node name="hmdtwall02" type="Sprite2D" parent="environment"]
+position = Vector2(484, 169)
+texture = ExtResource("2")
+centered = false
+
+[node name="hmdtwall03" type="Sprite2D" parent="environment"]
+position = Vector2(726, 169)
+texture = ExtResource("2")
+centered = false
+
+[node name="hmdtobj00" type="Sprite2D" parent="environment"]
+position = Vector2(252.21, 354.094)
+texture = ExtResource("4")
+
+[node name="hmdttilefloor_0" type="Sprite2D" parent="environment"]
+position = Vector2(290.007, 507.244)
+texture = ExtResource("6")
+
+[node name="hmdttilefloor_2" type="Sprite2D" parent="environment"]
+position = Vector2(535.231, 516.508)
+texture = ExtResource("6")
+
+[node name="hmdttilefloor_3" type="Sprite2D" parent="environment"]
+position = Vector2(804, 537.508)
+texture = ExtResource("6")
+
+[node name="hmdttilefloor_1" type="Sprite2D" parent="environment"]
+position = Vector2(118.949, 493.508)
+texture = ExtResource("7")
+
+[node name="Simona" parent="." instance=ExtResource("11")]
+offset_left = 583.604
+offset_top = 340.701
+offset_right = 648.604
+offset_bottom = 357.701
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(5.11182, 489.508)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(94.1062, 0)
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(962.716, 489.508)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+shape = SubResource("3")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_02"]
+position = Vector2(-109.803, 0)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(968, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2(484, 586.279)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource("4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PackedVector2Array(-1.04521, 555.886, -0.154312, 422.436, 968.253, 422.436, 968.253, 555.886, 1023.55, 555.886, 1023.55, -0.740372, -1.04521, 0.150528, -41.0706, -0.740372, -41.0706, 555.886)

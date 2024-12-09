@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbc8u4brhucim"]
+
+[ext_resource type="Script" path="res://src/npc/NPC.cs" id="2"]
+[ext_resource type="AudioStream" uid="uid://e44mijwq8771" path="res://assets/sounds/ui/commandshow.wav" id="3"]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type canvas_item;
+
+uniform vec4 outline_color : source_color;
+uniform bool show_outline = false;
+
+void fragment() {
+    float pixel_size_x = 1.0 / float(textureSize(TEXTURE, 0).x);
+    float pixel_size_y = 1.0 / float(textureSize(TEXTURE, 0).y);
+
+    vec4 sprite_color = texture(TEXTURE, UV);
+    float alpha = -4.0 * sprite_color.a;
+    alpha += texture(TEXTURE, UV + vec2(pixel_size_x, 0)).a;
+    alpha += texture(TEXTURE, UV + vec2(-pixel_size_x, 0)).a;
+    alpha += texture(TEXTURE, UV + vec2(0, pixel_size_y)).a;
+    alpha += texture(TEXTURE, UV + vec2(0, -pixel_size_y)).a;
+    
+    vec4 final_color = mix(sprite_color, outline_color, clamp(alpha, 0.0, 1.0));
+    
+    vec4 show_color;
+    if (show_outline) {
+        show_color = vec4(final_color.rgb, clamp(abs(alpha) + sprite_color.a, 0.0, 1.0));
+    } else {
+        show_color = sprite_color;
+    }
+
+    COLOR = show_color;
+}"
+
+[sub_resource type="ShaderMaterial" id="2"]
+shader = SubResource("1")
+shader_parameter/outline_color = Color(0.654902, 0.964706, 0.192157, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(144, 186.25)
+
+[node name="NPC" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2")
+
+[node name="body_shadow" type="AnimatedSprite2D" parent="."]
+position = Vector2(-25.3907, 46.7723)
+
+[node name="body" type="AnimatedSprite2D" parent="."]
+material = SubResource("2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="nameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -47.6179
+offset_top = -87.0
+offset_right = 48.3821
+offset_bottom = -70.0
+
+[node name="mouse_check" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -58.0
+offset_right = 58.0
+offset_bottom = 67.0
+
+[node name="npc_talk" type="AudioStreamPlayer2D" parent="."]
+volume_db = 12.0
+max_distance = 400.0
+bus = &"SFX"
+area_mask = 2
+
+[node name="range_check" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="range_check"]
+position = Vector2(0, 0.5)
+shape = SubResource("4")
+
+[node name="talkPlayer" type="AnimationPlayer" parent="."]
+
+[node name="range_timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="clickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3")
+
+[connection signal="mouse_entered" from="mouse_check" to="." method="OnMouseCheckMouseEntered"]
+[connection signal="mouse_exited" from="mouse_check" to="." method="OnMouseCheckMouseExited"]
+[connection signal="pressed" from="mouse_check" to="." method="OnMouseCheckPressed"]
+[connection signal="timeout" from="range_timer" to="." method="OnRangeTimerTimeout"]

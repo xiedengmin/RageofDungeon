@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ET_Godot": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)",
+      "nativeDebugging": false
+    }
+  }
+}

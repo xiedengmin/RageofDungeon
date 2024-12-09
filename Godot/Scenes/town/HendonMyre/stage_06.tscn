@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://86mojqh0n5uf"]
+
+[ext_resource type="Texture2D" uid="uid://o2fxuu3ygial" path="res://assets/images/map/hendonMyre/bridge_0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://be1nx8c8exaav" path="res://assets/images/map/hendonMyre/brwall01_0.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bxv33h2fsgh1r" path="res://assets/images/map/hendonMyre/brwall01_1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="5"]
+[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="6"]
+[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="7"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(11.4149, 181.845)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(13.2919, 143.161)
+
+[node name="stage_06" type="Node2D"]
+script = ExtResource("7")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.7, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+texture = ExtResource("5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1002, 243)
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+texture = ExtResource("2")
+centered = false
+offset = Vector2(0, 125)
+region_enabled = true
+region_rect = Rect2(0, 0, 1255, 259)
+
+[node name="bridge_0" type="Sprite2D" parent="environment"]
+texture = ExtResource("1")
+centered = false
+
+[node name="brwall01_0" type="Sprite2D" parent="environment"]
+position = Vector2(598.795, 493.07)
+texture = ExtResource("3")
+
+[node name="brwall01_1" type="Sprite2D" parent="environment/brwall01_0"]
+position = Vector2(185, 4)
+texture = ExtResource("4")
+
+[node name="stage" type="Node2D" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(890.214, 407.364)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource("1")
+
+[node name="pos" type="Marker2D" parent="doors/to_stage_01"]
+position = Vector2(-90.474, 0)
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color(0.4, 0.00392157, 0.498039, 1)
+position = Vector2(7.03513, 420.072)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource("2")
+
+[node name="pos" type="Marker2D" parent="doors/to_Entrance"]
+position = Vector2(71.9481, 0)
+
+[node name="TopLeft" type="Marker2D" parent="."]
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(896, 600)
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(0, 492.859, 0, 347.749, 265.436, 347.749, 265.436, 320.149, 895.844, 320.388, 896.685, 492.771, 0, 492.859, 0, 600.574, 955.566, 600, 955.46, -0.190475, -49.3239, 0.847038, -48.483, 492.859)

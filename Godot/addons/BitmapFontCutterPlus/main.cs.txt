@@ -1,0 +1,15 @@
+using Godot;
+
+[Tool]
+public partial class CustomEditorPlugin : EditorPlugin
+{
+    public override void _EnterTree()
+    {
+        AddCustomType("CutBitmapFont", "FontFile", GD.Load("res://addons/BitmapFontCutterPlus/cutter.cs"), GD.Load("res://icon.png"));
+    }
+
+    public override void _ExitTree()
+    {
+        RemoveCustomType("CutBitmapFont");
+    }
+}

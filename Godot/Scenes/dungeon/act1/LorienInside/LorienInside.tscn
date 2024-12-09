@@ -1,0 +1,33 @@
+[gd_scene load_steps=9 format=3 uid="uid://d34bpwrqkgxk0"]
+
+[ext_resource type="Script" path="res://src/dungeon/act1/LorienInside.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://cqhf0dax27gn5" path="res://scenes/dungeon/act1/LorienInside/stage_01.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dpc8jf7jjl8fg" path="res://scenes/dungeon/act1/LorienInside/stage_02.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://by5drgjg5p1vm" path="res://scenes/dungeon/act1/LorienInside/stage_03.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://4ccnnxkix8f2" path="res://scenes/dungeon/act1/LorienInside/stage_04.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://qm3fnhjcqwax" path="res://scenes/dungeon/act1/LorienInside/stage_05.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://b2ovtas7pk5gh" path="res://scenes/dungeon/act1/LorienInside/stage_06.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bqm8xdgkymbag" path="res://scenes/dungeon/act1/LorienInside/stage_07.tscn" id="8"]
+
+[node name="LorienInside" type="Node2D"]
+script = ExtResource("1")
+
+[node name="stage_01" parent="." instance=ExtResource("2")]
+
+[node name="stage_02" parent="." instance=ExtResource("3")]
+position = Vector2(2000, 0)
+
+[node name="stage_03" parent="." instance=ExtResource("4")]
+position = Vector2(0, 1000)
+
+[node name="stage_04" parent="." instance=ExtResource("5")]
+position = Vector2(2000, 1000)
+
+[node name="stage_05" parent="." instance=ExtResource("6")]
+position = Vector2(4000, 1000)
+
+[node name="stage_06" parent="." instance=ExtResource("7")]
+position = Vector2(-5.488, 2000)
+
+[node name="stage_07" parent="." instance=ExtResource("8")]
+position = Vector2(2000, 2000)

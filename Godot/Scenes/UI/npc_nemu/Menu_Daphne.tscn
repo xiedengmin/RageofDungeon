@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd3l7osx2wxa"]
+
+[ext_resource type="Texture2D" uid="uid://cgocm0ojqyt6t" path="res://assets/images/ui/popup/48.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://pgkoxtvpxnjl" path="res://assets/images/face/npc/popup/daphne.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bagq515t7a1fd" path="res://assets/images/ui/popup/47.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c8ghjtocqvh4m" path="res://assets/images/ui/popup/49.png" id="4"]
+
+[node name="Menu_Daphne" type="Popup"]
+visible = true
+
+[node name="top" type="ColorRect" parent="."]
+offset_bottom = -84.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="faceIcon" type="Sprite2D" parent="top"]
+position = Vector2(10.5, 10.5)
+texture = ExtResource("2")
+
+[node name="nameLabel" type="Label" parent="top"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 99.0
+offset_bottom = 18.0
+text = "达芙妮·马弗罗"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="talkBtn" type="TextureButton" parent="."]
+offset_top = 21.0
+offset_right = 100.0
+offset_bottom = 42.0
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_hover = ExtResource("1")

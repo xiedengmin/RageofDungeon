@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsxkp4pxexvuy"]
+
+[ext_resource type="Script" path="res://src/character/Character.cs" id="1"]
+
+[node name="Character" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1")
+
+[node name="Body" type="CharacterBody2D" parent="."]
+
+[node name="shadow" type="Sprite2D" parent="Body"]
+
+[node name="body" type="Sprite2D" parent="Body"]
+
+[node name="weapon" type="Sprite2D" parent="Body"]
+
+[node name="nameLabel" type="Label" parent="Body"]
+offset_left = 0.561218
+offset_top = -167.059
+offset_right = 48.5612
+offset_bottom = -150.059
+text = "花也才"
+
+[node name="lvLabel" type="Label" parent="Body"]
+offset_left = -39.0
+offset_top = -165.0
+offset_right = -1.0
+offset_bottom = -148.0
+text = "Lv.10"
+
+[node name="effect" type="Sprite2D" parent="Body"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="MainPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Double_Click_Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Combo_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="soundPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="timeout" from="Double_Click_Timer" to="." method="_on_Double_Click_Timer_timeout"]
+[connection signal="timeout" from="Combo_Timer" to="." method="_on_Combo_Timer_timeout"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/images/map/act1/granflorisdownlight01.png" type="Texture2D" id=1]
+[ext_resource path="res://assets/images/map/act1/granflorisdowngate01.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/images/map/act1/granflorisdowndoor01.png" type="Texture2D" id=3]
+
+[sub_resource type="Animation" id=3]
+resource_name = "flash"
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("granflorisdownlight01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.5, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 84.6056, 33.8016 )
+
+[node name="BottomGate" type="Sprite2D"]
+texture = ExtResource( 2 )
+
+[node name="granflorisdownlight01" type="Sprite2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 13 )
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "flash"
+anims/flash = SubResource( 3 )
+
+[node name="granflorisdowndoor01" type="Sprite2D" parent="."]
+position = Vector2( 0, 36 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 33.3354 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )

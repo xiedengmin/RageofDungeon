@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://df5elfalflcby"]
+
+[ext_resource type="Shader" path="res://assets/shader/gray.gdshader" id="1"]
+[ext_resource type="Script" path="res://src/UI/slot/SkillShortcutSlot.cs" id="2"]
+[ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bae1q5ct1u04o" path="res://assets/fonts/bitmapfont/s_lv/LV.png" id="5"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("1")
+shader_parameter/is_gray = false
+
+[node name="SkillShortcutSlot" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.027
+anchor_bottom = 0.049
+offset_right = 0.439999
+offset_bottom = -0.280003
+expand_mode = 1
+script = ExtResource("2")
+
+[node name="Icon" type="TextureRect" parent="."]
+material = SubResource("1")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.971
+anchor_bottom = 0.971
+offset_right = 0.0149956
+offset_bottom = 0.0149956
+expand_mode = 1
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+texture = ExtResource("3")
+expand_mode = 1
+
+[node name="lv" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+offset_left = -7.0
+offset_right = -8.0
+offset_bottom = 7.0
+scale = Vector2(1.2, 1.2)
+text = "50"
+
+[node name="static_lv" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_right = 20.0
+offset_bottom = 7.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5")
+
+[connection signal="mouse_entered" from="." to="." method="_on_SkillShortcutSlot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_SkillShortcutSlot_mouse_exited"]
