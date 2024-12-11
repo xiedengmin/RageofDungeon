@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cw2faqywsj3u4"]
 
 [ext_resource type="Script" path="res://src/town/Elvengard.cs" id="1_5vvtd"]
-[ext_resource type="PackedScene" uid="uid://bv2n87qg4w7sj" path="res://scenes/town/Elvengard/stage_01.tscn" id="2_hbafb"]
-[ext_resource type="PackedScene" uid="uid://pgnjtj2m63ex" path="res://scenes/town/Elvengard/stage_02.tscn" id="3_hw0ty"]
-[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="4_aw0xt"]
+[ext_resource type="PackedScene" uid="uid://bv2n87qg4w7sj" path="res://Scenes/town/Elvengard/stage_01.tscn" id="2_hbafb"]
+[ext_resource type="PackedScene" uid="uid://pgnjtj2m63ex" path="res://Scenes/town/Elvengard/stage_02.tscn" id="3_hw0ty"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://Scenes/town/Gate.tscn" id="4_aw0xt"]
 
 [node name="Elvengard" type="Node2D"]
 script = ExtResource("1_5vvtd")

@@ -29,6 +29,15 @@ namespace ET
         {
 
         }
+
+        private static void PrintNodePaths(Node node)
+        {
+            GD.Print(node.GetPath());
+            foreach (Node child in node.GetChildren())
+            {
+                PrintNodePaths(child);
+            }
+        }
         public static void Update(this OperaComponent self)
         {
             //    if (Input.IsMouseButtonPressed(MouseButton.Left))
@@ -75,9 +84,8 @@ namespace ET
                 if (mouseEvent.IsReleased())
                 {
                     //mouseEvent.Position;
-                    Camera2D camera2D = GlobalComponent.Instance.Unit.GetNode<Camera2D>("Main/Camera3D");
-
-
+                    //PrintNodePaths(GlobalComponent.Instance.Unit);
+                    Camera2D camera2D = GlobalComponent.Instance.Unit.GetNode<Camera2D>("Character/Camera2D");
 
                     if (camera2D == null)
                     {

@@ -22,7 +22,7 @@ namespace ET
 			
 			unit.AddComponent<MoveComponent>();
 			unit.AddComponent<PathfindingComponent, string>(scene.Name);
-			unit.Position = new Vector3(-10, 0, -10);
+			unit.Position = new Vector3(-10, 400, -0);
 			
 			unit.AddComponent<MailBoxComponent>();
 			

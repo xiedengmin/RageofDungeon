@@ -2,7 +2,7 @@ using Godot;
 
 namespace ET
 {
-    public class ChangeRotation_SyncGameObjectRotation: AEventClass<EventType.ChangeRotation>
+    public class ChangeRotation_SyncGameObjectRotation : AEventClass<EventType.ChangeRotation>
     {
         protected override void Run(object changeRotation)
         {
@@ -12,8 +12,8 @@ namespace ET
             {
                 return;
             }
-            Node3D transform = gameObjectComponent.GameObject;
-            transform.Quaternion = args.Unit.Rotation;
+            //  Node2D transform = gameObjectComponent.GameObject;
+            // transform.Quaternion = args.Unit.Rotation;
         }
     }
 }

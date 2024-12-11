@@ -15,23 +15,23 @@
 [ext_resource type="AudioStream" uid="uid://dfuko4caym2km" path="res://assets/sounds/ui/icondrop.ogg" id="20"]
 [ext_resource type="FontFile" uid="uid://c47lka652g2ye" path="res://assets/fonts/DroidSansChinese.ttf" id="21"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_tcclc"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_lxjko"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_oh7ck"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4v6wn"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_57i5g"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_pjf26"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_d7t1m"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_mbpmo"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_nmb3q"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_f28nd"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_qs63c"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_hx5m1"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_s606s"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_cmp11"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_pja0y"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_5pao7"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jf7x4"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_0dmdi"]
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("21")])
@@ -119,7 +119,7 @@ columns = 6
 clip_contents = true
 custom_minimum_size = Vector2(200, 250)
 layout_mode = 2
-button_group = SubResource("ButtonGroup_tcclc")
+button_group = SubResource("ButtonGroup_lxjko")
 stretch_mode = 0
 
 [node name="acter2" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
@@ -127,28 +127,28 @@ clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_direction = 1
 layout_mode = 2
-button_group = SubResource("ButtonGroup_oh7ck")
+button_group = SubResource("ButtonGroup_4v6wn")
 stretch_mode = 0
 
 [node name="acter3" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
 clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-button_group = SubResource("ButtonGroup_57i5g")
+button_group = SubResource("ButtonGroup_pjf26")
 stretch_mode = 0
 
 [node name="acter4" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
 clip_contents = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-button_group = SubResource("ButtonGroup_d7t1m")
+button_group = SubResource("ButtonGroup_mbpmo")
 stretch_mode = 0
 
 [node name="acter5" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
 clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-button_group = SubResource("ButtonGroup_nmb3q")
+button_group = SubResource("ButtonGroup_f28nd")
 stretch_mode = 0
 
 [node name="acter6" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
@@ -216,14 +216,14 @@ stretch_mode = 0
 clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-button_group = SubResource("ButtonGroup_qs63c")
+button_group = SubResource("ButtonGroup_hx5m1")
 stretch_mode = 0
 
 [node name="acter21" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
 clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-button_group = SubResource("ButtonGroup_s606s")
+button_group = SubResource("ButtonGroup_cmp11")
 stretch_mode = 0
 
 [node name="acter22" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
@@ -237,7 +237,7 @@ clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_direction = 2
 layout_mode = 2
-button_group = SubResource("ButtonGroup_pja0y")
+button_group = SubResource("ButtonGroup_5pao7")
 stretch_mode = 0
 
 [node name="acter24" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource("15")]
@@ -245,7 +245,7 @@ clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_direction = 3
 layout_mode = 2
-button_group = SubResource("ButtonGroup_jf7x4")
+button_group = SubResource("ButtonGroup_0dmdi")
 stretch_mode = 0
 
 [node name="createBtn" parent="." instance=ExtResource("11")]

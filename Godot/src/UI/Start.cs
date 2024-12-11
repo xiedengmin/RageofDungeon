@@ -12,7 +12,7 @@ public partial class Start : Control
     private AudioStreamPlayer selectSound;
 
     // Declare select_data dictionary
-    private Godot.Collections.Dictionary<string, Variant> selectData = new ();
+    private Godot.Collections.Dictionary<string, Variant> selectData = new();
     public override void _Ready()
     {
         loading = GetNode<TextureRect>("Loading");
@@ -22,7 +22,7 @@ public partial class Start : Control
         clickSound = GetNode<AudioStreamPlayer>("clickSound");
         selectSound = GetNode<AudioStreamPlayer>("selectSound");
 
-      // loading.Visible = true;
+        // loading.Visible = true;
         create.Visible = false;
         scrollContainer.GetVScrollBar().Step = scrollContainer.Size.Y / 2;
         GetRoleList();
@@ -41,9 +41,9 @@ public partial class Start : Control
         ArchiveManager.Instance.InitData();
         foreach (Node child in GetChildren())
         {
-                child.QueueFree();
+            child.QueueFree();
         }
-        GetTree().ChangeSceneToFile("res://Main.tscn");
+        //GetTree().ChangeSceneToFile("res://Main.tscn");
     }
     // Close Loading
     private void OnCloseLoading()
@@ -71,7 +71,7 @@ public partial class Start : Control
 
         if (btn.Get("data").ToString() == null)
         {
-           return;
+            return;
         }
 
         btn.GetNode<TextureRect>("select").Visible = buttonPressed;
@@ -80,7 +80,7 @@ public partial class Start : Control
         {
             btn.GetNode<AnimatedSprite2D>("bottom").Set("frame", 1);
             selectSound.Play();
-           selectData = (Godot.Collections.Dictionary<string, Variant>)btn.Get("data");
+            selectData = (Godot.Collections.Dictionary<string, Variant>)btn.Get("data");
         }
         else
         {
@@ -98,12 +98,12 @@ public partial class Start : Control
     // Get the role list from ArchiveManager
     private void GetRoleList()
     {
-       var list = ArchiveManager.Instance.GetRoleList();
+        var list = ArchiveManager.Instance.GetRoleList();
 
         for (int i = 0; i < list.Count; i++)
         {
             var btn = GetActer(i + 1);
-            
+
             btn.Set("data", list[i]);
             btn.Call("CreateRole");
         }

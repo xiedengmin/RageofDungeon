@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/test/Test1.cs" id="1_h7l8p"]
 [ext_resource type="TileSet" uid="uid://bkobjt201r1li" path="res://Scenes/test/Test.tres" id="2_25hpi"]
 [ext_resource type="PackedScene" uid="uid://bcobxtd7kaqw3" path="res://Prefabs/role/character/Swordman.tscn" id="2_trolj"]
-[ext_resource type="PackedScene" uid="uid://nndbvh101cah" path="res://Prefabs/role/monster/goblin/Goblin.tscn" id="3_qt887"]
+[ext_resource type="PackedScene" uid="uid://nndbvh101cah" path="res://Prefabs/monster/goblin/Goblin.tscn" id="3_qt887"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_h7l8p")

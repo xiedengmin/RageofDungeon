@@ -59,8 +59,8 @@ public partial class Main : Node2D
         InputManager.Instance.Connect("OpenSkill", new Callable(this, nameof(OnOpenSkill)));
         InputManager.Instance.Connect("UiCancel", new Callable(this, nameof(OnUiCancel)));
 
-        InitPlayer();
-        InitMap();
+        //InitPlayer();
+        // InitMap();
     }
 
     // 初始化玩家

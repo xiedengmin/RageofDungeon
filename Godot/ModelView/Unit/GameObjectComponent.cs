@@ -3,8 +3,8 @@ using Godot;
 namespace ET
 {
     [ComponentOf(typeof(Unit))]
-    public class GameObjectComponent: Entity, IAwake, IDestroy
+    public class GameObjectComponent : Entity, IAwake, IDestroy
     {
-        public Node3D GameObject { get; set; }
+        public Node2D GameObject { get; set; }
     }
 }
