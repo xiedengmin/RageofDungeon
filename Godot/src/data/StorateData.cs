@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class StorateData : Node
 {
     // Define a list to hold data
@@ -13,4 +14,6 @@ public partial class StorateData : Node
         // Initialize data if necessary
         // Data.Resize(10); // Uncomment this line if you need to resize the list to a specific size
     }
+}
+
 }

@@ -3,6 +3,7 @@ using Godot.Collections;
 using System.Collections.Generic;
 using System;
 using static Godot.HttpRequest;
+namespace ET {
 public partial class SkillConfigProxy : BaseConfig
 {
     // 鬼剑士技能
@@ -323,4 +324,6 @@ public partial class SkillConfigProxy : BaseConfig
         }
         return index;
     }
+}
+
 }

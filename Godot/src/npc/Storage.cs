@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Storage : NPC
 {
     [Export] public Popup menu;
@@ -40,3 +41,5 @@ public partial class Storage : NPC
 
 }
 
+
+}

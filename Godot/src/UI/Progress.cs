@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Progress: ColorRect
 {
     public int singleLayerHP = 0;  // 一层的血量值
@@ -90,4 +91,5 @@ public partial class Progress: ColorRect
       DrawRect(foregroundRect, foregroundColor);
       DrawRect(backgroundRect, backgroundColor);
    }
+}
 }

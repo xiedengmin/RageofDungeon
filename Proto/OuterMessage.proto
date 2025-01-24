@@ -238,4 +238,28 @@ message M2C_TransferMap // IActorLocationResponse
 	int32 Error = 91;
 	string Message = 92;
 }
- 
+message Equipment 
+{
+  int32 Id = 1;          // 装备ID
+  string Name = 2;       // 装备名称
+  int32 Attack = 3;      // 攻击力
+  int32 Defense = 4;     // 防御力
+  int32 Dodge = 5;       // 闪避值
+}
+
+//ResponseType G2C_EquipResponse
+message C2G_EquipRequest  // IRequest
+{ 
+  int32 RpcId = 90;
+  int32 PlayerId = 1;    // 玩家ID
+  Equipment Equip = 2; // 装备信息
+}
+
+// 定义响应消息（服务器 -> 客户端）
+message G2C_EquipResponse  // IResponse
+{
+  int32 RpcId = 90;
+  int32 Error = 91;
+  string Message = 92;
+  Equipment Equip = 1; // 返回的装备信息
+} 

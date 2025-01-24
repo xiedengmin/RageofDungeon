@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Idle : OnGround
 {
     //  [Signal]
@@ -31,5 +32,7 @@ public partial class Idle : OnGround
             EmitSignal(SignalName.Finished, "move");
         }
     }
+
+}
 
 }

@@ -4,7 +4,8 @@ using Godot.Collections;
 
 //namespace QFramework.Example
 //{
-    public partial class CounterAppController : Control,IController
+    namespace ET {
+public partial class CounterAppController : Control,IController
     {
         [Export] public Label CountText;
 
@@ -199,3 +200,4 @@ using Godot.Collections;
 
     }
 //}
+}

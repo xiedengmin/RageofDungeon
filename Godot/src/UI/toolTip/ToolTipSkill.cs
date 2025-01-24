@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+namespace ET {
 public partial class ToolTipSkill : Control
 {
     [Export] private Label nameLabel;
@@ -155,4 +156,6 @@ public partial class ToolTipSkill : Control
                                   Utils.LessCheck(mouse_pos.Y - Size.Y - offsetPos.Y, 0));
         Position = pos;
     }
+}
+
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class DraggableBar : NinePatchRect
 {
     private Node parent = null;
@@ -33,4 +34,6 @@ public partial class DraggableBar : NinePatchRect
             }
         }
     }
+}
+
 }

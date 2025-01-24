@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class SkillShortcutData : Node
 {
     public  Godot.Collections.Array<Godot.Collections.Dictionary<string, Variant>> data = new ();
@@ -38,4 +39,5 @@ public partial class SkillShortcutData : Node
         }
         return lv;
     }
+}
 }

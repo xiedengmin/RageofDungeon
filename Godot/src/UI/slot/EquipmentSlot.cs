@@ -2,6 +2,7 @@ using Godot;
 using Godot.Collections;
 
 
+namespace ET {
 public partial class EquipmentSlot : TextureRect
 {
     // 定义变量
@@ -118,4 +119,5 @@ public partial class EquipmentSlot : TextureRect
         select.Visible = false;
         GlobalManager.Instance.main.Call("OnHideToolTipEquip");
     }
+}
 }

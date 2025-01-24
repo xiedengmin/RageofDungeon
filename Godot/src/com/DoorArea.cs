@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class DoorArea : Area2D
 {
     public enum TYPE
@@ -97,4 +98,6 @@ public partial class DoorArea : Area2D
             Disconnect("body_exited", new Callable(this, nameof(_OnDoorAreaBodyExited)));
         }
     }
+}
+
 }

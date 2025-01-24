@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Albert:NPC
 {
     [Export] public Popup Menu;
@@ -38,4 +39,6 @@ public partial class Albert:NPC
     {
         // Replace with function body.
     }
+}
+
 }

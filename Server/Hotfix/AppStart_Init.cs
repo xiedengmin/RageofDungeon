@@ -35,6 +35,7 @@ namespace ET
             Game.Scene.AddComponent<NetThreadComponent>();
             
             Game.Scene.AddComponent<NavmeshComponent, Func<string, byte[]>>(RecastFileReader.Read);
+            Game.Scene.AddComponent<DBManagerComponent>();
 
             switch (Game.Options.AppType)
             {

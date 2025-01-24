@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class EquipData : Node
 {
     // 装备列表
@@ -10,4 +11,5 @@ public partial class EquipData : Node
     {
         base._Ready();
     }
+}
 }

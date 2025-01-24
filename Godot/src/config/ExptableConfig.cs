@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class ExptableConfig : BaseConfig
 {
     private static Godot.Collections.Array<Godot.Collections.Dictionary<string, Variant>> data;
@@ -32,4 +33,5 @@ public partial class ExptableConfig : BaseConfig
     }
 
     
+}
 }

@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>ET</RootNamespace>
-    <LangVersion>8</LangVersion>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -40,6 +40,11 @@
     <Compile Include="..\..\Godot\Hotfix\Module\Message\**\*.cs">
       <Link>Module\Message\%(RecursiveDir)%(FileName)%(Extension)</Link>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="9.0.2" />
+    <PackageReference Include="Npgsql.Json.NET" Version="9.0.2" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.171" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Tools\Analyzer\Analyzer.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class ConfigManager : Node
 {
     // 经验配置
@@ -40,4 +41,5 @@ public partial class ConfigManager : Node
         _instance.monsterConfig = new MonsterConfig();
 
     }
+}
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Button1 : Button
 {
     [Export] private AudioStreamPlayer _clickSound;
@@ -21,4 +22,5 @@ public partial class Button1 : Button
         // Uncomment to enable the sound on mouse enter
        _enteredSound.Play();
     }
+}
 }

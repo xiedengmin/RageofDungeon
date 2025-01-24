@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Status : Control
 {
     // UI elements
@@ -116,4 +117,5 @@ public partial class Status : Control
     {
         GetNode<AudioStreamPlayer>("windowSound").Play();
     }
+}
 }

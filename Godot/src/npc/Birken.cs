@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Birken: NPC
 {
     [Export]
@@ -40,4 +41,5 @@ public partial class Birken: NPC
     {
         // Replace with function body.
     }
+}
 }

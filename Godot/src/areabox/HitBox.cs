@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class HitBox : Area2D
 {
     // 伤害信息
@@ -19,3 +20,5 @@ public partial class HitBox : Area2D
     }
 }
 
+
+}

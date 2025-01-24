@@ -51,7 +51,7 @@ namespace ET
             {
                if (this.rotation == default)
                     return default;
-                 var (x, y, z) = this.rotation.GetEuler();
+                 var (x, y, z) = this.rotation.GetEuler(); 
                 return new Vector3(Mathf.RadToDeg(x), Mathf.RadToDeg(y), Mathf.RadToDeg(z)); 
             } 
         }

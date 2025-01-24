@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://pgnjtj2m63ex"]
 
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="1"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="1"]
 [ext_resource type="PackedScene" uid="uid://wifly836pnwu" path="res://Scenes/com/DoorArea.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="5"]
 [ext_resource type="PackedScene" uid="uid://c61s46w45rved" path="res://src/component/obj/01obj009.tscn" id="6"]

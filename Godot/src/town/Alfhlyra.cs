@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Alfhlyra:LevelBase
 {
     [Export] private NodePath gatePath;
@@ -48,4 +49,5 @@ public partial class Alfhlyra:LevelBase
     {
         return GetNode(GlobalManager.Instance.state.stage);
     }
+}
 }

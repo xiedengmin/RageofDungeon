@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Roger:NPC 
 {
     // 菜单和任务按钮的引用
@@ -36,4 +37,5 @@ public partial class Roger:NPC
     {
         // 在此添加函数主体
     }
+}
 }

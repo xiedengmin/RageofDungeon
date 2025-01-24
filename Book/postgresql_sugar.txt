@@ -1,5 +1,5 @@
 
-利用c# ,postgresql,System.Text.Json，SqlSugar这种orm 帮我代码演示一下应用在网游装备增删改各种属性，如何把jsonb里面的攻击力字段进行索引，找出攻击力大于100的，然后再比较一下如果用mongodb来做各有何优劣
+利用c#操作postgresql， 使用SqlSugar这种orm ,使用Npgsql.Json.NET这个库进行jsonb类型的操作。帮我代码演示一下应用在godot存储配置文件和装备增删查改各种属性，如何把jsonb里面的攻击力字段进行索引，找出攻击力大于100的，然后再比较一下如果用mongodb来做各有何优劣
 Deepbricks
 
 下面是一个示例代码，展示了如何使用 C# 与 PostgreSQL，利用 System.Text.Json 和 SqlSugar ORM 进行操作，同时在 PostgreSQL 中使用 jsonb 数据类型对“攻击力”字段进行索引。之后，我还会对比一下 PostgreSQL 和 MongoDB 在处理类似场景时的优缺点。

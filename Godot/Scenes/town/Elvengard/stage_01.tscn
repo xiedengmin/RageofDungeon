@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=4 uid="uid://bv2n87qg4w7sj"]
 
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="1_t4p1h"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="1_t4p1h"]
 [ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="2_8c7tk"]
 [ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="3_2mydp"]
 [ext_resource type="Texture2D" uid="uid://ccji5nmv4xnpx" path="res://assets/images/map/tiles/01tile03.png" id="4_t6yrv"]
@@ -262,7 +262,6 @@ position = Vector2(1568, 600)
 position = Vector2(789.419, 323.612)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
-visible = false
 polygon = PackedVector2Array(-790.562, 53.7334, -70.7271, 53.7334, -44.5641, 16.2567, 43.1172, 16.2567, 63.6233, 54.4405, 779.215, 53.7334, 778.149, -323.461, -731.283, -323.461, -790.916, -323.461)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="collision"]

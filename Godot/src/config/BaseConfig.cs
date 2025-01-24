@@ -3,6 +3,7 @@ using System;
 using System.Text.Json; // 使用C#的JSON库
 using System.Collections.Generic; // 用于存储数据
 
+namespace ET {
 public partial class BaseConfig : Node
 {
 
@@ -62,4 +63,5 @@ public partial class BaseConfig : Node
         }
     }
 
+}
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Sinda : NPC
 {
     [Export] private Popup menu;
@@ -32,4 +33,5 @@ public partial class Sinda : NPC
     {
         // Replace with function body
     }
+}
 }

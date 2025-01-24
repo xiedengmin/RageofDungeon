@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Elvengard : LevelBase
 {
     // 通过 [Node] 特性获取节点
@@ -55,4 +56,5 @@ public partial class Elvengard : LevelBase
     {
         return GetNode(GlobalManager.Instance.state.stage);
     }
+}
 }

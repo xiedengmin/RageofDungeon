@@ -2,6 +2,7 @@ using Godot;
 using System.Collections.Generic;
 
 
+namespace ET {
 public partial class JobBaseConfig : BaseConfig
 {
     // 鬼剑士基础属性
@@ -26,4 +27,5 @@ public partial class JobBaseConfig : BaseConfig
 
         return jobData;
     }
+}
 }

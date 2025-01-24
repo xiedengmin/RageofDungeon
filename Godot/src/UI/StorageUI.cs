@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class StorageUI : Control
 {
     // 预加载资源
@@ -43,3 +44,5 @@ public partial class StorageUI : Control
     }
 }
 
+
+}

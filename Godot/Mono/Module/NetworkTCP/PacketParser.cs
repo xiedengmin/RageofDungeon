@@ -41,7 +41,7 @@ namespace ET
 								return false;
 							}
 
-							this.buffer.Read(this.cache, 0, InnerPacketSizeLength);
+                                buffer.ReadExactly(this.cache, 0, InnerPacketSizeLength);
 
 							this.packetSize = BitConverter.ToInt32(this.cache, 0);
 							if (this.packetSize > ushort.MaxValue * 16 || this.packetSize < Packet.MinPacketSize)
@@ -56,7 +56,7 @@ namespace ET
 								return false;
 							}
 
-							this.buffer.Read(this.cache, 0, OuterPacketSizeLength);
+                                buffer.ReadExactly(this.cache, 0, OuterPacketSizeLength);
 
 							this.packetSize = BitConverter.ToUInt16(this.cache, 0);
 							if (this.packetSize < Packet.MinPacketSize)

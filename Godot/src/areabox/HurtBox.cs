@@ -1,4 +1,5 @@
 using Godot;
+namespace ET {
 public partial class HurtBox : Area2D
 {
     private PackedScene HitEffect = (PackedScene)GD.Load("res://scenes/areabox/HitEffect.tscn");
@@ -15,4 +16,5 @@ public partial class HurtBox : Area2D
         effect.Position = new Vector2(26, 0);
         parent.AddChild(effect);
     }
+}
 }

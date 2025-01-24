@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class MonsterHP : CanvasLayer
 {
     // 获取控件引用
@@ -47,4 +48,5 @@ public partial class MonsterHP : CanvasLayer
             bossHp.Visible = value3;
         }
     }
+}
 }

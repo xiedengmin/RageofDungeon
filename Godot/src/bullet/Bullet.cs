@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Bullet : Node2D
 {
     // 自动获取节点zd
@@ -60,4 +61,5 @@ public partial class Bullet : Node2D
         DrawCircle(Vector2.Zero, ((CircleShape2D)collisionShape.Shape).Radius, Colors.Red);
     }
     */
+}
 }

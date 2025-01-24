@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class DataManager : Node
 {
     // 人物数据
@@ -65,4 +66,5 @@ public partial class DataManager : Node
 
         return lv;
     }
+}
 }

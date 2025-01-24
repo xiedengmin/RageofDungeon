@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class SkillBuy : Panel
 {
     private PackedScene itemTemp = (PackedScene)ResourceLoader.Load("res://scenes/UI/slot/Skillbuy_Item.tscn");
@@ -249,4 +250,5 @@ public partial class SkillBuy : Panel
         QueueFree();
         GetNode<AudioStreamPlayer>("windowSound").Play();
     }
+}
 }

@@ -2,6 +2,7 @@ using Godot;
 using System.Collections.Generic;
 using System.Linq;
 
+namespace ET {
 public partial class PlayerStateMachine : StateMachine // Change "YourStateMachine" to the actual name of your class
 {
     // Declare nodes
@@ -90,4 +91,5 @@ public partial class PlayerStateMachine : StateMachine // Change "YourStateMachi
         currentState.Call("AttackSound");
     }
 
+}
 }

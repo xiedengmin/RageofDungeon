@@ -1,5 +1,6 @@
 using Godot;
 using System;
+namespace ET {
 public partial class CharacterCreate : Panel
 {
     private Sprite2D cutSwordman;
@@ -201,4 +202,5 @@ public partial class CharacterCreate : Panel
         Visible = false;
         GetParent().Call("get_role_list");
     }
+}
 }

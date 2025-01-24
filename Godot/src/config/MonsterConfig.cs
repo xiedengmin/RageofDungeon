@@ -2,6 +2,7 @@ using Godot;
 using System.Collections.Generic;
 
 
+namespace ET {
 public partial class MonsterConfig : BaseConfig
 {
     public MonsterConfig()
@@ -25,4 +26,5 @@ public partial class MonsterConfig : BaseConfig
 
         return config;
     }
+}
 }

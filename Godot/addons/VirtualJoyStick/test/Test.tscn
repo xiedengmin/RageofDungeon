@@ -9,6 +9,7 @@ metadata/_edit_vertical_guides_ = [481.0]
 metadata/_edit_horizontal_guides_ = [269.0]
 
 [node name="Player" type="Sprite2D" parent="." node_paths=PackedStringArray("_leftJoyStick", "_rightJoyStick")]
+visible = false
 position = Vector2(604, 347)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_tuoac")
@@ -29,14 +30,14 @@ grow_vertical = 2
 [node name="LeftJoyStick" parent="CanvasLayer/Ui" instance=ExtResource("1_lle0n")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.038
-anchor_top = 0.829
-anchor_right = 0.085
-anchor_bottom = 0.912
-offset_left = 0.359997
-offset_top = 0.119934
-offset_right = 0.199997
-offset_bottom = 0.359985
+anchor_left = 0.066
+anchor_top = 0.781
+anchor_right = 0.113
+anchor_bottom = 0.864
+offset_left = 0.520004
+offset_top = -0.320007
+offset_right = 0.359985
+offset_bottom = -0.0799561
 grow_horizontal = 1
 grow_vertical = 0
 

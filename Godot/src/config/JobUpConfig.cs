@@ -3,6 +3,7 @@ using Godot.Collections;
 using System.Collections.Generic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
+namespace ET {
 public partial class JobUpConfig : BaseConfig
 {
     public JobUpConfig()
@@ -24,4 +25,5 @@ public partial class JobUpConfig : BaseConfig
 
         return jobData;
     }
+}
 }

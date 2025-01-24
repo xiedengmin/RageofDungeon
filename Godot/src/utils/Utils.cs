@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class Utils : Node
 {
     public override void _Ready()
@@ -162,4 +163,5 @@ public partial class Utils : Node
         int jobIndex = GetIndexByJob(DataManager.Instance.roleData.job);
         return (int)gml[jobIndex];
     }
+}
 }

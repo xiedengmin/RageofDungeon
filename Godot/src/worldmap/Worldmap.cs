@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class Worldmap : Control // 修改为你的脚本名称
 {
     [Export] public Control buttons;
@@ -67,4 +68,6 @@ public partial class Worldmap : Control // 修改为你的脚本名称
             }
         }
     }
+}
+
 }

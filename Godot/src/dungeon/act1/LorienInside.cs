@@ -1,4 +1,5 @@
 using Godot;
+namespace ET {
 public partial class LorienInside : DungeonLevel
 {
     private string bornStage = "";
@@ -7,4 +8,5 @@ public partial class LorienInside : DungeonLevel
         bornStage = "stage_01";
     }
 
+}
 }

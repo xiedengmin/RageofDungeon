@@ -493,4 +493,59 @@ namespace ET
 
 	}
 
+    [Message(OuterOpcode.Equipment)]
+    [ProtoContract]
+    public partial class Equipment : Object
+    {
+        [ProtoMember(1)]
+        public int Id { get; set; }
+
+        [ProtoMember(2)]
+        public string Name { get; set; }
+
+        [ProtoMember(3)]
+        public int Attack { get; set; }
+
+        [ProtoMember(4)]
+        public int Defense { get; set; }
+
+        [ProtoMember(5)]
+        public int Dodge { get; set; }
+
+    }
+
+    [ResponseType(nameof(G2C_EquipResponse))]
+    [Message(OuterOpcode.C2G_EquipRequest)]
+    [ProtoContract]
+    public partial class C2G_EquipRequest : Object, IRequest
+    {
+        [ProtoMember(90)]
+        public int RpcId { get; set; }
+
+        [ProtoMember(1)]
+        public int PlayerId { get; set; }
+
+        [ProtoMember(2)]
+        public Equipment Equip { get; set; }
+
+    }
+
+    // 定义响应消息（服务器 -> 客户端）
+    [Message(OuterOpcode.G2C_EquipResponse)]
+    [ProtoContract]
+    public partial class G2C_EquipResponse : Object, IResponse
+    {
+        [ProtoMember(90)]
+        public int RpcId { get; set; }
+
+        [ProtoMember(91)]
+        public int Error { get; set; }
+
+        [ProtoMember(92)]
+        public string Message { get; set; }
+
+        [ProtoMember(1)]
+        public Equipment Equip { get; set; }
+
+    }
 }

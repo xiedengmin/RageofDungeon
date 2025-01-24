@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class EquipConfig : Node
 {
     // ID
@@ -35,4 +36,5 @@ public partial class EquipConfig : Node
     {
         // Do nothing
     }
+}
 }

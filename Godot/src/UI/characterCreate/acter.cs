@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class acter : TextureButton
 {
     private readonly Vector2 swordmanPosition = new Vector2(52, 96);
@@ -66,4 +67,5 @@ public partial class acter : TextureButton
         jobLabel.Text = Utils.GetExByJob(_job);
         jobLabel.Visible = true;
     }
+}
 }

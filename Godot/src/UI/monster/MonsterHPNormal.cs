@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class MonsterHPNormal : Control
 {
     [Export] public int singleLayerHP = 100;  // 一层的血量值
@@ -57,4 +58,6 @@ public partial class MonsterHPNormal : Control
         get => GetCurrentHP();
         set => SetCurrentHP(value);
     }
+}
+
 }

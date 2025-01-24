@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class HitEffect : Node2D
 {
     [Export]
@@ -15,4 +16,5 @@ public partial class HitEffect : Node2D
     {
         QueueFree();
     }
+}
 }

@@ -38,8 +38,48 @@ namespace ET
                 PrintNodePaths(child);
             }
         }
+        public static async ETTask SendEquipRequest(Session session)
+        {
+            if (Input.IsKeyPressed(Key.T))
+            {
+
+                Equipment equipment = new Equipment
+                {
+                    Id = 1,
+                    Name = "小试牛刀",
+                    Attack = 10,
+                    Defense = 5,
+                    Dodge = 2
+                };
+
+                // ����������Ϣ
+                C2G_EquipRequest request = new C2G_EquipRequest
+                {
+                    PlayerId = 1,
+                    Equip = equipment
+                };
+
+                // �������󵽷�����
+
+                G2C_EquipResponse response = await session.Call(request) as G2C_EquipResponse;
+
+                // ������������Ӧ
+                if (response.RpcId == 90)
+                {
+                    Log.Info($"装备名: {response.Equip.Name}");
+                }
+                else
+                {
+                    Log.Error($"装备名: {response.Message}");
+                }
+            }
+            await ETTask.CompletedTask;
+        }
         public static void Update(this OperaComponent self)
         {
+            Session session = self.ZoneScene().GetComponent<SessionComponent>().Session; // ��ȡ��ǰ�Ự
+
+
             //    if (Input.IsMouseButtonPressed(MouseButton.Left))
             //    {
             //        InputEventMouse inputEventMouse = Input.mou
@@ -72,6 +112,10 @@ namespace ET
             //        C2M_TransferMap c2MTransferMap = new C2M_TransferMap();
             //        self.ZoneScene().GetComponent<SessionComponent>().Session.Call(c2MTransferMap).Coroutine();
             //    }
+            //    // KeyCode.T
+
+            ETTask eTTask = SendEquipRequest(session);
+
             //if (Init.Instance.InputEvent is InputEventMouse mouseEvent && Input.IsMouseButtonPressed(MouseButton.Left))
             if (Init.Instance.InputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
             //if (Init.Instance.InputEvent is InputEventMouseMotion mouseEvent)// && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
@@ -115,11 +159,11 @@ namespace ET
                     {
                         return;
                     }
-                    Vector2 vector3 = (Vector2)position;
+                    Vector2 vector2 = (Vector2)position;
 
 
                     //Log.Debug($"click pos 2d:{mouseEvent.Position} 3d:{vector3}");
-                    self.ClickPoint = vector3;
+                    self.ClickPoint = vector2;
                     self.frameClickMap.X = self.ClickPoint.X;
                     self.frameClickMap.Y = self.ClickPoint.Y;
                     //self.frameClickMap.Z = self.ClickPoint.Z;

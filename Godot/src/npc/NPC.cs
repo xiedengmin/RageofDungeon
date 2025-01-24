@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class NPC : Control
 {
     // 是否播放菜单音效
@@ -94,4 +95,6 @@ public partial class NPC : Control
     {
         // 未实现
     }
+}
+
 }

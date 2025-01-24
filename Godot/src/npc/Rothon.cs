@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Rothon : NPC // 假设NPC是一个自定义的父类
 {
     // 定义菜单和按钮
@@ -45,4 +46,6 @@ public partial class Rothon : NPC // 假设NPC是一个自定义的父类
     {
         // 这里添加具体的函数体
     }
+}
+
 }

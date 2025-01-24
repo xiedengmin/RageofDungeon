@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class MonsterStateMachine: StateMachine
 {
     [Export] private NodePath idlePath;
@@ -77,4 +78,5 @@ public partial class MonsterStateMachine: StateMachine
         // Let the current state handle the input
         // currentState.HandleInput(@event);
     }
+}
 }

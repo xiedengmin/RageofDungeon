@@ -2,6 +2,7 @@ using Godot;
 using System.Collections.Generic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
+namespace ET {
 public partial class EquipConfigProxy : BaseConfig
 {
     // 装备列表
@@ -78,4 +79,6 @@ public partial class EquipConfigProxy : BaseConfig
         }
         return item_type;
     }
+}
+
 }

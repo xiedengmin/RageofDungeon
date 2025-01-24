@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class StormPass:LevelBase 
 {
     [Export]
@@ -51,4 +52,6 @@ public partial class StormPass:LevelBase
     {
         return GetNode(GlobalManager.Instance.state.stage) as Node;
     }
+}
+
 }

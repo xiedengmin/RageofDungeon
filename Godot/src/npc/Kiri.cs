@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Kiri : NPC
 {
     // 定义 Popup 类型的菜单
@@ -47,4 +48,6 @@ public partial class Kiri : NPC
     {
         // 实现函数逻辑
     }
+}
+
 }

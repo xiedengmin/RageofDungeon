@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Worldmap_Button : Control
 {
     private const int MinHard = 0;
@@ -120,4 +121,5 @@ public partial class Worldmap_Button : Control
         leftbtn.Visible = false;
         rightbtn.Visible = false;
     }
+}
 }

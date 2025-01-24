@@ -2,6 +2,7 @@ using Godot;
 using System.IO;
 using System.Threading.Tasks;
 
+namespace ET {
 public partial class BulletSpawner : Node
 {
     private Timer _cooldownTimer;
@@ -41,4 +42,5 @@ public partial class BulletSpawner : Node
         _cooldownTimer.Stop();
 
     }
+}
 }

@@ -157,13 +157,13 @@ namespace ET
 				int n = count - alreadyCopyCount;
 				if (ChunkSize - this.LastIndex > n)
 				{
-					stream.Read(this.lastBuffer, this.LastIndex, n);
+					stream.ReadExactly(this.lastBuffer, this.LastIndex, n);
 					this.LastIndex += count - alreadyCopyCount;
 					alreadyCopyCount += n;
 				}
 				else
 				{
-					stream.Read(this.lastBuffer, this.LastIndex, ChunkSize - this.LastIndex);
+					stream.ReadExactly(this.lastBuffer, this.LastIndex, ChunkSize - this.LastIndex);
 					alreadyCopyCount += ChunkSize - this.LastIndex;
 					this.LastIndex = ChunkSize;
 				}

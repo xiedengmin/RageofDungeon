@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class SkillInventory : Control
 {
     Button tab1;
@@ -180,4 +181,6 @@ public partial class SkillInventory : Control
     {
         GetNode<AudioStreamPlayer>("windowSound").Play();
     }
+}
+
 }

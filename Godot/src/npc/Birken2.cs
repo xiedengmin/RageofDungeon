@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Birden2 : NPC  // Assuming NPC.cs extends a base NPC class
 {
     [Export] private PopupMenu menu;
@@ -37,4 +38,5 @@ public partial class Birden2 : NPC  // Assuming NPC.cs extends a base NPC class
     {
         // Replace with function body
     }
+}
 }

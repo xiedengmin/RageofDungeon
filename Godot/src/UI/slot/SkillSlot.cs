@@ -2,6 +2,7 @@ using Godot;
 using Godot.Collections;
 using System;
 
+namespace ET {
 public partial class SkillSlot : TextureRect
 {
     private TextureRect icon;
@@ -144,4 +145,5 @@ public partial class SkillSlot : TextureRect
         select.Visible = false;
         GlobalManager.Instance.main.OnHideToolTipSkill();
     }
+}
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class MyinfoMenu : Popup
 {
     public override void _Ready()
@@ -16,4 +17,5 @@ public partial class MyinfoMenu : Popup
     {
         // Replace with function body
     }
+}
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class MonsterIdle:MonsterOnGround 
 {
     public override void _EnterTree()
@@ -31,4 +32,5 @@ public partial class MonsterIdle:MonsterOnGround
     //     // Implement your input direction logic here
     //     return Vector2.Zero;
     // }
+}
 }

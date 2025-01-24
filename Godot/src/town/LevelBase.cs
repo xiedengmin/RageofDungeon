@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class LevelBase : Node2D
 {
     // Dungeon
@@ -18,4 +19,5 @@ public partial class LevelBase : Node2D
      {
          player = p;
      }
+}
 }

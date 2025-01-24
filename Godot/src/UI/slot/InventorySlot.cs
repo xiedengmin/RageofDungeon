@@ -1,4 +1,5 @@
 using Godot;
+namespace ET {
 public partial class InventorySlot : TextureRect
 {
     private TextureRect icon;
@@ -129,4 +130,5 @@ public partial class InventorySlot : TextureRect
         select.Visible = false;
         GlobalManager.Instance.main.OnHideToolTipEquip();
     }
+}
 }

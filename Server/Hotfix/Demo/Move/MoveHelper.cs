@@ -61,10 +61,10 @@ namespace ET
                 Y = unit.Position.Y,
                 Z = unit.Position.Z,
 						
-                A = unit.Rotation.x,
-                B = unit.Rotation.y,
-                C = unit.Rotation.z,
-                W = unit.Rotation.w,
+                A = unit.Rotation.X,
+                B = unit.Rotation.Y,
+                C = unit.Rotation.Z,
+                W = unit.Rotation.W,
             });
         }
     }

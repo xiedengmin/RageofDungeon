@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Skillbuy_Item : TextureButton
 {
     // 名字
@@ -116,4 +117,5 @@ public partial class Skillbuy_Item : TextureButton
     {
         GlobalManager.Instance.main.OnHideToolTipSkill();
     }
+}
 }

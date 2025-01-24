@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class DungeonLevel : Node2D
 {
     // dungeon
@@ -55,4 +56,5 @@ public partial class DungeonLevel : Node2D
     {
         return GetNode(GlobalManager.Instance.state.stage);
     }
+}
 }

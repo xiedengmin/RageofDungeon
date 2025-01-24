@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class ToolTipEquip : Control
 {
     public string origin = "";
@@ -45,4 +46,5 @@ public partial class ToolTipEquip : Control
     //         itemId = (int)DataManager.InvShortcutData.Data[slotIndex]["id"];
     //     }
      //}
+}
 }

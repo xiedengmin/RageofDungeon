@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class BaseStage: Node2D
 {
     [Export] public string Bgm = "";
@@ -137,4 +138,5 @@ public void ChangeDoorState(bool value)
         var dPos = door.GetNode<Node2D>("pos");
         return door.Position + dPos.Position;
     }
+}
 }

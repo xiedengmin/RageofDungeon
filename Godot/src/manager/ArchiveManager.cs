@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 
+namespace ET {
 public partial class ArchiveManager : Node
 {
     [Signal]
@@ -230,4 +231,6 @@ public partial class ArchiveManager : Node
 
         DataManager.Instance.InitData();
     }
+}
+
 }

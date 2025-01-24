@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class InventoryData 
 {
     public  Godot.Collections.Array<Godot.Collections.Array< Godot.Collections.Dictionary<string, Variant> >> data = new ();
@@ -25,4 +26,6 @@ public partial class InventoryData
         // data[0].Add(new Dictionary<string, int> { {"id", 10007}, {"amount", 1} });
         // data[0].Add(new Dictionary<string, int> { {"id", 10010}, {"amount", 1} });
     }
+}
+
 }

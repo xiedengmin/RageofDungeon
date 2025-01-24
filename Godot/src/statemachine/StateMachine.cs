@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class StateMachine : Node
 {
     // Signal for state change
@@ -109,4 +110,5 @@ public partial class StateMachine : Node
             (currentState as IState)?.Enter();
         }
     }
+}
 }

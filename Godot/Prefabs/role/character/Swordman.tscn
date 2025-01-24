@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://bcobxtd7kaqw3"]
 
 [ext_resource type="PackedScene" uid="uid://dihxqpxwt46l2" path="res://Prefabs/role/template/RoleTemplate.tscn" id="1_foari"]
-[ext_resource type="Script" path="res://src/character/Swordman.cs" id="2_lk0i0"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="3_528fg"]
+[ext_resource type="Script" uid="uid://ckmkhx8et8sn2" path="res://src/character/Swordman.cs" id="2_lk0i0"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="3_528fg"]
 
 [sub_resource type="Animation" id="Animation_m6jrh"]
 length = 0.001
@@ -537,16 +537,16 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sualu"]
 _data = {
-"RESET": SubResource("Animation_m6jrh"),
-"attack1": SubResource("1"),
-"attack2": SubResource("2"),
-"attack3": SubResource("3"),
-"damage1": SubResource("4"),
-"damage2": SubResource("5"),
-"dash": SubResource("6"),
-"jump": SubResource("7"),
-"move": SubResource("8"),
-"rest": SubResource("9")
+&"RESET": SubResource("Animation_m6jrh"),
+&"attack1": SubResource("1"),
+&"attack2": SubResource("2"),
+&"attack3": SubResource("3"),
+&"damage1": SubResource("4"),
+&"damage2": SubResource("5"),
+&"dash": SubResource("6"),
+&"jump": SubResource("7"),
+&"move": SubResource("8"),
+&"rest": SubResource("9")
 }
 
 [sub_resource type="ShaderMaterial" id="10"]
@@ -564,7 +564,7 @@ script = ExtResource("2_lk0i0")
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_sualu")
+&"": SubResource("AnimationLibrary_sualu")
 }
 autoplay = "move"
 

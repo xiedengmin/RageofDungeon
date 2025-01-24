@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Jump : Motion
 {
 
@@ -76,4 +77,6 @@ public partial class Jump : Motion
 
         Owner.GetNode<Node2D>("BodyPivot").Position = new Vector2(Owner.GetNode<Node2D>("BodyPivot").Position.X, -height);
     }
+}
+
 }

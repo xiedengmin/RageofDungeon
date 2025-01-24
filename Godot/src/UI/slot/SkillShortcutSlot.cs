@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class SkillShortcutSlot : TextureRect
 {
     [Export] private TextureRect icon;
@@ -149,4 +150,6 @@ public partial class SkillShortcutSlot : TextureRect
         select.Visible = false;
         GlobalManager.Instance.main.OnHideToolTipSkill();
     }
+}
+
 }

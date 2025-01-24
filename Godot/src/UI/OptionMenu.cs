@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class OptionMenu : Popup
 {
     public override void _Ready()
@@ -32,4 +33,5 @@ public partial class OptionMenu : Popup
         // Replace with function body
         GetTree().Quit();
     }
+}
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Breeze:NPC
 {
     // Reference to the Popup menu
@@ -49,4 +50,5 @@ public partial class Breeze:NPC
     {
         // Replace with function body.
     }
+}
 }

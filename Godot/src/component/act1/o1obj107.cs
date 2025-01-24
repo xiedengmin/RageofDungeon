@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class O1obj107: StaticBody2D
 {  // 定义 Sprite2D 变量
     private Sprite2D pic;
@@ -32,4 +33,5 @@ public partial class O1obj107: StaticBody2D
         modulate.A = 1.0f;
         pic.Modulate = modulate;
     }
+}
 }

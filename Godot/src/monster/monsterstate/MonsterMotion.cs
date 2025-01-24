@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class MonsterMotion : IState
 {
     // Signal for when the action finishes
@@ -52,4 +53,5 @@ public partial class MonsterMotion : IState
 
         return value;
     }
+}
 }

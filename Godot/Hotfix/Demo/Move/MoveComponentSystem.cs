@@ -154,7 +154,7 @@ namespace ET
                     if (amount > 0)
                     {
 #if NOT_UNITY
-                        Vector3 newPos = Vector3.Lerp(self.StartPos,self.NextTarget, amount);
+                       Vector3 newPos = Vector3.Lerp(self.StartPos,self.NextTarget, amount);
 #else
                         Vector3 newPos = self.StartPos.Lerp(self.NextTarget, amount);
 #endif
@@ -263,7 +263,7 @@ namespace ET
                     //self.To = Quaternion.FromEuler(self.From * faceV);
                     //self.To = Quaternion.FromEuler(new Vector3(faceV.X, 0, faceV.Z));
                     //self.To = Quaternion.FromEuler( self.From.AngleTo(new Quaternion(faceV, Vector3.Up)));
-                    self.To = QuaternionHelper.LookRotation(faceV, Vector3.Up);
+                   self.To = QuaternionHelper.LookRotation(faceV, Vector3.Up);
 #else
                     self.To = Quaternion.LookRotation(faceV, Vector3.Up);
 #endif
@@ -286,7 +286,7 @@ namespace ET
                     //self.To = Quaternion.FromEuler(self.From * faceV);
                     //self.To = Quaternion.FromEuler(new Vector3(faceV.X,0, faceV.Z));
                     //self.To = new Quaternion(faceV, Vector3.Up);
-                    self.To = QuaternionHelper.LookRotation(faceV, Vector3.Up);
+                    //self.To = QuaternionHelper.LookRotation(faceV, Vector3.Up);
 #else
                     self.To = Quaternion.LookRotation(faceV, Vector3.Up);
 #endif

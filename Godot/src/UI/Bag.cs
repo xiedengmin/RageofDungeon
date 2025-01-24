@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class Bag : Control
 {
     // Button and GridContainer nodes
@@ -223,4 +224,5 @@ public partial class Bag : Control
     {
         GetNode<AudioStreamPlayer>("windowSound").Play();
     }
+}
 }

@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class InvShortcutSlot : TextureRect // 使用你的类名
 {
     [Export] private TextureRect icon;
@@ -137,4 +138,5 @@ public partial class InvShortcutSlot : TextureRect // 使用你的类名
         select.Visible = false;
         GlobalManager.Instance.main.OnHideToolTipEquip();
     }
+}
 }

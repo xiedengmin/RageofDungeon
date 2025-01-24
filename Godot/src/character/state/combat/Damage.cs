@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Damage : IState
 {
     //   [Signal]
@@ -15,4 +16,6 @@ public partial class Damage : IState
         // assert(animName == "damage1");
         EmitSignal(SignalName.Finished, "idle");
     }
+}
+
 }

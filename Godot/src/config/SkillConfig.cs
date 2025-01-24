@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class SkillConfig : Node
 {
     public int ID { get; set; } = 0;
@@ -68,4 +69,5 @@ public partial class SkillConfig : Node
     public string skillPreloadingImage { get; set; } = "";
     // 特殊升级
     public string specialLevelUp { get; set; } = "";
+}
 }

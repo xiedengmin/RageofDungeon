@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using MongoDB.Driver;
-
+using Npgsql;
+using SqlSugar;
+using Npgsql.Json.NET;
 namespace ET
 {
 	[FriendClass(typeof(DBComponent))]
@@ -14,7 +16,13 @@ namespace ET
 		    {
 			    self.mongoClient = new MongoClient(dbConnection);
 			    self.database = self.mongoClient.GetDatabase(dbName);
-		    }
+              //  self.dbpg = new SqlSugarClient(new ConnectionConfig()
+              // {
+               //     ConnectionString = "Host=localhost;Port=5432;Username=cool;Password=xdmloveu;Database=et-godot",
+               //     DbType = DbType.PostgreSQL,
+              //      IsAutoCloseConnection = true
+              //  });
+            }
 	    }
 
 	    private static IMongoCollection<T> GetCollection<T>(this DBComponent self, string collection = null)

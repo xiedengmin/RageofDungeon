@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Lorien:DungeonLevel
 {
 
@@ -49,4 +50,5 @@ public partial class Lorien:DungeonLevel
     // {
     //     return GetNode(GlobalManager.state.stage);
     // }
+}
 }

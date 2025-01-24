@@ -1,6 +1,7 @@
 using Godot;
 //using static CounterAppController;
 
+namespace ET {
 public partial class Swordman : Character//, IController
 {
     public override void _Ready()
@@ -30,4 +31,5 @@ public partial class Swordman : Character//, IController
     }
 
 
+}
 }

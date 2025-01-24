@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class WestCoast:LevelBase 
 {
     [Export] private Node gate;
@@ -46,4 +47,5 @@ public partial class WestCoast:LevelBase
     {
         return GetNode(GlobalManager.Instance.state.stage);
     }
+}
 }

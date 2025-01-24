@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Motion : IState
 {
     // Signal for state change
@@ -31,4 +32,6 @@ public partial class Motion : IState
             Owner.Set("lookDirection", direction);
         }
     }
+}
+
 }

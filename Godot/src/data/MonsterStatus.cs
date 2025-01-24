@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class MonsterStatus : Node
 {
     // 配置表ID
@@ -110,4 +111,5 @@ public partial class MonsterStatus : Node
             Items[temp2[0]] = temp2[1];
         }
     }
+}
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class IState : Node
 {
     [Signal]
@@ -30,4 +31,5 @@ public partial class IState : Node
     {
         // Add your animation finished handling code here
     }
+}
 }

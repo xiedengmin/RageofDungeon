@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Balena:NPC 
 {
     // 通过Path引用Popup控件
@@ -46,4 +47,5 @@ public partial class Balena:NPC
     {
         // 替换为功能实现
     }
+}
 }

@@ -2,6 +2,7 @@ using Godot;
 using System.Collections.Generic;
 using System;
 
+namespace ET {
 public partial class Attack : IState
 {
     // [Signal]
@@ -99,3 +100,5 @@ public partial class Attack : IState
     }
 }
 
+
+}

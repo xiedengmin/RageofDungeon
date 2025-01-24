@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Poongjin : NPC
 {
     private Popup menu;
@@ -43,4 +44,5 @@ public partial class Poongjin : NPC
     {
         // Replace with function body.
     }
+}
 }

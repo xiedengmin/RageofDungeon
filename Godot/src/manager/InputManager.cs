@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+namespace ET {
 public partial class InputManager : Node
 {
     // 定义技能的按键组合和优先等级
@@ -144,4 +145,5 @@ public partial class InputManager : Node
 
         return true;
     }
+}
 }

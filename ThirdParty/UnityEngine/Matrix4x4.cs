@@ -412,15 +412,15 @@ namespace Godot
 
         public static Matrix4x4 CreateFromQuaternion(Quaternion quaternion)
         {
-            float num1 = quaternion.x * quaternion.x;
-            float num2 = quaternion.y * quaternion.y;
-            float num3 = quaternion.z * quaternion.z;
-            float num4 = quaternion.x * quaternion.y;
-            float num5 = quaternion.z * quaternion.w;
-            float num6 = quaternion.z * quaternion.x;
-            float num7 = quaternion.y * quaternion.w;
-            float num8 = quaternion.y * quaternion.z;
-            float num9 = quaternion.x * quaternion.w;
+            float num1 = quaternion.X * quaternion.X;
+            float num2 = quaternion.Y * quaternion.Y;
+            float num3 = quaternion.Z * quaternion.Z;
+            float num4 = quaternion.X * quaternion.Y;
+            float num5 = quaternion.Z * quaternion.W;
+            float num6 = quaternion.Z * quaternion.X;
+            float num7 = quaternion.Y * quaternion.W;
+            float num8 = quaternion.Y * quaternion.Z;
+            float num9 = quaternion.X * quaternion.W;
             Matrix4x4 matrix44;
             matrix44.m00 = (float) (1.0 - 2.0 * ((double) num2 + (double) num3));
             matrix44.m10 = (float) (2.0 * ((double) num4 + (double) num5));
@@ -443,15 +443,15 @@ namespace Godot
 
         public static void CreateFromQuaternion(ref Quaternion quaternion, out Matrix4x4 matrix)
         {
-            float num1 = quaternion.x * quaternion.x;
-            float num2 = quaternion.y * quaternion.y;
-            float num3 = quaternion.z * quaternion.z;
-            float num4 = quaternion.x * quaternion.y;
-            float num5 = quaternion.z * quaternion.w;
-            float num6 = quaternion.z * quaternion.x;
-            float num7 = quaternion.y * quaternion.w;
-            float num8 = quaternion.y * quaternion.z;
-            float num9 = quaternion.x * quaternion.w;
+            float num1 = quaternion.X * quaternion.X;
+            float num2 = quaternion.Y * quaternion.Y;
+            float num3 = quaternion.Z * quaternion.Z;
+            float num4 = quaternion.X * quaternion.Y;
+            float num5 = quaternion.Z * quaternion.W;
+            float num6 = quaternion.Z * quaternion.X;
+            float num7 = quaternion.Y * quaternion.W;
+            float num8 = quaternion.Y * quaternion.Z;
+            float num9 = quaternion.X * quaternion.W;
             matrix.m00 = (float) (1.0 - 2.0 * ((double) num2 + (double) num3));
             matrix.m10 = (float) (2.0 * ((double) num4 + (double) num5));
             matrix.m20 = (float) (2.0 * ((double) num6 - (double) num7));

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Monster : CharacterBody2D
 {
     [Export] public string type { get; set; } = "normal";
@@ -46,15 +47,16 @@ public partial class Monster : CharacterBody2D
     public bool GetDirection()
     {
         bool value = false;
-        Vector2 playerPosition = GlobalManager.Instance.main.player.GlobalPosition;
-        if (playerPosition.X < GlobalPosition.X)
+        //Vector2 playerPosition = GlobalManager.Instance.main.player.GlobalPosition;
+     //   if (playerPosition.X < GlobalPosition.X)
         {
             value = true;
         }
-        else
+       // else
         {
             value = false;
         }
         return value;
     }
+}
 }

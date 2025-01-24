@@ -3,6 +3,7 @@ using Godot.Collections;
 using System;
 using System.Collections.Generic;
 
+namespace ET {
 public partial class RoleData : Node
 {
     // Signals
@@ -117,4 +118,6 @@ public partial class RoleData : Node
     {
         _hp = value;
     }
+}
+
 }

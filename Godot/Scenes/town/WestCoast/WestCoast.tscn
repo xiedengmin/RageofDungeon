@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://ccdijvkpil0bk"]
 
-[ext_resource type="PackedScene" uid="uid://bt26i8813n1kp" path="res://scenes/town/WestCoast/stage_05.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://cmg43exif3ghl" path="res://scenes/town/WestCoast/stage_06.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://xgv4vh236ox2" path="res://scenes/town/WestCoast/stage_01.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://c673nlcfxuutg" path="res://scenes/town/WestCoast/stage_03.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://5epscerhjsig" path="res://scenes/town/WestCoast/stage_02.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://r6k8ydqf76jb" path="res://scenes/town/WestCoast/stage_04.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="7"]
-[ext_resource type="Script" path="res://src/town/WestCoast.cs" id="8"]
+[ext_resource type="PackedScene" uid="uid://bt26i8813n1kp" path="res://Scenes/town/WestCoast/stage_05.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cmg43exif3ghl" path="res://Scenes/town/WestCoast/stage_06.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://xgv4vh236ox2" path="res://Scenes/town/WestCoast/stage_01.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c673nlcfxuutg" path="res://Scenes/town/WestCoast/stage_03.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://5epscerhjsig" path="res://Scenes/town/WestCoast/stage_02.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://r6k8ydqf76jb" path="res://Scenes/town/WestCoast/stage_04.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://Scenes/town/Gate.tscn" id="7"]
+[ext_resource type="Script" uid="uid://d1gaiydhaxpgf" path="res://src/town/WestCoast.cs" id="8"]
 
 [sub_resource type="Animation" id="3"]
 resource_name = "flash"
@@ -28,7 +28,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1k1fe"]
 _data = {
-"flash": SubResource("3")
+&"flash": SubResource("3")
 }
 
 [sub_resource type="Animation" id="1"]
@@ -50,7 +50,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w874t"]
 _data = {
-"move": SubResource("1")
+&"move": SubResource("1")
 }
 
 [sub_resource type="Animation" id="2"]
@@ -71,7 +71,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_456j7"]
 _data = {
-"move": SubResource("2")
+&"move": SubResource("2")
 }
 
 [sub_resource type="Animation" id="Animation_a5l8y"]
@@ -93,7 +93,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fgvmh"]
 _data = {
-"move": SubResource("Animation_a5l8y")
+&"move": SubResource("Animation_a5l8y")
 }
 
 [sub_resource type="Animation" id="Animation_rvj2o"]
@@ -114,7 +114,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_054yj"]
 _data = {
-"move": SubResource("Animation_rvj2o")
+&"move": SubResource("Animation_rvj2o")
 }
 
 [node name="WestCoast" type="Node2D"]
@@ -149,7 +149,7 @@ offset_bottom = 17.0
 
 [node name="AnimationPlayer" parent="stage_02/hendonpath_0" index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_1k1fe")
+&"": SubResource("AnimationLibrary_1k1fe")
 }
 
 [node name="stage_03" parent="." instance=ExtResource("4")]
@@ -168,12 +168,12 @@ transform = Transform2D(1, 0, 0, 1, 0, 2168)
 
 [node name="AnimationPlayer" parent="stage_04/environment/westomidship" index="0"]
 libraries = {
-"": SubResource("AnimationLibrary_w874t")
+&"": SubResource("AnimationLibrary_w874t")
 }
 
 [node name="AnimationPlayer" parent="stage_04/environment/westnearship" index="0"]
 libraries = {
-"": SubResource("AnimationLibrary_456j7")
+&"": SubResource("AnimationLibrary_456j7")
 }
 
 [node name="Ophelia" parent="stage_04" index="1"]
@@ -191,12 +191,12 @@ transform = Transform2D(1, 0, 0, 1, 0, 2857)
 
 [node name="AnimationPlayer" parent="stage_05/environment/westomidship" index="0"]
 libraries = {
-"": SubResource("AnimationLibrary_fgvmh")
+&"": SubResource("AnimationLibrary_fgvmh")
 }
 
 [node name="AnimationPlayer" parent="stage_05/environment/westnearship" index="0"]
 libraries = {
-"": SubResource("AnimationLibrary_054yj")
+&"": SubResource("AnimationLibrary_054yj")
 }
 
 [node name="stage_06" parent="." instance=ExtResource("2")]

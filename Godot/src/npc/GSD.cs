@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class GSD : NPC  // Assuming NPCBase is the base class for NPC
 {
     [Export] private Popup menu;
@@ -54,3 +55,4 @@ Godot 的事件机制可以使用 _on_TalkBtn_pressed() 等方法作为信号连
 
 你可以根据具体的项目需求对基类和信号的连接进一步调整。
 */
+}

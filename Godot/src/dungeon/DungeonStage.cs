@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class DungeonStage : Node2D
 {
     [Export] public string bgm = "";
@@ -96,4 +97,5 @@ public partial class DungeonStage : Node2D
         var dpos = door.GetNode("pos");
         return door.Position + ((Node2D)dpos).Position;
     }
+}
 }

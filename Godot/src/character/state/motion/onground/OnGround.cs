@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class OnGround : Motion
 {
     //[Signal]
@@ -15,4 +16,5 @@ public partial class OnGround : Motion
         }
         base.HandleInput(@event);
     }
+}
 }

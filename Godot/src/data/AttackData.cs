@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class AttackData : Node
 {
     // 伤害
@@ -10,4 +11,6 @@ public partial class AttackData : Node
 
     // z轴变化量
     public int ZOffset { get; set; } = 0;
+}
+
 }

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Move : OnGround // 确保继承自正确的节点类
 {
     // Y方向移动速度
@@ -95,5 +96,7 @@ public partial class Move : OnGround // 确保继承自正确的节点类
 
         return ((CharacterBody2D)Owner).GetSlideCollision(0);
     }
+
+}
 
 }

@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class HendonMyre:LevelBase
 {
     // 获取门的节点
@@ -51,4 +52,5 @@ public partial class HendonMyre:LevelBase
     {
         return GetNode(GlobalManager.Instance.state.stage);
     }
+}
 }

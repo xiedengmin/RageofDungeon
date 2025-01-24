@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Loading : Control
 {
     private AnimationPlayer aplayer;
@@ -49,4 +50,5 @@ public partial class Loading : Control
         Visible = true;
         aplayer.Play("change_stage");
     }
+}
 }

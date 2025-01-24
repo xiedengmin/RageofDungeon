@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://df5elfalflcby"]
 
-[ext_resource type="Shader" path="res://assets/shader/gray.gdshader" id="1"]
-[ext_resource type="Script" path="res://src/UI/slot/SkillShortcutSlot.cs" id="2"]
+[ext_resource type="Shader" uid="uid://rg3a23hfxvsa" path="res://assets/shader/gray.gdshader" id="1"]
+[ext_resource type="Script" uid="uid://hy5ydty2b123" path="res://src/UI/slot/SkillShortcutSlot.cs" id="2"]
 [ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bae1q5ct1u04o" path="res://assets/fonts/bitmapfont/s_lv/LV.png" id="5"]
 
@@ -14,7 +14,7 @@ anchors_preset = -1
 anchor_right = 0.027
 anchor_bottom = 0.049
 offset_right = 0.439999
-offset_bottom = -0.280003
+offset_bottom = -0.280006
 expand_mode = 1
 script = ExtResource("2")
 

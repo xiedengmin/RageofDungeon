@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+namespace ET {
 public partial class Character : CharacterBody2D
 {
     // The Player is a CharacterBody2D, in other words a physics-driven object.
@@ -75,4 +76,5 @@ public partial class Character : CharacterBody2D
         CombatPivot.Scale = new Vector2(value ? -1 : 1, CombatPivot.Scale.Y);
         //effect.FlipH = value;
     }
+}
 }

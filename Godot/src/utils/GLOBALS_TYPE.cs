@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class GLOBALS_TYPE //: Object
 {
     // Enumeration for monster types
@@ -40,4 +41,5 @@ public partial class GLOBALS_TYPE //: Object
     public const string SLOT_TYPE_RING = "Ring";          // 格子类型-戒指
     public const string SLOT_TYPE_WEAPON = "Weapon";      // 格子类型-武器
     public const string SLOT_TYPE_TITLE = "Title";        // 格子类型-称号
+}
 }

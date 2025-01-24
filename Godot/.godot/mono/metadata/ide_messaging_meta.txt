@@ -1,0 +1,2 @@
+﻿50925
+D:/gamedev/godotsharp/bin/godot.windows.editor.dev.x86_64.mono.exe

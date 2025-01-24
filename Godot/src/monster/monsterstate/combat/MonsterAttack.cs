@@ -1,4 +1,5 @@
 using Godot;
+namespace ET {
 public partial class MonsterAttack : IState
 {
 
@@ -8,4 +9,5 @@ public partial class MonsterAttack : IState
     /*#	if event.is_action_pressed("jump"):
     #		emit_signal("finished", "jump")
     #	return super.handle_input(event) */
+}
 }

@@ -1,9 +1,9 @@
-﻿<Project Sdk="Godot.NET.Sdk/4.3.1-rc">
+﻿<Project Sdk="Godot.NET.Sdk/4.4.0-beta">
   <PropertyGroup>
     <StartAction>Program</StartAction>
     <StartProgram>d:\gamedev\godotsharp\bin\godot.windows.editor.dev.x86_64.mono.exe</StartProgram>
     <StartArguments>--path $(SolutionDir) &gt; godot.log 2&gt;</StartArguments>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <CodeAnalysisRuleSet>e:\gamedev\monoprj\ET-Godot\Godot\.vscode\ruleset.xml</CodeAnalysisRuleSet>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace ET {
 public partial class Rino : NPC
 {
     // 使用 [Node] 属性代替 @onready
@@ -39,4 +40,5 @@ public partial class Rino : NPC
     {
         // 在这里添加函数体
     }
+}
 }

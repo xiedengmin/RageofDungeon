@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 
 using ET;
+namespace ET {
 public partial class Test1 : Node2D
 {
     // 角色节点
@@ -105,4 +106,6 @@ public partial class Test1 : Node2D
         // 这里简化为返回 0，实际应用中应根据地图数据返回正确的 ID
         return 0;
     }
+}
+
 }
