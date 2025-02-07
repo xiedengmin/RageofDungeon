@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bmirj5a1544p0"]
 
-[ext_resource path="res://assets/images/map/act1/01obj007.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://4d4t33uyar2u" path="res://assets/images/map/act1/01obj007.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 2.05076 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(20, 4.10152)
 
 [node name="01obj007" type="StaticBody2D"]
 
 [node name="pic" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.297302, 2.67572 )
-shape = SubResource( 1 )
+position = Vector2(-0.297302, 2.67572)
+shape = SubResource("1")
 disabled = true

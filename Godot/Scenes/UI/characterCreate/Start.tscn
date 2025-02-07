@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://bld44qdxas8dp"]
 
 [ext_resource type="AudioStream" uid="uid://c21tybpj4aaft" path="res://assets/music/characterSelectStage.ogg" id="1"]
-[ext_resource type="Script" path="res://src/UI/Start.cs" id="2"]
+[ext_resource type="Script" uid="uid://bwmudj3ujkpok" path="res://src/UI/Start.cs" id="2"]
 [ext_resource type="Texture2D" uid="uid://cbcbe7bmorwng" path="res://assets/images/loading/loading.jpg" id="3"]
 [ext_resource type="Texture2D" uid="uid://ckc6425lv8gyi" path="res://assets/images/ui/selectcharacter/1.png" id="10"]
 [ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="11"]

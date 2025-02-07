@@ -14,9 +14,9 @@
 [ext_resource type="PackedScene" path="res://src/component/act1/stonepillar.tscn" id="13"]
 [ext_resource type="Texture2D" uid="uid://dc1ysbh3tgslv" path="res://assets/images/map/act1/01obj201.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://bx8ki5xxlkukl" path="res://assets/images/map/act1/01obj202.png" id="15"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="16"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="16"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj002.tscn" id="17"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="18"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nyav4"]
 texture = ExtResource("1")

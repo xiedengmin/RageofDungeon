@@ -1,13 +1,13 @@
 [gd_scene load_steps=46 format=3 uid="uid://b6n784qbf1pyu"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://dgjr3fpobnyx0" path="res://assets/images/npc/npc_klonter/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://ck4pyjkjlc15g" path="res://assets/images/npc/npc_klonter/0.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://d3invuo63qcnd" path="res://assets/images/npc/npc_klonter/3.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://df84hv0hslpjk" path="res://assets/images/npc/npc_klonter/2.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Klonter.cs" id="8"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://iv74u0b6e1cw" path="res://src/npc/Klonter.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://th62e6pimqvx" path="res://assets/sounds/npc/klonter/klonter_amb_01.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://doi0hlqye7dhl" path="res://assets/sounds/npc/klonter/klonter_amb_02.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://bspr43rsogqdr" path="res://assets/sounds/npc/klonter/klonter_amb_05.ogg" id="11"]
@@ -23,7 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://c7rnvbe0uy2fr" path="res://assets/sounds/npc/klonter/klonter_amb_04.ogg" id="21"]
 [ext_resource type="AudioStream" uid="uid://cv78h3rkondr7" path="res://assets/sounds/npc/klonter/klonter_amb_03.ogg" id="22"]
 [ext_resource type="Texture2D" uid="uid://bg0s5dl4kkfsl" path="res://assets/images/face/npc/popup/klonter.png" id="23"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="24"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="24"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -107,7 +107,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_slox1"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -378,20 +378,20 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_838he"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"amb_04": SubResource("9"),
-"amb_05": SubResource("10"),
-"fw_01": SubResource("11"),
-"fw_02": SubResource("12"),
-"fw_03": SubResource("13"),
-"fw_04": SubResource("14"),
-"fw_05": SubResource("15"),
-"tk_01": SubResource("16"),
-"tk_02": SubResource("17"),
-"tk_03": SubResource("18"),
-"tk_04": SubResource("19")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"amb_04": SubResource("9"),
+&"amb_05": SubResource("10"),
+&"fw_01": SubResource("11"),
+&"fw_02": SubResource("12"),
+&"fw_03": SubResource("13"),
+&"fw_04": SubResource("14"),
+&"fw_05": SubResource("15"),
+&"tk_01": SubResource("16"),
+&"tk_02": SubResource("17"),
+&"tk_03": SubResource("18"),
+&"tk_04": SubResource("19")
 }
 
 [node name="Klonter" instance=ExtResource("1")]

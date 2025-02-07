@@ -1,0 +1,24 @@
+{
+    "name": "Godot.Hotfix.Codes",
+    "rootNamespace": "ET",
+    "references": [
+        "Godot.ThirdParty",
+        "Godot.Core",
+        "Godot.Model.Codes",
+        "Godot.Mathematics",
+        "Godot.Loader"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ENABLE_CODES"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

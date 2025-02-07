@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://tcqnngp74d70" path="res://assets/images/map/sign/sign10.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://u6wh73id8dc8" path="res://assets/images/map/alfhlyra/egtile.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://dlk8vgg5pxkbv" path="res://assets/images/map/alfhlyra/egobj01.png" id="3"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="4"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="4"]
 [ext_resource type="Texture2D" uid="uid://bpywwby5fh3ig" path="res://assets/images/map/path/elvenpath1.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://b87xgwodgrnvv" path="res://assets/images/map/path/elvenpath0.png" id="6"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="7"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="7"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "flash"
@@ -27,7 +27,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fqsng"]
 _data = {
-"flash": SubResource("1")
+&"flash": SubResource("1")
 }
 
 [sub_resource type="RectangleShape2D" id="3"]

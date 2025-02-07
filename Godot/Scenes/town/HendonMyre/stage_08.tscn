@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://ft0g5xjdagq4" path="res://assets/images/map/tiles/hmbstilefloor_1.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://cg56iwtbyopqx" path="res://assets/images/map/hendonMyre/hmbshouse04.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://dcgsjrushfwg0" path="res://assets/images/map/tiles/hmbstilefloor_0.png" id="7"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="8"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="8"]
 [ext_resource type="Texture2D" uid="uid://nn254rrr2bw8" path="res://assets/images/map/bg/hmbsmid00.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://dvavw84c0n6qg" path="res://assets/images/map/bg/hmbsfar00.png" id="10"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="11"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="11"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lolvg"]
 texture = ExtResource("3")

@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dm5wugpl54xrf" path="res://assets/images/ui/windowcommon/276.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://cjj5k07gkm411" path="res://assets/images/ui/windowcommon/278.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://2rsodvuukx1w" path="res://assets/images/ui/windowcommon/277.png" id="12"]
-[ext_resource type="PackedScene" path="res://src/component/buttons/Button2.tscn" id="14"]
-[ext_resource type="Script" path="res://src/UI/StorageUI.cs" id="18"]
-[ext_resource type="Script" path="res://src/com/DraggableBar.cs" id="19"]
+[ext_resource type="PackedScene" uid="uid://i1fqtj8s4bgh" path="res://src/component/buttons/Button2.tscn" id="14"]
+[ext_resource type="Script" uid="uid://bc2f8xnabcw1x" path="res://src/UI/StorageUI.cs" id="18"]
+[ext_resource type="Script" uid="uid://kijhipjpyl8c" path="res://src/com/DraggableBar.cs" id="19"]
 
 [node name="StorateUI" type="Control"]
 layout_mode = 3

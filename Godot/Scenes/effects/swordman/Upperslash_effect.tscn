@@ -1,7 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://7ptswrtm2375"]
 
 [ext_resource type="Texture2D" uid="uid://ct5adbi4fsp51" path="res://assets/images/effects/swordman_effect/upperslash.png" id="1"]
-[ext_resource type="Script" path="res://scenes/effects/swordman/Upperslash_effect.cs" id="2"]
+
+[sub_resource type="Resource" id="Resource_cy4pw"]
+metadata/__load_path__ = "res://scenes/effects/swordman/Upperslash_effect.cs"
 
 [sub_resource type="Animation" id="1"]
 resource_name = "default"
@@ -45,11 +47,11 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eu5vr"]
 _data = {
-"default": SubResource("1")
+&"default": SubResource("1")
 }
 
 [node name="Upperslash_Effect" type="Node2D"]
-script = ExtResource("2")
+script = SubResource("Resource_cy4pw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1")

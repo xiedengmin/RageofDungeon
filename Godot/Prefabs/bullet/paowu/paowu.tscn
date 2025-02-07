@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bkui5bb3178jd"]
 
-[ext_resource type="Script" path="res://Prefabs/bullet/paowu/paowu.cs" id="1_qv4vd"]
+[ext_resource type="Script" uid="uid://ch8epwf8x1v54" path="res://Prefabs/bullet/paowu/paowu.cs" id="1_qv4vd"]
 [ext_resource type="Texture2D" uid="uid://cvdj0g66v0c4u" path="res://Prefabs/bullet/paowu/icon.svg" id="2_wonmg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8hrs"]

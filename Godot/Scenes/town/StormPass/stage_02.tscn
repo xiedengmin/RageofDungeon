@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" path="res://src/component/obj/stormbattlegateleftr.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://src/component/obj/stormbattlegaterightr.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://byuwx6g4ui0sm" path="res://assets/images/map/bg/spmid00.png" id="6"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="7"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="8"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="7"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="8"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(11.9033, 156.876)

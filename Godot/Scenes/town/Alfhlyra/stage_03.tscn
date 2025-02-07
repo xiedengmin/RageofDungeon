@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gx286yhk521" path="res://assets/images/map/alfhlyra/littlerock.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://c23b6jianudkx" path="res://assets/images/map/alfhlyra/bigrock.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cpwt0sxhfdroq" path="res://assets/images/map/tiles/alftile.png" id="4"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="5"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="5"]
 [ext_resource type="Texture2D" uid="uid://canflvbohrlyl" path="res://assets/images/map/alfhlyra/alfobj00.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://5i8i8utlwxp7" path="res://assets/images/map/alfhlyra/mlittlerock.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://cu2genf0ymfhb" path="res://assets/images/map/alfhlyra/redsign.png" id="8"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b2eu4fuk87dhq" path="res://assets/images/map/alfhlyra/biggrass.png" id="22"]
 [ext_resource type="Texture2D" uid="uid://wn064jj776l1" path="res://assets/images/map/alfhlyra/smgrass.png" id="23"]
 [ext_resource type="Texture2D" uid="uid://e6ob6y0eq0mw" path="res://assets/images/map/alfhlyra/midgrass.png" id="24"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="25"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="25"]
 
 [sub_resource type="Animation" id="Animation_qroij"]
 resource_name = "move"
@@ -43,7 +43,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iyv0b"]
 _data = {
-"move": SubResource("Animation_qroij")
+&"move": SubResource("Animation_qroij")
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3cfsa"]
@@ -159,7 +159,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ca0yi"]
 _data = {
-"move": SubResource("5")
+&"move": SubResource("5")
 }
 
 [sub_resource type="RectangleShape2D" id="6"]

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://jiqf4sjv86lk" path="res://assets/images/map/hendonMyre/skybridge.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="4"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="5"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="6"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="5"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="6"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(12.592, 187.226)

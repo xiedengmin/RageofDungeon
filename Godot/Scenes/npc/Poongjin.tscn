@@ -1,19 +1,19 @@
 [gd_scene load_steps=28 format=3 uid="uid://bgvxqbxfsvjfs"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://bgtll657eenym" path="res://assets/images/npc/npc_poongjin/3.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://rv8tcajcoy00" path="res://assets/images/npc/npc_poongjin/0.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dtpvmw00upnso" path="res://assets/images/npc/npc_poongjin/1.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://da52jqo5vbla1" path="res://assets/images/npc/npc_poongjin/2.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Poongjin.cs" id="8"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://db2v4eyhqxqvu" path="res://src/npc/Poongjin.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://e18in287fky3" path="res://assets/sounds/npc/poongjin/pj_tk_01.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://rre5oo2aod5y" path="res://assets/sounds/npc/poongjin/pj_amb_01.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://dqro5k5hhdgue" path="res://assets/sounds/npc/poongjin/pj_fw_01.ogg" id="11"]
 [ext_resource type="AudioStream" uid="uid://c2nn1b3iuk6bc" path="res://assets/sounds/npc/poongjin/pj_fw_02.ogg" id="12"]
 [ext_resource type="AudioStream" uid="uid://ui4knkbdajwu" path="res://assets/sounds/npc/poongjin/pj_tk_02.ogg" id="13"]
-[ext_resource type="PackedScene" uid="uid://cjqrl6olmfam5" path="res://scenes/UI/npc_nemu/Menu_Type3.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://cjqrl6olmfam5" path="res://Scenes/UI/npc_nemu/Menu_Type3.tscn" id="14"]
 [ext_resource type="Texture2D" uid="uid://5ei3w3wyp742" path="res://assets/images/face/npc/popup/poongjin.png" id="15"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -99,7 +99,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b4r72"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -199,11 +199,11 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6hwvk"]
 _data = {
-"amb_01": SubResource("6"),
-"fw_01": SubResource("7"),
-"fw_02": SubResource("8"),
-"tk_01": SubResource("9"),
-"tk_02": SubResource("10")
+&"amb_01": SubResource("6"),
+&"fw_01": SubResource("7"),
+&"fw_02": SubResource("8"),
+&"tk_01": SubResource("9"),
+&"tk_02": SubResource("10")
 }
 
 [node name="Poongjin" instance=ExtResource("1")]

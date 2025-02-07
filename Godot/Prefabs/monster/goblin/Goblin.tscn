@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://nndbvh101cah"]
 
 [ext_resource type="PackedScene" uid="uid://c2n7qfvqsjtba" path="res://Prefabs/role/template/AiTemplate.tscn" id="1_uon47"]
-[ext_resource type="Script" path="res://src/monster/goblin/Goblin.cs" id="2_v0nov"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="3_p75dh"]
+[ext_resource type="Script" uid="uid://cca44icvtkm64" path="res://src/monster/goblin/Goblin.cs" id="2_v0nov"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="3_p75dh"]
 [ext_resource type="Texture2D" uid="uid://d3aqmcopp8105" path="res://assets/images/monster/goblin/goblin.png" id="4_upobk"]
-[ext_resource type="Script" path="res://src/bullet/BulletSpawner.cs" id="5_2svfh"]
+[ext_resource type="Script" uid="uid://ewf6xjosmaxo" path="res://src/bullet/BulletSpawner.cs" id="5_2svfh"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "attack"
@@ -163,12 +163,12 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wwh76"]
 _data = {
-"attack": SubResource("1"),
-"damage1": SubResource("2"),
-"damage2": SubResource("3"),
-"down": SubResource("4"),
-"move": SubResource("5"),
-"stay": SubResource("6")
+&"attack": SubResource("1"),
+&"damage1": SubResource("2"),
+&"damage2": SubResource("3"),
+&"down": SubResource("4"),
+&"move": SubResource("5"),
+&"stay": SubResource("6")
 }
 
 [sub_resource type="ShaderMaterial" id="7"]
@@ -189,17 +189,8 @@ height = 14.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_8clwx"]
 radius = 164.11
 
-[node name="Goblin" node_paths=PackedStringArray("StateDisplayText") instance=ExtResource("1_uon47")]
+[node name="Goblin" instance=ExtResource("1_uon47")]
 script = ExtResource("2_v0nov")
-AttackRange = 60.0
-AttackSpeed = 150.0
-ChaseSpeed = 200.0
-PatrolPoints = PackedVector2Array(220, 435, 160, 573, 350, 450, 300, 600, 240, 550)
-PatrolSpeed = 150.0
-SearchRange = 150.0
-SearchSpotRange = 350.0
-SearchTime = 20.0
-StateDisplayText = NodePath("StateLabel")
 
 [node name="StateMachine" parent="." index="0"]
 script = null
@@ -224,7 +215,7 @@ script = null
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {
-"": SubResource("AnimationLibrary_wwh76")
+&"": SubResource("AnimationLibrary_wwh76")
 }
 autoplay = "stay"
 

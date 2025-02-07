@@ -30,12 +30,12 @@
 [ext_resource type="Texture2D" uid="uid://dib7eaj4o5sy3" path="res://assets/images/map/hendonMyre/hmbgbox_3.png" id="28"]
 [ext_resource type="Texture2D" uid="uid://kc0nad40afct" path="res://assets/images/map/hendonMyre/hmbgbox_4.png" id="29"]
 [ext_resource type="Texture2D" uid="uid://duicqhecebsck" path="res://assets/images/map/path/hendonpath_4.png" id="30"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="31"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="32"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Poongjin.tscn" id="33"]
-[ext_resource type="PackedScene" uid="uid://bs5417ossijum" path="res://scenes/npc/Kanna.tscn" id="34"]
-[ext_resource type="PackedScene" uid="uid://dkcricw07yays" path="res://scenes/npc/Kiri.tscn" id="35"]
-[ext_resource type="PackedScene" uid="uid://ccejvuhfe4ron" path="res://scenes/npc/Danjin1.tscn" id="36"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="31"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="32"]
+[ext_resource type="PackedScene" uid="uid://bgvxqbxfsvjfs" path="res://scenes/npc/Poongjin.tscn" id="33"]
+[ext_resource type="PackedScene" uid="uid://bs5417ossijum" path="res://Scenes/npc/Kanna.tscn" id="34"]
+[ext_resource type="PackedScene" uid="uid://dkcricw07yays" path="res://Scenes/npc/Kiri.tscn" id="35"]
+[ext_resource type="PackedScene" uid="uid://ccejvuhfe4ron" path="res://Scenes/npc/Danjin1.tscn" id="36"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_txbb0"]
 texture = ExtResource("9")
@@ -140,7 +140,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bdscd"]
 _data = {
-"flash": SubResource("4")
+&"flash": SubResource("4")
 }
 
 [sub_resource type="SpriteFrames" id="5"]
@@ -182,7 +182,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_drc0o"]
 _data = {
-"flash": SubResource("6")
+&"flash": SubResource("6")
 }
 
 [sub_resource type="RectangleShape2D" id="7"]

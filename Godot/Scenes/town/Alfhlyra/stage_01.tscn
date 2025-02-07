@@ -40,13 +40,13 @@
 [ext_resource type="Texture2D" uid="uid://did76tbnfayu5" path="res://assets/images/map/alfhlyra/udgatelight_2.png" id="39"]
 [ext_resource type="Texture2D" uid="uid://d10pr4hmtm34l" path="res://assets/images/map/bg/alffar.png" id="40"]
 [ext_resource type="Texture2D" uid="uid://b5n0act3wgwmv" path="res://assets/images/map/bg/alfmid.png" id="41"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="42"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="43"]
-[ext_resource type="PackedScene" uid="uid://cqxfjjcx8hu8q" path="res://scenes/npc/Birken2.tscn" id="44"]
-[ext_resource type="PackedScene" uid="uid://csra8rlo1mybq" path="res://scenes/npc/Gale.tscn" id="45"]
-[ext_resource type="PackedScene" uid="uid://dosm8qip1yt60" path="res://scenes/npc/Breeze.tscn" id="46"]
-[ext_resource type="PackedScene" uid="uid://b6n784qbf1pyu" path="res://scenes/npc/Klonter.tscn" id="47"]
-[ext_resource type="PackedScene" uid="uid://deb4hsqv50uft" path="res://scenes/npc/Danjin4.tscn" id="48"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="42"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="43"]
+[ext_resource type="PackedScene" uid="uid://cqxfjjcx8hu8q" path="res://Scenes/npc/Birken2.tscn" id="44"]
+[ext_resource type="PackedScene" uid="uid://csra8rlo1mybq" path="res://Scenes/npc/Gale.tscn" id="45"]
+[ext_resource type="PackedScene" uid="uid://dosm8qip1yt60" path="res://Scenes/npc/Breeze.tscn" id="46"]
+[ext_resource type="PackedScene" uid="uid://b6n784qbf1pyu" path="res://Scenes/npc/Klonter.tscn" id="47"]
+[ext_resource type="PackedScene" uid="uid://deb4hsqv50uft" path="res://Scenes/npc/Danjin4.tscn" id="48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrry1"]
 texture = ExtResource("27")
@@ -220,7 +220,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4dv4a"]
 _data = {
-"move": SubResource("5")
+&"move": SubResource("5")
 }
 
 [sub_resource type="SpriteFrames" id="6"]

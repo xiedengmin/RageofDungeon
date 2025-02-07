@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcluwhx5snial"]
 
 [ext_resource type="Texture2D" uid="uid://ljknoyd8lwfl" path="res://assets/images/ui/windowcommon/ToolTipbg.png" id="1"]
-[ext_resource type="Script" path="res://src/UI/toolTip/ToolTipSkill.cs" id="5"]
+[ext_resource type="Script" uid="uid://dnkp2mqg141n8" path="res://src/UI/toolTip/ToolTipSkill.cs" id="5"]
 
 [node name="ToolTipSkill" type="Control"]
 layout_mode = 3

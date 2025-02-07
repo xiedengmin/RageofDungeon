@@ -1,12 +1,12 @@
 [gd_scene load_steps=38 format=3 uid="uid://bugkejx1fhdw4"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://0jftuwfkpcsi" path="res://assets/images/npc/npc_rino/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cjppub6scvxqm" path="res://assets/images/npc/npc_rino/2.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dmrgtfw72vh8u" path="res://assets/images/npc/npc_rino/0.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://pnli56wur7lw" path="res://assets/images/npc/npc_rino/3.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
 [ext_resource type="AudioStream" uid="uid://bfg6snfmylvvk" path="res://assets/sounds/npc/rino/rino_fw_04.ogg" id="8"]
 [ext_resource type="AudioStream" uid="uid://c0uji4gtk4ys8" path="res://assets/sounds/npc/rino/rino_tk_03.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://0dhj0ltapsqm" path="res://assets/sounds/npc/rino/rino_fw_02.ogg" id="10"]
@@ -17,8 +17,8 @@
 [ext_resource type="AudioStream" uid="uid://bo7d3g5iqpxv7" path="res://assets/sounds/npc/rino/rino_fw_03.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://bslp68eskuymf" path="res://assets/sounds/npc/rino/rino_tk_01.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://2cnlrlpt3mif" path="res://assets/sounds/npc/rino/rino_tk_02.ogg" id="17"]
-[ext_resource type="Script" path="res://src/npc/Rino.cs" id="18"]
-[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="19"]
+[ext_resource type="Script" uid="uid://0wr8qakut2v7" path="res://src/npc/Rino.cs" id="18"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://Scenes/UI/npc_nemu/Menu_Type2.tscn" id="19"]
 [ext_resource type="Texture2D" uid="uid://0fnq747qoucx" path="res://assets/images/face/npc/popup/rino.png" id="20"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -104,7 +104,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqprd"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -299,16 +299,16 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vunrq"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"fw_03": SubResource("11"),
-"fw_04": SubResource("12"),
-"tk_01": SubResource("13"),
-"tk_02": SubResource("14"),
-"tk_03": SubResource("15")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"fw_03": SubResource("11"),
+&"fw_04": SubResource("12"),
+&"tk_01": SubResource("13"),
+&"tk_02": SubResource("14"),
+&"tk_03": SubResource("15")
 }
 
 [node name="Rino" instance=ExtResource("1")]

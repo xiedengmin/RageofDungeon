@@ -1,0 +1,24 @@
+{
+    "name": "Godot.HotfixView",
+    "rootNamespace": "ET",
+    "references": [
+        "Godot.ThirdParty",
+        "Godot.Model",
+        "Godot.Hotfix",
+        "Godot.ModelView",
+        "Godot.Core",
+        "Godot.Mathematics",
+        "Godot.Loader"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

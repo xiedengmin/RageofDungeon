@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d4ge3ekecrmg1" path="res://assets/images/monster_hp/normal_bg.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://uqr65uiq3r3y" path="res://assets/images/common_etc/monster_type/0.png" id="4"]
-[ext_resource type="PackedScene" uid="uid://dkaubc0pnmo5p" path="res://scenes/UI/Progress.tscn" id="4_gmmvp"]
-[ext_resource type="Script" path="res://src/UI/monster/MonsterHPNormal.cs" id="7"]
+[ext_resource type="PackedScene" uid="uid://dkaubc0pnmo5p" path="res://Scenes/UI/Progress.tscn" id="4_gmmvp"]
+[ext_resource type="Script" uid="uid://xytne2qfpohk" path="res://src/UI/monster/MonsterHPNormal.cs" id="7"]
 
 [node name="Monster_HP_Normal" type="Control"]
 layout_mode = 3

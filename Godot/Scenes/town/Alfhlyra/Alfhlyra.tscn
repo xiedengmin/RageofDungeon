@@ -1,13 +1,13 @@
 [gd_scene load_steps=24 format=3 uid="uid://chb61xaj7s3hj"]
 
-[ext_resource type="PackedScene" uid="uid://5ful7hbslkak" path="res://scenes/town/Alfhlyra/stage_01.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://di3tjov322mii" path="res://scenes/town/Alfhlyra/stage_02.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://d1qp5o6yw3wly" path="res://scenes/town/Alfhlyra/stage_03.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://5ful7hbslkak" path="res://Scenes/town/Alfhlyra/stage_01.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://di3tjov322mii" path="res://Scenes/town/Alfhlyra/stage_02.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://d1qp5o6yw3wly" path="res://Scenes/town/Alfhlyra/stage_03.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://Scenes/town/Gate.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://jo44aemxdytp" path="res://assets/images/map/alfhlyra/d_gatelight_0.png" id="4_ru5gm"]
-[ext_resource type="PackedScene" uid="uid://dk18xddlyneku" path="res://scenes/town/Alfhlyra/stage_04.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dk18xddlyneku" path="res://Scenes/town/Alfhlyra/stage_04.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://cfo787ii2quqn" path="res://assets/images/map/alfhlyra/d_gatelight_1.png" id="5_jn01w"]
-[ext_resource type="Script" path="res://src/town/Alfhlyra.cs" id="6"]
+[ext_resource type="Script" uid="uid://c3fnoxi0j6psa" path="res://src/town/Alfhlyra.cs" id="6"]
 [ext_resource type="Texture2D" uid="uid://d1e6wrmy4x5lr" path="res://assets/images/map/alfhlyra/d_gatelight_2.png" id="6_sabmt"]
 [ext_resource type="Texture2D" uid="uid://oerao66v3450" path="res://assets/images/map/alfhlyra/d_gatelight_3.png" id="7_jkgdj"]
 [ext_resource type="Texture2D" uid="uid://bihg1cnaj00d0" path="res://assets/images/map/alfhlyra/d_gatelight_4.png" id="8_nc3bx"]
@@ -34,7 +34,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_07p7v"]
 _data = {
-"move": SubResource("1")
+&"move": SubResource("1")
 }
 
 [sub_resource type="SpriteFrames" id="2"]
@@ -79,7 +79,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vfvlj"]
 _data = {
-"move": SubResource("Animation_qroij")
+&"move": SubResource("Animation_qroij")
 }
 
 [sub_resource type="SpriteFrames" id="3"]
@@ -141,7 +141,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4luf5"]
 _data = {
-"move": SubResource("5")
+&"move": SubResource("5")
 }
 
 [node name="Alfhlyra" type="Node2D"]

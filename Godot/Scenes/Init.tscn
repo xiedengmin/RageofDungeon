@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbil2wslq1urp"]
 
-[ext_resource type="Script" uid="uid://cuqbof2qe7h4r" path="res://Mono/MonoBehaviour/Init.cs" id="1_3544i"]
+[ext_resource type="Script" uid="uid://05bso13e4gny" path="res://Loader/MonoBehaviour/Init.cs" id="1_3544i"]
 [ext_resource type="Script" uid="uid://dxddnbx5qgvns" path="res://Scenes/Test.cs" id="2_0c4h1"]
 
 [node name="Global" type="Node"]
@@ -20,4 +20,6 @@ layer = 20
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("2_0c4h1")
-order = 2
+forward = null
+up = null
+order = null

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://ckt7uc8o6qfy2"]
 
-[ext_resource type="Script" path="res://src/worldmap/Worldmap_Button.cs" id="1"]
+[ext_resource type="Script" uid="uid://qfro3p8pujkd" path="res://src/worldmap/Worldmap_Button.cs" id="1"]
 [ext_resource type="Texture2D" uid="uid://bvxjoj58q2rr3" path="res://assets/images/worldmap/act1/lorien/3.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://cm60k5f2wjgyd" path="res://assets/images/worldmap/act1/lorien/2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://didb7enoeopyx" path="res://assets/images/worldmap/act1/lorien/1.png" id="4"]

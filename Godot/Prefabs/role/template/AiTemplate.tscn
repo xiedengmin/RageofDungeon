@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://c2n7qfvqsjtba"]
 
-[ext_resource type="Script" path="res://src/monster/Monster.cs" id="1_mcie6"]
-[ext_resource type="Script" path="res://src/monster/MonsterStateMachine.cs" id="2_qrj55"]
-[ext_resource type="Script" path="res://src/monster/monsterstate/onground/MonsterIdle.cs" id="3_hhwvc"]
-[ext_resource type="Script" path="res://src/monster/monsterstate/onground/MonsterMove.cs" id="4_bsior"]
-[ext_resource type="Script" path="res://src/monster/monsterstate/inair/MonsterJump.cs" id="5_x3bqk"]
-[ext_resource type="Script" path="res://src/monster/monsterstate/combat/MonsterDamage.cs" id="6_rjf21"]
-[ext_resource type="Script" path="res://src/monster/monsterstate/combat/MonsterAttack.cs" id="7_h3eta"]
-[ext_resource type="Script" path="res://src/monster/monsterstate/combat/MonsterDown.cs" id="8_twq7k"]
-[ext_resource type="Script" path="res://src/data/MonsterStatus.cs" id="9_jswrn"]
-[ext_resource type="PackedScene" uid="uid://bmmfvdc5veuoe" path="res://scenes/areabox/HurtBox.tscn" id="10_i6riy"]
+[ext_resource type="Script" uid="uid://djjyy88crhhmu" path="res://src/monster/Monster.cs" id="1_mcie6"]
+[ext_resource type="Script" uid="uid://cicnoy3cxdikn" path="res://src/monster/MonsterStateMachine.cs" id="2_qrj55"]
+[ext_resource type="Script" uid="uid://c2bq8k28f4fh1" path="res://src/monster/monsterstate/onground/MonsterIdle.cs" id="3_hhwvc"]
+[ext_resource type="Script" uid="uid://sphgmsvsgbcv" path="res://src/monster/monsterstate/onground/MonsterMove.cs" id="4_bsior"]
+[ext_resource type="Script" uid="uid://dnrs0dtmlb2tq" path="res://src/monster/monsterstate/inair/MonsterJump.cs" id="5_x3bqk"]
+[ext_resource type="Script" uid="uid://bjwki1xo7fjll" path="res://src/monster/monsterstate/combat/MonsterDamage.cs" id="6_rjf21"]
+[ext_resource type="Script" uid="uid://ciar15bbadlok" path="res://src/monster/monsterstate/combat/MonsterAttack.cs" id="7_h3eta"]
+[ext_resource type="Script" uid="uid://ch1yda2nren87" path="res://src/monster/monsterstate/combat/MonsterDown.cs" id="8_twq7k"]
+[ext_resource type="Script" uid="uid://cnlmjqfyl3d06" path="res://src/data/MonsterStatus.cs" id="9_jswrn"]
+[ext_resource type="PackedScene" uid="uid://bmmfvdc5veuoe" path="res://Scenes/areabox/HurtBox.tscn" id="10_i6riy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n71um"]
 radius = 7.0
@@ -18,9 +18,16 @@ height = 14.0
 [node name="Monster" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_mcie6")
+type = null
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_qrj55")
+idlePath = null
+movePath = null
+jumpPath = null
+damagePath = null
+attackPath = null
+downPath = null
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_hhwvc")

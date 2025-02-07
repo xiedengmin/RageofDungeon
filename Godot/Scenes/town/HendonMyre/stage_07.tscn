@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cf3tj406w3a0r"]
 
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="1"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="1"]
 [ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://ckod4djvpqrqn" path="res://assets/images/map/hendonMyre/hmtree00.png" id="4"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ctdtvtfch0776" path="res://assets/images/map/hendonMyre/hmstwaywall02.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://ojdncsbu2dp" path="res://assets/images/map/hendonMyre/hmobj03_13.png" id="13"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="14"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kd07b"]
 texture = ExtResource("2")

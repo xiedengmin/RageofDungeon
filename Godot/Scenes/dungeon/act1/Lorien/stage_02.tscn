@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://bdxbjurs8pclm"]
 
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="1_sbqjp"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="1_sbqjp"]
 [ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="2_qvdq7"]
 [ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="3_gwkki"]
 [ext_resource type="Texture2D" uid="uid://dt737fegcc41c" path="res://assets/images/map/act1/01tile03.png" id="4_yf0gl"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://v2at6x35ik63" path="res://assets/images/map/act1/01obj001.png" id="16_qskui"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj107.tscn" id="17_c6670"]
 [ext_resource type="Texture2D" uid="uid://cp632j2ry7f54" path="res://assets/images/map/act1/01obj111.png" id="18_v6ml8"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="19_gfrms"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="19_gfrms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_noild"]
 texture = ExtResource("4_yf0gl")

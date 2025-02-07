@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bukbmc212iw3y" path="res://assets/images/charactercreate/38.png" id="30"]
 [ext_resource type="Texture2D" uid="uid://upajyjh7vlcr" path="res://assets/images/charactercreate/41.png" id="31"]
 [ext_resource type="Texture2D" uid="uid://d4i8rbbiqnpb" path="res://assets/images/charactercreate/43.png" id="32"]
-[ext_resource type="Script" path="res://src/UI/characterCreate/CharacterCreate.cs" id="33"]
+[ext_resource type="Script" uid="uid://i85m3aw6unco" path="res://src/UI/characterCreate/CharacterCreate.cs" id="33"]
 [ext_resource type="AudioStream" uid="uid://wcmfea7x4m2s" path="res://assets/sounds/ui/click2.ogg" id="35"]
 
 [node name="CharacterCreate" type="Panel"]

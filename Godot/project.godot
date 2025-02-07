@@ -10,47 +10,27 @@ config_version=5
 
 [application]
 
-config/name="RageofDungeon"
-run/main_scene="res://Scenes/Init.tscn"
-config/features=PackedStringArray("4.4", "C#")
+config/name="Godot"
+run/main_scene="uid://bbil2wslq1urp"
+config/features=PackedStringArray("4.4", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalManager="*res://src/manager/GlobalManager.cs"
-ConfigManager="*res://src/manager/ConfigManager.cs"
-ArchiveManager="*res://src/manager/ArchiveManager.cs"
-DataManager="*res://src/manager/DataManager.cs"
-InputManager="*res://src/manager/InputManager.cs"
 CoroutineManager="*res://addons/HCoroutines/coroutine_manager.tscn"
-
-[debug]
-
-gdscript/warnings/integer_division=false
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
-//window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="ET_Godot"
+project/assembly_name="Godot"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/BitmapFontCutterPlus/plugin.cfg", "res://addons/HCoroutines/plugin.cfg", "res://addons/HFSM/plugin.cfg", "res://addons/VirtualJoyStick/plugin.cfg")
-
-[global]
-
-GUI=false
-warning=false
-
-[gui]
-
-timers/tooltip_delay_sec=0.0
+enabled=PackedStringArray("res://addons/BitmapFontCutterPlus/plugin.cfg", "res://addons/HCoroutines/plugin.cfg", "res://addons/HFSM/plugin.cfg")
 
 [input]
 
@@ -209,7 +189,3 @@ pointing/emulate_mouse_from_touch=false
 [rendering]
 
 renderer/rendering_method="mobile"
-textures/vram_compression/import_etc2_astc=true
-2d/snapping/use_gpu_pixel_snap=true
-environment/default_environment="res://default_env.tres"
-quality/2d/use_pixel_snap=true

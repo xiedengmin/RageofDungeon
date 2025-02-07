@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cswykx81jpbqf" path="res://assets/images/npc/npc_balena/1.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://cvq526mauqo8j" path="res://assets/images/npc/npc_balena/2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://ihv5usyt84yb" path="res://assets/images/npc/npc_balena/3.png" id="4"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="5"]
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Balena.cs" id="8"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="5"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="6"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://dlsyymv5cs3bl" path="res://src/npc/Balena.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://chu53mnyx38q3" path="res://assets/sounds/npc/balena/balena_amb_01.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://gkgsb2h5tpr8" path="res://assets/sounds/npc/balena/balena_fw_03.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://c1h4c4ekimiiu" path="res://assets/sounds/npc/balena/balena_fw_04.ogg" id="11"]
@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://cmic7b0idvucn" path="res://assets/sounds/npc/balena/balena_fw_02.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://btyngg7ly3vgs" path="res://assets/sounds/npc/balena/balena_tk_01.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://ds14jyvjmru4w" path="res://assets/sounds/npc/balena/balena_tk_02.ogg" id="17"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="18"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("5")
@@ -101,7 +101,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k257d"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -277,15 +277,15 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7lkm2"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"fw_01": SubResource("8"),
-"fw_02": SubResource("9"),
-"fw_03": SubResource("10"),
-"fw_04": SubResource("11"),
-"tk_01": SubResource("12"),
-"tk_02": SubResource("13"),
-"tk_03": SubResource("14")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"fw_01": SubResource("8"),
+&"fw_02": SubResource("9"),
+&"fw_03": SubResource("10"),
+&"fw_04": SubResource("11"),
+&"tk_01": SubResource("12"),
+&"tk_02": SubResource("13"),
+&"tk_03": SubResource("14")
 }
 
 [node name="Balena" instance=ExtResource("6")]

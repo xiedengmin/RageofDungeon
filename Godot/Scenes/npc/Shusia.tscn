@@ -1,14 +1,14 @@
 [gd_scene load_steps=34 format=3 uid="uid://bagnqkk5uvb21"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://bp57x4catj2u1" path="res://assets/images/npc/npc_susia/0.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://b18yfyn3flhf3" path="res://assets/images/npc/npc_susia/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://du6xacecqy065" path="res://assets/images/npc/npc_susia/3.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cuyruderolbif" path="res://assets/images/npc/npc_susia/4.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://b0d3556ljmk55" path="res://assets/images/npc/npc_susia/2.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://boa2x2nirm66r" path="res://assets/images/npc/npc_susia/5.png" id="7"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="8"]
-[ext_resource type="Script" path="res://src/npc/Susia.cs" id="9"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="8"]
+[ext_resource type="Script" uid="uid://ccqanpkv4yguo" path="res://src/npc/Susia.cs" id="9"]
 [ext_resource type="AudioStream" uid="uid://bhcyuh81smukf" path="res://assets/sounds/npc/susia/su_fw_02.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://c8vqbs33ldiw5" path="res://assets/sounds/npc/susia/su_tk_01.ogg" id="11"]
 [ext_resource type="AudioStream" uid="uid://cat8yrtbo1xo2" path="res://assets/sounds/npc/susia/su_fw_01.ogg" id="12"]
@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dlk1s0y74ndax" path="res://assets/sounds/npc/susia/su_amb_02.ogg" id="14"]
 [ext_resource type="AudioStream" uid="uid://vjf8e3on4puu" path="res://assets/sounds/npc/susia/su_tk_02.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://bsdoovuekhtud" path="res://assets/sounds/npc/susia/su_tk_03.ogg" id="16"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="17"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="17"]
 [ext_resource type="Texture2D" uid="uid://dfgcet457g7d1" path="res://assets/images/face/npc/popup/shusia.png" id="18"]
 
 [sub_resource type="Shader" id="1"]
@@ -143,7 +143,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mopsv"]
 _data = {
-"default": SubResource("6")
+&"default": SubResource("6")
 }
 
 [sub_resource type="Animation" id="7"]
@@ -280,13 +280,13 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_20dad"]
 _data = {
-"amb_01": SubResource("7"),
-"amb_02": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"tk_01": SubResource("11"),
-"tk_02": SubResource("12"),
-"tk_03": SubResource("13")
+&"amb_01": SubResource("7"),
+&"amb_02": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"tk_01": SubResource("11"),
+&"tk_02": SubResource("12"),
+&"tk_03": SubResource("13")
 }
 
 [node name="Susia" instance=ExtResource("1")]

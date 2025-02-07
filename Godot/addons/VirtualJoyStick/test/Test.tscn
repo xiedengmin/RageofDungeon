@@ -1,21 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtg4rmbgg2dbp"]
 
 [ext_resource type="PackedScene" uid="uid://4ev0wdbp3ds8" path="res://addons/VirtualJoyStick/VirtualJoyStick.tscn" id="1_lle0n"]
-[ext_resource type="Texture2D" uid="uid://3rnpfoug4ln3" path="res://icon.png" id="1_tuoac"]
-[ext_resource type="Script" path="res://addons/VirtualJoyStick/test/JoyStickExample.cs" id="2_xg2eh"]
+[ext_resource type="Texture2D" uid="uid://ct7yb71klb8jj" path="res://icon.svg" id="1_tuoac"]
+[ext_resource type="Script" uid="uid://b4vlatraxsjrp" path="res://addons/VirtualJoyStick/test/JoyStickExample.cs" id="2_xg2eh"]
 
 [node name="Test" type="Node2D"]
 metadata/_edit_vertical_guides_ = [481.0]
 metadata/_edit_horizontal_guides_ = [269.0]
 
-[node name="Player" type="Sprite2D" parent="." node_paths=PackedStringArray("_leftJoyStick", "_rightJoyStick")]
+[node name="Player" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(604, 347)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_tuoac")
 script = ExtResource("2_xg2eh")
-_leftJoyStick = NodePath("../CanvasLayer/Ui/LeftJoyStick")
-_rightJoyStick = NodePath("../CanvasLayer/Ui/RightJoyStick")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -54,4 +52,3 @@ offset_right = -0.280029
 offset_bottom = 0.119995
 grow_horizontal = 0
 grow_vertical = 0
-useInputActions = false

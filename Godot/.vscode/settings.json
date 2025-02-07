@@ -1,3 +1,6 @@
 {
-    "godotTools.editorPath.godot4": "d:\\gamedev\\godotsharp\\bin\\godot.windows.editor.dev.x86_64.mono.exe"
+    "godotTools.editorPath.godot4": "d:\\gamedev\\godotsharp\\bin\\godot.windows.editor.dev.x86_64.mono.exe",
+    "cSpell.words": [
+        "Coolsoft"
+    ]
 }

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Share.Tool": {
+      "commandName": "Project",
+      "commandLineArgs": "--AppType=Proto2CS"
+    }
+  }
+}

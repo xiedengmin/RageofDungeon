@@ -3,10 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://d3mo4i18x311j" path="res://assets/images/map/hendonMyre/hmbartile.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://coqbexeqwrrtg" path="res://assets/images/map/bg/hmbarmid.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://pcuha1ikrh61" path="res://assets/images/map/bg/hmbarfar.png" id="3"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="4"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="5"]
-[ext_resource type="Texture2D" uid="uid://3rnpfoug4ln3" path="res://icon.png" id="6"]
-[ext_resource type="PackedScene" uid="uid://bagnqkk5uvb21" path="res://scenes/npc/Shusia.tscn" id="7"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="4"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="5"]
+[ext_resource type="PackedScene" uid="uid://bagnqkk5uvb21" path="res://Scenes/npc/Shusia.tscn" id="7"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(62.441, 36.417)
@@ -28,6 +27,9 @@ void fragment(){
 
 [sub_resource type="ShaderMaterial" id="4"]
 shader = SubResource("3")
+
+[sub_resource type="Resource" id="Resource_sxgcb"]
+metadata/__load_path__ = "res://icon.png"
 
 [node name="stage_05" type="Node2D"]
 script = ExtResource("5")
@@ -112,4 +114,4 @@ modulate = Color(1, 1, 1, 0.215686)
 material = SubResource("4")
 position = Vector2(677.388, 483.457)
 scale = Vector2(19.3588, 4)
-texture = ExtResource("6")
+texture = SubResource("Resource_sxgcb")

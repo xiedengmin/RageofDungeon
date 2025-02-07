@@ -3,7 +3,7 @@ using System;
 
 public partial class Test : Node2D
 {
-	[Export]
+
 	private Vector2 forward;
 	[Export]
 	private Vector2 up;

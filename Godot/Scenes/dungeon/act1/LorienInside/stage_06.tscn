@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://src/component/act1/treasurebox.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://src/component/act1/grass2lorien.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj002.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://src/component/act1/01obj108.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://xhexq8j61n7a" path="res://src/component/act1/01obj108.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj007.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj400.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://src/component/act1/grass1lorien.tscn" id="9"]
@@ -21,8 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="20"]
 [ext_resource type="Texture2D" uid="uid://dkyasm3llhneg" path="res://assets/images/map/act1/01tile00.png" id="21"]
 [ext_resource type="Texture2D" uid="uid://b4lvi07uia28j" path="res://assets/images/map/act1/granfloristree01.png" id="22"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="23"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="24"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="23"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xaus8"]
 texture = ExtResource("11")

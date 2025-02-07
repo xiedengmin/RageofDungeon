@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://ca2vpvoxv2rex"]
 
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="1_kg3h4"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="1_kg3h4"]
 [ext_resource type="Texture2D" uid="uid://cn7xlhyjb4plc" path="res://assets/images/map/bg/gateback.png" id="2_y20rq"]
-[ext_resource type="PackedScene" uid="uid://wifly836pnwu" path="res://scenes/com/DoorArea.tscn" id="3_cv87t"]
-[ext_resource type="PackedScene" uid="uid://cjloj475us43x" path="res://scenes/npc/Seria.tscn" id="4_tsbaj"]
-[ext_resource type="PackedScene" uid="uid://iferwr8itas1" path="res://scenes/npc/Postbox.tscn" id="5_goh1w"]
+[ext_resource type="PackedScene" uid="uid://wifly836pnwu" path="res://Scenes/com/DoorArea.tscn" id="3_cv87t"]
+[ext_resource type="PackedScene" uid="uid://cjloj475us43x" path="res://Scenes/npc/Seria.tscn" id="4_tsbaj"]
+[ext_resource type="PackedScene" uid="uid://iferwr8itas1" path="res://Scenes/npc/Postbox.tscn" id="5_goh1w"]
 [ext_resource type="PackedScene" uid="uid://dsqhc4s3pe5ff" path="res://src/component/obj/gatepillar.tscn" id="6_55al1"]
-[ext_resource type="PackedScene" uid="uid://cmtqqov33s4lr" path="res://scenes/npc/Storate.tscn" id="7_f3hs4"]
+[ext_resource type="PackedScene" uid="uid://cmtqqov33s4lr" path="res://Scenes/npc/Storate.tscn" id="7_f3hs4"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(318.919, 44)

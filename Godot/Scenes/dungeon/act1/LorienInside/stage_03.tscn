@@ -13,11 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://b4lvi07uia28j" path="res://assets/images/map/act1/granfloristree01.png" id="12"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj002.tscn" id="13"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj007.tscn" id="14"]
-[ext_resource type="PackedScene" path="res://src/component/act1/01obj001.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://b0rl4ifo77bi0" path="res://src/component/act1/01obj001.tscn" id="15"]
 [ext_resource type="Texture2D" uid="uid://bx8ki5xxlkukl" path="res://assets/images/map/act1/01obj202.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="17"]
 [ext_resource type="PackedScene" path="res://src/component/act1/treasurebox.tscn" id="18"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="19"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="19"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sas81"]
 texture = ExtResource("2")
@@ -143,7 +143,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_johhx"]
 _data = {
-"flash": SubResource("Animation_wamu1")
+&"flash": SubResource("Animation_wamu1")
 }
 
 [sub_resource type="RectangleShape2D" id="2"]

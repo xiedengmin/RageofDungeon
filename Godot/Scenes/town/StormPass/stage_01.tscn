@@ -1,6 +1,6 @@
 [gd_scene load_steps=71 format=3 uid="uid://cg5phks1gsrat"]
 
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="1"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="1"]
 [ext_resource type="Texture2D" uid="uid://bxi4puh3chn5q" path="res://assets/images/map/light/seriahousewave00/4.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://dpfbrsgf7ktg1" path="res://assets/images/map/light/seriahousewave01/3.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://rdyomon37gm7" path="res://assets/images/map/light/seriahousewave01/2.png" id="4"]
@@ -54,11 +54,11 @@
 [ext_resource type="Texture2D" uid="uid://che52vygch8tg" path="res://assets/images/map/stormPass/orcahousedeco_3.png" id="52"]
 [ext_resource type="Texture2D" uid="uid://4rqpekf2jyg5" path="res://assets/images/map/stormPass/orcahousedeco_0.png" id="53"]
 [ext_resource type="Texture2D" uid="uid://c12fmwprdjx6o" path="res://assets/images/map/stormPass/orcahousedeco_2.png" id="54"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="55"]
-[ext_resource type="PackedScene" uid="uid://bek57r1b1xbgj" path="res://scenes/npc/Mintai.tscn" id="56"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Orca.tscn" id="57"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Rino.tscn" id="58"]
-[ext_resource type="PackedScene" uid="uid://yaoygcg3avh0" path="res://scenes/npc/Balena.tscn" id="59"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="55"]
+[ext_resource type="PackedScene" uid="uid://bek57r1b1xbgj" path="res://Scenes/npc/Mintai.tscn" id="56"]
+[ext_resource type="PackedScene" uid="uid://cpwb8ndaal63w" path="res://scenes/npc/Orca.tscn" id="57"]
+[ext_resource type="PackedScene" uid="uid://bugkejx1fhdw4" path="res://scenes/npc/Rino.tscn" id="58"]
+[ext_resource type="PackedScene" uid="uid://yaoygcg3avh0" path="res://Scenes/npc/Balena.tscn" id="59"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -251,7 +251,7 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ca6r"]
 _data = {
-"idle": SubResource("6")
+&"idle": SubResource("6")
 }
 
 [sub_resource type="RectangleShape2D" id="7"]

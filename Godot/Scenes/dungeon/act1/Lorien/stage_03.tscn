@@ -21,8 +21,8 @@
 [ext_resource type="PackedScene" path="res://src/component/act1/BottomGate.tscn" id="20"]
 [ext_resource type="Texture2D" uid="uid://bp0uuy5il7xm6" path="res://assets/images/map/act1/granflorisdowngate05.png" id="21"]
 [ext_resource type="Texture2D" uid="uid://cy83x5bc5vx0o" path="res://assets/images/map/act1/granflorisdownlight02.png" id="22"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="23"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="24"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="23"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l6sl2"]
 texture = ExtResource("7")
@@ -148,7 +148,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mbt7o"]
 _data = {
-"flash": SubResource("3")
+&"flash": SubResource("3")
 }
 
 [sub_resource type="RectangleShape2D" id="2"]

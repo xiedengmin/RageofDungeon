@@ -1,17 +1,17 @@
-[gd_scene load_steps=33 format=4 uid="uid://bv2n87qg4w7sj"]
+[gd_scene load_steps=34 format=4 uid="uid://bv2n87qg4w7sj"]
 
 [ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="1_t4p1h"]
 [ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="2_8c7tk"]
 [ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="3_2mydp"]
 [ext_resource type="Texture2D" uid="uid://ccji5nmv4xnpx" path="res://assets/images/map/tiles/01tile03.png" id="4_t6yrv"]
 [ext_resource type="Texture2D" uid="uid://bodpqvvtnobcx" path="res://assets/images/map/tiles/elvengardobject05.png" id="5_wlfoq"]
-[ext_resource type="PackedScene" path="res://src/component/obj/blacksmith.tscn" id="6_5twim"]
+[ext_resource type="PackedScene" uid="uid://dkk3riqfy2bpk" path="res://src/component/obj/blacksmith.tscn" id="6_5twim"]
 [ext_resource type="Texture2D" uid="uid://cyksulqoiakxh" path="res://assets/images/map/obj/blacksmith00.png" id="7_a1re8"]
 [ext_resource type="Texture2D" uid="uid://guu5lb8vio4t" path="res://assets/images/map/obj/blacksmith01.png" id="8_uoet1"]
 [ext_resource type="Texture2D" uid="uid://pefvma2inlec" path="res://assets/images/map/obj/blacksmith02.png" id="9_ji1l8"]
 [ext_resource type="PackedScene" uid="uid://dih88iwg71au0" path="res://src/component/obj/elvenltw.tscn" id="10_78fxs"]
-[ext_resource type="PackedScene" path="res://src/component/flag/flag0.tscn" id="11_vom86"]
-[ext_resource type="PackedScene" path="res://src/component/obj/egseriahouse.tscn" id="12_ctxri"]
+[ext_resource type="PackedScene" uid="uid://c6fmxn4rffn03" path="res://src/component/flag/flag0.tscn" id="11_vom86"]
+[ext_resource type="PackedScene" uid="uid://8y4plc1mk1gw" path="res://src/component/obj/egseriahouse.tscn" id="12_ctxri"]
 [ext_resource type="Texture2D" uid="uid://5llv6n6d8tcs" path="res://assets/images/map/sign/sign0.png" id="13_i07po"]
 [ext_resource type="PackedScene" uid="uid://bkvdb4oq0qcd2" path="res://src/component/obj/01obj102.tscn" id="14_qcoga"]
 [ext_resource type="PackedScene" uid="uid://jo52bpajytd0" path="res://src/component/obj/elvenrdg.tscn" id="15_g4xq5"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cawncx4g0fky8" path="res://Scenes/npc/Linus.tscn" id="17_qhvdm"]
 [ext_resource type="PackedScene" uid="uid://dhrvs0u50060j" path="res://Scenes/npc/Danjin.tscn" id="18_t1vgd"]
 [ext_resource type="PackedScene" uid="uid://nndbvh101cah" path="res://Prefabs/monster/goblin/Goblin.tscn" id="19_ms0to"]
-[ext_resource type="PackedScene" path="res://src/component/path/elvenpath2.tscn" id="20_0x5f1"]
+[ext_resource type="PackedScene" uid="uid://bhu3jp0qvnspl" path="res://src/component/path/elvenpath2.tscn" id="20_0x5f1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bfwj"]
 texture = ExtResource("4_t6yrv")
@@ -115,10 +115,15 @@ size = Vector2(37.6652, 282.864)
 [sub_resource type="RectangleShape2D" id="10"]
 size = Vector2(37.6652, 362)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_5rc17"]
+vertices = PackedVector2Array(1619.1, 657.961, 8.71875, 652.031, 8.53906, 645.992, 1619.24, 643.992, 13.5078, 397.797, 5.67969, 546.781, 1.32812, 396.32, 1620.8, 493.93, 1619.16, 389, 1621.9, 389, 713.609, 358.039, 10, 364.898, 10, 13, 740.688, 328.953, 1611.11, 13, 1614.89, 364.062, 861.938, 368.961, 841.008, 330.07)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6), PackedInt32Array(7, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(12, 14, 17, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 3, 1621, 3, 1625, 374, 856, 379, 835, 340, 745, 339, 721, 372, 0, 375), PackedVector2Array(24, 389, -9, 385, -1, 662, 1629, 668, 1632, 379, 1609, 379, 1613, 634, 11, 636)])
+
 [node name="Elvengard_map1" type="Node2D"]
 script = ExtResource("1_t4p1h")
-Bgm = "forest_town"
-Env = "amb_forest_01"
+Bgm = null
+Env = null
 
 [node name="environment" type="Node2D" parent="."]
 position = Vector2(1, 0)
@@ -188,8 +193,10 @@ position = Vector2(1479.18, 264.349)
 
 [node name="to_Gate" parent="doors" instance=ExtResource("16_fpcs3")]
 position = Vector2(782, 339)
-current = "stage_01"
-target = "Gate"
+current = null
+target = null
+stage = null
+Type = null
 
 [node name="CollisionShape2D" parent="doors/to_Gate" index="0"]
 position = Vector2(6, 6)
@@ -200,9 +207,10 @@ position = Vector2(10, 81)
 
 [node name="to_HendonMyre" parent="doors" instance=ExtResource("16_fpcs3")]
 position = Vector2(7, 435)
-current = "stage_01"
-target = "HendonMyre"
-stage = "stage_02"
+current = null
+target = null
+stage = null
+Type = null
 
 [node name="CollisionShape2D" parent="doors/to_HendonMyre" index="0"]
 position = Vector2(2, 78)
@@ -214,8 +222,10 @@ position = Vector2(82.6499, -0.891907)
 [node name="to_stage_02" parent="doors" instance=ExtResource("16_fpcs3")]
 position = Vector2(1561, 438)
 collision_layer = 1
-current = "stage_01"
-target = "stage_02"
+current = null
+target = null
+stage = null
+Type = null
 
 [node name="CollisionShape2D" parent="doors/to_stage_02" index="0"]
 position = Vector2(56, 80)
@@ -226,6 +236,10 @@ position = Vector2(-26, 64)
 
 [node name="to_Alfhlyra" parent="doors" instance=ExtResource("16_fpcs3")]
 position = Vector2(1090, 549)
+current = null
+target = null
+stage = null
+Type = null
 
 [node name="CollisionShape2D" parent="doors/to_Alfhlyra" index="0"]
 position = Vector2(-1, 78)
@@ -236,12 +250,14 @@ offset_left = 450.714
 offset_top = 308.136
 offset_right = 515.714
 offset_bottom = 325.136
+play_menu_sound = null
 
 [node name="Danjin" parent="." instance=ExtResource("18_t1vgd")]
 offset_left = 1237.0
 offset_top = 316.0
 offset_right = 1274.0
 offset_bottom = 354.0
+play_menu_sound = null
 
 [node name="stage" type="Node2D" parent="."]
 
@@ -259,10 +275,12 @@ position = Vector2(1568, 600)
 [node name="collision" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="collision"]
-position = Vector2(789.419, 323.612)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+visible = false
+position = Vector2(791, 324)
 polygon = PackedVector2Array(-790.562, 53.7334, -70.7271, 53.7334, -44.5641, 16.2567, 43.1172, 16.2567, 63.6233, 54.4405, 779.215, 53.7334, 778.149, -323.461, -731.283, -323.461, -790.916, -323.461)
+disabled = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
 position = Vector2(788.419, 572.418)
@@ -285,6 +303,9 @@ position = Vector2(1587.09, 464.021)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collision/right"]
 position = Vector2(55.91, 7.979)
 shape = SubResource("10")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_5rc17")
 
 [editable path="doors/to_Gate"]
 [editable path="doors/to_HendonMyre"]

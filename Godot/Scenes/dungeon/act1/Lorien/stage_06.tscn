@@ -26,8 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://b6qskaiti6ake" path="res://assets/images/map/act1/granflorissidedoor05.png" id="25"]
 [ext_resource type="Texture2D" uid="uid://clhm2ahsnk30s" path="res://assets/images/map/act1/granflorissidegate05.png" id="26"]
 [ext_resource type="PackedScene" path="res://src/component/act1/barrel.tscn" id="27"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="28"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="29"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="28"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="29"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym5rq"]
 texture = ExtResource("8")
@@ -153,7 +153,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jjpmj"]
 _data = {
-"flash": SubResource("Animation_eesxw")
+&"flash": SubResource("Animation_eesxw")
 }
 
 [sub_resource type="RectangleShape2D" id="2"]

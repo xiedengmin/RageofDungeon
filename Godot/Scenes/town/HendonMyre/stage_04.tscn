@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://ft0g5xjdagq4" path="res://assets/images/map/tiles/hmbstilefloor_1.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://ddg857jly8ekq" path="res://assets/images/map/hendonMyre/hmbshouse03.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://dcgsjrushfwg0" path="res://assets/images/map/tiles/hmbstilefloor_0.png" id="7"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="8"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="8"]
 [ext_resource type="Texture2D" uid="uid://nn254rrr2bw8" path="res://assets/images/map/bg/hmbsmid00.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://dvavw84c0n6qg" path="res://assets/images/map/bg/hmbsfar00.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://dkr2j5bq163r4" path="res://assets/images/map/path/hendonpath_3.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://bchm4wmoug4li" path="res://assets/images/map/path/hendonpath_0.png" id="12"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="13"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Shylock.tscn" id="14"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="13"]
+[ext_resource type="PackedScene" uid="uid://dvy8jtag3wkl" path="res://scenes/npc/Shylock.tscn" id="14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykc7y"]
 texture = ExtResource("3")
@@ -67,7 +67,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1abec"]
 _data = {
-"flash": SubResource("4")
+&"flash": SubResource("4")
 }
 
 [sub_resource type="RectangleShape2D" id="5"]

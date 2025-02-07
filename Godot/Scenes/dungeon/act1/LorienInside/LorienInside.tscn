@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://d34bpwrqkgxk0"]
 
-[ext_resource type="Script" path="res://src/dungeon/act1/LorienInside.cs" id="1"]
-[ext_resource type="PackedScene" uid="uid://cqhf0dax27gn5" path="res://scenes/dungeon/act1/LorienInside/stage_01.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://dpc8jf7jjl8fg" path="res://scenes/dungeon/act1/LorienInside/stage_02.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://by5drgjg5p1vm" path="res://scenes/dungeon/act1/LorienInside/stage_03.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://4ccnnxkix8f2" path="res://scenes/dungeon/act1/LorienInside/stage_04.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://qm3fnhjcqwax" path="res://scenes/dungeon/act1/LorienInside/stage_05.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://b2ovtas7pk5gh" path="res://scenes/dungeon/act1/LorienInside/stage_06.tscn" id="7"]
-[ext_resource type="PackedScene" uid="uid://bqm8xdgkymbag" path="res://scenes/dungeon/act1/LorienInside/stage_07.tscn" id="8"]
+[ext_resource type="Script" uid="uid://d1ryvmrwpr7i4" path="res://src/dungeon/act1/LorienInside.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://cqhf0dax27gn5" path="res://Scenes/dungeon/act1/LorienInside/stage_01.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dpc8jf7jjl8fg" path="res://Scenes/dungeon/act1/LorienInside/stage_02.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://by5drgjg5p1vm" path="res://Scenes/dungeon/act1/LorienInside/stage_03.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://4ccnnxkix8f2" path="res://Scenes/dungeon/act1/LorienInside/stage_04.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://qm3fnhjcqwax" path="res://Scenes/dungeon/act1/LorienInside/stage_05.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://b2ovtas7pk5gh" path="res://Scenes/dungeon/act1/LorienInside/stage_06.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bqm8xdgkymbag" path="res://Scenes/dungeon/act1/LorienInside/stage_07.tscn" id="8"]
 
 [node name="LorienInside" type="Node2D"]
 script = ExtResource("1")

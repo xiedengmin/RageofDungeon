@@ -1,13 +1,13 @@
 [gd_scene load_steps=37 format=3 uid="uid://yiov0w4ctqvk"]
 
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="1"]
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="2"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://chhyhtx8a70sr" path="res://assets/images/npc/npc_grandis/3.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dxw25hv1fsw1s" path="res://assets/images/npc/npc_grandis/1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://c4n04xmgkpn51" path="res://assets/images/npc/npc_grandis/2.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dfryrxjbr1uj2" path="res://assets/images/npc/npc_grandis/0.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Grandis.cs" id="8"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://c48pthy1yowfh" path="res://src/npc/Grandis.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://cwbfptd5a1d5n" path="res://assets/sounds/npc/grandis/gr_fw_04.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://l0ma2fe7imcp" path="res://assets/sounds/npc/grandis/gr_amb_01.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://85frubtr2sxt" path="res://assets/sounds/npc/grandis/gr_tk_03.ogg" id="11"]
@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://h28bg4vjl13a" path="res://assets/sounds/npc/grandis/gr_fw_01.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://ybs2bfgwqh6p" path="res://assets/sounds/npc/grandis/gr_tk_01.ogg" id="17"]
 [ext_resource type="AudioStream" uid="uid://bpq21k3ud0164" path="res://assets/sounds/npc/grandis/gr_fw_03.ogg" id="18"]
-[ext_resource type="PackedScene" uid="uid://df8ac2iii18w7" path="res://scenes/UI/npc_nemu/Menu_Grandis.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://df8ac2iii18w7" path="res://Scenes/UI/npc_nemu/Menu_Grandis.tscn" id="19"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("1")
@@ -102,7 +102,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mmjaq"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -297,16 +297,16 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qauah"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"fw_03": SubResource("11"),
-"fw_04": SubResource("12"),
-"tk_01": SubResource("13"),
-"tk_02": SubResource("14"),
-"tk_03": SubResource("15")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"fw_03": SubResource("11"),
+&"fw_04": SubResource("12"),
+&"tk_01": SubResource("13"),
+&"tk_02": SubResource("14"),
+&"tk_03": SubResource("15")
 }
 
 [node name="Grandis" instance=ExtResource("2")]

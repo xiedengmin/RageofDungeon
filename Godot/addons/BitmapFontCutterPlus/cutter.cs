@@ -8,7 +8,6 @@ public partial class cutter: FontFile
     [Export(PropertyHint.Range, "1, 255")]
     public int StartChar { get; set; } = 48;
     
-    [Export]
     public Vector2 GlyphSize { get; set; } = new Vector2(8, 8);
     
     [Export]

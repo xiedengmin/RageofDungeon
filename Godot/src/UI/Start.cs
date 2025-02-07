@@ -38,7 +38,6 @@ namespace ET
             {
                 return;
             }
-
             ArchiveManager.Instance.data = selectData;
             ArchiveManager.Instance.InitData();
             foreach (Node child in GetChildren())

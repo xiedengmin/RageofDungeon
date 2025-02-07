@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cuqnyg38jbpmv" path="res://assets/images/icon/skill/swordman/12.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dmndwvfs8iouu" path="res://assets/images/ui/skillbuy/96.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://ctwir020m8u2f" path="res://assets/images/ui/skillbuy/0.png" id="7"]
-[ext_resource type="Script" path="res://src/UI/slot/Skillbuy_Item.cs" id="8"]
+[ext_resource type="Script" uid="uid://bh2twehvlibsj" path="res://src/UI/slot/Skillbuy_Item.cs" id="8"]
 
 [sub_resource type="Animation" id="3"]
 resource_name = "新建动画"
@@ -25,7 +25,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pwnow"]
 _data = {
-"新建动画": SubResource("3")
+&"新建动画": SubResource("3")
 }
 
 [node name="Skillbuy_Item" type="TextureButton"]

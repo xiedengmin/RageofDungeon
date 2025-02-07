@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c7jma1sh1mmv8" path="res://assets/images/map/act1/01obj010.png" id="2"]
 [ext_resource type="PackedScene" path="res://src/component/act1/TopGate.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj002.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://src/component/act1/01obj001.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://b0rl4ifo77bi0" path="res://src/component/act1/01obj001.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://src/component/act1/barrel.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://src/component/act1/RightGate.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://dt737fegcc41c" path="res://assets/images/map/act1/01tile03.png" id="8"]
@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://dkyasm3llhneg" path="res://assets/images/map/act1/01tile00.png" id="17"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="18"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="19"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="18"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="19"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ulg6r"]
 texture = ExtResource("8")

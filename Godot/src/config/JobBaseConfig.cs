@@ -2,30 +2,31 @@ using Godot;
 using System.Collections.Generic;
 
 
-namespace ET {
-public partial class JobBaseConfig : BaseConfig
+namespace ET
 {
-    // 鬼剑士基础属性
-    public JobBaseConfig()
+    public partial class JobBaseConfig : BaseConfig
     {
-        LoadJson("res://assets/configs/JobBase.json");
-    }
-
-    public  Godot.Collections.Dictionary<string, Variant> GetData(string job)
-    {
-         Godot.Collections.Dictionary<string, Variant> jobData = null;
-
-        for (int i = 0; i < data.Count; i++)
+        // 鬼剑士基础属性
+        public JobBaseConfig()
         {
-            var entry = data[i] ;
-            if (entry != null && entry["job"].ToString() == job)
-            {
-                jobData = entry;
-                break;
-            }
+            LoadJson("res://assets/configs/JobBase.json");
         }
 
-        return jobData;
+        public Godot.Collections.Dictionary<string, Variant> GetData(string job)
+        {
+            Godot.Collections.Dictionary<string, Variant> jobData = null;
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                var entry = data[i];
+                if (entry != null && entry["job"].ToString() == job)
+                {
+                    jobData = entry;
+                    break;
+                }
+            }
+            jobData = data[0];//临时给数据生成
+            return jobData;
+        }
     }
-}
 }

@@ -1,0 +1,98 @@
+<Project Sdk="Godot.NET.Sdk/4.4.0-beta">
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>d:\gamedev\godotsharp\bin\godot.windows.editor.dev.x86_64.mono.exe</StartProgram>
+    <StartArguments>--path $(SolutionDir) &gt; godot.log 2&gt;</StartArguments>
+    <TargetFramework>net9.0</TargetFramework>
+    <CodeAnalysisRuleSet>.vscode\ruleset.xml</CodeAnalysisRuleSet>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <PublishAot>false</PublishAot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>ENABLE_CODES;NOT_UNITY;UNITY_2021;GODOT4;GODOT;</DefineConstants>
+    <DebugType>portable</DebugType>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ThirdParty\GodotEngine\**\*.cs" />
+    <Compile Remove="Model\Generate\ClientServer\Config\AIConfig.cs" />
+    <Compile Remove="Model\Generate\ClientServer\Config\UnitConfig.cs" />
+    <Compile Remove="Model\Generate\Server\Config\*.cs" />
+    <Compile Remove="Model\Generate\Server\Message\*.cs" />
+    <Compile Remove="Model\Generate\Client\Message\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plugins\MacOS\x86_64\libkcp.dylib">
+      <Link>runtimes\osx\native\libkcp.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\MacOS\x86_64\libRecastDll.dylib">
+      <Link>runtimes\osx\native\libRecastDll.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\x86_64\kcp.dll">
+      <Link>runtimes\win\native\kcp.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\x86_64\libkcp.so">
+      <Link>runtimes\linux\native\libkcp.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\x86_64\libRecastDll.so">
+      <Link>runtimes\linux\native\libRecastDll.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\x86_64\RecastDll.dll">
+      <Link>runtimes\win\native\RecastDll.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Kcp" Version="2.7.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ENet-CSharp" Version="2.4.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>Plugins\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>Plugins\NLog.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="9.0.2" />
+    <PackageReference Include="Npgsql.Json.NET" Version="9.0.2" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.175" />
+  </ItemGroup>
+  <PropertyGroup>
+    <!-- 忽略指定的警告编号 -->
+    <NoWarn>$(NoWarn);NU1903</NoWarn>
+  </PropertyGroup>
+</Project>

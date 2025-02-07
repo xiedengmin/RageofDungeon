@@ -1,14 +1,14 @@
 [gd_scene load_steps=41 format=3 uid="uid://cqxfjjcx8hu8q"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://g6f6bt1ksu1r" path="res://assets/images/npc/npc_birken2/3.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://c8ek8qhb8gx1g" path="res://assets/images/npc/npc_birken2/2.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxpkcjdgwyg4i" path="res://assets/images/npc/npc_birken2/4.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://cn4i1u4yycsa5" path="res://assets/images/npc/npc_birken2/0.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://cckfxn6titgn0" path="res://assets/images/npc/npc_birken2/1.png" id="7"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="8"]
-[ext_resource type="Script" path="res://src/npc/Birken2.cs" id="9"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="8"]
+[ext_resource type="Script" uid="uid://b57vwa5ptxa2a" path="res://src/npc/Birken2.cs" id="9"]
 [ext_resource type="AudioStream" uid="uid://b4bx1kp6octb4" path="res://assets/sounds/npc/birken/bk_amb.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://c3ilwft7jnthe" path="res://assets/sounds/npc/birken/bk_fw_05.ogg" id="11"]
 [ext_resource type="AudioStream" uid="uid://ddgjptiks7vhq" path="res://assets/sounds/npc/birken/bk_tk_02.ogg" id="12"]
@@ -21,7 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://dexksy8cnrsrm" path="res://assets/sounds/npc/birken/bk_fw_02.ogg" id="19"]
 [ext_resource type="AudioStream" uid="uid://cpjwxsny4rjgb" path="res://assets/sounds/npc/birken/bk_tk_03.ogg" id="20"]
 [ext_resource type="Texture2D" uid="uid://b0undlnhsoira" path="res://assets/images/face/npc/popup/birken2.png" id="21"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="22"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -111,7 +111,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wa5f5"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -324,17 +324,17 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tfco1"]
 _data = {
-"amb_01": SubResource("6"),
-"fw_01": SubResource("7"),
-"fw_02": SubResource("8"),
-"fw_03": SubResource("9"),
-"fw_04": SubResource("10"),
-"fw_05": SubResource("11"),
-"tk_01": SubResource("12"),
-"tk_02": SubResource("13"),
-"tk_03": SubResource("14"),
-"tk_04": SubResource("15"),
-"tk_05": SubResource("16")
+&"amb_01": SubResource("6"),
+&"fw_01": SubResource("7"),
+&"fw_02": SubResource("8"),
+&"fw_03": SubResource("9"),
+&"fw_04": SubResource("10"),
+&"fw_05": SubResource("11"),
+&"tk_01": SubResource("12"),
+&"tk_02": SubResource("13"),
+&"tk_03": SubResource("14"),
+&"tk_04": SubResource("15"),
+&"tk_05": SubResource("16")
 }
 
 [node name="Birken2" instance=ExtResource("1")]

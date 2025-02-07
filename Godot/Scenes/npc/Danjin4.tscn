@@ -1,13 +1,13 @@
 [gd_scene load_steps=32 format=3 uid="uid://deb4hsqv50uft"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://b0f8dgyxx3s6l" path="res://assets/images/npc/npc_danjin4/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://mkqithqndw2s" path="res://assets/images/npc/npc_danjin4/2.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cq3vnbnjj8n65" path="res://assets/images/npc/npc_danjin4/3.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dwr8vouader5n" path="res://assets/images/npc/npc_danjin4/0.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Danjin4.cs" id="8"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://5gdesuj5a4cf" path="res://src/npc/Danjin4.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://blpoaaavn1t0u" path="res://assets/sounds/npc/danjin/dj_fw_02.wav" id="9"]
 [ext_resource type="AudioStream" uid="uid://bsfb3ibxjryvb" path="res://assets/sounds/npc/danjin/dj_tk_02.wav" id="10"]
 [ext_resource type="AudioStream" uid="uid://mnuyem7mrvpc" path="res://assets/sounds/npc/danjin/dj_tk_03.wav" id="11"]
@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dc78rf11k8a72" path="res://assets/sounds/npc/danjin/dj_tk_01.wav" id="14"]
 [ext_resource type="AudioStream" uid="uid://ckfqbwe5lyb7x" path="res://assets/sounds/npc/danjin/dj_amb_01.wav" id="15"]
 [ext_resource type="Texture2D" uid="uid://sy7xa2atm2lp" path="res://assets/images/face/npc/popup/danjin4.png" id="16"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="17"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="17"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -100,7 +100,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d5smj"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -238,13 +238,13 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rlwg5"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"fw_01": SubResource("8"),
-"fw_02": SubResource("9"),
-"tk_01": SubResource("10"),
-"tk_02": SubResource("11"),
-"tk_03": SubResource("12")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"fw_01": SubResource("8"),
+&"fw_02": SubResource("9"),
+&"tk_01": SubResource("10"),
+&"tk_02": SubResource("11"),
+&"tk_03": SubResource("12")
 }
 
 [node name="Danjin4" instance=ExtResource("1")]

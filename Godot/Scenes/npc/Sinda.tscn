@@ -1,7 +1,7 @@
 [gd_scene load_steps=41 format=3 uid="uid://dkcdjfgovrcdv"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://djutmmqdiio8p" path="res://assets/images/npc/npc_sinda/3.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://d0o58com3i5n7" path="res://assets/images/npc/npc_sinda/1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://b7j4xyku5m3ia" path="res://assets/images/npc/npc_sinda/5.png" id="5"]
@@ -17,15 +17,15 @@
 [ext_resource type="Texture2D" uid="uid://bbmq6liu8kjkt" path="res://assets/images/npc/npc_sinda/14.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://buw2iwjvhpb57" path="res://assets/images/npc/npc_sinda/12.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://07d66oxomepc" path="res://assets/images/npc/npc_sinda/6.png" id="17"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="18"]
-[ext_resource type="Script" path="res://src/npc/Sinda.cs" id="19"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="18"]
+[ext_resource type="Script" uid="uid://uyqlh6knt68q" path="res://src/npc/Sinda.cs" id="19"]
 [ext_resource type="AudioStream" uid="uid://dhdsmaxm0q0c6" path="res://assets/sounds/npc/sinda/sin_amb_01.ogg" id="20"]
 [ext_resource type="AudioStream" uid="uid://byc0gcvwwf3jn" path="res://assets/sounds/npc/sinda/sin_fw_01.ogg" id="21"]
 [ext_resource type="AudioStream" uid="uid://g7ajiply7d5m" path="res://assets/sounds/npc/sinda/sin_tk_02.ogg" id="22"]
 [ext_resource type="AudioStream" uid="uid://dfyu7qke6c4d3" path="res://assets/sounds/npc/sinda/sin_tk_01.ogg" id="23"]
 [ext_resource type="AudioStream" uid="uid://hrmfc6qprldn" path="res://assets/sounds/npc/sinda/sin_fw_02.ogg" id="24"]
 [ext_resource type="AudioStream" uid="uid://c1xc8v5usyffw" path="res://assets/sounds/npc/sinda/sin_tk_03.ogg" id="25"]
-[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="26"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://Scenes/UI/npc_nemu/Menu_Type2.tscn" id="26"]
 [ext_resource type="Texture2D" uid="uid://dxu43vj5y6omp" path="res://assets/images/face/npc/popup/sinda.png" id="27"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -177,7 +177,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y05c6"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -296,12 +296,12 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qeegk"]
 _data = {
-"amb_01": SubResource("6"),
-"fw_01": SubResource("7"),
-"fw_02": SubResource("8"),
-"tk_01": SubResource("9"),
-"tk_02": SubResource("10"),
-"tk_03": SubResource("11")
+&"amb_01": SubResource("6"),
+&"fw_01": SubResource("7"),
+&"fw_02": SubResource("8"),
+&"tk_01": SubResource("9"),
+&"tk_02": SubResource("10"),
+&"tk_03": SubResource("11")
 }
 
 [node name="Sinda" instance=ExtResource("1")]

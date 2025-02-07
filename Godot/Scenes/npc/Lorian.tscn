@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=3 uid="uid://bpla15og8bhwx"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://00abw7vy2wfk" path="res://assets/images/npc/npc_lorian/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://5cqu1wuv0dhj" path="res://assets/images/npc/npc_lorian/5.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cfn0dhra0j0pn" path="res://assets/images/npc/npc_lorian/0.png" id="5"]
@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://3guv7hxhfg83" path="res://assets/images/npc/npc_lorian/3.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://bn32y0embgl8q" path="res://assets/images/npc/npc_lorian/4.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://bi3rxrunrdvc8" path="res://assets/images/npc/npc_lorian/6.png" id="11"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="12"]
-[ext_resource type="Script" path="res://src/npc/Lorian.cs" id="13"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="12"]
+[ext_resource type="Script" uid="uid://joc284yorshj" path="res://src/npc/Lorian.cs" id="13"]
 [ext_resource type="AudioStream" uid="uid://bv3vcoqmj2um1" path="res://assets/sounds/npc/lorian/lo_fw_02.ogg" id="14"]
 [ext_resource type="AudioStream" uid="uid://syrtsnttxw5q" path="res://assets/sounds/npc/lorian/lo_amb_01.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://ceiyus3mklxxs" path="res://assets/sounds/npc/lorian/lo_tk_02.ogg" id="16"]
@@ -20,7 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://bs420d3jive5t" path="res://assets/sounds/npc/lorian/lo_tk_03.ogg" id="18"]
 [ext_resource type="AudioStream" uid="uid://c4psolyibqk0h" path="res://assets/sounds/npc/lorian/lo_tk_01.ogg" id="19"]
 [ext_resource type="Texture2D" uid="uid://dwwtehx174ovt" path="res://assets/images/face/npc/popup/lorian.png" id="20"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="21"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -134,7 +134,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8568c"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -253,12 +253,12 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5b6ds"]
 _data = {
-"amb_01": SubResource("6"),
-"fw_01": SubResource("7"),
-"fw_02": SubResource("8"),
-"tk_01": SubResource("9"),
-"tk_02": SubResource("10"),
-"tk_03": SubResource("11")
+&"amb_01": SubResource("6"),
+&"fw_01": SubResource("7"),
+&"fw_02": SubResource("8"),
+&"tk_01": SubResource("9"),
+&"tk_02": SubResource("10"),
+&"tk_03": SubResource("11")
 }
 
 [node name="Lorian" instance=ExtResource("1")]

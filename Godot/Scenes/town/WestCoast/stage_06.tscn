@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://bbyth86qlebxy" path="res://assets/images/map/hendonMyre/hmdtwall01.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://cpcb4lvt8u13a" path="res://assets/images/map/hendonMyre/hmdtwall00.png" id="2"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="3"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="3"]
 [ext_resource type="Texture2D" uid="uid://bsmsfg4b3dm2g" path="res://assets/images/map/hendonMyre/hmdtobj00.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://donm2utjuyl7r" path="res://assets/images/map/tiles/hmdttilefloor_0.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://bbdkrhh78lben" path="res://assets/images/map/tiles/hmdttilefloor_1.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://2i80gve8bdf3" path="res://assets/images/map/bg/hmdtfar00.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="9"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="10"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Simona.tscn" id="11"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="10"]
+[ext_resource type="PackedScene" uid="uid://bwbn5xacksvkb" path="res://scenes/npc/Simona.tscn" id="11"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyybl"]
 texture = ExtResource("5")

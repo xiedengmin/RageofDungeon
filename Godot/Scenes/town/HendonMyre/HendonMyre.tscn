@@ -1,20 +1,20 @@
 [gd_scene load_steps=54 format=3 uid="uid://ngg37jnp2afu"]
 
-[ext_resource type="PackedScene" uid="uid://2llvwshueqwo" path="res://scenes/town/HendonMyre/stage_01.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://4xbs067plcwt" path="res://scenes/town/HendonMyre/stage_02.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://7mt7ewynkoax" path="res://scenes/town/HendonMyre/stage_05.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://86mojqh0n5uf" path="res://scenes/town/HendonMyre/stage_06.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://d0kx7mrk3whjg" path="res://scenes/town/HendonMyre/stage_04.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://2llvwshueqwo" path="res://Scenes/town/HendonMyre/stage_01.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://4xbs067plcwt" path="res://Scenes/town/HendonMyre/stage_02.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://7mt7ewynkoax" path="res://Scenes/town/HendonMyre/stage_05.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://86mojqh0n5uf" path="res://Scenes/town/HendonMyre/stage_06.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://d0kx7mrk3whjg" path="res://Scenes/town/HendonMyre/stage_04.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://bxse3p7atyg84" path="res://assets/images/map/hendonMyre/bigrabbit_0.png" id="5_na8d8"]
-[ext_resource type="PackedScene" uid="uid://b0iqan8ff6l17" path="res://scenes/town/HendonMyre/stage_03.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://b0iqan8ff6l17" path="res://Scenes/town/HendonMyre/stage_03.tscn" id="6"]
 [ext_resource type="Texture2D" uid="uid://cxrrpurjt51sl" path="res://assets/images/map/hendonMyre/bigrabbit_1.png" id="6_hrjbp"]
-[ext_resource type="PackedScene" uid="uid://cf3tj406w3a0r" path="res://scenes/town/HendonMyre/stage_07.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://cf3tj406w3a0r" path="res://Scenes/town/HendonMyre/stage_07.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://kv6v5bs2alan" path="res://assets/images/map/hendonMyre/bigrabbit_2.png" id="7_gek4c"]
-[ext_resource type="PackedScene" uid="uid://bvxvslsoxm3j0" path="res://scenes/town/HendonMyre/stage_08.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bvxvslsoxm3j0" path="res://Scenes/town/HendonMyre/stage_08.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://dry5qo80u67d" path="res://assets/images/map/hendonMyre/smallbear_0.png" id="8_ce0oa"]
-[ext_resource type="PackedScene" uid="uid://cbj86rofl36ps" path="res://scenes/town/Gate_HendonMyre.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://cbj86rofl36ps" path="res://Scenes/town/Gate_HendonMyre.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://dw4xw7khxw72c" path="res://assets/images/map/hendonMyre/smallbear_1.png" id="9_a4xrp"]
-[ext_resource type="Script" path="res://src/town/HendonMyre.cs" id="10"]
+[ext_resource type="Script" uid="uid://bre5rg46fja3j" path="res://src/town/HendonMyre.cs" id="10"]
 [ext_resource type="Texture2D" uid="uid://ccbmcngojtw3v" path="res://assets/images/map/hendonMyre/smallbear_2.png" id="10_qbtyn"]
 [ext_resource type="Texture2D" uid="uid://b4r2w3q8njkde" path="res://assets/images/map/hendonMyre/hmobj01_18.png" id="11_centk"]
 [ext_resource type="Texture2D" uid="uid://dgjvvf26oxbkv" path="res://assets/images/map/hendonMyre/hmobj01_19.png" id="12_tmqw3"]
@@ -54,7 +54,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nced3"]
 _data = {
-"flash": SubResource("3")
+&"flash": SubResource("3")
 }
 
 [sub_resource type="SpriteFrames" id="4"]
@@ -92,7 +92,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yk2fy"]
 _data = {
-"idle": SubResource("5")
+&"idle": SubResource("5")
 }
 
 [sub_resource type="SpriteFrames" id="8"]
@@ -129,7 +129,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kg2dl"]
 _data = {
-"idle": SubResource("9")
+&"idle": SubResource("9")
 }
 
 [sub_resource type="SpriteFrames" id="10"]
@@ -170,7 +170,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hy877"]
 _data = {
-"idle": SubResource("11")
+&"idle": SubResource("11")
 }
 
 [sub_resource type="SpriteFrames" id="12"]
@@ -220,7 +220,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v4l8r"]
 _data = {
-"idle": SubResource("13")
+&"idle": SubResource("13")
 }
 
 [sub_resource type="Animation" id="14"]
@@ -241,7 +241,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nd5fi"]
 _data = {
-"flash": SubResource("14")
+&"flash": SubResource("14")
 }
 
 [sub_resource type="SpriteFrames" id="19"]
@@ -291,7 +291,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ha58x"]
 _data = {
-"flash": SubResource("Animation_7mtrp")
+&"flash": SubResource("Animation_7mtrp")
 }
 
 [node name="HendonMyre" type="Node2D"]

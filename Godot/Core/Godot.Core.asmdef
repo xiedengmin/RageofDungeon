@@ -1,0 +1,17 @@
+{
+    "name": "Godot.Core",
+    "rootNamespace": "ET",
+    "references": [
+        "Godot.ThirdParty",
+        "Godot.Mathematics"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

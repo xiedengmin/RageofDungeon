@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://iferwr8itas1"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="2"]
-[ext_resource type="Script" path="res://src/npc/Postbox.cs" id="2_bsqw5"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="2"]
+[ext_resource type="Script" uid="uid://bk03qtyxcg4po" path="res://src/npc/Postbox.cs" id="2_bsqw5"]
 [ext_resource type="Texture2D" uid="uid://b8oxjowgsi64i" path="res://assets/images/map/obj/postbox.png" id="3"]
 
 [sub_resource type="Shader" id="1"]

@@ -1,15 +1,15 @@
 [gd_scene load_steps=34 format=3 uid="uid://bwempqwgqxttd"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://ddgqvh00nk3wk" path="res://assets/images/npc/npc_sharan/0.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dyxa4c857sbwd" path="res://assets/images/npc/npc_sharan/1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://7lotvlirkvau" path="res://assets/images/npc/npc_sharan/3.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dht06o7us73yw" path="res://assets/images/npc/npc_sharan/2.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://bt6y6qn4orh71" path="res://assets/images/npc/npc_sharan/4.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://bl03birpbvjcy" path="res://assets/images/npc/npc_sharan/5.png" id="8"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="9"]
-[ext_resource type="Script" path="res://src/npc/Sharan.cs" id="10"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="9"]
+[ext_resource type="Script" uid="uid://baug7j5dplthq" path="res://src/npc/Sharan.cs" id="10"]
 [ext_resource type="AudioStream" uid="uid://c302yxheukg5n" path="res://assets/sounds/npc/sharan/sr_amb_02.ogg" id="11"]
 [ext_resource type="AudioStream" uid="uid://btg600skht8hr" path="res://assets/sounds/npc/sharan/sr_fw_01.ogg" id="12"]
 [ext_resource type="AudioStream" uid="uid://ddnfant36i70o" path="res://assets/sounds/npc/sharan/sr_fw_02.ogg" id="13"]
@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://enlhyqxnobaa" path="res://assets/sounds/npc/sharan/sr_tk_01.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://cdwmcu6tpm5na" path="res://assets/sounds/npc/sharan/sr_tk_02.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://d37fslouyf4jp" path="res://assets/sounds/npc/sharan/sr_fw_03.ogg" id="17"]
-[ext_resource type="PackedScene" uid="uid://cjqrl6olmfam5" path="res://scenes/UI/npc_nemu/Menu_Type3.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://cjqrl6olmfam5" path="res://Scenes/UI/npc_nemu/Menu_Type3.tscn" id="18"]
 [ext_resource type="Texture2D" uid="uid://ckie4u0qlnf8m" path="res://assets/images/face/npc/popup/sharan.png" id="19"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -115,7 +115,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sql4r"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -253,13 +253,13 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ov786"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"fw_01": SubResource("8"),
-"fw_02": SubResource("9"),
-"fw_03": SubResource("10"),
-"tk_01": SubResource("11"),
-"tk_02": SubResource("12")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"fw_01": SubResource("8"),
+&"fw_02": SubResource("9"),
+&"fw_03": SubResource("10"),
+&"tk_01": SubResource("11"),
+&"tk_02": SubResource("12")
 }
 
 [node name="Sharan" instance=ExtResource("1")]

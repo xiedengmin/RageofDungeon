@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://jo44aemxdytp" path="res://assets/images/map/alfhlyra/d_gatelight_0.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://cd53hvs7yav4s" path="res://assets/images/map/alfhlyra/d_gate.png" id="4"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="5"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="5"]
 [ext_resource type="Texture2D" uid="uid://bgce4qtwftds" path="res://assets/images/map/alfhlyra/alftile01.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://cfo787ii2quqn" path="res://assets/images/map/alfhlyra/d_gatelight_1.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://d1e6wrmy4x5lr" path="res://assets/images/map/alfhlyra/d_gatelight_2.png" id="8"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://e6ob6y0eq0mw" path="res://assets/images/map/alfhlyra/midgrass.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://cb7d0y85p0a4j" path="res://assets/images/map/alfhlyra/d_gateedge.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://dm47wupl56toj" path="res://assets/images/map/alfhlyra/alfobj01.png" id="15"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="16"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="16"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "move"
@@ -34,7 +34,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6qx7k"]
 _data = {
-"move": SubResource("1")
+&"move": SubResource("1")
 }
 
 [sub_resource type="SpriteFrames" id="2"]

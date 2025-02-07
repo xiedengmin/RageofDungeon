@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cw8b2fisg5pjo"]
 
-[ext_resource type="Script" path="res://src/UI/CounterAppController.cs" id="1_2gmbf"]
+[ext_resource type="Script" uid="uid://bodjhr16v8atb" path="res://src/UI/CounterAppController.cs" id="1_2gmbf"]
 
 [node name="CounterApp" type="Control" node_paths=PackedStringArray("CountText", "BtnAdd", "BtnSub")]
 layout_mode = 3

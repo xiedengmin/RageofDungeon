@@ -1,13 +1,13 @@
 [gd_scene load_steps=45 format=3 uid="uid://bwlijifw4sm0g"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://bnt8c3jg2jmjy" path="res://assets/images/npc/npc_albert/0.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://tstgao3omv42" path="res://assets/images/npc/npc_albert/2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bs4ulce5x5tcx" path="res://assets/images/npc/npc_albert/3.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://6hxmbwycqs47" path="res://assets/images/npc/npc_albert/1.png" id="5"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Albert.cs" id="8"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="6"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://bo3k83r0unu8g" path="res://src/npc/Albert.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://ss3xlllkhdhv" path="res://assets/sounds/npc/albert/albert_amb_01.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://cthvrup7oo5ar" path="res://assets/sounds/npc/albert/albert_amb_02.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://blucyj81k7ctx" path="res://assets/sounds/npc/albert/albert_amb_05.ogg" id="11"]
@@ -22,7 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://dg1kste5r5jg4" path="res://assets/sounds/npc/albert/albert_fw_01.ogg" id="20"]
 [ext_resource type="AudioStream" uid="uid://d1gap2ps75flm" path="res://assets/sounds/npc/albert/albert_tk_04.ogg" id="21"]
 [ext_resource type="AudioStream" uid="uid://bsx4qoekn2rx0" path="res://assets/sounds/npc/albert/albert_tk_03.ogg" id="22"]
-[ext_resource type="PackedScene" uid="uid://b3l7udxljip5e" path="res://scenes/UI/npc_nemu/Menu_Albert.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://b3l7udxljip5e" path="res://Scenes/UI/npc_nemu/Menu_Albert.tscn" id="23"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("6")
@@ -106,7 +106,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p48ii"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -377,20 +377,20 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q3yc3"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"amb_04": SubResource("9"),
-"amb_05": SubResource("10"),
-"fw_01": SubResource("11"),
-"fw_02": SubResource("12"),
-"fw_03": SubResource("13"),
-"fw_04": SubResource("14"),
-"tk_01": SubResource("15"),
-"tk_02": SubResource("16"),
-"tk_03": SubResource("17"),
-"tk_04": SubResource("18"),
-"tk_05": SubResource("19")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"amb_04": SubResource("9"),
+&"amb_05": SubResource("10"),
+&"fw_01": SubResource("11"),
+&"fw_02": SubResource("12"),
+&"fw_03": SubResource("13"),
+&"fw_04": SubResource("14"),
+&"tk_01": SubResource("15"),
+&"tk_02": SubResource("16"),
+&"tk_03": SubResource("17"),
+&"tk_04": SubResource("18"),
+&"tk_05": SubResource("19")
 }
 
 [node name="Albert" instance=ExtResource("1")]

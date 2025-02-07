@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgtu8fxgad75i"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://dxfr15b5c7s33" path="res://assets/images/map/obj/board.png" id="2"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="3"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="3"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("3")

@@ -23,8 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://4sl78lm36lnk" path="res://assets/images/map/stormPass/fire_12.png" id="21"]
 [ext_resource type="Texture2D" uid="uid://cdfesgo0dfoi7" path="res://assets/images/map/stormPass/firebox.png" id="22"]
 [ext_resource type="Texture2D" uid="uid://dvmo0nn1yo6fe" path="res://assets/images/map/stormPass/fire_1.png" id="23"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="24"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="25"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="24"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="25"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -102,7 +102,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dpcsb"]
 _data = {
-"idle": SubResource("2")
+&"idle": SubResource("2")
 }
 
 [sub_resource type="RectangleShape2D" id="3"]

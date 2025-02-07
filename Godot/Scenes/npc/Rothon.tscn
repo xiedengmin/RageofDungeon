@@ -1,19 +1,19 @@
 [gd_scene load_steps=29 format=3 uid="uid://c0ncc4ehi2vkv"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://cj6f70ohh6v5c" path="res://assets/images/npc/npc_rothon/2.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://dl3yq7robfn6k" path="res://assets/images/npc/npc_rothon/0.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://baah6wd82g0di" path="res://assets/images/npc/npc_rothon/1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://c5w4fnwk1eswn" path="res://assets/images/npc/npc_rothon/3.png" id="5"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="6"]
-[ext_resource type="Script" path="res://src/npc/Rothon.cs" id="7"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="6"]
+[ext_resource type="Script" uid="uid://bxfj2b165jyjl" path="res://src/npc/Rothon.cs" id="7"]
 [ext_resource type="AudioStream" uid="uid://dy1auqdywqr37" path="res://assets/sounds/npc/rothon/rt_fw_01.ogg" id="8"]
 [ext_resource type="AudioStream" uid="uid://burwxjhluqn06" path="res://assets/sounds/npc/rothon/rt_fw_02.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://d1s14m1rcavkl" path="res://assets/sounds/npc/rothon/rt_tk_01.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://cvgfbkt748sb3" path="res://assets/sounds/npc/rothon/rt_fw_03.ogg" id="11"]
 [ext_resource type="AudioStream" uid="uid://b3wm2m73pwo20" path="res://assets/sounds/npc/rothon/rt_tk_02.ogg" id="12"]
 [ext_resource type="AudioStream" uid="uid://bm5uptvkn4omw" path="res://assets/sounds/npc/rothon/rt_tk_03.ogg" id="13"]
-[ext_resource type="PackedScene" uid="uid://bq7rjigyfqqid" path="res://scenes/UI/npc_nemu/Menu_Rothon.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://bq7rjigyfqqid" path="res://Scenes/UI/npc_nemu/Menu_Rothon.tscn" id="14"]
 
 [sub_resource type="Shader" id="1"]
 code = "shader_type canvas_item;
@@ -127,7 +127,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mnsx1"]
 _data = {
-"default": SubResource("6")
+&"default": SubResource("6")
 }
 
 [sub_resource type="Animation" id="7"]
@@ -246,12 +246,12 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sa5v6"]
 _data = {
-"fw_01": SubResource("7"),
-"fw_02": SubResource("8"),
-"fw_03": SubResource("9"),
-"tk_01": SubResource("10"),
-"tk_02": SubResource("11"),
-"tk_03": SubResource("12")
+&"fw_01": SubResource("7"),
+&"fw_02": SubResource("8"),
+&"fw_03": SubResource("9"),
+&"tk_01": SubResource("10"),
+&"tk_02": SubResource("11"),
+&"tk_03": SubResource("12")
 }
 
 [node name="Rothon" instance=ExtResource("1")]

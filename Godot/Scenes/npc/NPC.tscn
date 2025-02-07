@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dbc8u4brhucim"]
 
-[ext_resource type="Script" path="res://src/npc/NPC.cs" id="2"]
+[ext_resource type="Script" uid="uid://cybmbdfuijoa6" path="res://src/npc/NPC.cs" id="2"]
 [ext_resource type="AudioStream" uid="uid://e44mijwq8771" path="res://assets/sounds/ui/commandshow.wav" id="3"]
 
 [sub_resource type="Shader" id="1"]

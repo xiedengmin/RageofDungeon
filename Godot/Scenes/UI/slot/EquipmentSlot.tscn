@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgpv5vi3k4bcp"]
 
 [ext_resource type="Texture2D" uid="uid://qkgh3p5ayrt4" path="res://assets/images/icon/weapon/swordman/club/1.png" id="1"]
-[ext_resource type="Script" path="res://src/UI/slot/EquipmentSlot.cs" id="2"]
+[ext_resource type="Script" uid="uid://cwamkanuh3w78" path="res://src/UI/slot/EquipmentSlot.cs" id="2"]
 [ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
 
 [node name="EquipSlot" type="TextureRect"]

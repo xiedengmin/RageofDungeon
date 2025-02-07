@@ -1,0 +1,22 @@
+{
+    "name": "Godot.Model.Codes",
+    "rootNamespace": "ET",
+    "references": [
+        "Godot.ThirdParty",
+        "Godot.Core",
+        "Godot.Mathematics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ENABLE_CODES"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

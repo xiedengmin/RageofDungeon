@@ -1,13 +1,13 @@
 [gd_scene load_steps=37 format=3 uid="uid://xgqbu4h8564j"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://gedr8atxwh13" path="res://assets/images/npc/npc_daphne/0.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://dr55fyh8fgr56" path="res://assets/images/npc/npc_daphne/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dmc4pwjuyffw5" path="res://assets/images/npc/npc_daphne/3.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://jjtbfo3c6fyo" path="res://assets/images/npc/npc_daphne/2.png" id="5"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Daphne.cs" id="8"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="6"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://b56jw0kdx7c54" path="res://src/npc/Daphne.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://bpha5p37igjxo" path="res://assets/sounds/npc/daphne/daphne_amb_01.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://dekqldwjgt523" path="res://assets/sounds/npc/daphne/daphne_amb_02.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://dgj5ubyi552v8" path="res://assets/sounds/npc/daphne/daphne_amb_03.ogg" id="11"]
@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://6bypc0ca3bng" path="res://assets/sounds/npc/daphne/daphne_tk_01.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://de02qdkr8xs0w" path="res://assets/sounds/npc/daphne/daphne_tk_02.ogg" id="17"]
 [ext_resource type="AudioStream" uid="uid://x8rv8adbp80x" path="res://assets/sounds/npc/daphne/daphne_tk_04.ogg" id="18"]
-[ext_resource type="PackedScene" uid="uid://cd3l7osx2wxa" path="res://scenes/UI/npc_nemu/Menu_Daphne.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://cd3l7osx2wxa" path="res://Scenes/UI/npc_nemu/Menu_Daphne.tscn" id="19"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("6")
@@ -102,7 +102,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qj4i1"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -297,16 +297,16 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_24rot"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"fw_03": SubResource("11"),
-"tk_01": SubResource("12"),
-"tk_02": SubResource("13"),
-"tk_03": SubResource("14"),
-"tk_04": SubResource("15")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"fw_03": SubResource("11"),
+&"tk_01": SubResource("12"),
+&"tk_02": SubResource("13"),
+&"tk_03": SubResource("14"),
+&"tk_04": SubResource("15")
 }
 
 [node name="Daphne" instance=ExtResource("1")]

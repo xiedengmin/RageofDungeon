@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://cydjv4mc3bb5y" path="res://assets/images/map/hendonMyre/westtile03.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://ijvcgk5jtojq" path="res://assets/images/map/hendonMyre/westomidship.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cfg7f6a0xmnnv" path="res://assets/images/map/hendonMyre/westtile00.png" id="4"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="5"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="5"]
 [ext_resource type="Texture2D" uid="uid://b43ip30vn1grm" path="res://assets/images/map/hendonMyre/westnearship.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://d1nccq7v8otqi" path="res://assets/images/map/hendonMyre/westtile04.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://dog57ige3wvqb" path="res://assets/images/map/bg/westfar00.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://1o5h4d4uqpta" path="res://assets/images/map/bg/westmid00.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://bac6gu8vvoqcp" path="res://assets/images/map/hendonMyre/westmobj00.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://dp5eb6515tydp" path="res://assets/images/map/hendonMyre/westmsafetybar.png" id="11"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="12"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="12"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "move"
@@ -32,7 +32,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6nsrl"]
 _data = {
-"move": SubResource("1")
+&"move": SubResource("1")
 }
 
 [sub_resource type="Animation" id="2"]
@@ -53,7 +53,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yp1bf"]
 _data = {
-"move": SubResource("2")
+&"move": SubResource("2")
 }
 
 [sub_resource type="RectangleShape2D" id="3"]

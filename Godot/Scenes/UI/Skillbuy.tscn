@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cj2sjw0cibofh" path="res://assets/images/ui/windowcommon/279.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://s421w0xp1v34" path="res://assets/images/ui/window_title_accessory/1.png" id="12"]
 [ext_resource type="PackedScene" uid="uid://dky7q52qh0u0o" path="res://src/component/buttons/Button1.tscn" id="13"]
-[ext_resource type="Script" path="res://src/UI/Skillbuy.cs" id="14"]
+[ext_resource type="Script" uid="uid://bw6028bvshvf1" path="res://src/UI/Skillbuy.cs" id="14"]
 [ext_resource type="AudioStream" uid="uid://j8gh0ucttat5" path="res://assets/sounds/ui/ambox_result.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://wcmfea7x4m2s" path="res://assets/sounds/ui/click2.ogg" id="17"]
 
@@ -55,8 +55,8 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uxyih"]
 _data = {
-"learn": SubResource("3"),
-"select": SubResource("4")
+&"learn": SubResource("3"),
+&"select": SubResource("4")
 }
 
 [node name="Skillbuy" type="Panel"]

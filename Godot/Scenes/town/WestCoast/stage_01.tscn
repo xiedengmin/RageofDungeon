@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dseiyrt2ovcjb" path="res://assets/images/map/tiles/hmtileex.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://bxtbff1lcqdes" path="res://assets/images/map/path/hendonpath_1.png" id="2"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="3"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="3"]
 [ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://duicqhecebsck" path="res://assets/images/map/path/hendonpath_4.png" id="6"]
@@ -56,13 +56,13 @@
 [ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="36"]
 [ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="37"]
 [ext_resource type="Texture2D" uid="uid://byxmv4r0vj1p1" path="res://assets/images/map/hendonMyre/hmseriahouse1.png" id="38"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="39"]
-[ext_resource type="PackedScene" uid="uid://bpla15og8bhwx" path="res://scenes/npc/Lorian.tscn" id="40"]
-[ext_resource type="PackedScene" uid="uid://bf2kojqmmjeb8" path="res://scenes/npc/Kagon.tscn" id="41"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Roger.tscn" id="42"]
-[ext_resource type="PackedScene" uid="uid://xgqbu4h8564j" path="res://scenes/npc/Daphne.tscn" id="43"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="44"]
-[ext_resource type="PackedScene" uid="uid://c3bejm435t7pj" path="res://scenes/npc/Danjin2.tscn" id="45"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="39"]
+[ext_resource type="PackedScene" uid="uid://bpla15og8bhwx" path="res://Scenes/npc/Lorian.tscn" id="40"]
+[ext_resource type="PackedScene" uid="uid://bf2kojqmmjeb8" path="res://Scenes/npc/Kagon.tscn" id="41"]
+[ext_resource type="PackedScene" uid="uid://c45gg7kctjsm1" path="res://scenes/npc/Roger.tscn" id="42"]
+[ext_resource type="PackedScene" uid="uid://xgqbu4h8564j" path="res://Scenes/npc/Daphne.tscn" id="43"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="44"]
+[ext_resource type="PackedScene" uid="uid://c3bejm435t7pj" path="res://Scenes/npc/Danjin2.tscn" id="45"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66ewd"]
 texture = ExtResource("5")
@@ -167,7 +167,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t4wbb"]
 _data = {
-"flash": SubResource("4")
+&"flash": SubResource("4")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_38vx1"]
@@ -288,7 +288,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e50re"]
 _data = {
-"idle": SubResource("6")
+&"idle": SubResource("6")
 }
 
 [sub_resource type="ShaderMaterial" id="7"]

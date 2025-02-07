@@ -1,0 +1,22 @@
+{
+    "name": "Godot.ModelView",
+    "rootNamespace": "ET",
+    "references": [
+        "Godot.Model",
+        "Godot.ThirdParty",
+        "Godot.Core",
+        "Godot.Mathematics",
+        "Godot.Loader"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

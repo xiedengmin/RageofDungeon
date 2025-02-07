@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="2"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="3"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="3"]
 [ext_resource type="Texture2D" uid="uid://b4b2jwyuh44u0" path="res://assets/images/map/path/hendonpath_2.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cyook15i7qhkj" path="res://assets/images/map/obj/hmpoll_3.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://c4yi3lad1a3e" path="res://assets/images/map/hendonMyre/hmbggrass0.png" id="6"]
@@ -19,10 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="17"]
 [ext_resource type="Texture2D" uid="uid://dkr2j5bq163r4" path="res://assets/images/map/path/hendonpath_3.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://bchm4wmoug4li" path="res://assets/images/map/path/hendonpath_0.png" id="19"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="20"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Sharan.tscn" id="21"]
-[ext_resource type="PackedScene" uid="uid://barbe5kyb0a7s" path="res://scenes/npc/Iris.tscn" id="22"]
-[ext_resource type="PackedScene" uid="uid://b1goe3ie1is10" path="res://scenes/npc/Danjin3.tscn" id="23"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="20"]
+[ext_resource type="PackedScene" uid="uid://bwempqwgqxttd" path="res://scenes/npc/Sharan.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://barbe5kyb0a7s" path="res://Scenes/npc/Iris.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://b1goe3ie1is10" path="res://Scenes/npc/Danjin3.tscn" id="23"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk6ni"]
 texture = ExtResource("1")
@@ -99,7 +99,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ku4ix"]
 _data = {
-"flash": SubResource("3")
+&"flash": SubResource("3")
 }
 
 [sub_resource type="RectangleShape2D" id="4"]

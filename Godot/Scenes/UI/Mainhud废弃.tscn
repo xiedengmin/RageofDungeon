@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://4sq4vii33jvv" path="res://assets/images/mainhud/35.png" id="26"]
 [ext_resource type="Texture2D" uid="uid://clnsf3ndk4bmd" path="res://assets/images/mainhud/33.png" id="27"]
 [ext_resource type="Texture2D" uid="uid://cq814d1j73ioi" path="res://assets/fonts/bitmapfont/level02/10.png" id="28"]
-[ext_resource type="Script" path="res://src/UI/Mainhud.cs" id="31"]
+[ext_resource type="Script" uid="uid://coqg4p14ds4ts" path="res://src/UI/Mainhud.cs" id="31"]
 
 [node name="Mainhud" type="Control"]
 layout_mode = 3

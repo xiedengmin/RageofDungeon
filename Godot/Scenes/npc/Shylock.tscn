@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://dvy8jtag3wkl"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://fps10ip5ydpb" path="res://assets/images/npc/npc_gbn/0.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://c8h42qsrp0r4c" path="res://assets/images/npc/npc_gbn/9.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bqq2pd7f45dve" path="res://assets/images/npc/npc_gbn/17.png" id="5"]
@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bd0akrd2q8w3m" path="res://assets/images/npc/npc_gbn/26.png" id="28"]
 [ext_resource type="Texture2D" uid="uid://du0mrsmokjaus" path="res://assets/images/npc/npc_gbn/19.png" id="29"]
 [ext_resource type="Texture2D" uid="uid://no7e5s83hkif" path="res://assets/images/npc/npc_gbn/24.png" id="30"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="31"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="31"]
 [ext_resource type="AudioStream" uid="uid://djwci8q72u844" path="res://assets/sounds/npc/shylock/gbn_amb_01.ogg" id="32"]
 [ext_resource type="AudioStream" uid="uid://b67divisct0vx" path="res://assets/sounds/npc/shylock/gbn_tk_02.ogg" id="33"]
 [ext_resource type="AudioStream" uid="uid://cyg5dvefl47wt" path="res://assets/sounds/npc/shylock/gbn_amb_02.ogg" id="34"]
@@ -38,8 +38,8 @@
 [ext_resource type="AudioStream" uid="uid://bjy1w2j80rt5x" path="res://assets/sounds/npc/shylock/gbn_tk_03.ogg" id="36"]
 [ext_resource type="AudioStream" uid="uid://ckriomad1fi05" path="res://assets/sounds/npc/shylock/gbn_fw_01.ogg" id="37"]
 [ext_resource type="AudioStream" uid="uid://j3kq5wdmqw7t" path="res://assets/sounds/npc/shylock/gbn_tk_01.ogg" id="38"]
-[ext_resource type="Script" path="res://src/npc/Shylock.cs" id="39"]
-[ext_resource type="PackedScene" uid="uid://gth40so748kr" path="res://scenes/UI/npc_nemu/Menu_Shylock.tscn" id="40"]
+[ext_resource type="Script" uid="uid://160utl2ng28e" path="res://src/npc/Shylock.cs" id="39"]
+[ext_resource type="PackedScene" uid="uid://gth40so748kr" path="res://Scenes/UI/npc_nemu/Menu_Shylock.tscn" id="40"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -268,7 +268,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1kkga"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -406,13 +406,13 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4pnh2"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"fw_01": SubResource("8"),
-"fw_02": SubResource("9"),
-"tk_01": SubResource("10"),
-"tk_02": SubResource("11"),
-"tk_03": SubResource("12")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"fw_01": SubResource("8"),
+&"fw_02": SubResource("9"),
+&"tk_01": SubResource("10"),
+&"tk_02": SubResource("11"),
+&"tk_03": SubResource("12")
 }
 
 [node name="Shylock" instance=ExtResource("1")]

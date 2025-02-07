@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" path="res://src/component/act1/TopGate.tscn" id="12"]
 [ext_resource type="Texture2D" uid="uid://d2nqn7i0bx5nr" path="res://assets/images/map/act1/01obj012.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://ej7wcncqxm5g" path="res://assets/images/map/act1/01obj105.png" id="14"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="15"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="15"]
 [ext_resource type="Texture2D" uid="uid://dwctpt5r71y6a" path="res://assets/images/map/act1/01obj008.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://bwovky2b8yen6" path="res://assets/images/map/act1/granflorisbush01.png" id="17"]
 [ext_resource type="PackedScene" path="res://src/component/act1/01obj400.tscn" id="18"]
@@ -149,7 +149,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_63bea"]
 _data = {
-"flash": SubResource("Animation_eesxw")
+&"flash": SubResource("Animation_eesxw")
 }
 
 [sub_resource type="Animation" id="Animation_jdu0l"]
@@ -170,7 +170,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r3414"]
 _data = {
-"flash": SubResource("Animation_jdu0l")
+&"flash": SubResource("Animation_jdu0l")
 }
 
 [sub_resource type="RectangleShape2D" id="2"]

@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6uru8lfx45ma"]
 
-[ext_resource type="Script" path="res://src/bullet/Bullet.cs" id="1_5nvvf"]
-[ext_resource type="Texture2D" uid="uid://3rnpfoug4ln3" path="res://icon.png" id="2_ofso1"]
+[ext_resource type="Script" uid="uid://8xyaknvad4ry" path="res://src/bullet/Bullet.cs" id="1_5nvvf"]
+
+[sub_resource type="Resource" id="Resource_h6hvn"]
+metadata/__load_path__ = "res://icon.png"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xmash"]
 
@@ -17,7 +19,7 @@ collision_mask = 2
 [node name="Sprite2D" type="Sprite2D" parent="zd"]
 top_level = true
 position = Vector2(41, 670)
-texture = ExtResource("2_ofso1")
+texture = SubResource("Resource_h6hvn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zd"]
 shape = SubResource("RectangleShape2D_xmash")

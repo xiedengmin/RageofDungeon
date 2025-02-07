@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3ts52huo7stt"]
 
 [ext_resource type="Texture2D" uid="uid://ljknoyd8lwfl" path="res://assets/images/ui/windowcommon/ToolTipbg.png" id="4"]
-[ext_resource type="Script" path="res://src/UI/toolTip/ToolTipEquip.cs" id="5"]
+[ext_resource type="Script" uid="uid://coxa7ofoeeb54" path="res://src/UI/toolTip/ToolTipEquip.cs" id="5"]
 [ext_resource type="Texture2D" uid="uid://c3jwuuhh4uqkm" path="res://assets/images/icon/weapon/swordman/katana/0.png" id="6"]
 
 [node name="ToolTipEquip" type="Control"]

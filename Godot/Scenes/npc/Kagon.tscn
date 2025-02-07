@@ -1,13 +1,13 @@
 [gd_scene load_steps=34 format=3 uid="uid://bf2kojqmmjeb8"]
 
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="1"]
 [ext_resource type="Texture2D" uid="uid://drmwpd1woyk3c" path="res://assets/images/npc/npc_kagon/2.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bwlfuspdk3x3g" path="res://assets/images/npc/npc_kagon/3.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://b6c7pufb075ru" path="res://assets/images/npc/npc_kagon/0.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://1iim6d36pg3a" path="res://assets/images/npc/npc_kagon/1.png" id="5"]
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Kagon.cs" id="8"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="6"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://d1ociv605mkor" path="res://src/npc/Kagon.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://c4pmg7ynkiwug" path="res://assets/sounds/npc/kagon/kg_tk_02.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://01qlu1sfw1k" path="res://assets/sounds/npc/kagon/kg_fw_01.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://t4md81a3x6id" path="res://assets/sounds/npc/kagon/kg_tk_01.ogg" id="11"]
@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://bt6bulebwcnbm" path="res://assets/sounds/npc/kagon/kg_fw_03.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://bq4vq477jrlo0" path="res://assets/sounds/npc/kagon/kg_amb_02.ogg" id="16"]
 [ext_resource type="Texture2D" uid="uid://3jkus27ov7c" path="res://assets/images/face/npc/popup/kagon.png" id="17"]
-[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://Scenes/UI/npc_nemu/Menu_Type2.tscn" id="18"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("1")
@@ -101,7 +101,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m1u6o"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -258,14 +258,14 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qkoj0"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"fw_01": SubResource("8"),
-"fw_02": SubResource("9"),
-"fw_03": SubResource("10"),
-"tk_01": SubResource("11"),
-"tk_02": SubResource("12"),
-"tk_03": SubResource("13")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"fw_01": SubResource("8"),
+&"fw_02": SubResource("9"),
+&"fw_03": SubResource("10"),
+&"tk_01": SubResource("11"),
+&"tk_02": SubResource("12"),
+&"tk_03": SubResource("13")
 }
 
 [node name="Kagon" instance=ExtResource("6")]

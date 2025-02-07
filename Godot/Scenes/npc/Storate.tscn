@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cmtqqov33s4lr"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://dl47xccimmiol" path="res://assets/images/map/obj/storage_0.png" id="3"]
-[ext_resource type="Script" path="res://src/npc/Storage.cs" id="4"]
+[ext_resource type="Script" uid="uid://owdix3njuqux" path="res://src/npc/Storage.cs" id="4"]
 
 [sub_resource type="Shader" id="1"]
 code = "shader_type canvas_item;

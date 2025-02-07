@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://ds2ufchlw3kbg"]
 
-[ext_resource path="res://assets/images/map/act1/breakableobject/grass1lorien/0.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://cfhssgjmg55o3" path="res://assets/images/map/act1/breakableobject/grass1lorien/0.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.60625, 2.5554 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(17.2125, 5.1108)
 
 [node name="grass1lorien" type="StaticBody2D"]
 
 [node name="0" type="Sprite2D" parent="."]
-position = Vector2( 2.52269, -36.3688 )
-texture = ExtResource( 1 )
+position = Vector2(2.52269, -36.3688)
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource("1")
 disabled = true

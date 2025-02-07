@@ -1,10 +1,10 @@
 [gd_scene load_steps=25 format=3 uid="uid://wsxg4e0f3t8p"]
 
-[ext_resource type="PackedScene" uid="uid://cg5phks1gsrat" path="res://scenes/town/StormPass/stage_01.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://xpfmpno3e47k" path="res://scenes/town/StormPass/stage_02.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://wqqaxlhd8bcy" path="res://scenes/town/StormPass/stage_03.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://scenes/town/Gate.tscn" id="4"]
-[ext_resource type="Script" path="res://src/town/StormPass.cs" id="5"]
+[ext_resource type="PackedScene" uid="uid://cg5phks1gsrat" path="res://Scenes/town/StormPass/stage_01.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://xpfmpno3e47k" path="res://Scenes/town/StormPass/stage_02.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://wqqaxlhd8bcy" path="res://Scenes/town/StormPass/stage_03.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ca2vpvoxv2rex" path="res://Scenes/town/Gate.tscn" id="4"]
+[ext_resource type="Script" uid="uid://dudpy0y7ro6j3" path="res://src/town/StormPass.cs" id="5"]
 [ext_resource type="Texture2D" uid="uid://dqq8fkumb5okx" path="res://assets/images/map/stormPass/fire_0.png" id="5_bu8d7"]
 [ext_resource type="Texture2D" uid="uid://dvmo0nn1yo6fe" path="res://assets/images/map/stormPass/fire_1.png" id="6_a3skp"]
 [ext_resource type="Texture2D" uid="uid://ocyt5kinnrr6" path="res://assets/images/map/stormPass/fire_2.png" id="7_trf4q"]
@@ -98,7 +98,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_74g5t"]
 _data = {
-"idle": SubResource("2")
+&"idle": SubResource("2")
 }
 
 [node name="StormPass" type="Node2D"]

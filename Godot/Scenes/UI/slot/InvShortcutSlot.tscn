@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0expods1dumt"]
 
-[ext_resource type="Script" path="res://src/UI/slot/InvShortcutSlot.cs" id="1_lybpi"]
+[ext_resource type="Script" uid="uid://5jtj7hrytxdu" path="res://src/UI/slot/InvShortcutSlot.cs" id="1_lybpi"]
 [ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
 
 [node name="InvShortcutSlot" type="TextureRect"]

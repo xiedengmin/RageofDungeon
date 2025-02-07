@@ -1,13 +1,13 @@
 [gd_scene load_steps=37 format=3 uid="uid://cpwb8ndaal63w"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://ktns7wjps2fh" path="res://assets/images/npc/npc_orca/0.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://biiqom2guqy0c" path="res://assets/images/npc/npc_orca/1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dav4u255qojy5" path="res://assets/images/npc/npc_orca/2.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dlxm2hhbq0u78" path="res://assets/images/npc/npc_orca/3.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Orca.cs" id="8"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://3olq0f21ea2b" path="res://src/npc/Orca.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://bk3oc83c7isss" path="res://assets/sounds/npc/orca/orca_amb_03.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://kmpcl5p4ucuw" path="res://assets/sounds/npc/orca/orca_fw_01.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://bcu8onq47a882" path="res://assets/sounds/npc/orca/orca_tk_01.ogg" id="11"]
@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://bnqwuf6hkvs8o" path="res://assets/sounds/npc/orca/orca_tk_03.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://gcre7mq0p1ms" path="res://assets/sounds/npc/orca/orca_fw_02.ogg" id="17"]
 [ext_resource type="AudioStream" uid="uid://dfvt38nkc25ij" path="res://assets/sounds/npc/orca/orca_amb_01.ogg" id="18"]
-[ext_resource type="PackedScene" uid="uid://cr24a6jb08g27" path="res://scenes/UI/npc_nemu/Menu_Orca.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://cr24a6jb08g27" path="res://Scenes/UI/npc_nemu/Menu_Orca.tscn" id="19"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -103,7 +103,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sgtmt"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -298,16 +298,16 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x0yas"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"fw_03": SubResource("11"),
-"fw_04": SubResource("12"),
-"tk_01": SubResource("13"),
-"tk_02": SubResource("14"),
-"tk_03": SubResource("15")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"fw_03": SubResource("11"),
+&"fw_04": SubResource("12"),
+&"tk_01": SubResource("13"),
+&"tk_02": SubResource("14"),
+&"tk_03": SubResource("15")
 }
 
 [node name="Orca" instance=ExtResource("1")]

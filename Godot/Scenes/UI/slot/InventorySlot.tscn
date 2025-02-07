@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5y5fn0jachy2" path="res://assets/images/ui/windowcommon/57.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://wpama4btkv7h" path="res://assets/images/ui/windowcommon/Grid_Select.png" id="3"]
-[ext_resource type="Script" path="res://src/UI/slot/InventorySlot.cs" id="4"]
+[ext_resource type="Script" uid="uid://ceuxr0khi2ag" path="res://src/UI/slot/InventorySlot.cs" id="4"]
 
 [node name="InventorySlot" type="TextureRect"]
 anchors_preset = -1

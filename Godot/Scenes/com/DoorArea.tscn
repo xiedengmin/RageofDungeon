@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://wifly836pnwu"]
 
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="1"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="1"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(231.548, 27.5918)

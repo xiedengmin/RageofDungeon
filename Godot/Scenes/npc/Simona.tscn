@@ -1,13 +1,13 @@
 [gd_scene load_steps=33 format=3 uid="uid://bwbn5xacksvkb"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="2"]
 [ext_resource type="Texture2D" uid="uid://nmer42jp3scs" path="res://assets/images/npc/npc_simona/2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://sull5y3174cr" path="res://assets/images/npc/npc_simona/0.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://clnhonse7cfu2" path="res://assets/images/npc/npc_simona/1.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://d0a3okq5ob1c0" path="res://assets/images/npc/npc_simona/3.png" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Simona.cs" id="8"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://yi44if24gbq5" path="res://src/npc/Simona.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://bpaa5v00dygmv" path="res://assets/sounds/npc/simona/simona_amb_01.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://bjos3nxyan8kk" path="res://assets/sounds/npc/simona/simona_amb_02.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://c3ufwvm7q70jf" path="res://assets/sounds/npc/simona/simona_tk_02.ogg" id="11"]
@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://btig7e2m6u0am" path="res://assets/sounds/npc/simona/simona_fw_02.ogg" id="14"]
 [ext_resource type="AudioStream" uid="uid://bwxpytkfoxxvl" path="res://assets/sounds/npc/simona/simona_tk_03.ogg" id="15"]
 [ext_resource type="AudioStream" uid="uid://iysev6blm82e" path="res://assets/sounds/npc/simona/simona_amb_03.ogg" id="16"]
-[ext_resource type="PackedScene" uid="uid://cm5vm1vjm8juy" path="res://scenes/UI/npc_nemu/Menu_Simona.tscn" id="17"]
+[ext_resource type="PackedScene" uid="uid://cm5vm1vjm8juy" path="res://Scenes/UI/npc_nemu/Menu_Simona.tscn" id="17"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
@@ -101,7 +101,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gqdxv"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -258,14 +258,14 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnp8h"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"tk_01": SubResource("11"),
-"tk_02": SubResource("12"),
-"tk_03": SubResource("13")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"tk_01": SubResource("11"),
+&"tk_02": SubResource("12"),
+&"tk_03": SubResource("13")
 }
 
 [node name="Simona" instance=ExtResource("1")]

@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dkyasm3llhneg" path="res://assets/images/map/act1/01tile00.png" id="15"]
 [ext_resource type="PackedScene" path="res://src/component/act1/grass2lorien.tscn" id="16"]
 [ext_resource type="PackedScene" path="res://src/component/act1/grass1lorien.tscn" id="17"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="18"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="19"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="18"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="19"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fwf8"]
 texture = ExtResource("5")

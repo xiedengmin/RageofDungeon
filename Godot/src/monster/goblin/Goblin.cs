@@ -16,30 +16,25 @@ namespace ET
 
         private StateMachine<string, State, string> _fsm;
 
-        /// <summary>
-        /// Internal fields
-        /// </summary>
+
         private int _patrolDirection = 1;
         private Node2D _player;
         private Vector2 _lastSeenPlayerPosition;
         private Vector2 _nextPosition;
 
-        /// <summary>
-        /// Parameters (can be changed in the inspector)
-        /// </summary>
         // [Export] public Animator animator;
-        [Export] public float AttackRange { get; set; } = 60;
-        [Export] public float AttackSpeed { get; set; } = 150;
-        [Export] public float ChaseSpeed { get; set; } = 200;
-        [Export] public Vector2[] PatrolPoints { get; set; } = Array.Empty<Vector2>();
-        [Export] public float PatrolSpeed { get; set; } = 150;
-        [Export] public float SearchRange { get; set; } = 150;
-        [Export] public float SearchSpotRange { get; set; } = 350;
+        public float AttackRange { get; set; } = 60;
+        public float AttackSpeed { get; set; } = 150;
+        public float ChaseSpeed { get; set; } = 200;
+        public Vector2[] PatrolPoints { get; set; }
+        public float PatrolSpeed { get; set; } = 150;
+        public float SearchRange { get; set; } = 150;
+        public float SearchSpotRange { get; set; } = 350;
         /// <summary>
         /// in seconds
         /// </summary>
-        [Export] public float SearchTime { get; set; } = 20;
-        [Export] public Label StateDisplayText { get; set; }
+        public float SearchTime { get; set; } = 20;
+        public Label StateDisplayText { get; set; }
 
         /// <summary>
         /// Helper methods (depend on how your scene has been set up)
@@ -66,6 +61,13 @@ namespace ET
 
         public override void _Ready()
         {
+            PatrolPoints = new Vector2[]
+    {
+                new Vector2(220, 435),
+        new Vector2(160, 573),
+        new Vector2(350, 450),
+        new Vector2(300, 600),
+        new Vector2(240, 550)};
             base._Ready();
             _nextPosition = Position;
 
@@ -148,10 +150,8 @@ namespace ET
 
             _fsm.AddTransition(State.Search, State.Chase, condition: _ => DistanceToPlayer <= SearchSpotRange);
             _fsm.AddTransition(new TransitionAfter<State>(State.Search, State.Patrol, SearchTime));
-
+            StateDisplayText = GetNode<Label>("StateLabel");
             _fsm.Init();
-            //  StateDisplayText = GetNode<Label>("StateLabel");
-
             status = new MonsterStatus();
             status.ID = 1;
             status.InitData();
@@ -185,7 +185,7 @@ namespace ET
                 }
                 catch (Exception e)
                 {
-                    //  GD.PrintErr(e); //第一次总是提示 协程已死
+                    GD.PrintErr(e); //第一次总是提示 协程已死
                     _fsm.Trigger("PlayerSpotted");
                 }
             }

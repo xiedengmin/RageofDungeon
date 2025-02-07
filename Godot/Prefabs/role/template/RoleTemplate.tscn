@@ -1,14 +1,14 @@
 [gd_scene load_steps=17 format=3 uid="uid://dihxqpxwt46l2"]
 
-[ext_resource type="Script" path="res://src/character/Character.cs" id="1_t48oh"]
-[ext_resource type="Script" path="res://src/character/PlayerStateMachine.cs" id="2_65axe"]
-[ext_resource type="Script" path="res://src/character/state/motion/onground/Idle.cs" id="3_wqovb"]
-[ext_resource type="Script" path="res://src/character/state/motion/onground/Move.cs" id="4_luuf6"]
-[ext_resource type="Script" path="res://src/character/state/motion/inair/Jump.cs" id="5_ft12c"]
-[ext_resource type="Script" path="res://src/character/state/combat/Damage.cs" id="6_sa51u"]
-[ext_resource type="Script" path="res://src/character/state/combat/Attack.cs" id="7_ongjl"]
-[ext_resource type="Script" path="res://src/character/state/motion/onground/Punch.cs" id="8_8uiav"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="8_h86vx"]
+[ext_resource type="Script" uid="uid://d3ck0063fsgxg" path="res://src/character/Character.cs" id="1_t48oh"]
+[ext_resource type="Script" uid="uid://coyouk4wnnujb" path="res://src/character/PlayerStateMachine.cs" id="2_65axe"]
+[ext_resource type="Script" uid="uid://b5kb41yhwbcnw" path="res://src/character/state/motion/onground/Idle.cs" id="3_wqovb"]
+[ext_resource type="Script" uid="uid://cfrd3so5b2126" path="res://src/character/state/motion/onground/Move.cs" id="4_luuf6"]
+[ext_resource type="Script" uid="uid://nbsebnqhsgb3" path="res://src/character/state/motion/inair/Jump.cs" id="5_ft12c"]
+[ext_resource type="Script" uid="uid://hjibkbd6btvk" path="res://src/character/state/combat/Damage.cs" id="6_sa51u"]
+[ext_resource type="Script" uid="uid://ceab5unppvg60" path="res://src/character/state/combat/Attack.cs" id="7_ongjl"]
+[ext_resource type="Script" uid="uid://c7pq1koswboti" path="res://src/character/state/motion/onground/Punch.cs" id="8_8uiav"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="8_h86vx"]
 [ext_resource type="Texture2D" uid="uid://omkif5t1rpgd" path="res://assets/images/character/swordman/body/sm_body0000.png" id="9_v3ela"]
 [ext_resource type="Texture2D" uid="uid://3h6b8qfxrhi0" path="res://assets/images/character/swordman/kanata/katana0001.png" id="10_v1rhd"]
 [ext_resource type="PackedScene" uid="uid://bnrocxn68oxhy" path="res://Scenes/areabox/HitBox.tscn" id="11_2ku1r"]
@@ -43,15 +43,24 @@ script = ExtResource("4_luuf6")
 
 [node name="Jump" type="Node" parent="StateMachine"]
 script = ExtResource("5_ft12c")
+baseMaxHorizontalSpeed = null
+airAcceleration = null
+airDeceleration = null
+airSteeringPower = null
+gravity = null
 
 [node name="Damage" type="Node" parent="StateMachine"]
 script = ExtResource("6_sa51u")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("7_ongjl")
+MAX_COMBO_COUNT = null
 
 [node name="Punch" type="Node" parent="StateMachine"]
 script = ExtResource("8_8uiav")
+MaxYSpeed = null
+MaxWalkSpeed = null
+MaxRunSpeed = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

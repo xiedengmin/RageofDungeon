@@ -1,29 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cbpmjnle6enni"]
 
-[ext_resource path="res://src/component/act1/o1obj107.cs" type="Script" id=1]
-[ext_resource path="res://assets/images/map/act1/actiontree1-lorien.png" type="Texture2D" id=2]
+[ext_resource type="Script" uid="uid://5pjkql4v6wvo" path="res://src/component/act1/o1obj107.cs" id="1"]
+[ext_resource type="Texture2D" uid="uid://evyccpfwtn6j" path="res://assets/images/map/act1/actiontree1-lorien.png" id="2"]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 17.2801
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 12.8244
 height = 25.6487
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 62.4978, 76.5673 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(124.996, 153.135)
 
 [node name="actiontree1-lorien" type="StaticBody2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="pic" type="Sprite2D" parent="."]
-position = Vector2( 1.54489, -68.4093 )
-texture = ExtResource( 2 )
+position = Vector2(1.54489, -68.4093)
+texture = ExtResource("2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3.44325, 4.23785 )
+position = Vector2(-3.44325, 4.23785)
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, -90.5097 )
-shape = SubResource( 2 )
+position = Vector2(0, -90.5097)
+shape = SubResource("2")

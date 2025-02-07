@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ogabb6niujgs"]
 
 [ext_resource type="Texture2D" uid="uid://qmtlh3pkw040" path="res://assets/images/hitEffects/knocksmall/2.png" id="1"]
-[ext_resource type="Script" path="res://src/areabox/HitEffect.cs" id="1_sjycg"]
+[ext_resource type="Script" uid="uid://co5du2hmr4rw7" path="res://src/areabox/HitEffect.cs" id="1_sjycg"]
 [ext_resource type="Texture2D" uid="uid://dy1tw644j7k38" path="res://assets/images/hitEffects/knocksmall/0.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://c122f2i32l86e" path="res://assets/images/hitEffects/knocksmall/1.png" id="3"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://cawncx4g0fky8"]
 
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="1"]
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="2"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://dc6tff018h34i" path="res://assets/images/npc/linus/0.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://buemob0yf82wl" path="res://assets/images/npc/linus/1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://ctetuxo8fjjr5" path="res://assets/images/npc/linus/11.png" id="5"]
@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dn0l4bidooc8g" path="res://assets/images/npc/linus/8.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://k52y7d2vpa6y" path="res://assets/images/npc/linus/4.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://cp1gn5k40dw5u" path="res://assets/images/npc/linus/10.png" id="14"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="15"]
-[ext_resource type="Script" path="res://src/npc/Linus.cs" id="16"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="15"]
+[ext_resource type="Script" uid="uid://q0qtyel44osr" path="res://src/npc/Linus.cs" id="16"]
 [ext_resource type="AudioStream" uid="uid://cuyxpkoy1uiaf" path="res://assets/sounds/npc/linus/rn_amb_01.ogg" id="17"]
 [ext_resource type="AudioStream" uid="uid://dieyk0upm4ygp" path="res://assets/sounds/npc/linus/rn_fw_02.ogg" id="18"]
 [ext_resource type="AudioStream" uid="uid://bs1ax4icxe7ev" path="res://assets/sounds/npc/linus/rn_fw_01.ogg" id="19"]
@@ -24,7 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://ch3ibqsxafs5a" path="res://assets/sounds/npc/linus/rn_tk_03.ogg" id="22"]
 [ext_resource type="AudioStream" uid="uid://cwjxacdci4rj8" path="res://assets/sounds/npc/linus/rn_tk_02.ogg" id="23"]
 [ext_resource type="Texture2D" uid="uid://djyvjomyckuvl" path="res://assets/images/face/npc/popup/linus.png" id="24"]
-[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://scenes/UI/npc_nemu/Menu_Type2.tscn" id="25"]
+[ext_resource type="PackedScene" uid="uid://cha4be00a6k2a" path="res://Scenes/UI/npc_nemu/Menu_Type2.tscn" id="25"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("1")
@@ -156,7 +156,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kiwqm"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -294,13 +294,13 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_opy4w"]
 _data = {
-"amb_01": SubResource("6"),
-"fw_01": SubResource("7"),
-"fw_02": SubResource("8"),
-"fw_03": SubResource("9"),
-"tk_01": SubResource("10"),
-"tk_02": SubResource("11"),
-"tk_03": SubResource("12")
+&"amb_01": SubResource("6"),
+&"fw_01": SubResource("7"),
+&"fw_02": SubResource("8"),
+&"fw_03": SubResource("9"),
+&"tk_01": SubResource("10"),
+&"tk_02": SubResource("11"),
+&"tk_03": SubResource("12")
 }
 
 [node name="Linus" instance=ExtResource("2")]

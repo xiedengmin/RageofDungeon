@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://b4u8sw6xxf2ys"]
 
-[ext_resource type="PackedScene" uid="uid://bl4tdcr0mu3f6" path="res://scenes/dungeon/act1/Lorien/stage_01.tscn" id="1"]
-[ext_resource type="Script" path="res://src/dungeon/act1/Lorien.cs" id="2"]
-[ext_resource type="PackedScene" uid="uid://bmc5wf0dbjk2j" path="res://scenes/dungeon/act1/Lorien/stage_03.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://bnmce7lr74p4q" path="res://scenes/dungeon/act1/Lorien/stage_04.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://bdxbjurs8pclm" path="res://scenes/dungeon/act1/Lorien/stage_02.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://c01bq5shybj65" path="res://scenes/dungeon/act1/Lorien/stage_06.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://c2cp8c86dcqlh" path="res://scenes/dungeon/act1/Lorien/stage_05.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bl4tdcr0mu3f6" path="res://Scenes/dungeon/act1/Lorien/stage_01.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bp3t8yd2xdd6h" path="res://src/dungeon/act1/Lorien.cs" id="2"]
+[ext_resource type="PackedScene" uid="uid://bmc5wf0dbjk2j" path="res://Scenes/dungeon/act1/Lorien/stage_03.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bnmce7lr74p4q" path="res://Scenes/dungeon/act1/Lorien/stage_04.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bdxbjurs8pclm" path="res://Scenes/dungeon/act1/Lorien/stage_02.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://c01bq5shybj65" path="res://Scenes/dungeon/act1/Lorien/stage_06.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://c2cp8c86dcqlh" path="res://Scenes/dungeon/act1/Lorien/stage_05.tscn" id="7"]
 
 [node name="Lorien" type="Node2D"]
 script = ExtResource("2")

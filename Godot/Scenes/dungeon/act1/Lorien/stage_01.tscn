@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dpiu3q6y6mghi" path="res://assets/images/map/act1/01obj002.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://c2jwvlx7r4gib" path="res://assets/images/map/bg/01mid1.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://ypyibvj8mh5b" path="res://assets/images/map/bg/01far1.png" id="15"]
-[ext_resource type="Script" path="res://src/dungeon/DungeonStage.cs" id="16"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="17"]
+[ext_resource type="Script" uid="uid://cduggcb4icc6t" path="res://src/dungeon/DungeonStage.cs" id="16"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hle7f"]
 texture = ExtResource("7")

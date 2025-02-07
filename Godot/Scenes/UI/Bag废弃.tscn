@@ -17,12 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://dm5wugpl54xrf" path="res://assets/images/ui/windowcommon/276.png" id="22"]
 [ext_resource type="Texture2D" uid="uid://cjj5k07gkm411" path="res://assets/images/ui/windowcommon/278.png" id="24"]
 [ext_resource type="Texture2D" uid="uid://df07i7tn77sew" path="res://assets/images/ui/status_bag/inventory_6.png" id="25"]
-[ext_resource type="PackedScene" path="res://src/component/buttons/Button2.tscn" id="26"]
+[ext_resource type="PackedScene" uid="uid://i1fqtj8s4bgh" path="res://src/component/buttons/Button2.tscn" id="26"]
 [ext_resource type="PackedScene" uid="uid://cf8avhck56h3j" path="res://src/component/buttons/Tab_Button1.tscn" id="27"]
-[ext_resource type="PackedScene" uid="uid://dgpv5vi3k4bcp" path="res://scenes/UI/slot/EquipmentSlot.tscn" id="28"]
-[ext_resource type="PackedScene" uid="uid://dl5oqjl6do75s" path="res://scenes/UI/slot/InventorySlot.tscn" id="29"]
-[ext_resource type="Script" path="res://src/com/DraggableBar.cs" id="30"]
-[ext_resource type="Script" path="res://src/UI/Bag.cs" id="31"]
+[ext_resource type="PackedScene" uid="uid://dgpv5vi3k4bcp" path="res://Scenes/UI/slot/EquipmentSlot.tscn" id="28"]
+[ext_resource type="PackedScene" uid="uid://dl5oqjl6do75s" path="res://Scenes/UI/slot/InventorySlot.tscn" id="29"]
+[ext_resource type="Script" uid="uid://kijhipjpyl8c" path="res://src/com/DraggableBar.cs" id="30"]
+[ext_resource type="Script" uid="uid://c2u6w7to1efbj" path="res://src/UI/Bag.cs" id="31"]
 
 [node name="Bag" type="Control"]
 layout_mode = 3

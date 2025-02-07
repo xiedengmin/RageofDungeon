@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://rxk52hjyq1fs" path="res://assets/images/map/tiles/hmtile.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b1oxlbxvevmvm" path="res://assets/images/map/hendonMyre/hmwall02.png" id="2"]
-[ext_resource type="Script" path="res://src/com/DoorArea.cs" id="3"]
+[ext_resource type="Script" uid="uid://b7lstsou8xqyf" path="res://src/com/DoorArea.cs" id="3"]
 [ext_resource type="Texture2D" uid="uid://b1f623mxw5lfw" path="res://assets/images/map/bg/hmfar01.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://klckjlnq070p" path="res://assets/images/map/bg/hmmid01.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://cgp18d5nqqmtq" path="res://assets/images/map/obj/hmpoll_0.png" id="6"]
@@ -44,10 +44,10 @@
 [ext_resource type="Texture2D" uid="uid://c25sle6ynwsiu" path="res://assets/images/map/light/onipart/6.png" id="42"]
 [ext_resource type="Texture2D" uid="uid://d1njec6quppxl" path="res://assets/images/map/light/onipart/2.png" id="43"]
 [ext_resource type="Texture2D" uid="uid://df21wnbah68v" path="res://assets/images/map/light/onipart/3.png" id="44"]
-[ext_resource type="Script" path="res://src/town/BaseStage.cs" id="45"]
-[ext_resource type="PackedScene" path="res://scenes/npc/Oran.tscn" id="46"]
-[ext_resource type="PackedScene" uid="uid://dkcdjfgovrcdv" path="res://scenes/npc/Sinda.tscn" id="47"]
-[ext_resource type="PackedScene" uid="uid://dm2i566k48fq4" path="res://scenes/npc/GSD.tscn" id="48"]
+[ext_resource type="Script" uid="uid://mb3d6nkbmw8k" path="res://src/town/BaseStage.cs" id="45"]
+[ext_resource type="PackedScene" uid="uid://bft5d5t6dqvu6" path="res://scenes/npc/Oran.tscn" id="46"]
+[ext_resource type="PackedScene" uid="uid://dkcdjfgovrcdv" path="res://Scenes/npc/Sinda.tscn" id="47"]
+[ext_resource type="PackedScene" uid="uid://dm2i566k48fq4" path="res://Scenes/npc/GSD.tscn" id="48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhugq"]
 texture = ExtResource("2")
@@ -124,7 +124,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c4tyk"]
 _data = {
-"flash": SubResource("3")
+&"flash": SubResource("3")
 }
 
 [sub_resource type="SpriteFrames" id="4"]
@@ -162,7 +162,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1pvxr"]
 _data = {
-"idle": SubResource("5")
+&"idle": SubResource("5")
 }
 
 [sub_resource type="Shader" id="6"]
@@ -235,7 +235,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nsacm"]
 _data = {
-"idle": SubResource("9")
+&"idle": SubResource("9")
 }
 
 [sub_resource type="SpriteFrames" id="10"]
@@ -276,7 +276,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yluwd"]
 _data = {
-"idle": SubResource("11")
+&"idle": SubResource("11")
 }
 
 [sub_resource type="SpriteFrames" id="12"]
@@ -326,7 +326,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vu80f"]
 _data = {
-"idle": SubResource("13")
+&"idle": SubResource("13")
 }
 
 [sub_resource type="Animation" id="14"]
@@ -347,7 +347,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q8mrk"]
 _data = {
-"flash": SubResource("14")
+&"flash": SubResource("14")
 }
 
 [sub_resource type="RectangleShape2D" id="15"]

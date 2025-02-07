@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cqjvufhd2tie4" path="res://assets/images/map/title/westcoast.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://cjtriv315mbny" path="res://assets/images/map/cutscene/elvengard.png" id="2"]
 [ext_resource type="SpriteFrames" path="res://assets/tres/dungeon_title/lorieninside.tres" id="3"]
-[ext_resource type="Script" path="res://src/UI/Loading.cs" id="5"]
+[ext_resource type="Script" uid="uid://dc5k43cx3uwni" path="res://src/UI/Loading.cs" id="5"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "change_stage"
@@ -245,9 +245,9 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0vadr"]
 _data = {
-"change_stage": SubResource("1"),
-"enter_dungeon": SubResource("2"),
-"town_cutscene": SubResource("3")
+&"change_stage": SubResource("1"),
+&"enter_dungeon": SubResource("2"),
+&"town_cutscene": SubResource("3")
 }
 
 [node name="Loading" type="Control"]

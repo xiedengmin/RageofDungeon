@@ -1,13 +1,13 @@
 [gd_scene load_steps=38 format=3 uid="uid://bek57r1b1xbgj"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://bkh54df1k6egd" path="res://assets/images/npc/npc_mintai/0.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://dycr0sag05e7h" path="res://assets/images/npc/npc_mintai/1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bp46yrqxb8crg" path="res://assets/images/npc/npc_mintai/2.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://egbw786ymmlv" path="res://assets/images/npc/npc_mintai/3.png" id="5"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="6"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="7"]
-[ext_resource type="Script" path="res://src/npc/Mintai.cs" id="8"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="6"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="7"]
+[ext_resource type="Script" uid="uid://cq4sps4qqalks" path="res://src/npc/Mintai.cs" id="8"]
 [ext_resource type="AudioStream" uid="uid://7g2yrh5rjiej" path="res://assets/sounds/npc/mintai/mintai_tk_03.ogg" id="9"]
 [ext_resource type="AudioStream" uid="uid://cadaqo6f5rxka" path="res://assets/sounds/npc/mintai/mintai_tk_01.ogg" id="10"]
 [ext_resource type="AudioStream" uid="uid://fg62hwuejuln" path="res://assets/sounds/npc/mintai/mintai_fw_01.ogg" id="11"]
@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://boa8uguyqa4y4" path="res://assets/sounds/npc/mintai/mintai_tk_02.ogg" id="16"]
 [ext_resource type="AudioStream" uid="uid://kfbo01sxqwcc" path="res://assets/sounds/npc/mintai/mintai_amb_01.ogg" id="17"]
 [ext_resource type="AudioStream" uid="uid://bk7wpphfrmsm8" path="res://assets/sounds/npc/mintai/mintai_tk_04.ogg" id="18"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="19"]
 [ext_resource type="Texture2D" uid="uid://cgkj1p2hbweui" path="res://assets/images/face/npc/popup/mintai.png" id="20"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -103,7 +103,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7oqud"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -298,16 +298,16 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pxf8k"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"fw_01": SubResource("8"),
-"fw_02": SubResource("9"),
-"fw_03": SubResource("10"),
-"fw_04": SubResource("11"),
-"tk_01": SubResource("12"),
-"tk_02": SubResource("13"),
-"tk_03": SubResource("14"),
-"tk_04": SubResource("15")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"fw_01": SubResource("8"),
+&"fw_02": SubResource("9"),
+&"fw_03": SubResource("10"),
+&"fw_04": SubResource("11"),
+&"tk_01": SubResource("12"),
+&"tk_02": SubResource("13"),
+&"tk_03": SubResource("14"),
+&"tk_04": SubResource("15")
 }
 
 [node name="Mintai" instance=ExtResource("1")]

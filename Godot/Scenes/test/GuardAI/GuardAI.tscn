@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://yty4f68raf0h"]
 
-[ext_resource type="Script" path="res://Scenes/test/GuardAI/GuardAI.cs" id="1_0r3n4"]
+[ext_resource type="Script" uid="uid://dd1jox5u7s3y4" path="res://Scenes/test/GuardAI/GuardAI.cs" id="1_0r3n4"]
 [ext_resource type="Texture2D" uid="uid://dk8l3nviso1ue" path="res://assets/images/Pixel.png" id="2_gsgun"]
-[ext_resource type="Script" path="res://Scenes/test/GuardAI/PlayerController.cs" id="3_8cd15"]
+[ext_resource type="Script" uid="uid://plsl0mo6s17v" path="res://Scenes/test/GuardAI/PlayerController.cs" id="3_8cd15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blhp5"]
 size = Vector2(42, 42)

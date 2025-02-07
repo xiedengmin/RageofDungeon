@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://bft5d5t6dqvu6"]
 
-[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://scenes/npc/NPC.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dbc8u4brhucim" path="res://Scenes/npc/NPC.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://dper3nvrfh4f5" path="res://assets/images/npc/npc_oran/8.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://dtfsdsny0vp6y" path="res://assets/images/npc/npc_oran/10.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cxbtj1un30bpk" path="res://assets/images/npc/npc_oran/11.png" id="4"]
@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://btu6mw620kdql" path="res://assets/images/npc/npc_oran/15.png" id="19"]
 [ext_resource type="Texture2D" uid="uid://bmvuqdh2dw5v2" path="res://assets/images/npc/npc_oran/16.png" id="20"]
 [ext_resource type="Texture2D" uid="uid://dsgi6ch5dqy6g" path="res://assets/images/npc/npc_oran/19.png" id="21"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="22"]
-[ext_resource type="Shader" path="res://assets/shader/outline_shader.gdshader" id="23"]
-[ext_resource type="Script" path="res://src/npc/Oran.cs" id="24"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="22"]
+[ext_resource type="Shader" uid="uid://c3k66dwqq5ve2" path="res://assets/shader/outline_shader.gdshader" id="23"]
+[ext_resource type="Script" uid="uid://b0afbsdtcsfx4" path="res://src/npc/Oran.cs" id="24"]
 [ext_resource type="AudioStream" uid="uid://bswaeqa5wn81h" path="res://assets/sounds/npc/oran/oran_tk_01.ogg" id="25"]
 [ext_resource type="AudioStream" uid="uid://bx64kq6o0r7un" path="res://assets/sounds/npc/oran/oran_fw_01.ogg" id="26"]
 [ext_resource type="AudioStream" uid="uid://bsh0aypllrgy8" path="res://assets/sounds/npc/oran/oran_fw_03.ogg" id="27"]
@@ -32,7 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://2m2d0lrlbry1" path="res://assets/sounds/npc/oran/oran_amb_02.ogg" id="30"]
 [ext_resource type="AudioStream" uid="uid://bcs7oxehgr0t" path="res://assets/sounds/npc/oran/oran_amb_03.ogg" id="31"]
 [ext_resource type="AudioStream" uid="uid://bfnccyarnbyfw" path="res://assets/sounds/npc/oran/oran_amb_01.ogg" id="32"]
-[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://scenes/UI/npc_nemu/Menu_Type1.tscn" id="33"]
+[ext_resource type="PackedScene" uid="uid://bkj25bsqmjtt5" path="res://Scenes/UI/npc_nemu/Menu_Type1.tscn" id="33"]
 [ext_resource type="Texture2D" uid="uid://csbd0e70dwkr3" path="res://assets/images/face/npc/popup/oran.png" id="34"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -213,7 +213,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mkjn2"]
 _data = {
-"default": SubResource("5")
+&"default": SubResource("5")
 }
 
 [sub_resource type="Animation" id="6"]
@@ -370,14 +370,14 @@ tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bhcqt"]
 _data = {
-"amb_01": SubResource("6"),
-"amb_02": SubResource("7"),
-"amb_03": SubResource("8"),
-"fw_01": SubResource("9"),
-"fw_02": SubResource("10"),
-"fw_03": SubResource("11"),
-"tk_01": SubResource("12"),
-"tk_02": SubResource("13")
+&"amb_01": SubResource("6"),
+&"amb_02": SubResource("7"),
+&"amb_03": SubResource("8"),
+&"fw_01": SubResource("9"),
+&"fw_02": SubResource("10"),
+&"fw_03": SubResource("11"),
+&"tk_01": SubResource("12"),
+&"tk_02": SubResource("13")
 }
 
 [node name="Oran" instance=ExtResource("1")]

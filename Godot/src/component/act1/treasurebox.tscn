@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://l8rifddopjr7"]
 
-[ext_resource path="res://assets/images/map/act1/breakableobject/treasurebox/0.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://tixjeojle256" path="res://assets/images/map/act1/breakableobject/treasurebox/0.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 35.6607, 7.06912 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(71.3214, 14.1382)
 
 [node name="treasurebox" type="StaticBody2D"]
 
 [node name="0" type="Sprite2D" parent="."]
-position = Vector2( 0, -9.89951 )
-texture = ExtResource( 1 )
+position = Vector2(0, -9.89951)
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2.47487 )
-shape = SubResource( 1 )
+position = Vector2(0, 2.47487)
+shape = SubResource("1")
