@@ -25,7 +25,7 @@ namespace ET.Client
 
 		private static void Awake(this CameraComponent self)
 		{
-			//self.mainCamera = Camera2D.main;
+			self.mainCamera = GlobalComponent.Instance.Unit.GetNode<Camera2D>("CameraRoot/Camera2D");
 		}
 
 		private static void LateUpdate(this CameraComponent self)

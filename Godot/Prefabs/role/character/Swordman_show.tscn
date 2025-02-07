@@ -21,7 +21,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_csq5t"]
 _data = {
-"default": SubResource("1")
+&"default": SubResource("1")
 }
 
 [node name="Swordman_show" type="Sprite2D"]
@@ -31,6 +31,6 @@ hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_csq5t")
+&"": SubResource("AnimationLibrary_csq5t")
 }
 autoplay = "default"

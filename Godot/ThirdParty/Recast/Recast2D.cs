@@ -11,8 +11,8 @@ public class Recast2D
     {
 
         //filePath = filePath.Replace("_", "/");
-        filePath = "town_Elvengard_stage01";
-        string fileContent = File.ReadAllText(Path.Combine("../Config/Recast/", filePath));
+        //filePath = "town_Elvengard_stage01";
+        string fileContent = File.ReadAllText(Path.Combine("../Config/Recast/2D", filePath));
 
         // 使用正则表达式提取轮廓数据
         string pattern = @"PackedVector2Array\(([^)]+)\)";

@@ -20,6 +20,5 @@ layer = 20
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("2_0c4h1")
-forward = null
 up = null
 order = null

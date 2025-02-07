@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsxkp4pxexvuy"]
 
-[ext_resource type="Script" path="res://src/character/Character.cs" id="1"]
+[ext_resource type="Script" uid="uid://d3ck0063fsgxg" path="res://src/character/Character.cs" id="1"]
 
 [node name="Character" type="CharacterBody2D"]
 collision_layer = 2

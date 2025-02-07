@@ -30,7 +30,7 @@ namespace ET
         {
 
         }
-        private static void PrintNodePaths(Node node)
+        public static void PrintNodePaths(Node node)
         {
             GD.Print(node.GetPath());
             foreach (Node child in node.GetChildren())
@@ -38,6 +38,7 @@ namespace ET
                 PrintNodePaths(child);
             }
         }
+
         public static async ETTask SendEquipRequest(Session session)
         {
             /*  if (Input.IsKeyPressed(Key.T))
@@ -103,8 +104,9 @@ namespace ET
             //        Game.EventSystem.Load();
             //        Log.Debug("hot reload success!");
             //    }
+ 
 
-            ETTask eTTask = SendEquipRequest(session);
+        ETTask eTTask = SendEquipRequest(session);
             if (Input.IsKeyPressed(Key.T))
             {
                 C2M_TransferMap c2MTransferMap = new C2M_TransferMap();
@@ -112,7 +114,6 @@ namespace ET
             }
             //if (Init.Instance.InputEvent is InputEventMouse mouseEvent && Input.IsMouseButtonPressed(MouseButton.Left))
             if (Init.Instance.InputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
-            //if (Init.Instance.InputEvent is InputEventMouseMotion mouseEvent)// && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
             {
                 if (mouseEvent == null)
                 {
@@ -121,8 +122,7 @@ namespace ET
 
                 if (mouseEvent.IsReleased())
                 {
-                    //mouseEvent.Position;
-                    //PrintNodePaths(GlobalComponent.Instance.Unit);
+                    //DebugHelper.PrintNodePaths(GlobalComponent.Instance.Unit);
                     Camera2D camera2D = GlobalComponent.Instance.Unit.GetNode<Camera2D>("CameraRoot/Camera2D");
 
                     if (camera2D == null)
@@ -132,10 +132,16 @@ namespace ET
 
                     float RayLength = 1;
 
+                    // 获取鼠标点击的全局坐标
+                    Vector2 globalClickPosition = mouseEvent.Position;
+
+                    // 打印全局坐标
+                    GD.Print("鼠标点击的全局坐标: " + globalClickPosition);
+
                     // var from = camera3D.ProjectRayOrigin(mouseEvent.Position);
                     //  var to = from + camera3D.ProjectRayNormal(mouseEvent.Position) * RayLength;
-                    var from = camera2D.Position = (mouseEvent.Position);
-                    var to = from + camera2D.Position + (mouseEvent.Position) * RayLength;
+                    var from = camera2D.Position;
+                    var to = from + (mouseEvent.Position) * RayLength;
                     Unit unit = self.Parent.GetComponent<UnitComponent>().MyUnit;
                     if (unit == null)
                     {

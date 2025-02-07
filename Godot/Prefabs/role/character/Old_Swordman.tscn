@@ -1,14 +1,14 @@
 [gd_scene load_steps=36 format=3 uid="uid://yl1aovouqbcc"]
 
-[ext_resource type="PackedScene" uid="uid://dsxkp4pxexvuy" path="res://scenes/character/Old_Character.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dsxkp4pxexvuy" path="res://Prefabs/role/character/Old_Character.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://omkif5t1rpgd" path="res://assets/images/character/swordman/body/sm_body0000.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://ynljmusqiht1" path="res://assets/sounds/swordman/sm_upslash.ogg" id="3"]
 [ext_resource type="Texture2D" uid="uid://ct5adbi4fsp51" path="res://assets/images/effects/swordman_effect/upperslash.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://3h6b8qfxrhi0" path="res://assets/images/character/swordman/kanata/katana0001.png" id="5"]
 [ext_resource type="AudioStream" uid="uid://bq3gwtvdc7x6u" path="res://assets/sounds/swordman/sm_ghostslash_bs_01.ogg" id="6"]
 [ext_resource type="Texture2D" uid="uid://lc2iajdg5lym" path="res://assets/images/effects/swordman_effect/hardattack.png" id="7"]
-[ext_resource type="Shader" path="res://assets/shader/shadow_shader.gdshader" id="8"]
-[ext_resource type="Script" path="res://src/character/Swordman.cs" id="9"]
+[ext_resource type="Shader" uid="uid://bwmhd84opkxo5" path="res://assets/shader/shadow_shader.gdshader" id="8"]
+[ext_resource type="Script" uid="uid://ckmkhx8et8sn2" path="res://src/character/Swordman.cs" id="9"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("8")
@@ -1148,30 +1148,30 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xkln6"]
 _data = {
-"attack1": SubResource("3"),
-"attack2": SubResource("4"),
-"attack3": SubResource("5"),
-"back": SubResource("6"),
-"buff": SubResource("7"),
-"damage1": SubResource("8"),
-"damage2": SubResource("9"),
-"dash": SubResource("10"),
-"dashattack": SubResource("11"),
-"down": SubResource("12"),
-"getitem": SubResource("13"),
-"hardattack": SubResource("14"),
-"jump": SubResource("15"),
-"jumpattack": SubResource("16"),
-"move": SubResource("17"),
-"overturn": SubResource("18"),
-"rest": SubResource("19"),
-"sit": SubResource("20"),
-"summon1": SubResource("21"),
-"summon2": SubResource("7"),
-"throw1": SubResource("22"),
-"throw2": SubResource("23"),
-"upperslash": SubResource("24"),
-"waiting": SubResource("25")
+&"attack1": SubResource("3"),
+&"attack2": SubResource("4"),
+&"attack3": SubResource("5"),
+&"back": SubResource("6"),
+&"buff": SubResource("7"),
+&"damage1": SubResource("8"),
+&"damage2": SubResource("9"),
+&"dash": SubResource("10"),
+&"dashattack": SubResource("11"),
+&"down": SubResource("12"),
+&"getitem": SubResource("13"),
+&"hardattack": SubResource("14"),
+&"jump": SubResource("15"),
+&"jumpattack": SubResource("16"),
+&"move": SubResource("17"),
+&"overturn": SubResource("18"),
+&"rest": SubResource("19"),
+&"sit": SubResource("20"),
+&"summon1": SubResource("21"),
+&"summon2": SubResource("7"),
+&"throw1": SubResource("22"),
+&"throw2": SubResource("23"),
+&"upperslash": SubResource("24"),
+&"waiting": SubResource("25")
 }
 
 [node name="Character" instance=ExtResource("1")]
@@ -1222,7 +1222,7 @@ shape = SubResource("2")
 
 [node name="MainPlayer" parent="." index="2"]
 libraries = {
-"": SubResource("AnimationLibrary_xkln6")
+&"": SubResource("AnimationLibrary_xkln6")
 }
 
 [node name="soundPlayer" parent="." index="6"]

@@ -7,11 +7,14 @@
 
 [node name="Elvengard" type="Node2D"]
 script = ExtResource("1_5vvtd")
+Type = null
 
 [node name="stage_01" parent="." instance=ExtResource("2_hbafb")]
 
 [node name="stage_02" parent="." instance=ExtResource("3_hw0ty")]
 position = Vector2(2000, 0)
+Bgm = null
+Env = null
 
 [node name="01obj009" parent="stage_02/environment" index="4"]
 position = Vector2(332, 335)
@@ -21,15 +24,21 @@ offset = Vector2(2000, 0)
 transform = Transform2D(1, 0, 0, 1, 2000, 0)
 
 [node name="to_stage_01" parent="stage_02/doors" index="0"]
-current = ""
-target = ""
+current = null
+target = null
+stage = null
+Type = null
 
 [node name="to_Entrance" parent="stage_02/doors" index="1"]
-current = ""
-target = ""
+current = null
+target = null
+stage = null
+Type = null
 
 [node name="Gate" parent="." instance=ExtResource("4_aw0xt")]
 position = Vector2(0, 1000)
+Bgm = null
+Env = null
 
 [editable path="stage_02"]
 [editable path="stage_02/doors/to_stage_01"]

@@ -91,6 +91,9 @@
     <PackageReference Include="Npgsql.Json.NET" Version="9.0.2" />
     <PackageReference Include="SqlSugarCore" Version="5.1.4.175" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HotfixView\Client\Module\Resource\" />
+  </ItemGroup>
   <PropertyGroup>
     <!-- 忽略指定的警告编号 -->
     <NoWarn>$(NoWarn);NU1903</NoWarn>
