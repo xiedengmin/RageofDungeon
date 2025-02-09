@@ -37,7 +37,7 @@ namespace ET.Server
 			MessageHelper.SendToClient(unit, m2CCreateUnits);
 			
 			// 加入aoi
-			unit.AddComponent<AOIEntity, int, Vector3>(9 * 1000, unit.Position);
+			unit.AddComponent<AOIEntity, int, Vector3>(59 * 10000, unit.Position);
 			
 			// 解锁location，可以接收发给Unit的消息
 			await LocationProxyComponent.Instance.UnLock(unit.Id, request.OldInstanceId, unit.InstanceId);

@@ -1,4 +1,4 @@
-﻿namespace ET.Server
+namespace ET.Server
 {
     [ComponentOf(typeof(Scene))]
     public class AOIManagerComponent: Entity, IAwake

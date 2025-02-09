@@ -5,7 +5,7 @@ using Godot;
 namespace ET.Client
 {
 	/// <summary>
-	/// 管理所有UI GameObject 以及UI事件
+	/// 管理所有UI NodeObject 以及UI事件
 	/// </summary>
 	[FriendOf(typeof(UIEventComponent))]
 	public static class UIEventComponentSystem
@@ -16,7 +16,7 @@ namespace ET.Client
 			protected override void Awake(UIEventComponent self)
 			{
 				UIEventComponent.Instance = self;
-				Node uiRoot = GlobalComponent.Instance.UI;
+				Node uiRoot = GlobalComponent.Instance.UIRoot;
 
 				//	ReferenceCollector referenceCollector = uiRoot.GetComponent<ReferenceCollector>();
 				self.UILayers.Add((int)UILayer.Hidden, GlobalComponent.Instance.Hidden);

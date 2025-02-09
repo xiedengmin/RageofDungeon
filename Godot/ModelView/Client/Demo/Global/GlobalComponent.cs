@@ -9,8 +9,8 @@ namespace ET.Client
         public static GlobalComponent Instance;
 
         public Node Global { get; set; }
-        public Node2D Unit { get; set; }
-        public Node2D UI { get; set; }
+        public Node2D UnitRoot { get; set; }
+        public Node2D UIRoot { get; set; }
 
         public CanvasLayer Hidden { get; set; }
         public CanvasLayer NormalLayer { get; set; }

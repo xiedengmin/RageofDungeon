@@ -9,10 +9,10 @@ namespace ET.Client
         {
             GlobalComponent.Instance = self;
             self.Global = Init.Instance.node;
-            self.Unit = self.Global.GetNode<Node2D>("UnitRoot");
-            self.UI = self.Global.GetNode<Node2D>("UIRoot");
+            self.UnitRoot = self.Global.GetNode<Node2D>("UnitRoot");
+            self.UIRoot = self.Global.GetNode<Node2D>("UIRoot");
             //self.NormalLayer = self.Global.GetNode<CanvasLayer>("UIRoot/Normal");
-            self.NormalLayer = self.UI.GetNode<CanvasLayer>("Normal");
+            self.NormalLayer = self.UIRoot.GetNode<CanvasLayer>("Normal");
             self.PopUpLayer = self.Global.GetNode<CanvasLayer>("UIRoot/PopUp");
             self.LoadingLayer = self.Global.GetNode<CanvasLayer>("UIRoot/Loading");
         }

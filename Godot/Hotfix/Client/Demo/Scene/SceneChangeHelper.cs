@@ -1,3 +1,5 @@
+using Godot;
+
 namespace ET.Client
 {
     [FriendOfAttribute(typeof(ET.UnitComponent))]
@@ -20,10 +22,21 @@ namespace ET.Client
             Wait_CreateMyUnit waitCreateMyUnit = await clientScene.GetComponent<ObjectWait>().Wait<Wait_CreateMyUnit>();
             M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
             Unit unit = UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
+
+            //加载相机
+#if GODOT
+            PackedScene resCamera = GD.Load<PackedScene>($"res://Prefabs/Camera2DRoot.tscn");
+            Node2D camera = resCamera.Instantiate() as Node2D;
+            //GlobalComponent.Instance.UnitRoot.AddChild(camera);
+            unit.GetComponent<NodeObjectComponent>().NodeObject.AddChild(camera);
+            unit.GetComponent<NodeObjectComponent>().NodeObject.Call("IsMyunit", true);
+            // ModelShare.PrintNodePaths(unit.GetComponent<NodeObjectComponent>().NodeObject);
+
+            currentScene.AddComponent<OperaComponent>();
             unitComponent.Add(unit);
             unitComponent.MyUnit = unit;
             clientScene.RemoveComponent<AIComponent>();
-
+#endif
             EventSystem.Instance.Publish(currentScene, new EventType.SceneChangeFinish());
 
             // 通知等待场景切换的协程

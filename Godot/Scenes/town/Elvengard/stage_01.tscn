@@ -135,6 +135,7 @@ motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(640, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="environment/background/far"]
+scale = Vector2(1.03135, 1.00533)
 texture = ExtResource("2_8c7tk")
 centered = false
 region_enabled = true
@@ -145,6 +146,7 @@ motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(640, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="environment/background/mid"]
+scale = Vector2(1.50161, 0.992084)
 texture = ExtResource("3_2mydp")
 centered = false
 region_enabled = true

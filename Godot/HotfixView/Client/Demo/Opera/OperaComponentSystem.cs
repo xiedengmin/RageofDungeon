@@ -30,14 +30,7 @@ namespace ET
         {
 
         }
-        public static void PrintNodePaths(Node node)
-        {
-            GD.Print(node.GetPath());
-            foreach (Node child in node.GetChildren())
-            {
-                PrintNodePaths(child);
-            }
-        }
+
 
         public static async ETTask SendEquipRequest(Session session)
         {
@@ -78,7 +71,8 @@ namespace ET
         }
         public static void Update(this OperaComponent self)
         {
-            Session session = self.ClientScene().GetComponent<SessionComponent>().Session; // 会话
+            Session session = self.ClientScene().GetComponent<SessionComponent>().Session;
+            // 会话
             //    if (Input.IsMouseButtonPressed(MouseButton.Left))
             //    {
             //        InputEventMouse inputEventMouse = Input.mou
@@ -104,9 +98,9 @@ namespace ET
             //        Game.EventSystem.Load();
             //        Log.Debug("hot reload success!");
             //    }
- 
 
-        ETTask eTTask = SendEquipRequest(session);
+
+            ETTask eTTask = SendEquipRequest(session);
             if (Input.IsKeyPressed(Key.T))
             {
                 C2M_TransferMap c2MTransferMap = new C2M_TransferMap();
@@ -122,52 +116,46 @@ namespace ET
 
                 if (mouseEvent.IsReleased())
                 {
-                    //DebugHelper.PrintNodePaths(GlobalComponent.Instance.Unit);
-                    Camera2D camera2D = GlobalComponent.Instance.Unit.GetNode<Camera2D>("CameraRoot/Camera2D");
-
-                    if (camera2D == null)
-                    {
-                        return;
-                    }
-
-                    float RayLength = 1;
-
-                    // 获取鼠标点击的全局坐标
-                    Vector2 globalClickPosition = mouseEvent.Position;
-
-                    // 打印全局坐标
-                    GD.Print("鼠标点击的全局坐标: " + globalClickPosition);
-
-                    // var from = camera3D.ProjectRayOrigin(mouseEvent.Position);
-                    //  var to = from + camera3D.ProjectRayNormal(mouseEvent.Position) * RayLength;
-                    var from = camera2D.Position;
-                    var to = from + (mouseEvent.Position) * RayLength;
                     Unit unit = self.Parent.GetComponent<UnitComponent>().MyUnit;
                     if (unit == null)
                     {
                         return;
                     }
 
-                    var gameObject = unit.GetComponent<GameObjectComponent>().GameObject;
+                    Camera2D camera2D = unit.GetComponent<NodeObjectComponent>().NodeObject.GetNode<Camera2D>("CameraRoot/Camera2D");
+                    // ModelShare.PrintNodePaths(GlobalComponent.Instance.UnitRoot);
 
-                    var spaceState = GlobalComponent.Instance.Unit.GetWorld2D().DirectSpaceState;
+                    if (camera2D == null)
+                    {
+                        return;
+                    }
+                    camera2D.MakeCurrent();
+                    // 将屏幕坐标转换为世界坐标GetScreenTransform
+                    //var from = camera2D.ProjectRayOrigin(mouseEvent.Position);
+                    //  var to = from + camera2D.ProjectRayNormal(mouseEvent.Position) * RayLength;
+                    // 获取2D摄像机的位置
+                    Vector2 from = camera2D.GetGlobalMousePosition();
+
+                    // 获取鼠标的世界坐标或射线投射的方向
+
+                    // 使用 RayLength 来得到射线的终点
+                    var to = from;
+                    var NodeObject = unit.GetComponent<NodeObjectComponent>().NodeObject;
+                    GD.Print(NodeObject.GetGlobalTransform());
+                    var spaceState = GlobalComponent.Instance.UnitRoot.GetWorld2D().DirectSpaceState;
                     var query = PhysicsRayQueryParameters2D.Create(from, to);
-                    query.Exclude = new Godot.Collections.Array<Rid> { new Rid(gameObject) };
+                    query.Exclude = new Godot.Collections.Array<Rid> { new Rid(NodeObject) };
                     query.CollideWithAreas = true;
                     var result = spaceState.IntersectRay(query);
                     if (!result.TryGetValue("position", out var position))
                     {
-                        return;
+                        //    return;
                     }
-                    Vector3 vector3 = (Vector3)position;
-
-
-                    //Log.Debug($"click pos 2d:{mouseEvent.Position} 3d:{vector3}");
-                    self.ClickPoint = vector3;
+                    //   Vector3 vector3 = (Vector3)position;
+                    self.ClickPoint = new Vector3(from.X, from.Y, 0);
                     self.ClickPoint.Z = 0;
                     self.frameClickMap.Position = new Vector3(self.ClickPoint.X, self.ClickPoint.Y, self.ClickPoint.Z);
                     self.ClientScene().GetComponent<SessionComponent>().Session.Send(self.frameClickMap);
-
                     //Log.Debug($"click pos 2d:{mouseEvent.Position} 3d:{vector3}");
 
                 }

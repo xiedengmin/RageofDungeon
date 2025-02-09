@@ -13,7 +13,7 @@ namespace ET.Server
             protected override void Awake(AOIEntity self, int distance, Vector3 pos)
             {
                 self.ViewDistance = distance;
-                self.DomainScene().GetComponent<AOIManagerComponent>().Add(self, pos.X, pos.Z);
+                self.DomainScene().GetComponent<AOIManagerComponent>().Add(self, pos.X, pos.Y);
             }
         }
 

@@ -16,13 +16,9 @@ namespace ET.Client
             PackedScene res = GD.Load<PackedScene>($"res://Scenes/{SceneName}.tscn");
             //Node3D scene = res.Instantiate() as Node3D;
             Node2D scene = res.Instantiate() as Node2D;
-            GlobalComponent.Instance.Unit.AddChild(scene);
+            GlobalComponent.Instance.UnitRoot.AddChild(scene);
 
-            //加载相机
-            PackedScene resCamera = GD.Load<PackedScene>($"res://Prefabs/Camera2DRoot.tscn");
-            Node2D camera = resCamera.Instantiate() as Node2D;
-            GlobalComponent.Instance.Unit.AddChild(camera);
-            currentScene.AddComponent<OperaComponent>();
+
         }
     }
 }

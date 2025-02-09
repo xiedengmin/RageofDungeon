@@ -9,15 +9,15 @@ namespace ET.Client
         [ObjectSystem]
         public class UIAwakeSystem : AwakeSystem<UI, string, Node>
         {
-            protected override void Awake(UI self, string name, Node gameObject)
+            protected override void Awake(UI self, string name, Node NodeObject)
             {
                 self.nameChildren.Clear();
-               // gameObject.layer = LayerMask.NameToLayer(LayerNames.UI);
+                // NodeObject.layer = LayerMask.NameToLayer(LayerNames.UI);
                 self.Name = name;
-                self.GameObject = gameObject;
+                self.NodeObject = NodeObject;
             }
         }
-		
+
         [ObjectSystem]
         public class UIDestroySystem : DestroySystem<UI>
         {
@@ -27,18 +27,18 @@ namespace ET.Client
                 {
                     ui.Dispose();
                 }
-                //self.GameObject.Dispose();
-                self.GameObject.Free();
-                self.GameObject.Dispose();
+                //self.NodeObject.Dispose();
+                self.NodeObject.Free();
+                self.NodeObject.Dispose();
                 //ResourceLoader.
-                //Object.Destroy(self.GameObject);
+                //Object.Destroy(self.NodeObject);
                 self.nameChildren.Clear();
             }
         }
 
         //  public static void SetAsFirstSibling(this UI self)
         //  {
-        //      self.GameObject.transform.SetAsFirstSibling();
+        //      self.NodeObject.transform.SetAsFirstSibling();
         //  }
 
         public static void Add(this UI self, UI ui)
@@ -64,22 +64,22 @@ namespace ET.Client
             {
                 return child;
             }
-            Node childGameObject = self.GameObject.GetNode(name);
-            if (childGameObject == null)
+            Node childNodeObject = self.NodeObject.GetNode(name);
+            if (childNodeObject == null)
             {
                 return null;
             }
-            child = self.AddChild<UI, string, Node>(name, childGameObject);
+            child = self.AddChild<UI, string, Node>(name, childNodeObject);
             self.Add(child);
             return child;
         }
     }
-    
+
     [ChildOf()]
-    public sealed class UI: Entity, IAwake<string, Node>, IDestroy
+    public sealed class UI : Entity, IAwake<string, Node>, IDestroy
     {
-        public Node GameObject { get; set; }
-		
+        public Node NodeObject { get; set; }
+
         public string Name { get; set; }
 
         public Dictionary<string, UI> nameChildren = new Dictionary<string, UI>();

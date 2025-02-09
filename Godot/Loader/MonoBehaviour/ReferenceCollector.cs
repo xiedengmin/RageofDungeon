@@ -9,11 +9,11 @@ using System.Collections.Generic;
 public class ReferenceCollectorData
 {
 	public string key;
-    //Object并非C#基础中的Object，而是 UnityEngine.Object
-    public Object gameObject;
+	//Object并非C#基础中的Object，而是 UnityEngine.Object
+	public Object NodeObject;
 }
 //继承IComparer对比器，Ordinal会使用序号排序规则比较字符串，因为是byte级别的比较，所以准确性和性能都不错
-public class ReferenceCollectorDataComparer: IComparer<ReferenceCollectorData>
+public class ReferenceCollectorDataComparer : IComparer<ReferenceCollectorData>
 {
 	public int Compare(ReferenceCollectorData x, ReferenceCollectorData y)
 	{
@@ -26,10 +26,10 @@ public class ReferenceCollectorDataComparer: IComparer<ReferenceCollectorData>
 //注意UNITY_EDITOR宏定义，在编译以后，部分编辑器相关函数并不存在
 public class ReferenceCollector//: MonoBehaviour, ISerializationCallbackReceiver
 {
-    //用于序列化的List
+	//用于序列化的List
 	public List<ReferenceCollectorData> data = new List<ReferenceCollectorData>();
-    //Object并非C#基础中的Object，而是 UnityEngine.Object
-    private readonly Dictionary<string, Object> dict = new Dictionary<string, Object>();
+	//Object并非C#基础中的Object，而是 UnityEngine.Object
+	private readonly Dictionary<string, Object> dict = new Dictionary<string, Object>();
 
 #if UNITY_EDITOR
     //添加新的元素
@@ -54,9 +54,9 @@ public class ReferenceCollector//: MonoBehaviour, ISerializationCallbackReceiver
 		{
             //根据i的值获取dataProperty，也就是data中的对应ReferenceCollectorData，不过在这里，是对Property进行的读取，有点类似json或者xml的节点
             UnityEditor.SerializedProperty element = dataProperty.GetArrayElementAtIndex(i);
-            //对对应节点进行赋值，值为gameobject相对应的fileID
-            //fileID独一无二，单对单关系，其他挂载在这个gameobject上的script或组件会保存相对应的fileID
-            element.FindPropertyRelative("gameObject").objectReferenceValue = obj;
+            //对对应节点进行赋值，值为NodeObject相对应的fileID
+            //fileID独一无二，单对单关系，其他挂载在这个NodeObject上的script或组件会保存相对应的fileID
+            element.FindPropertyRelative("NodeObject").objectReferenceValue = obj;
 		}
 		else
 		{
@@ -64,7 +64,7 @@ public class ReferenceCollector//: MonoBehaviour, ISerializationCallbackReceiver
             dataProperty.InsertArrayElementAtIndex(i);
             UnityEditor.SerializedProperty element = dataProperty.GetArrayElementAtIndex(i);
 			element.FindPropertyRelative("key").stringValue = key;
-			element.FindPropertyRelative("gameObject").objectReferenceValue = obj;
+			element.FindPropertyRelative("NodeObject").objectReferenceValue = obj;
 		}
         //应用与更新
         UnityEditor.EditorUtility.SetDirty(this);
@@ -114,7 +114,7 @@ public class ReferenceCollector//: MonoBehaviour, ISerializationCallbackReceiver
 		serializedObject.UpdateIfRequiredOrScript();
 	}
 #endif
-    //使用泛型返回对应key的gameobject
+	//使用泛型返回对应key的NodeObject
 	public T Get<T>(string key) where T : class
 	{
 		Object dictGo;
@@ -138,7 +138,7 @@ public class ReferenceCollector//: MonoBehaviour, ISerializationCallbackReceiver
 	public void OnBeforeSerialize()
 	{
 	}
-    //在反序列化后运行
+	//在反序列化后运行
 	public void OnAfterDeserialize()
 	{
 		dict.Clear();
@@ -146,7 +146,7 @@ public class ReferenceCollector//: MonoBehaviour, ISerializationCallbackReceiver
 		{
 			if (!dict.ContainsKey(referenceCollectorData.key))
 			{
-				dict.Add(referenceCollectorData.key, referenceCollectorData.gameObject);
+				dict.Add(referenceCollectorData.key, referenceCollectorData.NodeObject);
 			}
 		}
 	}

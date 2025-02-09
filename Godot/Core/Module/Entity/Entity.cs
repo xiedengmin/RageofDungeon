@@ -18,7 +18,7 @@ namespace ET
     public partial class Entity : DisposeObject
     {
 #if ENABLE_VIEW && UNITY_EDITOR
-        private GodotEngine.GameObject viewGO;
+        private GodotEngine.NodeObject viewGO;
 #endif
 
         [BsonIgnore]
@@ -86,10 +86,10 @@ namespace ET
 #if ENABLE_VIEW && UNITY_EDITOR
                 if (value)
                 {
-                    this.viewGO = new GodotEngine.GameObject(this.ViewName);
+                    this.viewGO = new GodotEngine.NodeObject(this.ViewName);
                     this.viewGO.AddComponent<ComponentView>().Component = this;
                     this.viewGO.transform.SetParent(this.Parent == null? 
-                            GodotEngine.GameObject.Find("Global").transform : this.Parent.viewGO.transform);
+                            GodotEngine.NodeObject.Find("Global").transform : this.Parent.viewGO.transform);
                 }
                 else
                 {
@@ -206,7 +206,7 @@ namespace ET
 #if ENABLE_VIEW && UNITY_EDITOR
                 this.viewGO.GetComponent<ComponentView>().Component = this;
                 this.viewGO.transform.SetParent(this.Parent == null ?
-                        GodotEngine.GameObject.Find("Global").transform : this.Parent.viewGO.transform);
+                        GodotEngine.NodeObject.Find("Global").transform : this.Parent.viewGO.transform);
                 foreach (var child in this.Children.Values)
                 {
                     child.viewGO.transform.SetParent(this.viewGO.transform);

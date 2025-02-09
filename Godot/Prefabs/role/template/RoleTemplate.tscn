@@ -43,24 +43,15 @@ script = ExtResource("4_luuf6")
 
 [node name="Jump" type="Node" parent="StateMachine"]
 script = ExtResource("5_ft12c")
-baseMaxHorizontalSpeed = null
-airAcceleration = null
-airDeceleration = null
-airSteeringPower = null
-gravity = null
 
 [node name="Damage" type="Node" parent="StateMachine"]
 script = ExtResource("6_sa51u")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("7_ongjl")
-MAX_COMBO_COUNT = null
 
 [node name="Punch" type="Node" parent="StateMachine"]
 script = ExtResource("8_8uiav")
-MaxYSpeed = null
-MaxWalkSpeed = null
-MaxRunSpeed = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -109,8 +100,6 @@ frame = 176
 
 [node name="Bullet" type="Marker2D" parent="BodyPivot"]
 position = Vector2(42.9463, -86.8364)
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)

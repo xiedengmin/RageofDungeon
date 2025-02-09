@@ -2,16 +2,16 @@ using System;
 
 namespace ET.Client
 {
-    public static class GameObjectComponentSystem
+    public static class NodeObjectComponentSystem
     {
         [ObjectSystem]
-        public class DestroySystem: DestroySystem<GameObjectComponent>
+        public class DestroySystem : DestroySystem<NodeObjectComponent>
         {
-            protected override void Destroy(GameObjectComponent self)
+            protected override void Destroy(NodeObjectComponent self)
             {
-                self.GameObject.Free();
-                self.GameObject.Dispose();
-                //self.GameObject.QueueFree();
+                self.NodeObject.Free();
+                self.NodeObject.Dispose();
+                //self.NodeObject.QueueFree();
             }
         }
     }
