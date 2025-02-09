@@ -10,6 +10,7 @@
 
 # ETGodot演示游戏DEMO《地牢之怒》RageofDungeon 发布!
 
+![演示图](https://github.com/xiedengmin/RageofDungeon/blob/master/Book/demo.png)
 1. 调整结构，机器人工程与服务器合并，更易使用，一个进程同时可以做server，也能创建机器人，真正的ALL IN ONE! -- 已实现  
 2. 客户端跟服务端合并，服务端代码全部放在了客户端，客户端中可以带一个服务端，开发超级方便，服务端发布的时候可以选择发布成Dotnet也可以发布成UnityServer，终极All IN ONE  -- 已实现  
 3. Entity可视化，客户端跟服务端所有的Entity都实现了可视化，开启ENABLE_CODES宏，运行游戏，查看Hierarchy面板，展开Init/Global/Scene(Process)即可看到 -- 已实现  
