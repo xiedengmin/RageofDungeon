@@ -13,10 +13,8 @@ namespace ET.Client
             PackedScene res = GD.Load<PackedScene>("res://Prefabs/role/character/Swordman.tscn");
             Node2D role = res.Instantiate() as Node2D;
             GlobalComponent.Instance.UnitRoot.AddChild(role);
-            role.Position = new Vector2(args.Unit.Position.X, args.Unit.Position.Y);
-            args.Unit.AddComponent<NodeObjectComponent>().NodeObject = role;
-
-
+            role.Position = new Vector2(unit.Position.X, unit.Position.Y);
+            unit.AddComponent<NodeObjectComponent>().NodeObject = role;
 
             //Camera3D camera3D = GlobalComponent.Instance.Unit.GetNode<Camera3D>("Map1/CameraRoot/Camera3D");
             //camera3D.Position += skin.Position;

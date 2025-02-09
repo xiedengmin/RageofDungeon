@@ -1,14 +1,12 @@
+using ET.Client;
 using Godot;
-//using static CounterAppController;
-
 namespace ET
 {
-    public partial class Swordman : Character//, IController
+    public partial class Swordman : Character
     {
         public override void _Ready()
         {
-            //   _tileMap = GetParent().GetNode<Test>("DynamicTileMap");
-
+            // GlobalComponent.Instance.UIRoot.GetChild
             base._Ready();
         }
         public override void _PhysicsProcess(double delta)

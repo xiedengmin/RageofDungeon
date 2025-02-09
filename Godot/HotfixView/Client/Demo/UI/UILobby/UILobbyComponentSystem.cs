@@ -25,13 +25,13 @@ namespace ET.Client
             await EnterMapHelper.EnterMapAsync(self.ClientScene());
             await UIHelper.Remove(self.ClientScene(), UIType.UILobby);
 
-            PackedScene mainui = GD.Load<PackedScene>($"res://Scenes/Main.tscn");
+            //  PackedScene mainui = GD.Load<PackedScene>($"res://Scenes/Main.tscn");
             //Node3D scene = res.Instantiate() as Node3D;
-            Node2D Mainui = mainui.Instantiate() as Node2D;
-            GlobalComponent.Instance.UIRoot.AddChild(Mainui);
-            Node2D vjs = ResourceLoader.Load<PackedScene>("res://addons/VirtualJoyStick/test/Test.tscn").Instantiate<Node2D>();
-            GlobalComponent.Instance.UIRoot.AddChild(vjs);
-            //    UIHelper.Create(self.ZoneScene(), UIType.UIMain, UILayer.Normal).Coroutine();
+            //  Node2D Mainui = mainui.Instantiate() as Node2D;
+            //   GlobalComponent.Instance.UIRoot.AddChild(Mainui);
+            //   Node2D vjs = ResourceLoader.Load<PackedScene>("res://addons/VirtualJoyStick/test/Test.tscn").Instantiate<Node2D>();
+            //   GlobalComponent.Instance.UIRoot.AddChild(vjs);
+            //  UIHelper.Create(self.ClientScene(), UIType.UIMain, UILayer.Normal).Coroutine();
         }
     }
 }

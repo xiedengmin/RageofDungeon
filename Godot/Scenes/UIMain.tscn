@@ -3032,6 +3032,7 @@ script = ExtResource("99_7rlo6")
 visible = false
 offset_top = 98.0
 offset_bottom = -470.0
+singleLayerHP = null
 
 [node name="Monster_HP_Elite" parent="MonsterHP" instance=ExtResource("101_ycqsj")]
 visible = false

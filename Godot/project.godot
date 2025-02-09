@@ -17,7 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GlobalManager="*res://src/manager/GlobalManager.cs"
+ArchiveManager="*res://src/manager/ArchiveManager.cs"
 CoroutineManager="*res://addons/HCoroutines/coroutine_manager.tscn"
+InputManager="*res://src/manager/InputManager.cs"
+ConfigManager="*res://src/manager/ConfigManager.cs"
+DataManager="*res://src/manager/DataManager.cs"
 
 [display]
 
