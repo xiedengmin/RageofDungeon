@@ -78,7 +78,6 @@ namespace ET
 			//IStaticMethod start = new StaticMethod(this.model, "ET.Entry", "Start");
 			//start.Run();
 			Entry.Init();
-
 			Entry.Start();
 		}
 

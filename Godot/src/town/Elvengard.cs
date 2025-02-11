@@ -60,9 +60,19 @@ namespace ET
         }
         public override void _Input(InputEvent inputEvent)
         {
+            OperaComponentSystem.InputEvent = inputEvent;
             if (inputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
+
             {
-                OperaComponentSystem.InputEvent = inputEvent;
+                if (mouseEvent == null)
+                {
+                    return;
+                }
+
+                if (mouseEvent.IsReleased())
+                {
+                    OperaComponentSystem.instance.ClientScene().GetComponent<SessionComponent>().Session.Send(OperaComponentSystem.instance.frameClickMap);
+                }
 
             }
 

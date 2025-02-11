@@ -93,14 +93,14 @@ namespace ET
             //        }
             //    }
 
-            //    // KeyCode.R
-            //    if (InputHelper.GetKeyDown(114))
-            //    {
-            //        CodeLoader.Instance.LoadLogic();
-            //        Game.EventSystem.Add(CodeLoader.Instance.GetHotfixTypes());
-            //        Game.EventSystem.Load();
-            //        Log.Debug("hot reload success!");
-            //    }
+            // KeyCode.R
+            if (Input.IsKeyPressed(Key.R))
+            {
+                CodeLoader.Instance.LoadHotfix();
+                //        Game.EventSystem.Add(CodeLoader.Instance.GetHotfixTypes());
+                //        Game.EventSystem.Load();
+                //        Log.Debug("hot reload success!");
+            }
 
 
             ETTask eTTask = SendEquipRequest(session);
@@ -110,7 +110,7 @@ namespace ET
                 self.ClientScene().GetComponent<SessionComponent>().Session.Call(c2MTransferMap).Coroutine();
             }
             //if (Init.Instance.InputEvent is InputEventMouse mouseEvent && Input.IsMouseButtonPressed(MouseButton.Left))
-            if (InputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
+            if (Init.Instance.InputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
             {
                 if (mouseEvent == null)
                 {
