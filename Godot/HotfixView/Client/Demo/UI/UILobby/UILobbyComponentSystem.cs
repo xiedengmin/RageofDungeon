@@ -29,8 +29,8 @@ namespace ET.Client
             //Node3D scene = res.Instantiate() as Node3D;
             //  Node2D Mainui = mainui.Instantiate() as Node2D;
             //   GlobalComponent.Instance.UIRoot.AddChild(Mainui);
-            //   Node2D vjs = ResourceLoader.Load<PackedScene>("res://addons/VirtualJoyStick/test/Test.tscn").Instantiate<Node2D>();
-            //   GlobalComponent.Instance.UIRoot.AddChild(vjs);
+            // Node2D vjs = ResourceLoader.Load<PackedScene>("res://addons/VirtualJoyStick/test/Test.tscn").Instantiate<Node2D>();
+            //  GlobalComponent.Instance.UIRoot.AddChild(vjs);
             //  UIHelper.Create(self.ClientScene(), UIType.UIMain, UILayer.Normal).Coroutine();
         }
     }

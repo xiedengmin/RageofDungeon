@@ -19,16 +19,6 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(30, 30)
 script = ExtResource("1_omsr4")
-pressedColor = null
-deadZoneSize = null
-clampZoneSize = null
-joyStickMode = null
-visibilityMode = null
-useInputActions = null
-actionLeft = null
-actionRight = null
-actionUp = null
-actionDown = null
 
 [node name="Base" type="TextureRect" parent="."]
 layout_mode = 1

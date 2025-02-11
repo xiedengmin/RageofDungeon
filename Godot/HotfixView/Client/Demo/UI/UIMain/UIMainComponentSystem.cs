@@ -15,6 +15,7 @@ namespace ET.Client
     {
         public static async ETTask EnterMapFinish(this UIMainComponent self)
         {
+            // self.ClientScene().
             // await EnterMapHelper.EnterMapAsync(self.ClientScene());
             //   await UIHelper.Remove(self.ClientScene(), UIType.UILobby);
 

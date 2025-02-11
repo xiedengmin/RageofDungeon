@@ -17,8 +17,6 @@ namespace ET.Client
             //Node3D scene = res.Instantiate() as Node3D;
             Node2D scene = res.Instantiate() as Node2D;
             GlobalComponent.Instance.UnitRoot.AddChild(scene);
-
-
         }
     }
 }

@@ -26,6 +26,8 @@ namespace ET
     [FriendOf(typeof(OperaComponent))]
     public static class OperaComponentSystem
     {
+        public static InputEvent InputEvent;
+        public static OperaComponent instance;
         public static void Awake(this OperaComponent self)
         {
 
@@ -71,6 +73,7 @@ namespace ET
         }
         public static void Update(this OperaComponent self)
         {
+            instance = self;
             Session session = self.ClientScene().GetComponent<SessionComponent>().Session;
             // 会话
             //    if (Input.IsMouseButtonPressed(MouseButton.Left))
@@ -107,7 +110,7 @@ namespace ET
                 self.ClientScene().GetComponent<SessionComponent>().Session.Call(c2MTransferMap).Coroutine();
             }
             //if (Init.Instance.InputEvent is InputEventMouse mouseEvent && Input.IsMouseButtonPressed(MouseButton.Left))
-            if (Init.Instance.InputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
+            if (InputEvent is InputEventMouseButton mouseEvent && (MouseButton)mouseEvent.ButtonIndex == MouseButton.Left)
             {
                 if (mouseEvent == null)
                 {
@@ -129,7 +132,7 @@ namespace ET
                     {
                         return;
                     }
-                    camera2D.MakeCurrent();
+                    //camera2D.MakeCurrent();
                     // 将屏幕坐标转换为世界坐标GetScreenTransform
                     //var from = camera2D.ProjectRayOrigin(mouseEvent.Position);
                     //  var to = from + camera2D.ProjectRayNormal(mouseEvent.Position) * RayLength;
